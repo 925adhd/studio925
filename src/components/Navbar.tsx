@@ -41,8 +41,8 @@ export default function Navbar() {
             <a href="/#services" onClick={() => setIsOpen(false)} className="text-lg font-medium">Services</a>
             <a href="/#process" onClick={() => setIsOpen(false)} className="text-lg font-medium">Process</a>
             <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-lg font-medium">Pricing</a>
-            <a href="/#contact" onClick={() => setIsOpen(false)} className="bg-brand-primary text-white w-full py-4 rounded-xl font-medium text-center">
-              Build My Website
+            <a href="/#contact" onClick={() => setIsOpen(false)} className="bg-brand-primary text-white px-6 py-2.5 rounded-xl font-medium text-base self-start">
+              Contact Me
             </a>
           </div>
         </motion.div>
