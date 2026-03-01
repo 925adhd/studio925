@@ -4,32 +4,32 @@ import { Layout, Zap, ShieldCheck, Search, Smartphone, Globe } from 'lucide-reac
 const services = [
   {
     title: "Custom-Built Website",
-    description: "A professionally designed website built around your business, not a cookie-cutter template. Designed to make the right first impression every time a potential customer looks you up.",
+    description: "Not a cookie-cutter template. Not a theme swap. Built specifically for your business so it looks right, says the right things, and works the way you need it to.",
     icon: Layout,
   },
   {
-    title: "Search-Ready Website Structure",
-    description: "Your website is built and structured properly so search engines can clearly understand your services and display your site accurately in search results.",
+    title: "Built to Show Up When Customers Search",
+    description: "Your site is structured so search engines understand exactly what you do and where you do it, which means more people find your business when they're actively looking for your services.",
     icon: Search,
   },
   {
-    title: "Mobile Optimization",
-    description: "Most customers check you out on their phone before they ever call. Your site will look and work exactly right on every screen size.",
+    title: "Designed for the Way People Actually Browse",
+    description: "Most customers decide on their phone before they ever call. Your site will look sharp and load fast on every screen. Period.",
     icon: Smartphone,
   },
   {
     title: "Speed & Security Optimization",
-    description: "A slow or broken site costs you customers before they read a single word. Yours will load fast, run clean, and stay online.",
+    description: "A slow or broken site loses customers before they read a single word. Yours loads fast, runs clean, and stays online.",
     icon: ShieldCheck,
   },
   {
     title: "Online Payments & Booking Integration",
-    description: "Let customers book, pay, or place orders directly from your site. Fewer calls chasing invoices. More revenue with less back-and-forth.",
+    description: "Let customers book appointments or pay invoices directly from your site. Less phone tag. More closed business.",
     icon: Zap,
   },
   {
     title: "Someone in Your Corner",
-    description: "You won't be left figuring it out alone. When something needs updating or something breaks, you've got someone to call.",
+    description: "You won't be handed a login and left to figure it out. When something needs updating or something breaks, you have someone to call.",
     icon: Globe,
   }
 ];

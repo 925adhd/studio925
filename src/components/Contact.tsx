@@ -52,7 +52,7 @@ export default function Contact() {
               <span className="italic text-brand-accent">searching for you.</span>
             </h2>
             <p className="text-xl text-white/70 mb-12 max-w-lg">
-              Tell me about your business. No pressure, no pitch — just an honest conversation about what would actually help you.
+              Tell me about your business. No pressure, no pitch. Just an honest conversation about what would actually help you.
             </p>
 
             <div className="space-y-6">
@@ -140,7 +140,7 @@ export default function Contact() {
                 disabled={status === 'sending'}
                 className="w-full bg-brand-primary text-white py-3 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-brand-primary/90 transition-all group disabled:opacity-60"
               >
-                {status === 'sending' ? 'Sending...' : <>Start My Website <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></>}
+                {status === 'sending' ? 'Sending...' : <>Start My Project <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></>}
               </button>
             </form>
             )}

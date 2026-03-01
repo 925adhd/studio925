@@ -23,12 +23,12 @@ export default function Hero() {
           </h2>
 
           <p className="text-[17px] md:text-xl text-brand-primary/70 mb-9 md:mb-8 max-w-2xl leading-relaxed mx-auto">
-            Studio 925 builds modern, high-performing websites for small businesses in Grayson County, Kentucky. Designed to look professional, load fast, and support real business growth.
+            Studio 925 builds custom websites for local businesses in Grayson County that need more calls, more leads, and real growth. Built locally. Built personally. No outsourcing. No templates. Just focused, strategic work that helps your business get found and convert.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <a href="/#contact" className="bg-brand-primary text-white px-8 py-4 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
-              Start My Website <ArrowRight size={20} />
+              Build My Website <ArrowRight size={20} />
             </a>
             <Link to="/portfolio" className="bg-white border border-brand-primary/10 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-primary/5 transition-colors">
               See My Work

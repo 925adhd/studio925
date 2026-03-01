@@ -72,7 +72,8 @@ export default function Pricing() {
     <section id="pricing" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-4">Invest in a website <span className="italic text-brand-accent">that works for you.</span></h2>
+          <h2 className="text-4xl md:text-5xl mb-4">Every serious local business needs a website <span className="italic text-brand-accent">that works.</span></h2>
+          <p className="text-brand-primary/50 text-lg mt-3">Custom-built. Fixed pricing. No surprises.</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-14 lg:gap-8">

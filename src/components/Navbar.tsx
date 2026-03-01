@@ -20,7 +20,7 @@ export default function Navbar() {
           <a href="/#process" className="text-sm font-medium hover:text-brand-accent transition-colors">Process</a>
           <a href="/#pricing" className="text-sm font-medium hover:text-brand-accent transition-colors">Pricing</a>
           <a href="/#contact" className="bg-brand-primary text-white px-5 py-2 rounded-xl text-sm font-medium flex items-center gap-2 hover:bg-brand-primary/90 transition-all">
-            Start My Website <ArrowRight size={16} />
+            Build My Website <ArrowRight size={16} />
           </a>
         </div>
 
@@ -42,7 +42,7 @@ export default function Navbar() {
             <a href="/#process" onClick={() => setIsOpen(false)} className="text-lg font-medium">Process</a>
             <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-lg font-medium">Pricing</a>
             <a href="/#contact" onClick={() => setIsOpen(false)} className="bg-brand-primary text-white w-full py-4 rounded-xl font-medium text-center">
-              Start My Website
+              Build My Website
             </a>
           </div>
         </motion.div>

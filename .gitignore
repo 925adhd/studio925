@@ -3,8 +3,6 @@ build/
 dist/
 coverage/
 .DS_Store
-desktop.ini
 *.log
 .env*
 !.env.example
-.claude/

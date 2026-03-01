@@ -60,7 +60,10 @@ export default function LocalSection() {
               I work with contractors, service providers, retailers, restaurants, and anyone building something worth sharing. Local businesses don't need flashy tech for its own sake. They need websites that are clear, easy to use, and structured properly so customers can find and trust your business.
             </p>
             <p>
-              Whether you're in Leitchfield, Caneyville, Clarkson, or anywhere nearby, Studio 925 builds websites designed to support real, working businesses.
+              Whether you're in Leitchfield, Caneyville, Clarkson, or anywhere nearby, Studio 925 builds websites designed specifically for real, working Kentucky businesses.
+            </p>
+            <p>
+              When you work with Studio 925, you're working directly with the person building your site. No agencies. No outsourcing. No middlemen. If needed, we can sit down and talk through your goals in person. That level of access and accountability is hard to find online.
             </p>
           </div>
 

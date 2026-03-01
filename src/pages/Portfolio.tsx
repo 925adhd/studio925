@@ -128,11 +128,11 @@ export default function Portfolio() {
               >
                 {project.image && (
                   <div className="bg-brand-primary/5 p-3 md:p-6">
-                    <div className="h-48 rounded-xl overflow-hidden shadow-md shadow-brand-primary/10">
+                    <div className="h-56 rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 bg-white flex items-center justify-center">
                       <img
                         src={project.image}
                         alt={`${project.title} screenshot`}
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-contain object-center"
                       />
                     </div>
                   </div>
