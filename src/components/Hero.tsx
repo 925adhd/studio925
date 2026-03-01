@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative pt-28 md:pt-32 pb-14 md:pb-20 px-6 overflow-hidden">
+    <section className="relative pt-24 md:pt-32 pb-14 md:pb-20 px-6 overflow-hidden">
       <div className="absolute inset-0 grid-pattern -z-10" />
 
       <div className="max-w-4xl mx-auto text-center">
