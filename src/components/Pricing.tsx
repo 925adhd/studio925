@@ -52,14 +52,14 @@ const tiers = [
     description: "Built for businesses ready to sell online or offer secure member access.",
     features: [
       "Everything in Growth, plus:",
-      "Shopping Cart & Stripe Checkout Integration",
-      "Secure User Accounts & Login System",
-      "Supabase Auth Setup",
-      "Structured Database for Orders or Member Data",
-      "Simple Admin Dashboard for Managing Customers",
+      "Online Store with Secure Checkout",
+      "Secure Customer Accounts & Login System",
+      "Customer Dashboard & Order Management",
+      "Structured System for Orders or Member Data",
+      "Admin Dashboard to Manage Customers",
       "Automated Email Confirmations",
-      "Performance Optimization",
-      "Full Launch Setup & 30 Days Post-Launch Support"
+      "Performance & Security Optimization",
+      "Full Launch Setup + 60 Days Guided Support"
     ],
     bestFor: "Best for businesses ready to accept payments, offer memberships, or add secure account functionality to their website.",
     cta: "Start This Plan",
@@ -73,7 +73,7 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl mb-4">Every serious local business needs a website <span className="italic text-brand-accent">that works.</span></h2>
-          <p className="text-brand-primary/50 text-lg mt-3">Custom-built. Fixed pricing. No surprises.</p>
+          <p className="text-brand-primary/50 text-lg mt-3">Custom-built. Clear pricing. No surprises.</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-14 lg:gap-8">
@@ -142,6 +142,9 @@ export default function Pricing() {
 
         <p className="text-center text-sm text-brand-primary/50 mt-16">
           Projects begin with a 50% deposit. The remaining balance is due at launch.
+        </p>
+        <p className="text-center text-sm text-brand-primary/40 mt-3">
+          Platform costs (hosting and payment processing) are separate. All third-party accounts are set up in your name, and you retain full ownership.
         </p>
       </div>
     </section>
