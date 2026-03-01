@@ -37,12 +37,12 @@ export default function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           className="absolute top-full left-0 right-0 bg-brand-warm border-b border-brand-primary/5 shadow-lg p-6 md:hidden"
         >
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-5 items-start">
             <a href="/#services" onClick={() => setIsOpen(false)} className="text-lg font-medium">Services</a>
             <a href="/#process" onClick={() => setIsOpen(false)} className="text-lg font-medium">Process</a>
             <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-lg font-medium">Pricing</a>
-            <a href="/#contact" onClick={() => setIsOpen(false)} className="bg-brand-primary text-white px-6 py-2.5 rounded-xl font-medium text-base self-start">
-              Contact Me
+            <a href="/#contact" onClick={() => setIsOpen(false)} className="bg-brand-primary text-white px-4 py-2.5 rounded-xl font-medium text-base mt-1">
+              Contact
             </a>
           </div>
         </motion.div>
