@@ -22,7 +22,7 @@ const tiers = [
       "Full Ownership of Files"
     ],
     bestFor: "Best for businesses that need a solid, trustworthy online presence without the extras.",
-    cta: "Build My Website",
+    cta: "Start This Plan",
     featured: false
   },
   {
@@ -43,7 +43,7 @@ const tiers = [
       "Basic Legal Pages Included (Privacy Policy, Terms, Cookie Notice as needed)"
     ],
     bestFor: "Best for businesses ready to expand their online presence and see what's actually working.",
-    cta: "Build My Website",
+    cta: "Start This Plan",
     featured: true
   },
   {
@@ -62,7 +62,7 @@ const tiers = [
       "Full Launch Setup & 30 Days Post-Launch Support"
     ],
     bestFor: "Best for businesses ready to accept payments, offer memberships, or add secure account functionality to their website.",
-    cta: "Build My Website",
+    cta: "Start This Plan",
     featured: false
   }
 ];
@@ -123,11 +123,16 @@ export default function Pricing() {
                 )}
               </ul>
 
-              <button className={`w-full py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all ${
-                tier.featured
-                  ? 'bg-brand-accent text-white hover:bg-brand-accent/90'
-                  : 'bg-brand-primary text-white hover:bg-brand-primary/90'
-              }`}>
+              <button
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent('planSelected', { detail: tier.name }));
+                  window.location.href = '/#contact';
+                }}
+                className={`w-full py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all ${
+                  tier.featured
+                    ? 'bg-brand-accent text-white hover:bg-brand-accent/90'
+                    : 'bg-brand-primary text-white hover:bg-brand-primary/90'
+                }`}>
                 {tier.cta} <ArrowRight size={18} />
               </button>
             </motion.div>
