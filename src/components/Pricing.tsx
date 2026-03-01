@@ -1,0 +1,143 @@
+import { motion } from 'motion/react';
+import { Check, ArrowRight } from 'lucide-react';
+
+const tiers = [
+  {
+    name: "Foundation",
+    price: "1,200",
+    description: "A clean, professional website that makes your business look credible and easy to contact.",
+    features: [
+      "48-Hour Rough Draft to Review",
+      "Up to 3 Core Pages (typically Home, About, and Contact or Services)",
+      "Fully Mobile Responsive",
+      "Custom Homepage Layout",
+      "Simple Logo Creation or Cleanup (if needed)",
+      "Contact / Inquiry Form",
+      "Web Address Connection & Secure Setup",
+      "Submit Your Site to Google",
+      "Favicon Setup",
+      "Speed Optimization",
+      "1 Round of Revisions",
+      "Complete Launch & Deployment",
+      "Full Ownership of Files"
+    ],
+    bestFor: "Best for businesses that need a solid, trustworthy online presence without the extras.",
+    cta: "Build My Website",
+    featured: false
+  },
+  {
+    name: "Growth",
+    price: "2,400",
+    description: "Built to help you attract more customers, build trust faster, and turn visitors into real leads.",
+    features: [
+      "Everything in Foundation, plus:",
+      "Up to 6 Core Pages",
+      "Separate Pages for Your Main Services",
+      "Structured Layout Designed to Encourage Calls & Inquiries",
+      "Blog or Content Management System",
+      "Google Analytics & Search Console Setup",
+      "Basic Analytics & Form Tracking Setup",
+      "Custom Lead Capture Forms",
+      "2 Rounds of Revisions",
+      "30 Days Post-Launch Support",
+      "Basic Legal Pages Included (Privacy Policy, Terms, Cookie Notice as needed)"
+    ],
+    bestFor: "Best for businesses ready to expand their online presence and see what's actually working.",
+    cta: "Build My Website",
+    featured: true
+  },
+  {
+    name: "Membership & Payments",
+    price: "3,200",
+    description: "Built for businesses ready to sell online or offer secure member access.",
+    features: [
+      "Everything in Growth, plus:",
+      "Shopping Cart & Stripe Checkout Integration",
+      "Secure User Accounts & Login System",
+      "Supabase Auth Setup",
+      "Structured Database for Orders or Member Data",
+      "Simple Admin Dashboard for Managing Customers",
+      "Automated Email Confirmations",
+      "Performance Optimization",
+      "Full Launch Setup & 30 Days Post-Launch Support"
+    ],
+    bestFor: "Best for businesses ready to accept payments, offer memberships, or add secure account functionality to their website.",
+    cta: "Build My Website",
+    featured: false
+  }
+];
+
+export default function Pricing() {
+  return (
+    <section id="pricing" className="py-24 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl mb-4">Invest in a website <span className="italic text-brand-accent">that pays you back.</span></h2>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-14 lg:gap-8">
+          {tiers.map((tier, index) => (
+            <motion.div
+              key={tier.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className={`relative p-8 rounded-[2.5rem] border flex flex-col ${
+                tier.featured
+                  ? 'bg-brand-primary text-white border-brand-primary shadow-2xl lg:scale-105 z-10'
+                  : 'bg-white border-brand-primary/5'
+              }`}
+            >
+              {tier.featured && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                  Most Popular
+                </div>
+              )}
+
+              <div className="mb-8">
+                <h3 className={`text-2xl mb-2 ${tier.featured ? 'text-white' : 'text-brand-primary'}`}>{tier.name}</h3>
+                <div className="flex items-baseline gap-3 mb-7">
+                  <span className="text-sm font-medium opacity-60">Starts at</span>
+                  <span className="text-4xl font-serif font-bold italic">
+                    {tier.price === 'Custom' ? '' : '$'}{tier.price}
+                  </span>
+                </div>
+                <p className={`text-sm ${tier.featured ? 'text-white/70' : 'text-brand-primary/60'}`}>
+                  {tier.description}
+                </p>
+              </div>
+
+              <ul className="space-y-3 mb-8 flex-1">
+                {tier.features.map((feature) =>
+                  feature.endsWith('plus:') ? (
+                    <li key={feature} className={`text-xs font-bold uppercase tracking-widest pt-1 ${tier.featured ? 'text-white/40' : 'text-brand-primary/30'}`}>
+                      {feature}
+                    </li>
+                  ) : (
+                    <li key={feature} className="flex items-start gap-3 text-sm">
+                      <Check size={16} className="text-brand-accent mt-0.5 shrink-0" />
+                      <span className={tier.featured ? 'text-white/90' : 'text-brand-primary/80'}>{feature}</span>
+                    </li>
+                  )
+                )}
+              </ul>
+
+              <button className={`w-full py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all ${
+                tier.featured
+                  ? 'bg-brand-accent text-white hover:bg-brand-accent/90'
+                  : 'bg-brand-primary text-white hover:bg-brand-primary/90'
+              }`}>
+                {tier.cta} <ArrowRight size={18} />
+              </button>
+            </motion.div>
+          ))}
+        </div>
+
+        <p className="text-center text-sm text-brand-primary/50 mt-16">
+          Projects begin with a 50% deposit. The remaining balance is due at launch.
+        </p>
+      </div>
+    </section>
+  );
+}
