@@ -72,7 +72,7 @@ export default function Pricing() {
     <section id="pricing" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-4">Invest in a website <span className="italic text-brand-accent">that pays you back.</span></h2>
+          <h2 className="text-4xl md:text-5xl mb-4">Invest in a website <span className="italic text-brand-accent">that works for you.</span></h2>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-14 lg:gap-8">

@@ -42,7 +42,7 @@ const features = [
   'Mobile-first design',
   'SEO-friendly structure',
   'Fast performance',
-  'Clear user journeys',
+  'Clear Calls to Action',
   'Secure deployment',
 ];
 

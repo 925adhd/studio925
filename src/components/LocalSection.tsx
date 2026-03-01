@@ -49,18 +49,18 @@ export default function LocalSection() {
           <p className="text-xs font-medium tracking-widest uppercase text-brand-primary/40 mb-3">Behind the work</p>
 
           <h2 className="text-4xl md:text-5xl mb-6">
-            Local designer. <span className="italic text-brand-accent">Real results.</span>
+            Local designer. <span className="italic text-brand-accent">Websites that work.</span>
           </h2>
 
           <div className="space-y-4 text-brand-primary/70 text-lg leading-relaxed">
             <p>
-              I'm a Grayson County-based web designer who works directly with small business owners. No agencies, no hand-offs. Just focused, honest work that helps your business get found and grow.
+              I'm a Grayson County–based web designer who works directly with small business owners. No agencies. No hand-offs. Just focused, honest work that helps your business get found and present itself professionally online.
             </p>
             <p>
-              We work with contractors, service providers, retailers, restaurants, and anyone building something worth sharing. Grayson County businesses don't need flashy tech for its own sake. They need websites that are clear, easy to use, and show up when customers are searching.
+              I work with contractors, service providers, retailers, restaurants, and anyone building something worth sharing. Local businesses don't need flashy tech for its own sake. They need websites that are clear, easy to use, and structured properly so customers can find and trust your business.
             </p>
             <p>
-              Whether you're in Leitchfield, Caneyville, Clarkson, or anywhere in the surrounding area, Studio 925 can help your business get found online and convert visitors into customers.
+              Whether you're in Leitchfield, Caneyville, Clarkson, or anywhere nearby, Studio 925 builds websites designed to support real, working businesses.
             </p>
           </div>
 
