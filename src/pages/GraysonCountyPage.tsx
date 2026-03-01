@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
 import { ArrowRight, Check, MapPin } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -37,7 +36,7 @@ export default function GraysonCountyPage() {
               Web Design Services in <span className="italic text-brand-accent">Grayson County, Kentucky</span>
             </h1>
             <p className="text-xl text-brand-primary/70 max-w-2xl leading-relaxed">
-              Professional website design built specifically for local service providers, contractors, and small businesses in Grayson County and the surrounding Kentucky communities.
+              Custom website design built for local service providers, contractors, and small businesses in Grayson County, Leitchfield, and the surrounding Kentucky communities.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
@@ -107,7 +106,10 @@ export default function GraysonCountyPage() {
               When someone in Leitchfield searches for a plumber, a contractor, or a place to eat, they're going to Google first. If your business doesn't have a website, or has one that looks outdated, they're going to call someone else.
             </p>
             <p>
-              A professionally built website signals trust. It tells potential customers that you're serious about your business, that you're easy to contact, and that you're the right choice. That matters in a small community where reputation is everything.
+              A well-built website signals trust. It tells potential customers that you're serious about your business, that you're easy to contact, and that you're the right choice. That matters in a small community where reputation is everything.
+            </p>
+            <p>
+              In Grayson County, word travels fast. Your website should reinforce your reputation, not weaken it.
             </p>
             <p>
               Beyond appearance, a well-built website performs. Fast load times, clear navigation, and strong calls to action turn visitors into inquiries. That's the difference between a site that just exists and one that actively grows your business.
@@ -119,7 +121,7 @@ export default function GraysonCountyPage() {
         <section className="max-w-4xl mx-auto mb-24">
           <h2 className="text-3xl md:text-4xl mb-6">Pricing overview</h2>
           <p className="text-brand-primary/70 text-lg leading-relaxed mb-8">
-            Website projects start at <strong>$1,200</strong> for a clean, professional Foundation site and scale based on your needs, whether that's expanded service pages, content systems, or secure payments. Every project includes full ownership of your files and a complete launch.
+            Website projects start at <strong>$1,200</strong> for a clean, professional Foundation site and scale into Growth or Membership plans depending on your needs — whether that's expanded service pages, content systems, or secure payments. Every project includes full ownership of your files and a complete launch.
           </p>
           <a
             href="/#pricing"
@@ -139,7 +141,7 @@ export default function GraysonCountyPage() {
             href="/#contact"
             className="inline-flex items-center gap-2 bg-brand-accent text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-accent/90 transition-colors"
           >
-            Start My Website <ArrowRight size={20} />
+            Book My Free Consultation <ArrowRight size={20} />
           </a>
         </section>
 

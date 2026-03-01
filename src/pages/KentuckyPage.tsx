@@ -1,12 +1,11 @@
 import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const reasons = [
   'Most customers search online before calling any business',
-  'A professional site builds immediate credibility and trust',
+  'A well-built site builds immediate credibility and trust',
   'Well-built sites appear in local Google searches',
   'Clear calls to action convert visitors into real leads',
   'Mobile-responsive design reaches customers on every device',
@@ -31,7 +30,7 @@ export default function KentuckyPage() {
               Small Business Website Design in <span className="italic text-brand-accent">Kentucky</span>
             </h1>
             <p className="text-xl text-brand-primary/70 max-w-2xl leading-relaxed">
-              Studio 925 builds professional websites for small businesses across Kentucky, from Grayson County to Louisville and everywhere in between. Modern, fast, and built to help your business grow.
+              Studio 925 builds custom websites for small businesses across Kentucky — from Grayson County to Louisville and everywhere in between. Fast, strategic, and built around your specific customers.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <a
@@ -58,10 +57,13 @@ export default function KentuckyPage() {
               Running a small business in Kentucky comes with its own challenges: tight margins, strong local competition, and customers who already know their neighbors. Your website needs to do more than look nice. It needs to make you easy to find, easy to contact, and easy to trust.
             </p>
             <p>
-              I specialize in website design for small businesses across Kentucky. I build sites that are straightforward, fast, and built around your specific customers. Not generic templates that look like everyone else.
+              You get a website that's fast, clear, and built around your specific customers — not a generic template that looks like everyone else.
             </p>
             <p>
               Whether you're a solo operator in a small county or a growing business in a larger market, the principles are the same: clear messaging, strong design, and a site that actually performs.
+            </p>
+            <p>
+              Based in Grayson County, I work directly with business owners — no outsourcing, no middle layers.
             </p>
           </div>
         </section>
@@ -77,6 +79,9 @@ export default function KentuckyPage() {
               </li>
             ))}
           </ul>
+          <p className="mt-8 text-brand-primary/70 text-lg leading-relaxed">
+            The goal isn't just a website. It's more calls, more inquiries, and more booked work.
+          </p>
         </section>
 
         {/* What We Build */}
@@ -104,7 +109,10 @@ export default function KentuckyPage() {
         <section className="max-w-4xl mx-auto mb-24">
           <h2 className="text-3xl md:text-4xl mb-6">Serving local businesses across Kentucky</h2>
           <p className="text-brand-primary/70 text-lg leading-relaxed mb-6">
-            I'm based in Grayson County and work with businesses across Western and Central Kentucky. If you're looking for a local web designer who understands small business and not a large agency that treats you like a number, let's talk.
+            Whether you're in Louisville, Bowling Green, Elizabethtown, or a small rural county — the goal is the same: a website that makes your business easy to find, easy to trust, and easy to contact.
+          </p>
+          <p className="text-brand-primary/70 text-lg leading-relaxed">
+            I'm based in Grayson County and work directly with business owners across Western and Central Kentucky. No agency overhead. No outsourcing. Just focused work on your site.
           </p>
         </section>
 
@@ -118,7 +126,7 @@ export default function KentuckyPage() {
             href="/#contact"
             className="inline-flex items-center gap-2 bg-brand-accent text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-accent/90 transition-colors"
           >
-            Start My Website <ArrowRight size={20} />
+            Book My Free Consultation <ArrowRight size={20} />
           </a>
         </section>
 
