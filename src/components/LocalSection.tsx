@@ -54,16 +54,24 @@ export default function LocalSection() {
 
           <div className="space-y-4 text-brand-primary/70 text-lg leading-relaxed">
             <p>
-              I'm a Grayson County–based web designer who works directly with small business owners. No agencies. No hand-offs. Just focused, honest work that helps your business get found and present itself professionally online.
+              I'm a Grayson County–based web designer who works directly with small business owners. When you hire Studio 925, you're working with the person building your site.
             </p>
             <p>
-              I work with contractors, service providers, retailers, restaurants, and anyone building something worth sharing. Local businesses don't need flashy tech for its own sake. They need websites that are clear, easy to use, and structured properly so customers can find and trust your business.
+              No agencies. No outsourcing. No middlemen.
             </p>
             <p>
-              Whether you're in Leitchfield, Caneyville, Clarkson, or anywhere nearby, Studio 925 builds websites designed specifically for real, working Kentucky businesses.
+              Just clear, focused work that helps your business get found and look professional online. If needed, we can sit down and talk through your goals in person.
+            </p>
+            <p className="text-brand-primary/90 font-medium">
+              That kind of access is rare.
             </p>
             <p>
-              When you work with Studio 925, you're working directly with the person building your site. No agencies. No outsourcing. No middlemen. If needed, we can sit down and talk through your goals in person. That level of access and accountability is hard to find online.
+              Local businesses don't need flashy tech.<br />
+              They need results.<br />
+              Clear. Easy to use. Built to be found. Built to be trusted.
+            </p>
+            <p className="text-brand-primary/90 font-medium">
+              Built for local businesses serious about growth.
             </p>
           </div>
 

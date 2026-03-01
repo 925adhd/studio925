@@ -48,15 +48,14 @@ function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl mb-4">How I build websites <span className="italic text-brand-accent">that work.</span></h2>
-
             </div>
 
             <div className="grid md:grid-cols-4 gap-10">
               {[
-                { step: "01", title: "Discovery", desc: "You get clarity on your goals, your customers, and the direction your site needs to take. No tech talk." },
-                { step: "02", title: "Strategy", desc: "Your site is structured to guide visitors toward action. Not just look good." },
-                { step: "03", title: "Build", desc: "Your site is built fast, secure, and mobile-ready. Nothing generic. Built specifically for your business." },
-                { step: "04", title: "Launch", desc: "You launch with confidence and know exactly how to manage it. Your online presence finally works for you." }
+                { step: "01", title: "Discovery", desc: "We clarify your goals, customers, and what success looks like — together. You'll know exactly what we're building and why before anything begins." },
+                { step: "02", title: "Strategy", desc: "I map out the structure and user flow for your site based on your goals and your customers. You review and approve the plan before we move forward." },
+                { step: "03", title: "Build", desc: "Your website is built from scratch — not from a template — section by section. You'll see progress and receive a private preview before anything goes live." },
+                { step: "04", title: "Launch", desc: "Once everything is finalized and approved, we launch with confidence. You'll know exactly how your site works and what to expect moving forward." }
               ].map((item, i) => (
                 <div key={i} className="relative p-10 glass rounded-3xl">
                   <span className="text-5xl font-serif font-bold italic text-brand-accent/20 absolute top-4 right-6">{item.step}</span>
@@ -65,6 +64,10 @@ function HomePage() {
                 </div>
               ))}
             </div>
+
+            <p className="text-center text-sm text-brand-primary/50 mt-12 max-w-xl mx-auto leading-relaxed">
+              You'll never wonder what's happening with your project. Clear milestones. Regular updates. Direct communication from start to finish.
+            </p>
           </div>
         </section>
 
