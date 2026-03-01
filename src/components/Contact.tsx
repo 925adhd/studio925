@@ -1,11 +1,12 @@
 import { motion } from 'motion/react';
-import { Mail, ArrowUpRight } from 'lucide-react';
+import { Mail, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const plans = ['Foundation', 'Growth', 'Membership & Payments', 'Not Sure Yet'];
 
 export default function Contact() {
   const [selectedPlan, setSelectedPlan] = useState('Not Sure Yet');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     const handlePlanSelected = (e: Event) => {
@@ -14,6 +15,30 @@ export default function Contact() {
     window.addEventListener('planSelected', handlePlanSelected);
     return () => window.removeEventListener('planSelected', handlePlanSelected);
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('sending');
+    const formData = new FormData(e.currentTarget);
+    formData.append('access_key', 'c6f8a1a3-cfa8-4688-8f3b-73e2f5a64182');
+    formData.append('subject', 'New Studio 925 Website Inquiry');
+    formData.append('from_name', 'Studio 925 – New Lead');
+    formData.append('replyto', formData.get('Email') as string);
+
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData,
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      setStatus('success');
+      (e.target as HTMLFormElement).reset();
+      setSelectedPlan('Not Sure Yet');
+    } else {
+      setStatus('error');
+    }
+  };
 
   return (
     <section id="contact" className="scroll-mt-16 pt-10 pb-24 md:py-36 px-6 bg-brand-primary text-white overflow-hidden relative">
@@ -49,15 +74,24 @@ export default function Contact() {
             viewport={{ once: true }}
             className="bg-white text-brand-primary p-6 md:p-8 rounded-[2rem] shadow-xl"
           >
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            {status === 'success' ? (
+              <div className="flex flex-col items-center justify-center py-10 text-center">
+                <div className="w-14 h-14 rounded-full bg-brand-accent/10 flex items-center justify-center mb-5">
+                  <CheckCircle2 size={26} className="text-brand-accent" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">You're all set!</h3>
+                <p className="text-brand-primary/60">I'll review your details and be in touch shortly.</p>
+              </div>
+            ) : (
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider opacity-50">Name</label>
-                  <input type="text" className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors" placeholder="John Doe" />
+                  <input required name="Name" type="text" className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors" placeholder="John Doe" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider opacity-50">Email</label>
-                  <input type="email" className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors" placeholder="john@example.com" />
+                  <input required name="Email" type="email" className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors" placeholder="john@example.com" />
                 </div>
               </div>
               <div className="space-y-2">
@@ -83,11 +117,11 @@ export default function Contact() {
                     </button>
                   ))}
                 </div>
-                <input type="hidden" name="plan" value={selectedPlan} />
+                <input type="hidden" name="Plan" value={selectedPlan} />
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wider opacity-50">Business Type</label>
-                <select className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors bg-white">
+                <select name="Business Type" className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors bg-white">
                   <option>Local Service Provider</option>
                   <option>Small Business</option>
                   <option>Community Platform</option>
@@ -96,12 +130,20 @@ export default function Contact() {
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wider opacity-50">Project Details</label>
-                <textarea rows={3} className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors text-base" placeholder="Tell me about your business and what you need..."></textarea>
+                <textarea name="Project Details" rows={3} className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors text-base" placeholder="Tell me about your business or organization and what you're looking to create."></textarea>
               </div>
-              <button className="w-full bg-brand-primary text-white py-3 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-brand-primary/90 transition-all group">
-                Start My Website <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              {status === 'error' && (
+                <p className="text-red-500 text-sm">Something went wrong. Please try again or email me directly.</p>
+              )}
+              <button
+                type="submit"
+                disabled={status === 'sending'}
+                className="w-full bg-brand-primary text-white py-3 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-brand-primary/90 transition-all group disabled:opacity-60"
+              >
+                {status === 'sending' ? 'Sending...' : <>Start My Website <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></>}
               </button>
             </form>
+            )}
           </motion.div>
         </div>
       </div>

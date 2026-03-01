@@ -15,6 +15,7 @@ import ScrollToTop from './components/ScrollToTop';
 import GraysonCountyPage from './pages/GraysonCountyPage';
 import KentuckyPage from './pages/KentuckyPage';
 import Portfolio from './pages/Portfolio';
+import ThankYou from './pages/ThankYou';
 import { motion, useScroll, useSpring } from 'motion/react';
 
 function HomePage() {
@@ -98,6 +99,7 @@ export default function App() {
         <Route path="/web-design-grayson-county-ky" element={<GraysonCountyPage />} />
         <Route path="/small-business-website-design-kentucky" element={<KentuckyPage />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/thank-you" element={<ThankYou />} />
       </Routes>
     </>
   );
