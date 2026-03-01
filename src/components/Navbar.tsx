@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../logo.png';
+const logo = '/logo.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

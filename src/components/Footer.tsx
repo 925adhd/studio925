@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LegalModal, { LegalType } from './LegalModal';
-import logo from '../../logo.png';
+const logo = '/logo.png';
 
 export default function Footer() {
   const [legal, setLegal] = useState<LegalType>(null);
