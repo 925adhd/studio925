@@ -32,7 +32,7 @@ export default function LocalSection() {
         className="county-bg"
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-5xl mx-auto grid md:grid-cols-2 gap-5 md:gap-12 items-center">
 
         {/* Text content */}
         <motion.div
@@ -42,7 +42,7 @@ export default function LocalSection() {
           transition={{ duration: 0.6 }}
           className="order-2 md:order-1"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-md bg-brand-primary text-white text-xs font-medium mb-6">
+          <div className="hidden md:inline-flex items-center gap-1.5 px-3 py-0.5 rounded-md bg-brand-primary/10 text-brand-primary/60 text-xs font-medium mb-6">
             <MapPin size={12} className="shrink-0" /> Grayson County, KY
           </div>
 
@@ -91,13 +91,20 @@ export default function LocalSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="flex justify-center order-1 md:order-2"
+          className="flex flex-col items-center order-1 md:order-2"
         >
           <img
             src="/me.png"
             alt="Studio 925 — local web designer in Grayson County, KY"
             className="w-64 md:w-full max-w-xs object-cover rounded-3xl shadow-xl shadow-brand-primary/10"
           />
+          <div className="mt-4 text-center">
+            <div className="md:hidden inline-flex items-center gap-1.5 px-3 py-0.5 rounded-md bg-brand-primary text-white text-xs font-medium mb-4">
+              <MapPin size={12} className="shrink-0" /> Grayson County, KY
+            </div>
+            <span className="block text-xs font-normal text-brand-primary/75">Kara Gibson</span>
+            <span className="block text-xs font-normal text-brand-primary/40 mt-0.5">Founder, Studio 925</span>
+          </div>
         </motion.div>
 
       </div>
