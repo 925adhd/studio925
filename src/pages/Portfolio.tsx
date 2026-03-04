@@ -4,21 +4,22 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const featured = {
-  title: '925 ADHD',
-  tag: 'SaaS Platform',
+  title: 'Townly',
+  tag: 'Community Platform',
   description:
-    'A platform built to help ADHD individuals find flexible remote work opportunities. Designed around how ADHD minds actually work — with a clean interface, gated resource library, integrated blog, and Stripe-powered subscription model. Built for clarity, usability, and scalable growth.',
-  href: 'https://925adhd.com',
+    'Community-focused platform built to connect local residents through alerts, reviews, and shared resources. Designed around how neighbors actually communicate — with a clean interface, neighborhood-level targeting, and a structure built for long-term expansion.',
+  href: 'https://townly.us',
+  image: '/townly.png',
 };
 
 const projects = [
   {
-    title: 'Townly',
+    title: '925 ADHD',
     description:
-      'Community-focused platform built to connect local residents through alerts, reviews, and shared resources. Structured for long-term expansion.',
-    href: 'https://townly.us',
-    tag: 'Community Platform',
-    image: '/townly.png',
+      'A platform built to help ADHD individuals find flexible remote work opportunities. Designed around how ADHD minds actually work — with a clean interface, gated resource library, integrated blog, and Stripe-powered subscription model.',
+    href: 'https://925adhd.com',
+    tag: 'SaaS Platform',
+    image: '/925adhd.png',
   },
   {
     title: 'Four Chariots',
@@ -85,8 +86,8 @@ export default function Portfolio() {
             <div className="bg-brand-primary/5 p-3 md:p-8 md:flex md:items-center md:justify-center md:min-h-[360px]">
               <div className="h-48 md:h-auto rounded-xl md:rounded-2xl overflow-hidden shadow-md md:shadow-lg shadow-brand-primary/10">
                 <img
-                  src="/925adhd.png"
-                  alt="925 ADHD platform screenshot"
+                  src={featured.image}
+                  alt={`${featured.title} screenshot`}
                   className="w-full h-full object-cover object-top"
                 />
               </div>
