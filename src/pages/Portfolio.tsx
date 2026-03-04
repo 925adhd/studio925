@@ -16,7 +16,7 @@ const projects = [
     title: 'Townly',
     description:
       'Community-focused platform built to connect local residents through alerts, reviews, and shared resources. Structured for long-term expansion.',
-    href: null,
+    href: 'https://townly.us',
     tag: 'Community Platform',
     image: '/townly.png',
   },
