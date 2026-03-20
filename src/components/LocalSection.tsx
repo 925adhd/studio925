@@ -48,11 +48,14 @@ export default function LocalSection() {
 
           <p className="text-xs font-medium tracking-widest uppercase text-brand-primary/40 mb-3">Behind the work</p>
 
-          <h2 className="text-4xl md:text-5xl mb-6">
+          <h2 className="text-4xl md:text-5xl mb-3">
             Local designer. <span className="italic text-brand-accent">Websites that work.</span>
           </h2>
+          <p className="text-sm text-brand-primary/50 mb-6">
+            Based in Kentucky. Built for local businesses.
+          </p>
 
-          <div className="space-y-4 text-brand-primary/70 text-lg leading-relaxed">
+          <div className="space-y-3.5 text-brand-primary/70 text-lg leading-relaxed">
             <p>
               I'm a Grayson County–based web designer who works directly with small business owners. When you hire Studio 925, you're working with the person building your site.
             </p>
@@ -60,7 +63,7 @@ export default function LocalSection() {
               No agencies. No outsourcing. No middlemen.
             </p>
             <p>
-              Just clear, focused work that helps your business get found and look professional online. If needed, we can sit down and talk through your goals in person.
+              Clear, focused work that helps your business get found and look professional online. If needed, we can talk through your goals in person.
             </p>
             <p className="text-brand-primary/90 font-medium">
               That kind of access is rare.
@@ -75,7 +78,11 @@ export default function LocalSection() {
             </p>
           </div>
 
-          <div className="mt-8">
+          <p className="text-brand-primary/90 font-semibold text-lg mt-5">
+            You're not getting a template. You're getting something built for your business.
+          </p>
+
+          <div className="mt-6">
             <a
               href="/#pricing"
               className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-semibold hover:scale-[1.02] transition-transform"

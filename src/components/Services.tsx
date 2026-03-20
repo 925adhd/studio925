@@ -3,17 +3,17 @@ import { Layout, Zap, ShieldCheck, Search, Smartphone, Globe } from 'lucide-reac
 
 const services = [
   {
-    title: "Custom-Built Website",
-    description: "Not a cookie-cutter template. Not a theme swap. Built specifically for your business so it looks right, says the right things, and works the way you need it to.",
+    title: "No templates. Built for your business.",
+    description: "Not a theme swap. Built specifically for your business so it looks right, says the right things, and works the way you need it to.",
     icon: Layout,
   },
   {
-    title: "Built to Show Up When Customers Search",
-    description: "Your site is structured so search engines understand exactly what you do and where you do it, which means more people find your business when they're actively looking for your services.",
+    title: "Show up when customers are looking",
+    description: "Your site is structured so search engines understand what you do and where you do it — so more people find you when they're actively looking.",
     icon: Search,
   },
   {
-    title: "Designed for the Way People Actually Browse",
+    title: "Built for how people actually use their phones",
     description: "Most customers decide on their phone before they ever call. Your site will look sharp and load fast on every screen. Period.",
     icon: Smartphone,
   },
@@ -38,14 +38,14 @@ export default function Services() {
   return (
     <section id="services" className="pt-20 pb-14 md:py-32 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-12 max-w-2xl">
+        <div className="mb-10 max-w-2xl">
           <h2 className="text-4xl md:text-5xl mb-4">Your website should be <br /><span className="text-brand-accent italic">working for you right now.</span></h2>
           <p className="text-lg text-brand-primary/60">
             Here's what's included in your website.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

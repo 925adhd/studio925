@@ -22,13 +22,17 @@ export default function Hero() {
             You deserve a website that <span className="italic text-brand-accent">works as hard as you do.</span>
           </h2>
 
-          <p className="text-[17px] md:text-xl text-brand-primary/70 mb-10 md:mb-8 max-w-2xl leading-[1.75] md:leading-relaxed mx-auto">
+          <p className="text-[17px] md:text-xl text-brand-primary/70 mb-4 md:mb-4 max-w-2xl leading-[1.75] md:leading-relaxed mx-auto">
             Studio 925 builds custom websites for local businesses in Grayson County that need more calls, more leads, and real growth. Built locally. Built personally. No outsourcing. No templates.<span className="hidden sm:inline"> Just focused, strategic work that helps your business get found and convert.</span>
           </p>
 
+          <p className="text-sm text-brand-primary/45 mb-10 md:mb-8">
+            Most websites just sit there. This one is built to bring you customers.
+          </p>
+
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-4 justify-center">
-            <a href="/#contact" className="w-full sm:w-auto bg-brand-primary text-white px-8 py-4 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
-              Build My Website <ArrowRight size={20} />
+            <a href="/#contact" className="w-full sm:w-auto bg-brand-primary text-white px-9 py-4.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
+              Start My Project <ArrowRight size={20} />
             </a>
             <Link to="/portfolio" className="sm:bg-white sm:border sm:border-brand-primary/10 sm:px-8 sm:py-4 sm:rounded-2xl text-lg font-semibold sm:hover:bg-brand-primary/5 transition-colors text-brand-primary/70 sm:text-brand-primary underline sm:no-underline">
               See My Work
