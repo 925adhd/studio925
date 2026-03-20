@@ -7,8 +7,8 @@ const featured = {
   title: 'Townly',
   tag: 'Community Platform',
   description:
-    'Community-focused platform built to connect local residents through alerts, reviews, and shared resources. Designed around how neighbors actually communicate — with a clean interface, neighborhood-level targeting, and a structure built for long-term expansion.',
-  impact: 'A platform built to organize and power an entire local community.',
+    'A clean, structured platform that replaces scattered posts with something people can actually use.',
+  impact: 'Built to organize and power a local community.',
   bullets: [
     'Helps residents find local businesses faster',
     'Builds neighborhood trust instantly',
@@ -23,8 +23,8 @@ const projects = [
   {
     title: '925 ADHD',
     description:
-      'A platform built to help ADHD individuals find flexible remote work opportunities. Designed around how ADHD minds actually work — with a clean interface, gated resource library, integrated blog, and Stripe-powered subscription model.',
-    impact: 'A system designed to help ADHD individuals earn online with clarity and structure.',
+      'Flexible remote work platform designed around how ADHD minds actually work — with a gated resource library, blog, and Stripe-powered subscriptions.',
+    impact: 'Helps ADHD individuals earn online with clarity and structure.',
     bullets: [
       'Helps users find the right opportunities faster',
       'Builds confidence through clear structure',
@@ -38,8 +38,8 @@ const projects = [
   {
     title: 'Four Chariots',
     description:
-      'E-commerce brand site built to sell apparel with strong visual identity and streamlined purchasing flow.',
-    impact: 'A brand-focused e-commerce experience built for identity and storytelling.',
+      'Apparel brand site with strong visual identity and a streamlined purchasing flow.',
+    impact: 'Brand-focused e-commerce built for identity and storytelling.',
     bullets: [
       'Helps customers find products faster',
       'Builds brand trust instantly',
@@ -52,8 +52,8 @@ const projects = [
   {
     title: 'Studio 925',
     description:
-      "The website you're currently viewing. Built to demonstrate performance, clarity, and modern structure for local service businesses.",
-    impact: 'A conversion-focused website designed to generate real business leads.',
+      'The site you\'re on right now. Built for performance, clarity, and real lead generation.',
+    impact: 'Conversion-focused design that generates real business leads.',
     bullets: [
       'Helps customers find the business faster',
       'Builds trust instantly',
@@ -99,6 +99,9 @@ export default function Portfolio() {
             <p className="text-sm text-brand-primary/50 mt-1">
               Scroll to see how I help businesses grow online.
             </p>
+            <p className="text-sm text-brand-primary/40 mt-3">
+              Most websites just sit there. These are built to actually do something.
+            </p>
           </motion.div>
         </section>
 
@@ -110,9 +113,12 @@ export default function Portfolio() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-3 py-1 rounded-lg bg-brand-accent/10 text-brand-accent text-[11px] font-bold tracking-widest uppercase mb-4">
+            <span className="inline-block px-3 py-1 rounded-lg bg-brand-accent/10 text-brand-accent text-[11px] font-bold tracking-widest uppercase mb-1.5">
               Featured Project
             </span>
+            <p className="text-xs text-brand-primary/50 mb-4">
+              Real product. Real users. Real impact.
+            </p>
 
             <div className="relative grid md:grid-cols-2 overflow-hidden rounded-[2.5rem] border border-brand-primary/10 shadow-lg shadow-brand-primary/10 bg-white">
               {/* Screenshot side */}
@@ -132,13 +138,13 @@ export default function Portfolio() {
                   {featured.tag}
                 </span>
                 <h2 className="text-xl md:text-4xl mb-2 md:mb-3">{featured.title}</h2>
-                <p className="text-brand-primary/70 font-medium text-sm md:text-base mb-3">
+                <p className="text-brand-primary/70 font-medium text-sm md:text-base mb-2">
                   {featured.impact}
                 </p>
-                <p className="text-brand-primary/60 leading-relaxed mb-4 text-sm md:text-[17px]">
+                <p className="text-brand-primary/60 leading-relaxed mb-3 text-sm md:text-[16px]">
                   {featured.description}
                 </p>
-                <ul className="space-y-2 mb-5">
+                <ul className="space-y-1.5 mb-4">
                   {featured.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2 text-brand-primary/60 text-sm">
                       <CheckCircle2 size={16} className="text-brand-accent shrink-0 mt-0.5" />
@@ -150,7 +156,7 @@ export default function Portfolio() {
                   href={featured.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-semibold text-base text-brand-primary hover:text-brand-accent transition-colors self-start group mb-4 max-md:after:content-[''] max-md:after:absolute max-md:after:inset-0"
+                  className="inline-flex items-center gap-2 font-semibold text-base text-brand-accent hover:text-brand-accent/80 transition-colors self-start group mt-1 mb-4 max-md:after:content-[''] max-md:after:absolute max-md:after:inset-0"
                 >
                   View Website
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -163,7 +169,7 @@ export default function Portfolio() {
 
         {/* Secondary Grid */}
         <section className="max-w-6xl mx-auto mb-20">
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-3 gap-4">
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -174,8 +180,8 @@ export default function Portfolio() {
                 className="relative bg-white rounded-3xl border border-brand-primary/10 shadow-sm shadow-brand-primary/5 hover:shadow-md hover:shadow-brand-primary/10 hover:-translate-y-1 transition-all overflow-hidden"
               >
                 {project.image && (
-                  <div className="bg-brand-primary/5 p-3 md:p-5">
-                    <div className="h-48 rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 bg-white flex items-center justify-center">
+                  <div className="bg-brand-primary/5 p-2.5 md:p-4">
+                    <div className="h-44 rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 bg-white flex items-center justify-center">
                       <img
                         src={project.image}
                         alt={`${project.title} screenshot`}
@@ -184,12 +190,12 @@ export default function Portfolio() {
                     </div>
                   </div>
                 )}
-                <div className="p-6">
-                  <span className="inline-block px-3 py-1 rounded-lg bg-brand-primary/5 text-brand-primary/60 text-xs font-medium tracking-wide mb-3">
+                <div className="p-5">
+                  <span className="inline-block px-3 py-1 rounded-lg bg-brand-primary/5 text-brand-primary/60 text-xs font-medium tracking-wide mb-2.5">
                     {project.tag}
                   </span>
                   <h3 className="text-xl font-bold mb-1">{project.title}</h3>
-                  <p className="text-brand-primary/70 font-medium text-sm mb-3">{project.impact}</p>
+                  <p className="text-brand-primary/70 font-medium text-sm mb-2.5">{project.impact}</p>
                   <ul className="space-y-1.5 mb-4">
                     {project.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2 text-brand-primary/60 text-[13px]">
@@ -203,7 +209,7 @@ export default function Portfolio() {
                       href={project.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-primary hover:text-brand-accent transition-colors group max-md:after:content-[''] max-md:after:absolute max-md:after:inset-0"
+                      className="inline-flex items-center gap-2 text-[15px] font-semibold text-brand-accent hover:text-brand-accent/80 transition-colors group mt-1 max-md:after:content-[''] max-md:after:absolute max-md:after:inset-0"
                     >
                       View Website
                       <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -242,12 +248,12 @@ export default function Portfolio() {
           <h2 className="text-3xl md:text-4xl mb-4">
             Ready to get a website that actually brings you customers?
           </h2>
-          <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-white/70 text-lg mb-10 max-w-xl mx-auto">
             If you're ready for a website that looks professional, loads fast, and supports real growth, let's talk.
           </p>
           <a
             href="/#contact"
-            className="inline-flex items-center gap-2 bg-brand-accent text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:brightness-110 transition-all shadow-lg shadow-brand-accent/30"
+            className="inline-flex items-center gap-2 bg-brand-accent text-white px-9 py-4 rounded-2xl text-lg font-semibold hover:brightness-115 transition-all shadow-xl shadow-brand-accent/40"
           >
             Start My Project <ArrowRight size={20} />
           </a>
