@@ -21,6 +21,20 @@ const featured = {
 
 const projects = [
   {
+    title: 'Four Chariots',
+    description:
+      'Apparel brand site with strong visual identity and a streamlined purchasing flow.',
+    impact: 'Brand-focused e-commerce built for identity and storytelling.',
+    bullets: [
+      'Helps customers find products faster',
+      'Builds brand trust instantly',
+      'Designed to convert browsers into buyers',
+    ],
+    href: 'https://4chariots.com',
+    tag: 'E-Commerce Brand',
+    image: '/4chariots.png',
+  },
+  {
     title: '925 ADHD',
     description:
       'Flexible remote work platform designed around how ADHD minds actually work — with a gated resource library, blog, and Stripe-powered subscriptions.',
@@ -34,20 +48,6 @@ const projects = [
     href: 'https://925adhd.com',
     tag: 'SaaS Platform',
     image: '/925adhd.png',
-  },
-  {
-    title: 'Four Chariots',
-    description:
-      'Apparel brand site with strong visual identity and a streamlined purchasing flow.',
-    impact: 'Brand-focused e-commerce built for identity and storytelling.',
-    bullets: [
-      'Helps customers find products faster',
-      'Builds brand trust instantly',
-      'Designed to convert browsers into buyers',
-    ],
-    href: 'https://4chariots.com',
-    tag: 'E-Commerce Brand',
-    image: '/4chariots.png',
   },
   {
     title: 'Studio 925',
