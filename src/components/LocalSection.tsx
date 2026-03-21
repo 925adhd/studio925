@@ -69,9 +69,7 @@ export default function LocalSection() {
               That kind of access is rare.
             </p>
             <p>
-              Local businesses don't need flashy tech.<br />
-              They need results.<br />
-              Clear. Easy to use. Built to be found. Built to be trusted.
+              Local businesses don't need flashy tech. They need results — clear, easy to use, built to be found, and built to be trusted.
             </p>
             <p className="text-brand-primary/90 font-medium">
               Built for local businesses serious about growth.
