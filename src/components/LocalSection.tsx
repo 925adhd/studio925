@@ -110,7 +110,7 @@ export default function LocalSection() {
               <MapPin size={12} className="shrink-0" /> Grayson County, KY
             </div>
             <span className="block text-xs font-normal text-brand-primary/75">Kara Gibson</span>
-            <span className="block text-xs font-normal text-brand-primary/40 mt-0.5">Founder, Studio 925</span>
+            <span className="block text-xs font-normal text-brand-primary/40 mt-0.5">Owner, Studio 925</span>
           </div>
         </motion.div>
 
