@@ -36,10 +36,10 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="pt-20 pb-14 md:py-32 px-6 bg-white">
+    <section id="services" className="pt-10 pb-14 md:py-32 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-10 max-w-2xl">
-          <h2 className="text-4xl md:text-5xl mb-4">Your website should be <br /><span className="text-brand-accent italic">working for you right now.</span></h2>
+          <h2 className="text-4xl md:text-5xl mb-4"><span className="whitespace-nowrap">Your website should be</span> <br /><span className="text-brand-accent italic">working for you right now.</span></h2>
           <p className="text-lg text-brand-primary/60">
             Here's what's included in your website.
           </p>
