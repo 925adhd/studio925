@@ -13,7 +13,7 @@ const tiers = [
       "Custom Homepage Layout",
       "Simple Logo Creation or Cleanup (if needed)",
       "Contact / Inquiry Form",
-      "Web Address Connection & Secure Setup",
+      "Website Domain & Secure Setup",
       "Submit Your Site to Google",
       "Favicon Setup",
       "Speed Optimization",
