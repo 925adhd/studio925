@@ -1,5 +1,6 @@
-import { motion } from 'motion/react';
-import { Globe, ExternalLink, ChevronRight, CheckCircle, Info, AlertTriangle } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Globe, ExternalLink, ChevronRight, CheckCircle, Info, AlertTriangle, X, ZoomIn } from 'lucide-react';
 
 const steps = [
   {
@@ -98,6 +99,8 @@ const tipStyles = {
 };
 
 export default function DomainSetupGuide() {
+  const [expandedVideo, setExpandedVideo] = useState<string | null>(null);
+
   return (
     <div className="min-h-screen bg-brand-warm selection:bg-brand-accent selection:text-white">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
@@ -143,10 +146,10 @@ export default function DomainSetupGuide() {
           <p className="text-xs font-bold text-brand-accent uppercase tracking-widest text-center mb-3">
             The whole process at a glance
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-2">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap sm:items-center sm:justify-center gap-2">
             {['Buy your domain', 'Confirm it works', 'Send me the name', 'Add 2 settings'].map((label, i) => (
               <div key={label} className="flex items-center gap-2">
-                <span className="flex items-center gap-2 bg-brand-primary/5 rounded-full px-3 py-1.5 text-sm font-semibold">
+                <span className="flex items-center gap-2 bg-brand-primary/5 rounded-full px-3 py-1.5 text-sm font-semibold w-full sm:w-auto">
                   <span className="w-5 h-5 rounded-full bg-brand-accent text-white text-xs font-bold flex items-center justify-center shrink-0">
                     {i + 1}
                   </span>
@@ -222,7 +225,10 @@ export default function DomainSetupGuide() {
                 <div className={`${step.color} text-white text-xs font-bold px-4 py-2 tracking-wide`}>
                   {vid.caption}
                 </div>
-                <div className="bg-white p-4 flex justify-center">
+                <div
+                  className="bg-white p-4 flex justify-center relative cursor-pointer group"
+                  onClick={() => setExpandedVideo(vid.src)}
+                >
                   <video
                     src={vid.src}
                     autoPlay
@@ -231,6 +237,11 @@ export default function DomainSetupGuide() {
                     playsInline
                     className="max-w-full rounded-lg shadow-md"
                   />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/10 transition-colors rounded-lg m-4">
+                    <span className="bg-white/90 rounded-full p-2 shadow-lg opacity-0 group-hover:opacity-100 sm:opacity-0 transition-opacity flex items-center gap-1.5 text-xs font-semibold text-brand-primary/70 px-3">
+                      <ZoomIn size={14} /> Tap to enlarge
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -284,9 +295,41 @@ export default function DomainSetupGuide() {
 
         {/* Footer attribution */}
         <p className="text-center text-sm text-brand-primary/30 mt-6 font-sans">
-          Studio 925 &middot; studio925.design
+          Studio 925 &middot; <a href="https://studio925.design" className="hover:text-brand-accent transition-colors">studio925.design</a>
         </p>
       </div>
+
+      {/* Fullscreen video modal */}
+      <AnimatePresence>
+        {expandedVideo && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setExpandedVideo(null)}
+          >
+            <button
+              className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 rounded-full p-2 transition-colors"
+              onClick={() => setExpandedVideo(null)}
+            >
+              <X size={24} className="text-white" />
+            </button>
+            <motion.video
+              src={expandedVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="max-w-full max-h-[90vh] rounded-xl shadow-2xl"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -18,6 +18,7 @@ import Portfolio from './pages/Portfolio';
 import ThankYou from './pages/ThankYou';
 import Web3FormsGuide from './pages/Web3FormsGuide';
 import DomainSetupGuide from './pages/DomainSetupGuide';
+import SetupHub from './pages/SetupHub';
 import { motion, useScroll, useSpring } from 'motion/react';
 
 function HomePage() {
@@ -105,6 +106,7 @@ export default function App() {
         <Route path="/small-business-website-design-kentucky" element={<KentuckyPage />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/guide" element={<SetupHub />} />
         <Route path="/guide/contact-setup" element={<Web3FormsGuide />} />
         <Route path="/guide/domain-setup" element={<DomainSetupGuide />} />
       </Routes>
