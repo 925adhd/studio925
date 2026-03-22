@@ -105,7 +105,7 @@ export default function App() {
         <Route path="/small-business-website-design-kentucky" element={<KentuckyPage />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/thank-you" element={<ThankYou />} />
-        <Route path="/guide/web3forms" element={<Web3FormsGuide />} />
+        <Route path="/guide/contact-setup" element={<Web3FormsGuide />} />
         <Route path="/guide/domain-setup" element={<DomainSetupGuide />} />
       </Routes>
     </>

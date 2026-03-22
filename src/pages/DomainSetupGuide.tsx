@@ -19,7 +19,8 @@ const steps = [
       { src: '/guides/domain2.mp4', caption: 'Click the "Buy domain" button in the top-right' },
     ],
     tips: [
-      { type: 'blue' as const, icon: Info, text: <>You don't need any add-ons during checkout. Just make sure <strong>Privacy Protection is ON</strong> — it usually is by default. A <strong>.com</strong> domain costs about <strong>$10/year</strong> through Cloudflare — no hidden fees.</> },
+      { type: 'blue' as const, icon: Info, text: <>You don't need any add-ons during checkout. A <strong>.com</strong> domain usually costs about <strong>$10/year</strong> through Cloudflare — no hidden fees. Some extensions like <strong>.ai</strong> can be more expensive, so keep an eye on the price when deciding.</> },
+      { type: 'blue' as const, icon: Info, text: <>If the name you want is already taken, Cloudflare will show you alternatives like <strong>.net</strong>, <strong>.io</strong>, or <strong>.ai</strong> — but <strong>.com is always the best choice</strong> if it's available. Try switching up the wording to find an available .com — for example, <strong>"smithplumbingky.com"</strong> instead of <strong>"smithplumbing.com"</strong>. Keep it <strong>short, simple, and easy to remember</strong> — the easier it is to say out loud, the better. Not sure what to pick? Just message me and I'll help you choose.</> },
     ],
   },
   {
@@ -120,6 +121,18 @@ export default function DomainSetupGuide() {
           </p>
         </motion.div>
 
+        {/* Already have a domain */}
+        <motion.div
+          className="bg-sky-50 border border-sky-200 text-sky-800 rounded-2xl p-5 mb-8 text-center"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.08 }}
+        >
+          <p className="text-sm font-sans font-medium leading-relaxed">
+            <strong>Already have a domain?</strong> Skip Steps 1 and 2 — just send me your <strong>domain name</strong> and <strong>where you bought it</strong> (GoDaddy, Namecheap, Google, etc.) and I'll send you the right instructions for your setup.
+          </p>
+        </motion.div>
+
         {/* Summary Strip */}
         <motion.div
           className="glass rounded-2xl p-5 mb-12"
@@ -195,6 +208,14 @@ export default function DomainSetupGuide() {
               </div>
             )}
 
+            {/* Tips */}
+            {'tips' in step && step.tips?.map((tip, j) => (
+              <div key={j} className={`flex items-start gap-3 rounded-xl px-4 py-3 mt-4 border ${tipStyles[tip.type]}`}>
+                <tip.icon size={18} className="shrink-0 mt-0.5" />
+                <span className="text-sm font-sans leading-relaxed font-medium">{tip.text}</span>
+              </div>
+            ))}
+
             {/* Videos */}
             {'videos' in step && step.videos && step.videos.map((vid, j) => (
               <div key={j} className="mt-5 rounded-xl border-2 border-brand-primary/10 overflow-hidden">
@@ -234,14 +255,6 @@ export default function DomainSetupGuide() {
                 ))}
               </div>
             )}
-
-            {/* Tips */}
-            {'tips' in step && step.tips?.map((tip, j) => (
-              <div key={j} className={`flex items-start gap-3 rounded-xl px-4 py-3 mt-4 border ${tipStyles[tip.type]}`}>
-                <tip.icon size={18} className="shrink-0 mt-0.5" />
-                <span className="text-sm font-sans leading-relaxed font-medium">{tip.text}</span>
-              </div>
-            ))}
           </motion.div>
         ))}
 
@@ -262,7 +275,7 @@ export default function DomainSetupGuide() {
         {/* Link to other guide */}
         <div className="text-center mt-10">
           <a
-            href="/guide/web3forms"
+            href="/guide/contact-setup"
             className="inline-flex items-center gap-2 text-sm font-sans font-semibold text-brand-accent hover:underline"
           >
             Need to set up your contact form? Follow the Contact Form Guide <ChevronRight size={14} />
