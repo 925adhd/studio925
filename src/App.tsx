@@ -16,6 +16,8 @@ import GraysonCountyPage from './pages/GraysonCountyPage';
 import KentuckyPage from './pages/KentuckyPage';
 import Portfolio from './pages/Portfolio';
 import ThankYou from './pages/ThankYou';
+import Web3FormsGuide from './pages/Web3FormsGuide';
+import DomainSetupGuide from './pages/DomainSetupGuide';
 import { motion, useScroll, useSpring } from 'motion/react';
 
 function HomePage() {
@@ -103,6 +105,8 @@ export default function App() {
         <Route path="/small-business-website-design-kentucky" element={<KentuckyPage />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/guide/web3forms" element={<Web3FormsGuide />} />
+        <Route path="/guide/domain-setup" element={<DomainSetupGuide />} />
       </Routes>
     </>
   );
