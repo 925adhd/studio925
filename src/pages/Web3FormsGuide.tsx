@@ -229,7 +229,7 @@ export default function Web3FormsGuide() {
         {/* Link to other guide */}
         <div className="text-center mt-10">
           <a
-            href="/guide/domain-setup"
+            href="/setup/domain"
             className="inline-flex items-center gap-2 text-sm font-sans font-semibold text-brand-accent hover:underline"
           >
             Need to connect a custom domain? Follow the Domain Setup Guide <ChevronRight size={14} />

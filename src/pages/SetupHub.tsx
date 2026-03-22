@@ -6,14 +6,14 @@ const guides = [
     title: 'Connect Your Domain',
     description: 'Buy a domain name and connect it to your new website. Takes about 10 minutes.',
     icon: Globe,
-    href: '/guide/domain-setup',
+    href: '/setup/domain',
     color: 'bg-brand-accent',
   },
   {
     title: 'Set Up Your Contact Form',
     description: 'Connect your contact form so messages go straight to your email. Takes about 5 minutes.',
     icon: Mail,
-    href: '/guide/contact-setup',
+    href: '/setup/contact',
     color: 'bg-sky-600',
   },
 ];

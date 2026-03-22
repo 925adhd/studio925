@@ -120,7 +120,7 @@ export default function DomainSetupGuide() {
             <span className="italic text-brand-accent">to Your Website</span>
           </h1>
           <p className="text-lg text-brand-primary/60 max-w-xl mx-auto leading-relaxed">
-            No technical experience needed — just follow along one step at a time. If you get stuck on anything, send me a message and I'll walk you through it.
+            No technical experience needed — just follow along one step at a time. If you get stuck, send me a message and I'll help.
           </p>
         </motion.div>
 
@@ -286,7 +286,7 @@ export default function DomainSetupGuide() {
         {/* Link to other guide */}
         <div className="text-center mt-10">
           <a
-            href="/guide/contact-setup"
+            href="/setup/contact"
             className="inline-flex items-center gap-2 text-sm font-sans font-semibold text-brand-accent hover:underline"
           >
             Need to set up your contact form? Follow the Contact Form Guide <ChevronRight size={14} />
