@@ -1,22 +1,29 @@
 import { useEffect } from 'react';
-import { X } from 'lucide-react';
-
-export type LegalType = 'privacy' | 'terms' | 'cookies' | null;
-
-interface Props {
-  type: LegalType;
-  onClose: () => void;
-}
+import { Link, useLocation } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const lastUpdated = 'February 27, 2026';
 const email = 'contact@studio925.design';
 const company = 'Studio 925';
 const location = 'Grayson County, Kentucky';
 
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div className="mb-8">
+      <h3 className="text-lg font-bold mb-3 text-brand-primary">{title}</h3>
+      <div className="text-brand-primary/70 leading-relaxed space-y-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2">
+        {children}
+      </div>
+    </div>
+  );
+}
+
 function PrivacyPolicy() {
   return (
     <>
-      <h2 className="text-3xl font-serif font-bold mb-2">Privacy Policy</h2>
+      <h1 className="text-3xl md:text-4xl font-serif font-bold mb-2">Privacy Policy</h1>
       <p className="text-sm text-brand-primary/40 mb-8">Last Updated: {lastUpdated}</p>
 
       <Section title="1. Introduction">
@@ -127,7 +134,7 @@ function PrivacyPolicy() {
 function TermsOfService() {
   return (
     <>
-      <h2 className="text-3xl font-serif font-bold mb-2">Terms of Service</h2>
+      <h1 className="text-3xl md:text-4xl font-serif font-bold mb-2">Terms of Service</h1>
       <p className="text-sm text-brand-primary/40 mb-8">Last Updated: {lastUpdated}</p>
 
       <Section title="1. Agreement to Terms">
@@ -242,7 +249,7 @@ function TermsOfService() {
 function CookiePolicy() {
   return (
     <>
-      <h2 className="text-3xl font-serif font-bold mb-2">Cookie Policy</h2>
+      <h1 className="text-3xl md:text-4xl font-serif font-bold mb-2">Cookie Policy</h1>
       <p className="text-sm text-brand-primary/40 mb-8">Last Updated: {lastUpdated}</p>
 
       <Section title="1. What Are Cookies?">
@@ -294,53 +301,35 @@ function CookiePolicy() {
   );
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <div className="mb-8">
-      <h3 className="text-lg font-bold mb-3 text-brand-primary">{title}</h3>
-      <div className="text-brand-primary/70 leading-relaxed space-y-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2">
-        {children}
-      </div>
-    </div>
-  );
-}
+const pages = {
+  'privacy-policy': { component: PrivacyPolicy, title: 'Privacy Policy' },
+  'terms-of-service': { component: TermsOfService, title: 'Terms of Service' },
+  'cookie-policy': { component: CookiePolicy, title: 'Cookie Policy' },
+} as const;
 
-export default function LegalModal({ type, onClose }: Props) {
+export default function LegalPage({ type }: { type: keyof typeof pages }) {
+  const { title, component: Content } = pages[type];
+
   useEffect(() => {
-    if (type) {
-      document.body.style.overflow = 'hidden';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [type]);
-
-  if (!type) return null;
+    document.title = `${title} | Studio 925`;
+  }, [title]);
 
   return (
-    <div
-      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-0 sm:p-6"
-      onClick={onClose}
-    >
-      {/* Backdrop */}
-      <div className="absolute inset-0 bg-brand-primary/60 backdrop-blur-sm" />
-
-      {/* Modal */}
-      <div
-        className="relative bg-white w-full sm:max-w-2xl max-h-[90dvh] rounded-t-[2rem] sm:rounded-[2rem] overflow-y-auto p-8 md:p-12 shadow-2xl"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button
-          onClick={onClose}
-          className="absolute top-6 right-6 w-10 h-10 rounded-full bg-brand-primary/5 flex items-center justify-center hover:bg-brand-primary/10 transition-colors"
-        >
-          <X size={18} />
-        </button>
-
-        {type === 'privacy' && <PrivacyPolicy />}
-        {type === 'terms' && <TermsOfService />}
-        {type === 'cookies' && <CookiePolicy />}
-      </div>
+    <div className="min-h-screen selection:bg-brand-accent selection:text-white">
+      <Navbar />
+      <main className="pt-32 pb-20 px-6">
+        <div className="max-w-2xl mx-auto">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-sm text-brand-primary/50 hover:text-brand-accent transition-colors mb-8"
+          >
+            <ArrowLeft size={16} />
+            Back to Home
+          </Link>
+          <Content />
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }

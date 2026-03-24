@@ -20,6 +20,7 @@ import ThankYou from './pages/ThankYou';
 import Web3FormsGuide from './pages/Web3FormsGuide';
 import DomainSetupGuide from './pages/DomainSetupGuide';
 import SetupHub from './pages/SetupHub';
+import LegalPage from './pages/LegalPage';
 import { motion, useScroll, useSpring } from 'motion/react';
 
 function HomePage() {
@@ -111,6 +112,9 @@ export default function App() {
         <Route path="/setup" element={<SetupHub />} />
         <Route path="/setup/contact" element={<Web3FormsGuide />} />
         <Route path="/setup/domain" element={<DomainSetupGuide />} />
+        <Route path="/privacy-policy" element={<LegalPage type="privacy-policy" />} />
+        <Route path="/terms-of-service" element={<LegalPage type="terms-of-service" />} />
+        <Route path="/cookie-policy" element={<LegalPage type="cookie-policy" />} />
       </Routes>
     </>
   );

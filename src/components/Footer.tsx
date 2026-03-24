@@ -1,16 +1,9 @@
-import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import LegalModal, { LegalType } from './LegalModal';
 const logo = '/logo.png';
 
 export default function Footer() {
-  const [legal, setLegal] = useState<LegalType>(null);
-
   return (
     <footer className="py-20 px-6 bg-white border-t border-brand-primary/5">
-      <LegalModal type={legal} onClose={() => setLegal(null)} />
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-5 gap-12 mb-16">
           <div className="col-span-2">
@@ -51,9 +44,9 @@ export default function Footer() {
           <div>
             <h4 className="font-sans font-bold mb-6">Legal</h4>
             <ul className="space-y-4 text-brand-primary/60">
-              <li><button onClick={() => setLegal('privacy')} className="hover:text-brand-accent transition-colors">Privacy Policy</button></li>
-              <li><button onClick={() => setLegal('terms')} className="hover:text-brand-accent transition-colors">Terms of Service</button></li>
-              <li><button onClick={() => setLegal('cookies')} className="hover:text-brand-accent transition-colors">Cookie Policy</button></li>
+              <li><Link to="/privacy-policy" className="hover:text-brand-accent transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service" className="hover:text-brand-accent transition-colors">Terms of Service</Link></li>
+              <li><Link to="/cookie-policy" className="hover:text-brand-accent transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
