@@ -11,6 +11,7 @@ import Pricing from './components/Pricing';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LocalSection from './components/LocalSection';
+import WebsiteCare from './components/WebsiteCare';
 import ScrollToTop from './components/ScrollToTop';
 import GraysonCountyPage from './pages/GraysonCountyPage';
 import KentuckyPage from './pages/KentuckyPage';
@@ -88,6 +89,7 @@ function HomePage() {
         </section>
 
         <Pricing />
+        <WebsiteCare />
         <Contact />
       </main>
 

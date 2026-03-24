@@ -29,7 +29,7 @@ const services = [
   },
   {
     title: "Someone in Your Corner",
-    description: "You won't be handed a login and left to figure it out. When something needs updating or something breaks, you have someone to call.",
+    description: "You won't be handed a login and left to figure it out. After launch, I'm still here — whether you need a quick update, a fix, or just someone to call.",
     icon: Globe,
   }
 ];

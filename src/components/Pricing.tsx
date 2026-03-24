@@ -143,9 +143,6 @@ export default function Pricing() {
         <p className="text-center text-sm text-brand-primary/50 mt-16">
           Projects begin with a 50% deposit. The remaining balance is due at launch.
         </p>
-        <p className="text-center text-sm text-brand-primary/40 mt-3">
-          Platform costs (hosting and payment processing) are separate. All third-party accounts are set up in your name, and you retain full ownership.
-        </p>
       </div>
     </section>
   );
