@@ -15,9 +15,27 @@
   body {
     @apply bg-brand-warm text-brand-primary font-sans antialiased;
   }
-  
+
   h1, h2, h3, h4 {
     @apply font-serif font-bold tracking-tight;
+  }
+
+  /* Visible focus ring for keyboard navigation */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-accent;
+  }
+
+  /* Skip-to-content link */
+  .skip-to-content {
+    @apply absolute -top-full left-4 z-[100] bg-brand-primary text-white px-4 py-2 rounded-b-lg font-medium text-sm;
+  }
+  .skip-to-content:focus {
+    @apply top-0;
   }
 }
 

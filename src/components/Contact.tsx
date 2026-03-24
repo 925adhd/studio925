@@ -56,7 +56,7 @@ export default function Contact() {
             </p>
 
             <div className="space-y-6">
-              <div className="flex items-center gap-4 group cursor-pointer">
+              <a href="mailto:contact@studio925.design" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-brand-accent transition-colors">
                   <Mail size={20} />
                 </div>
@@ -64,7 +64,7 @@ export default function Contact() {
                   <p className="text-xs uppercase tracking-widest text-white/50 mb-1">Email Me</p>
                   <p className="text-lg font-medium">contact@studio925.design</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -86,21 +86,23 @@ export default function Contact() {
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-wider opacity-50">Name</label>
-                  <input required name="Name" type="text" className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors" placeholder="John Doe" />
+                  <label htmlFor="contact-name" className="text-xs font-bold uppercase tracking-wider opacity-50">Name</label>
+                  <input required name="Name" id="contact-name" type="text" className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:border-brand-accent transition-colors" placeholder="John Doe" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-wider opacity-50">Email</label>
-                  <input required name="Email" type="email" className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors" placeholder="john@example.com" />
+                  <label htmlFor="contact-email" className="text-xs font-bold uppercase tracking-wider opacity-50">Email</label>
+                  <input required name="Email" id="contact-email" type="email" className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:border-brand-accent transition-colors" placeholder="john@example.com" />
                 </div>
               </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-wider opacity-50">Which plan are you interested in?</label>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+              <fieldset className="space-y-2">
+                <legend className="text-xs font-bold uppercase tracking-wider opacity-50">Which plan are you interested in?</legend>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-1" role="radiogroup" aria-label="Select a plan">
                   {plans.map((plan) => (
                     <button
                       key={plan}
                       type="button"
+                      role="radio"
+                      aria-checked={selectedPlan === plan}
                       onClick={() => setSelectedPlan(plan)}
                       className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-left transition-all ${
                         selectedPlan === plan
@@ -112,16 +114,16 @@ export default function Contact() {
                         selectedPlan === plan
                           ? 'border-brand-accent bg-brand-accent'
                           : 'border-brand-primary/20'
-                      }`} />
+                      }`} aria-hidden="true" />
                       {plan}
                     </button>
                   ))}
                 </div>
                 <input type="hidden" name="Plan" value={selectedPlan} />
-              </div>
+              </fieldset>
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-wider opacity-50">Business Type</label>
-                <select name="Business Type" className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors bg-white">
+                <label htmlFor="contact-business-type" className="text-xs font-bold uppercase tracking-wider opacity-50">Business Type</label>
+                <select name="Business Type" id="contact-business-type" className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:border-brand-accent transition-colors bg-white">
                   <option>Local Service Provider</option>
                   <option>Small Business</option>
                   <option>Community Platform</option>
@@ -129,8 +131,8 @@ export default function Contact() {
                 </select>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-wider opacity-50">Project Details</label>
-                <textarea name="Project Details" rows={3} className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:outline-none focus:border-brand-accent transition-colors text-base" placeholder="Tell me about your business or organization and what you're looking to create."></textarea>
+                <label htmlFor="contact-details" className="text-xs font-bold uppercase tracking-wider opacity-50">Project Details</label>
+                <textarea name="Project Details" id="contact-details" rows={3} className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:border-brand-accent transition-colors text-base" placeholder="Tell me about your business or organization and what you're looking to create."></textarea>
               </div>
               {status === 'error' && (
                 <p className="text-red-500 text-sm">Something went wrong. Please try again or email me directly.</p>

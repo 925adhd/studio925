@@ -33,6 +33,10 @@ function HomePage() {
 
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
+      <a href="#main-content" className="skip-to-content">
+        Skip to main content
+      </a>
+
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-brand-accent z-[60] origin-left"
@@ -41,7 +45,7 @@ function HomePage() {
 
       <Navbar />
 
-      <main>
+      <main id="main-content">
         <Hero />
 
         <Services />
