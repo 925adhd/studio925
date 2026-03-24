@@ -21,6 +21,20 @@ const featured = {
 
 const projects = [
   {
+    title: 'CS Media',
+    description:
+      'A modern media brand site built for strong visual presence and clear service positioning.',
+    impact: 'Clean, professional identity that builds trust fast.',
+    bullets: [
+      'Helps clients understand services at a glance',
+      'Builds credibility instantly',
+      'Designed to generate real inquiries',
+    ],
+    href: 'https://csmedia.vercel.app',
+    tag: 'Media Brand',
+    image: '/csmedia.png',
+  },
+  {
     title: 'Four Chariots',
     description:
       'Apparel brand site with strong visual identity and a streamlined purchasing flow.',
@@ -91,7 +105,7 @@ export default function Portfolio() {
               Portfolio
             </p>
             <h1 className="text-3xl md:text-5xl mb-2 leading-[1.1]">
-              Selected Work
+              Latest Projects
             </h1>
             <p className="text-lg text-brand-primary/80 max-w-xl leading-relaxed">
               Real websites built to bring in more calls, leads, and customers.
