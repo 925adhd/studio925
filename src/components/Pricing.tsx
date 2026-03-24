@@ -22,7 +22,7 @@ const tiers = [
       "Full Ownership of Files"
     ],
     bestFor: "Best for businesses that need a solid, trustworthy online presence without the extras.",
-    cta: "Start This Plan",
+    cta: "Start My Project",
     featured: false
   },
   {
@@ -43,7 +43,7 @@ const tiers = [
       "Basic Legal Pages Included (Privacy Policy, Terms, Cookie Notice as needed)"
     ],
     bestFor: "Best for businesses ready to expand their online presence and see what's actually working.",
-    cta: "Start This Plan",
+    cta: "Start My Project",
     featured: true
   },
   {
@@ -62,7 +62,7 @@ const tiers = [
       "Full Launch Setup + 60 Days Guided Support"
     ],
     bestFor: "Best for businesses ready to accept payments, offer memberships, or add secure account functionality to their website.",
-    cta: "Start This Plan",
+    cta: "Start My Project",
     featured: false
   }
 ];
