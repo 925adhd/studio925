@@ -77,9 +77,8 @@ export default function Pricing() {
     <section id="pricing" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm font-medium tracking-widest uppercase text-brand-primary/40 mb-4">Clear pricing. No surprises. Built for real businesses.</p>
           <h2 className="text-4xl md:text-5xl mb-4">Every serious local business needs a website <span className="italic text-brand-accent">that works.</span></h2>
-          <p className="text-brand-primary/50 text-lg mt-3">Custom-built. One flat price. No hidden fees.</p>
+          <p className="text-brand-primary/50 text-lg mt-3">Clear pricing. One flat price. No hidden fees.</p>
           <p className="text-sm text-brand-primary/40 mt-4">Introductory pricing currently available for new projects.</p>
         </div>
 
