@@ -42,7 +42,7 @@ export default function Hero() {
           </div>
 
           <div className="mt-6 sm:mt-12 flex flex-row flex-wrap gap-2 sm:gap-x-6 gap-y-2 sm:gap-y-3 items-center justify-center">
-            {['Easy to Contact', 'Visible on Google', 'Look Trustworthy Online'].map((item) => (
+            {['48-Hour First Draft', 'Built to Be Found', 'Easy to Contact'].map((item) => (
               <div key={item} className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-sm font-medium text-brand-primary/60 whitespace-nowrap">
                 <CheckCircle2 size={14} className="text-brand-accent" />
                 {item}
