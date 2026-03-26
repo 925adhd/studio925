@@ -4,7 +4,8 @@ import { Check, ArrowRight } from 'lucide-react';
 const tiers = [
   {
     name: "Foundation",
-    price: "1,200",
+    standardPrice: "1,200",
+    price: "900",
     description: "A clean, professional website that makes your business look credible and easy to contact.",
     features: [
       "48-Hour Rough Draft to Review",
@@ -27,7 +28,8 @@ const tiers = [
   },
   {
     name: "Growth",
-    price: "2,400",
+    standardPrice: "2,400",
+    price: "1,800",
     description: "Built to help you attract more customers, build trust faster, and turn visitors into real leads.",
     features: [
       "Everything in Foundation, plus:",
@@ -48,7 +50,8 @@ const tiers = [
   },
   {
     name: "Membership & Payments",
-    price: "3,200",
+    standardPrice: "3,200",
+    price: "2,600",
     description: "Built for businesses ready to sell online or offer secure member access.",
     features: [
       "Everything in Growth, plus:",
@@ -74,6 +77,7 @@ export default function Pricing() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl mb-4">Every serious local business needs a website <span className="italic text-brand-accent">that works.</span></h2>
           <p className="text-brand-primary/50 text-lg mt-3">Custom-built. Clear pricing. No surprises.</p>
+          <p className="text-sm text-brand-primary/40 mt-4">Introductory pricing currently available for new projects.</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-14 lg:gap-8">
@@ -98,11 +102,18 @@ export default function Pricing() {
 
               <div className="mb-8">
                 <h3 className={`text-2xl mb-2 ${tier.featured ? 'text-white' : 'text-brand-primary'}`}>{tier.name}</h3>
-                <div className="flex items-baseline gap-3 mb-7">
-                  <span className="text-sm font-medium opacity-60">Starts at</span>
-                  <span className="text-4xl font-serif font-bold italic">
-                    {tier.price === 'Custom' ? '' : '$'}{tier.price}
+                <div className="mb-7">
+                  <span className={`text-xs font-semibold uppercase tracking-widest ${tier.featured ? 'text-brand-accent' : 'text-brand-accent'}`}>
+                    Introductory Price
                   </span>
+                  <div className="mt-1">
+                    <span className="text-5xl font-serif font-bold italic">
+                      ${tier.price}
+                    </span>
+                  </div>
+                  <p className={`text-xs mt-3 ${tier.featured ? 'text-white/40' : 'text-brand-primary/35'}`}>
+                    Standard Price ${tier.standardPrice}
+                  </p>
                 </div>
                 <p className={`text-sm ${tier.featured ? 'text-white/70' : 'text-brand-primary/60'}`}>
                   {tier.description}
