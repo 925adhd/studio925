@@ -11,6 +11,7 @@ import Pricing from './components/Pricing';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LocalSection from './components/LocalSection';
+import NoHomework from './components/NoHomework';
 import WebsiteCare from './components/WebsiteCare';
 import ScrollToTop from './components/ScrollToTop';
 import GraysonCountyPage from './pages/GraysonCountyPage';
@@ -80,18 +81,7 @@ function HomePage() {
           </div>
         </section>
 
-        {/* Project Details */}
-        <section className="pt-0 pb-20 px-6 bg-white">
-          <div className="max-w-xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl mb-8 text-brand-primary">Project Details</h2>
-            <p className="text-brand-primary/60 leading-relaxed mb-4">
-              Projects begin with a 50% deposit. The remaining balance is due at launch.
-            </p>
-            <p className="text-brand-primary/60 leading-relaxed">
-              Full ownership of all website files transfers upon final payment.
-            </p>
-          </div>
-        </section>
+        <NoHomework />
 
         <Pricing />
         <WebsiteCare />

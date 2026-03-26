@@ -152,7 +152,8 @@ export default function Pricing() {
         </div>
 
         <p className="text-center text-sm text-brand-primary/50 mt-16">
-          Projects begin with a 50% deposit. The remaining balance is due at launch.
+          Projects begin with a 50% deposit. The remaining balance is due at launch.<br />
+          Full ownership of all website files transfers upon final payment.
         </p>
       </div>
     </section>
