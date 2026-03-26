@@ -6,7 +6,7 @@ import { Layout, Zap, ShieldCheck, Search, Smartphone, Globe } from 'lucide-reac
 const services = [
   {
     title: "No templates. Built for your business.",
-    description: "Not a theme swap. Not built on a drag-and-drop platform like Wix or Shopify. Built specifically for your business so it looks right, says the right things, and works the way you need it to.",
+    description: "Not a theme swap. Not built on a drag-and-drop platform like Wix, Squarespace, or Shopify. Built specifically for your business so it looks right, says the right things, and works the way you need it to.",
     icon: Layout,
   },
   {
