@@ -1,7 +1,9 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 const logo = '/logo.png';
 
 export default function Navbar() {
@@ -10,7 +12,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-primary/5 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
-        <Link to="/" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <img src={logo} alt="Studio 925" className="h-8 md:h-[50px] w-auto" />
         </Link>
 

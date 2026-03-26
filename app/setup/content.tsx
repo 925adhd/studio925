@@ -1,3 +1,6 @@
+'use client';
+
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Globe, Mail, ChevronRight } from 'lucide-react';
 
@@ -18,7 +21,7 @@ const guides = [
   },
 ];
 
-export default function SetupHub() {
+export default function SetupContent() {
   return (
     <div className="min-h-screen bg-brand-warm selection:bg-brand-accent selection:text-white">
       <div className="max-w-3xl mx-auto px-6 py-16 md:py-24">
@@ -37,7 +40,7 @@ export default function SetupHub() {
             Welcome to Your<br />
             <span className="italic text-brand-accent">Setup Guides</span>
           </h1>
-          <p className="text-lg text-brand-primary/60 max-w-lg mx-auto leading-relaxed">
+          <p className="text-lg text-brand-primary/60 max-lg mx-auto leading-relaxed">
             Pick the guide you need below. Each one walks you through every step — no technical experience required.
           </p>
         </motion.div>
@@ -45,24 +48,27 @@ export default function SetupHub() {
         {/* Guide Cards */}
         <div className="space-y-5">
           {guides.map((guide, i) => (
-            <motion.a
+            <motion.div
               key={guide.href}
-              href={guide.href}
-              className="glass rounded-3xl p-7 md:p-9 flex items-center gap-6 relative overflow-hidden group hover:shadow-lg transition-shadow cursor-pointer block"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.15 + i * 0.1 }}
             >
-              <div className={`absolute top-0 left-0 w-1.5 h-full ${guide.color} rounded-l-3xl`} />
-              <div className={`${guide.color} text-white w-14 h-14 rounded-2xl flex items-center justify-center shrink-0`}>
-                <guide.icon size={28} />
-              </div>
-              <div className="flex-1">
-                <h2 className="text-xl md:text-2xl leading-tight mb-1">{guide.title}</h2>
-                <p className="text-sm text-brand-primary/50 font-sans font-medium">{guide.description}</p>
-              </div>
-              <ChevronRight size={24} className="text-brand-primary/20 group-hover:text-brand-accent transition-colors shrink-0" />
-            </motion.a>
+              <Link
+                href={guide.href}
+                className="glass rounded-3xl p-7 md:p-9 flex items-center gap-6 relative overflow-hidden group hover:shadow-lg transition-shadow cursor-pointer block"
+              >
+                <div className={`absolute top-0 left-0 w-1.5 h-full ${guide.color} rounded-l-3xl`} />
+                <div className={`${guide.color} text-white w-14 h-14 rounded-2xl flex items-center justify-center shrink-0`}>
+                  <guide.icon size={28} />
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-xl md:text-2xl leading-tight mb-1">{guide.title}</h2>
+                  <p className="text-sm text-brand-primary/50 font-sans font-medium">{guide.description}</p>
+                </div>
+                <ChevronRight size={24} className="text-brand-primary/20 group-hover:text-brand-accent transition-colors shrink-0" />
+              </Link>
+            </motion.div>
           ))}
         </div>
 

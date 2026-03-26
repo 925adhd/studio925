@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 const logo = '/logo.png';
 
 export default function Footer() {
@@ -29,17 +29,17 @@ export default function Footer() {
             <h4 className="font-sans font-bold mb-6">Web Design Services</h4>
             <ul className="space-y-4 text-brand-primary/60">
               <li>
-                <Link to="/web-design-grayson-county-ky" className="hover:text-brand-accent transition-colors">
+                <Link href="/web-design-grayson-county-ky" className="hover:text-brand-accent transition-colors">
                   Web Design in Grayson County
                 </Link>
               </li>
               <li>
-                <Link to="/website-design-leitchfield-ky" className="hover:text-brand-accent transition-colors">
+                <Link href="/website-design-leitchfield-ky" className="hover:text-brand-accent transition-colors">
                   Website Design in Leitchfield, KY
                 </Link>
               </li>
               <li>
-                <Link to="/small-business-website-design-kentucky" className="hover:text-brand-accent transition-colors">
+                <Link href="/small-business-website-design-kentucky" className="hover:text-brand-accent transition-colors">
                   Small Business Websites in Kentucky
                 </Link>
               </li>
@@ -49,9 +49,9 @@ export default function Footer() {
           <div>
             <h4 className="font-sans font-bold mb-6">Legal</h4>
             <ul className="space-y-4 text-brand-primary/60">
-              <li><Link to="/privacy-policy" className="hover:text-brand-accent transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms-of-service" className="hover:text-brand-accent transition-colors">Terms of Service</Link></li>
-              <li><Link to="/cookie-policy" className="hover:text-brand-accent transition-colors">Cookie Policy</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-brand-accent transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service" className="hover:text-brand-accent transition-colors">Terms of Service</Link></li>
+              <li><Link href="/cookie-policy" className="hover:text-brand-accent transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>

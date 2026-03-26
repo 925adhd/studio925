@@ -1,10 +1,33 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { ArrowRight, Check, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import SEO from '../components/SEO';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+import Navbar from '../../src/components/Navbar';
+import Footer from '../../src/components/Footer';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Studio 925 — Website Design in Leitchfield, KY",
+  "url": "https://studio925.design/website-design-leitchfield-ky",
+  "email": "contact@studio925.design",
+  "description": "Professional website design for small businesses in Leitchfield, Kentucky. Custom websites built from scratch to help local businesses get found online.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Leitchfield",
+    "addressRegion": "KY",
+    "postalCode": "42754",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Leitchfield", "containedInPlace": { "@type": "State", "name": "Kentucky" } },
+    { "@type": "AdministrativeArea", "name": "Grayson County" }
+  ],
+  "serviceType": ["Website Design", "Web Design", "Small Business Website Design"],
+  "priceRange": "$$",
+  "knowsAbout": ["Website Design", "Web Design Leitchfield KY", "Small Business Websites", "Local SEO"]
+};
 
 const included = [
   'Custom homepage design tailored to your business',
@@ -18,38 +41,13 @@ const included = [
   'Full ownership of all files',
 ];
 
-export default function LeitchfieldPage() {
+export default function LeitchfieldContent() {
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
-      <SEO
-        title="Website Design in Leitchfield, KY | Studio 925"
-        description="Professional website design for small businesses in Leitchfield, Kentucky. Custom-built websites that bring in real customers. No templates. No page builders."
-        path="/website-design-leitchfield-ky"
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          "name": "Studio 925 — Website Design in Leitchfield, KY",
-          "url": "https://studio925.design/website-design-leitchfield-ky",
-          "email": "contact@studio925.design",
-          "description": "Professional website design for small businesses in Leitchfield, Kentucky. Custom websites built from scratch to help local businesses get found online.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Leitchfield",
-            "addressRegion": "KY",
-            "postalCode": "42754",
-            "addressCountry": "US"
-          },
-          "areaServed": [
-            { "@type": "City", "name": "Leitchfield", "containedInPlace": { "@type": "State", "name": "Kentucky" } },
-            { "@type": "AdministrativeArea", "name": "Grayson County" }
-          ],
-          "serviceType": ["Website Design", "Web Design", "Small Business Website Design"],
-          "priceRange": "$$",
-          "knowsAbout": ["Website Design", "Web Design Leitchfield KY", "Small Business Websites", "Local SEO"]
-        })}</script>
-      </Helmet>
       <Navbar />
 
       <main className="pt-32 pb-20 px-6">
@@ -186,12 +184,12 @@ export default function LeitchfieldPage() {
           </p>
           <ul className="space-y-3 text-brand-primary/70">
             <li>
-              <Link to="/web-design-grayson-county-ky" className="text-brand-accent hover:text-brand-accent/80 font-medium transition-colors">
+              <Link href="/web-design-grayson-county-ky" className="text-brand-accent hover:text-brand-accent/80 font-medium transition-colors">
                 Web Design in Grayson County, KY →
               </Link>
             </li>
             <li>
-              <Link to="/small-business-website-design-kentucky" className="text-brand-accent hover:text-brand-accent/80 font-medium transition-colors">
+              <Link href="/small-business-website-design-kentucky" className="text-brand-accent hover:text-brand-accent/80 font-medium transition-colors">
                 Small Business Website Design in Kentucky →
               </Link>
             </li>

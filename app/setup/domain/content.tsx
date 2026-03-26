@@ -1,4 +1,7 @@
+'use client';
+
 import { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { Globe, ExternalLink, ChevronRight, CheckCircle, Info, AlertTriangle, X, ZoomIn } from 'lucide-react';
 
@@ -98,7 +101,7 @@ const tipStyles = {
   yellow: 'bg-amber-50 border-amber-200 text-amber-800',
 };
 
-export default function DomainSetupGuide() {
+export default function DomainGuide() {
   const [expandedVideo, setExpandedVideo] = useState<string | null>(null);
 
   return (
@@ -285,12 +288,12 @@ export default function DomainSetupGuide() {
 
         {/* Link to other guide */}
         <div className="text-center mt-10">
-          <a
+          <Link
             href="/setup/contact"
             className="inline-flex items-center gap-2 text-sm font-sans font-semibold text-brand-accent hover:underline"
           >
             Need to set up your contact form? Follow the Contact Form Guide <ChevronRight size={14} />
-          </a>
+          </Link>
         </div>
 
         {/* Footer attribution */}
@@ -325,7 +328,7 @@ export default function DomainSetupGuide() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e: React.MouseEvent) => e.stopPropagation()}
             />
           </motion.div>
         )}

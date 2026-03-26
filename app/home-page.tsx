@@ -1,52 +1,30 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
+'use client';
 
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import Pricing from './components/Pricing';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import LocalSection from './components/LocalSection';
-import NoHomework from './components/NoHomework';
-import WebsiteCare from './components/WebsiteCare';
-import ScrollToTop from './components/ScrollToTop';
-import SEO from './components/SEO';
-import GraysonCountyPage from './pages/GraysonCountyPage';
-import KentuckyPage from './pages/KentuckyPage';
-import Portfolio from './pages/Portfolio';
-import ThankYou from './pages/ThankYou';
-import Web3FormsGuide from './pages/Web3FormsGuide';
-import DomainSetupGuide from './pages/DomainSetupGuide';
-import SetupHub from './pages/SetupHub';
-import LegalPage from './pages/LegalPage';
-import LeitchfieldPage from './pages/LeitchfieldPage';
-import NotFound from './pages/NotFound';
 import { motion, useScroll, useSpring } from 'motion/react';
+import Navbar from '../src/components/Navbar';
+import Hero from '../src/components/Hero';
+import Services from '../src/components/Services';
+import Pricing from '../src/components/Pricing';
+import Contact from '../src/components/Contact';
+import Footer from '../src/components/Footer';
+import LocalSection from '../src/components/LocalSection';
+import NoHomework from '../src/components/NoHomework';
+import WebsiteCare from '../src/components/WebsiteCare';
 
-function HomePage() {
+export default function HomePage() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
-      <SEO
-        title="Web Design in Grayson County, KY | Studio 925"
-        description="Custom websites for small businesses in Grayson County, Kentucky. No templates, no page builders. Built from scratch to bring in real customers."
-        path="/"
-      />
       <a href="#main-content" className="skip-to-content">
         Skip to main content
       </a>
 
-      {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-brand-accent z-[60] origin-left"
         style={{ scaleX }}
@@ -56,9 +34,7 @@ function HomePage() {
 
       <main id="main-content">
         <Hero />
-
         <Services />
-
         <LocalSection />
 
         {/* Process Section */}
@@ -90,7 +66,6 @@ function HomePage() {
         </section>
 
         <NoHomework />
-
         <Pricing />
         <WebsiteCare />
         <Contact />
@@ -98,28 +73,5 @@ function HomePage() {
 
       <Footer />
     </div>
-  );
-}
-
-export default function App() {
-  return (
-    <>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/web-design-grayson-county-ky" element={<GraysonCountyPage />} />
-        <Route path="/small-business-website-design-kentucky" element={<KentuckyPage />} />
-        <Route path="/website-design-leitchfield-ky" element={<LeitchfieldPage />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/thank-you" element={<ThankYou />} />
-        <Route path="/setup" element={<SetupHub />} />
-        <Route path="/setup/contact" element={<Web3FormsGuide />} />
-        <Route path="/setup/domain" element={<DomainSetupGuide />} />
-        <Route path="/privacy-policy" element={<LegalPage type="privacy-policy" />} />
-        <Route path="/terms-of-service" element={<LegalPage type="terms-of-service" />} />
-        <Route path="/cookie-policy" element={<LegalPage type="cookie-policy" />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </>
   );
 }

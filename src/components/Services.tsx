@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { Layout, Zap, ShieldCheck, Search, Smartphone, Globe } from 'lucide-react';
 

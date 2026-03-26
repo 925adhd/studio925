@@ -1,8 +1,9 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import SEO from '../components/SEO';
+import Navbar from '../../src/components/Navbar';
+import Footer from '../../src/components/Footer';
 
 const featured = {
   title: 'CS Media',
@@ -75,14 +76,9 @@ const features = [
   'Secure deployment',
 ];
 
-export default function Portfolio() {
+export default function PortfolioPage() {
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
-      <SEO
-        title="Portfolio | Studio 925 — Real Websites for Real Businesses"
-        description="See real websites built by Studio 925 for small businesses. Custom designs that bring in calls, leads, and customers."
-        path="/portfolio"
-      />
       <Navbar />
 
       <main className="pt-28 pb-20 px-6">
@@ -128,7 +124,6 @@ export default function Portfolio() {
             </p>
 
             <div className="relative grid md:grid-cols-2 overflow-hidden rounded-[2.5rem] border border-brand-primary/10 shadow-lg shadow-brand-primary/10 bg-white">
-              {/* Screenshot side */}
               <div className="bg-brand-primary/5 p-4 md:p-10 md:flex md:items-center md:justify-center md:min-h-[400px]">
                 <div className="h-56 md:h-auto rounded-xl md:rounded-2xl overflow-hidden shadow-lg shadow-brand-primary/15">
                   <img
@@ -139,7 +134,6 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* Content side */}
               <div className="p-7 md:p-14 flex flex-col justify-center">
                 <span className="inline-block px-3 py-1 rounded-lg bg-brand-primary/5 text-brand-primary/60 text-xs font-medium tracking-wide mb-4 self-start">
                   {featured.tag}
@@ -233,7 +227,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* What Every Project Includes — moved ABOVE CTA */}
+        {/* What Every Project Includes */}
         <section className="max-w-4xl mx-auto mb-12">
           <div className="p-10 md:p-14 glass rounded-[2.5rem]">
             <h2 className="text-3xl md:text-4xl mb-8">

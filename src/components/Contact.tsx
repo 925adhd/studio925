@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { Mail, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { useState, useEffect } from 'react';

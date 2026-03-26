@@ -1,4 +1,7 @@
+'use client';
+
 import { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { ExternalLink, Mail, ChevronRight, CheckCircle, Info, X, ZoomIn } from 'lucide-react';
 
@@ -66,7 +69,7 @@ const tipStyles = {
   yellow: 'bg-amber-50 border-amber-200 text-amber-800',
 };
 
-export default function Web3FormsGuide() {
+export default function ContactFormGuide() {
   const [expandedVideo, setExpandedVideo] = useState<string | null>(null);
 
   return (
@@ -228,12 +231,12 @@ export default function Web3FormsGuide() {
 
         {/* Link to other guide */}
         <div className="text-center mt-10">
-          <a
+          <Link
             href="/setup/domain"
             className="inline-flex items-center gap-2 text-sm font-sans font-semibold text-brand-accent hover:underline"
           >
             Need to connect a custom domain? Follow the Domain Setup Guide <ChevronRight size={14} />
-          </a>
+          </Link>
         </div>
 
         {/* Footer attribution */}
@@ -268,7 +271,7 @@ export default function Web3FormsGuide() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e: React.MouseEvent) => e.stopPropagation()}
             />
           </motion.div>
         )}
