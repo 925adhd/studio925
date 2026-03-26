@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Check } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const reasons = [
   'Most customers search online before calling any business',
@@ -15,6 +16,11 @@ const reasons = [
 export default function KentuckyPage() {
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
+      <SEO
+        title="Small Business Website Design in Kentucky | Studio 925"
+        description="Custom website design for small businesses across Kentucky. No templates. Built from scratch to help your business get found online and convert visitors into customers."
+        path="/small-business-website-design-kentucky"
+      />
       <Navbar />
 
       <main className="pt-32 pb-20 px-6">

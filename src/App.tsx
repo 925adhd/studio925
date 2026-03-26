@@ -14,6 +14,7 @@ import LocalSection from './components/LocalSection';
 import NoHomework from './components/NoHomework';
 import WebsiteCare from './components/WebsiteCare';
 import ScrollToTop from './components/ScrollToTop';
+import SEO from './components/SEO';
 import GraysonCountyPage from './pages/GraysonCountyPage';
 import KentuckyPage from './pages/KentuckyPage';
 import Portfolio from './pages/Portfolio';
@@ -22,6 +23,7 @@ import Web3FormsGuide from './pages/Web3FormsGuide';
 import DomainSetupGuide from './pages/DomainSetupGuide';
 import SetupHub from './pages/SetupHub';
 import LegalPage from './pages/LegalPage';
+import NotFound from './pages/NotFound';
 import { motion, useScroll, useSpring } from 'motion/react';
 
 function HomePage() {
@@ -34,6 +36,11 @@ function HomePage() {
 
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
+      <SEO
+        title="Web Design in Grayson County, KY | Studio 925"
+        description="Custom websites for small businesses in Grayson County, Kentucky. No templates, no page builders. Built from scratch to bring in real customers."
+        path="/"
+      />
       <a href="#main-content" className="skip-to-content">
         Skip to main content
       </a>
@@ -109,6 +116,7 @@ export default function App() {
         <Route path="/privacy-policy" element={<LegalPage type="privacy-policy" />} />
         <Route path="/terms-of-service" element={<LegalPage type="terms-of-service" />} />
         <Route path="/cookie-policy" element={<LegalPage type="cookie-policy" />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

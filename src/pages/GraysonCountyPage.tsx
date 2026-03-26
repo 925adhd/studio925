@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Check, MapPin } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const included = [
   'Custom homepage design tailored to your business',
@@ -18,6 +19,11 @@ const included = [
 export default function GraysonCountyPage() {
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
+      <SEO
+        title="Web Design in Grayson County, KY | Studio 925"
+        description="Professional web design for small businesses in Grayson County, Kentucky. Custom-built websites that bring in real customers and grow your business."
+        path="/web-design-grayson-county-ky"
+      />
       <Navbar />
 
       <main className="pt-32 pb-20 px-6">

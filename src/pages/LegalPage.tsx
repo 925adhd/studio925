@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const lastUpdated = 'February 27, 2026';
 const email = 'contact@studio925.design';
@@ -310,12 +310,19 @@ const pages = {
 export default function LegalPage({ type }: { type: keyof typeof pages }) {
   const { title, component: Content } = pages[type];
 
-  useEffect(() => {
-    document.title = `${title} | Studio 925`;
-  }, [title]);
+  const descriptions: Record<string, string> = {
+    'privacy-policy': 'Read the Studio 925 privacy policy. Learn how we collect, use, and protect your information.',
+    'terms-of-service': 'Read the Studio 925 terms of service. Understand the terms that govern our web design services.',
+    'cookie-policy': 'Read the Studio 925 cookie policy. Learn how we use cookies on our website.',
+  };
 
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
+      <SEO
+        title={`${title} | Studio 925`}
+        description={descriptions[type]}
+        path={`/${type}`}
+      />
       <Navbar />
       <main className="pt-32 pb-20 px-6">
         <div className="max-w-2xl mx-auto">

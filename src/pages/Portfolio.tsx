@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const featured = {
   title: 'CS Media',
@@ -77,6 +78,11 @@ const features = [
 export default function Portfolio() {
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
+      <SEO
+        title="Portfolio | Studio 925 — Real Websites for Real Businesses"
+        description="See real websites built by Studio 925 for small businesses. Custom designs that bring in calls, leads, and customers."
+        path="/portfolio"
+      />
       <Navbar />
 
       <main className="pt-28 pb-20 px-6">
