@@ -34,6 +34,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/website-design-leitchfield-ky" className="hover:text-brand-accent transition-colors">
+                  Website Design in Leitchfield, KY
+                </Link>
+              </li>
+              <li>
                 <Link to="/small-business-website-design-kentucky" className="hover:text-brand-accent transition-colors">
                   Small Business Websites in Kentucky
                 </Link>

@@ -23,6 +23,7 @@ import Web3FormsGuide from './pages/Web3FormsGuide';
 import DomainSetupGuide from './pages/DomainSetupGuide';
 import SetupHub from './pages/SetupHub';
 import LegalPage from './pages/LegalPage';
+import LeitchfieldPage from './pages/LeitchfieldPage';
 import NotFound from './pages/NotFound';
 import { motion, useScroll, useSpring } from 'motion/react';
 
@@ -108,6 +109,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/web-design-grayson-county-ky" element={<GraysonCountyPage />} />
         <Route path="/small-business-website-design-kentucky" element={<KentuckyPage />} />
+        <Route path="/website-design-leitchfield-ky" element={<LeitchfieldPage />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/setup" element={<SetupHub />} />
