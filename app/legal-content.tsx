@@ -6,7 +6,7 @@ import Navbar from '../src/components/Navbar';
 import Footer from '../src/components/Footer';
 
 const lastUpdated = 'February 27, 2026';
-const email = 'contact@studio925.design';
+const email = 'kara@studio925.design';
 const company = 'Studio 925';
 const location = 'Grayson County, Kentucky';
 

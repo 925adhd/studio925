@@ -58,13 +58,13 @@ export default function Contact() {
             </p>
 
             <div className="space-y-6">
-              <a href="mailto:contact@studio925.design" className="flex items-center gap-4 group">
+              <a href="mailto:kara@studio925.design" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-brand-accent transition-colors">
                   <Mail size={20} />
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/50 mb-1">Email Me</p>
-                  <p className="text-lg font-medium">contact@studio925.design</p>
+                  <p className="text-lg font-medium">kara@studio925.design</p>
                 </div>
               </a>
             </div>

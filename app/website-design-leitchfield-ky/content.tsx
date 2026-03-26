@@ -11,7 +11,7 @@ const jsonLd = {
   "@type": "ProfessionalService",
   "name": "Studio 925 — Website Design in Leitchfield, KY",
   "url": "https://studio925.design/website-design-leitchfield-ky",
-  "email": "contact@studio925.design",
+  "email": "kara@studio925.design",
   "description": "Professional website design for small businesses in Leitchfield, Kentucky. Custom websites built from scratch to help local businesses get found online.",
   "address": {
     "@type": "PostalAddress",

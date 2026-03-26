@@ -57,7 +57,7 @@ const jsonLd = {
   '@type': 'LocalBusiness',
   name: 'Studio 925',
   url: 'https://studio925.design',
-  email: 'contact@studio925.design',
+  email: 'kara@studio925.design',
   description: 'Professional web design services for small businesses in Grayson County, Kentucky and surrounding areas.',
   address: {
     '@type': 'PostalAddress',
