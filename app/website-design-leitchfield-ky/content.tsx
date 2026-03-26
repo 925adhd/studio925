@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { ArrowRight, Check, MapPin } from 'lucide-react';
+import { ArrowRight, Check, MapPin, Code, Search, Smartphone, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
@@ -30,11 +30,14 @@ const jsonLd = {
 };
 
 const included = [
-  'Custom homepage design tailored to your business',
-  'Fully mobile responsive layout',
-  'Fast load times optimized for performance',
+  { text: 'Custom homepage design tailored to your business', icon: Code },
+  { text: 'Fully mobile responsive layout', icon: Smartphone },
+  { text: 'Fast load times optimized for performance', icon: Zap },
+  { text: 'On-page SEO structure for Google visibility', icon: Search },
+];
+
+const includedMore = [
   'Contact forms and clear calls to action',
-  'On-page SEO structure for Google visibility',
   'Secure hosting setup and domain connection',
   'Google Search Console submission',
   'Complete launch and deployment',
@@ -50,31 +53,33 @@ export default function LeitchfieldContent() {
       />
       <Navbar />
 
-      <main className="pt-32 pb-20 px-6">
+      {/* Hero — full bleed with grid pattern */}
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-60" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-accent/5 -skew-x-12 translate-x-1/4" />
 
-        {/* Hero */}
-        <section className="max-w-4xl mx-auto mb-24">
+        <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-[1.2fr_1fr] gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-md bg-brand-primary text-white text-xs font-medium mb-6">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-primary text-white text-xs font-medium mb-6">
               <MapPin size={12} className="shrink-0" /> Leitchfield, KY
             </div>
             <h1 className="text-4xl md:text-6xl mb-6 leading-[1.1]">
               Website Design in <span className="italic text-brand-accent">Leitchfield, Kentucky</span>
             </h1>
-            <p className="text-xl text-brand-primary/70 max-w-2xl leading-relaxed">
+            <p className="text-xl text-brand-primary/70 max-w-xl leading-relaxed">
               Custom website design for small businesses in Leitchfield, KY. No templates, no page builders. Your site is built from scratch to bring in real customers.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a
-                href="/#contact"
+              <Link
+                href="/portfolio"
                 className="bg-brand-primary text-white px-8 py-4 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20"
               >
-                Book a Free Consultation <ArrowRight size={20} />
-              </a>
+                See My Work <ArrowRight size={20} />
+              </Link>
               <a
                 href="/#pricing"
                 className="bg-white border border-brand-primary/10 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-primary/5 transition-colors text-center"
@@ -83,33 +88,67 @@ export default function LeitchfieldContent() {
               </a>
             </div>
           </motion.div>
-        </section>
 
-        {/* Why Leitchfield businesses need a website */}
-        <section className="max-w-4xl mx-auto mb-24">
-          <h2 className="text-3xl md:text-4xl mb-6">
-            Why Leitchfield businesses need a professional website
-          </h2>
-          <div className="space-y-6 text-brand-primary/70 text-lg leading-relaxed">
-            <p>
-              When someone in Leitchfield searches for a contractor, a restaurant, or a local service, they go to Google first. If your business doesn't show up, or your website looks outdated, they're calling someone else.
-            </p>
-            <p>
-              A professional website tells potential customers that you're serious about your business. It makes you easy to find, easy to contact, and easy to trust. In a town like Leitchfield where reputation matters, your website should reflect the quality of your work.
-            </p>
-            <p>
-              Most website designers serving Leitchfield are based hours away or use cookie-cutter templates. Studio 925 is based right here in Grayson County. I build every site by hand, and I work directly with you through the entire process.
-            </p>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="hidden md:block"
+          >
+            <div className="relative">
+              <div className="absolute -inset-4 bg-brand-accent/10 rounded-[2.5rem] -rotate-3" />
+              <img
+                src="/me.png"
+                alt="Kara Gibson — web designer in Leitchfield, KY"
+                className="relative w-full max-w-sm mx-auto rounded-[2rem] shadow-xl shadow-brand-primary/10"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Leitchfield businesses need a website */}
+      <section className="py-24 px-6 bg-white border-t border-brand-primary/5">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl mb-8">
+              Why Leitchfield businesses need a <span className="italic text-brand-accent">professional website</span>
+            </h2>
+          </motion.div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { title: 'Get found first', text: 'When someone in Leitchfield searches for a contractor, a restaurant, or a local service, they go to Google first. If your business doesn\'t show up, they\'re calling someone else.' },
+              { title: 'Build instant trust', text: 'A professional website tells potential customers that you\'re serious. In a town like Leitchfield where reputation matters, your website should reflect the quality of your work.' },
+              { title: 'Work with a local', text: 'Most designers serving Leitchfield are based hours away or use cookie-cutter templates. Studio 925 is right here in Grayson County. I build every site by hand.' },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="p-8 glass rounded-3xl"
+              >
+                <h3 className="text-xl font-sans font-bold mb-3">{item.title}</h3>
+                <p className="text-brand-primary/60 leading-relaxed">{item.text}</p>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Who This Is For */}
-        <section className="max-w-4xl mx-auto mb-24">
-          <h2 className="text-3xl md:text-4xl mb-6">Who this is for</h2>
-          <p className="text-brand-primary/70 text-lg leading-relaxed mb-6">
-            If you run a business in Leitchfield and you don't have a website, or your current site is outdated, slow, or isn't bringing in customers, this is for you. I work with:
+      {/* Who This Is For */}
+      <section className="py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl mb-4">Who this is for</h2>
+          <p className="text-brand-primary/70 text-lg leading-relaxed mb-10">
+            If you run a business in Leitchfield and you don't have a website, or your current site is outdated, slow, or isn't bringing in customers, this is for you.
           </p>
-          <ul className="grid sm:grid-cols-2 gap-4 text-brand-primary/80">
+          <div className="grid sm:grid-cols-2 gap-4">
             {[
               'Contractors & tradespeople',
               'Local service providers',
@@ -119,54 +158,87 @@ export default function LeitchfieldContent() {
               'Real estate professionals',
               'Auto shops and dealerships',
               'Any Leitchfield business ready to grow',
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <Check size={18} className="text-brand-accent mt-0.5 shrink-0" />
-                <span>{item}</span>
-              </li>
+            ].map((item, i) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-brand-primary/5"
+              >
+                <div className="w-8 h-8 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0">
+                  <Check size={16} className="text-brand-accent" />
+                </div>
+                <span className="text-brand-primary/80 font-medium">{item}</span>
+              </motion.div>
             ))}
-          </ul>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        {/* What's Included */}
-        <section className="max-w-4xl mx-auto mb-24 p-8 md:p-12 glass rounded-[2.5rem]">
-          <h2 className="text-3xl md:text-4xl mb-6">What's included in every website</h2>
-          <p className="text-brand-primary/70 mb-8 leading-relaxed">
-            Every website I build for Leitchfield businesses includes everything you need to launch professionally and start getting calls. No hidden fees. No shortcuts.
+      {/* What's Included — cards */}
+      <section className="py-24 px-6 bg-brand-primary text-white">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl mb-4">What's included in every website</h2>
+          <p className="text-white/60 mb-12 max-w-2xl leading-relaxed">
+            Every website I build for Leitchfield businesses includes everything you need to launch professionally and start getting calls.
           </p>
-          <ul className="space-y-4">
-            {included.map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <Check size={18} className="text-brand-accent mt-0.5 shrink-0" />
-                <span className="text-brand-primary/80">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
 
-        {/* What makes Studio 925 different */}
-        <section className="max-w-4xl mx-auto mb-24">
-          <h2 className="text-3xl md:text-4xl mb-6">
-            What makes Studio 925 different
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            {included.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="p-6 rounded-2xl bg-white/10 border border-white/10"
+              >
+                <item.icon size={24} className="text-brand-accent mb-4" />
+                <p className="text-sm font-medium leading-relaxed">{item.text}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-3">
+            {includedMore.map((item) => (
+              <div key={item} className="flex items-center gap-3">
+                <Check size={16} className="text-brand-accent shrink-0" />
+                <span className="text-white/70 text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What makes Studio 925 different */}
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-40" />
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h2 className="text-3xl md:text-4xl mb-8">
+            What makes Studio 925 <span className="italic text-brand-accent">different</span>
           </h2>
           <div className="space-y-6 text-brand-primary/70 text-lg leading-relaxed">
             <p>
-              Most web designers use templates and page builders. I don't. Every Studio 925 website is hand-coded from scratch, which means faster load times, better Google rankings, and a site that actually looks like your business — not everyone else's.
+              Most web designers use templates and page builders like Wix, Squarespace, or WordPress themes. I don't. Every Studio 925 website is hand-coded from scratch, which means faster load times, better Google rankings, and a site that actually looks like your business — not everyone else's.
             </p>
             <p>
               I'm based in Grayson County, not a remote agency three states away. When you work with me, you're talking directly to the person building your site. No account managers. No outsourcing. No runaround.
             </p>
-            <p>
+            <p className="text-brand-primary font-semibold">
               You get a website that's built to perform — fast, mobile-friendly, optimized for search engines, and designed to turn visitors into paying customers.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Pricing Overview */}
-        <section className="max-w-4xl mx-auto mb-24">
+      {/* Pricing Overview */}
+      <section className="py-24 px-6 bg-white border-t border-brand-primary/5">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl mb-6">Website design pricing</h2>
           <p className="text-brand-primary/70 text-lg leading-relaxed mb-8">
-            Website projects start at <strong>$1,200</strong> for a clean, professional Foundation site. Growth and Membership plans are available for businesses that need expanded pages, content systems, or online payments. Every project includes full ownership of your files.
+            Website projects start at <strong>$900</strong> for a clean, professional Foundation site. Growth and Membership plans are available for businesses that need expanded pages, content systems, or online payments. Every project includes full ownership of your files.
           </p>
           <a
             href="/#pricing"
@@ -174,43 +246,50 @@ export default function LeitchfieldContent() {
           >
             See Full Pricing <ArrowRight size={18} />
           </a>
-        </section>
+        </div>
+      </section>
 
-        {/* Other service areas */}
-        <section className="max-w-4xl mx-auto mb-24">
+      {/* Other service areas */}
+      <section className="py-16 px-6">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl mb-6">Also serving</h2>
           <p className="text-brand-primary/70 text-lg leading-relaxed mb-6">
-            Studio 925 builds websites for businesses across Grayson County and Kentucky. See more:
+            Studio 925 builds websites for businesses across Grayson County and Kentucky.
           </p>
-          <ul className="space-y-3 text-brand-primary/70">
-            <li>
-              <Link href="/web-design-grayson-county-ky" className="text-brand-accent hover:text-brand-accent/80 font-medium transition-colors">
-                Web Design in Grayson County, KY →
-              </Link>
-            </li>
-            <li>
-              <Link href="/small-business-website-design-kentucky" className="text-brand-accent hover:text-brand-accent/80 font-medium transition-colors">
-                Small Business Website Design in Kentucky →
-              </Link>
-            </li>
-          </ul>
-        </section>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/web-design-grayson-county-ky" className="px-6 py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors font-medium text-brand-primary/80">
+              Web Design in Grayson County, KY <ArrowRight size={16} className="inline ml-2" />
+            </Link>
+            <Link href="/small-business-website-design-kentucky" className="px-6 py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors font-medium text-brand-primary/80">
+              Small Business Website Design in Kentucky <ArrowRight size={16} className="inline ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
-        {/* CTA */}
-        <section className="max-w-4xl mx-auto text-center py-16 px-8 bg-brand-primary text-white rounded-[2.5rem]">
+      {/* CTA */}
+      <section className="px-6 pb-20">
+        <div className="max-w-4xl mx-auto text-center py-16 px-8 bg-brand-primary text-white rounded-[2.5rem]">
           <h2 className="text-3xl md:text-4xl mb-4">Ready to get a website that works for your Leitchfield business?</h2>
           <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-            Book a free consultation and let's talk about your goals, your customers, and what a professional website can do for your business.
+            See what I've built for other businesses, then let's talk about yours.
           </p>
-          <a
-            href="/#contact"
-            className="inline-flex items-center gap-2 bg-brand-accent text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-accent/90 transition-colors"
-          >
-            Book My Free Consultation <ArrowRight size={20} />
-          </a>
-        </section>
-
-      </main>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/portfolio"
+              className="inline-flex items-center gap-2 bg-brand-accent text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-accent/90 transition-colors"
+            >
+              View Portfolio <ArrowRight size={20} />
+            </Link>
+            <a
+              href="/#contact"
+              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/20 transition-colors"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
