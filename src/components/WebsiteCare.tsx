@@ -18,8 +18,11 @@ const plans = [
     price: "49",
     features: [
       "Everything in Hosting",
-      "I handle edits & small updates for you",
-      "Ongoing help when you need it"
+      "Need something changed? Just tell me — I handle it",
+      "Text edits, new photos, layout tweaks — all covered",
+      "You never touch the backend or figure anything out",
+      "Ongoing SEO — I keep your site updated with current best practices",
+      "Ongoing support whenever you need it"
     ],
     featured: true
   }
@@ -32,7 +35,7 @@ export default function WebsiteCare() {
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl mb-3">Website Care & Support</h2>
           <p className="text-brand-primary/50 text-lg">Keep your site running smoothly after launch — without dealing with the technical side.</p>
-          <p className="text-brand-primary/60 text-sm mt-3">You'll purchase your domain (usually around $10–$20/year) so it's fully yours. I'll guide you through it and handle the rest.</p>
+          <p className="text-brand-primary/60 text-sm mt-3">You'll purchase your domain (usually around $10–$20/year) so it's fully yours. Already have one? I'll help you connect it. Either way, I handle the rest.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6">

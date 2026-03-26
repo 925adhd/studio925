@@ -5,45 +5,45 @@ import { Layout, Zap, ShieldCheck, Search, Smartphone, Globe } from 'lucide-reac
 
 const services = [
   {
-    title: "No templates. Built for your business.",
-    description: "Not a theme swap. Not built on a drag-and-drop platform like Wix, Squarespace, or Shopify. Built specifically for your business so it looks right, says the right things, and works the way you need it to.",
+    title: "Your site actually fits your business",
+    description: "No templates. No drag-and-drop builders. Your site is built from scratch to say the right things and work the way your business needs it to.",
     icon: Layout,
   },
   {
-    title: "Show up when customers are looking",
-    description: "Your site is structured so search engines understand what you do and where you do it — so more people find you when they're actively looking.",
+    title: "Built to be found",
+    description: "When someone searches for what you do, your business has a real chance to show up. Your site is structured so Google understands what you offer and where.",
     icon: Search,
   },
   {
-    title: "Built for how people actually use their phones",
-    description: "Most customers decide on their phone before they ever call. Your site will look sharp and load fast on every screen. Period.",
+    title: "Looks right on every phone",
+    description: "Most customers decide on their phone. Your site will load fast and look right immediately — no pinching, no waiting, no broken layouts.",
     icon: Smartphone,
   },
   {
-    title: "Speed & Security Optimization",
-    description: "A slow or broken site loses customers before they read a single word. Yours loads fast, runs clean, and stays online.",
+    title: "Fast, secure, and always online",
+    description: "A slow site loses customers before they read a word. Yours loads fast, stays secure, and doesn't go down.",
     icon: ShieldCheck,
   },
   {
-    title: "Online Payments & Booking Integration",
-    description: "Let customers book appointments or pay invoices directly from your site. Less phone tag. More closed business.",
+    title: "Payments & booking built in",
+    description: "Let customers book or pay directly from your site. Less phone tag. Fewer missed opportunities.",
     icon: Zap,
   },
   {
-    title: "Someone in Your Corner",
-    description: "You won't be handed a login and left to figure it out. After launch, I'm still here — whether you need a quick update, a fix, or just someone to call.",
+    title: "Someone in your corner",
+    description: "You won't be handed a login and left to figure it out. After launch, I'm still here — updates, fixes, or just someone to call.",
     icon: Globe,
   }
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="pt-10 pb-14 md:py-32 px-6 bg-white">
+    <section id="services" className="pt-10 pb-14 md:py-28 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-10 max-w-2xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4">Your website should be<br /><span className="text-brand-accent italic">working for you right now.</span></h2>
           <p className="text-lg text-brand-primary/60">
-            Here's what's included in your website.
+            Not a list of features. These are the outcomes you actually need.
           </p>
         </div>
 

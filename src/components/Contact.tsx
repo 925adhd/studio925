@@ -50,8 +50,8 @@ export default function Contact() {
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-center">
           <div>
             <h2 className="text-5xl md:text-6xl mb-8 leading-tight">
-              Your next customer is already <br />
-              <span className="italic text-brand-accent">searching for you.</span>
+              Let's build something <br />
+              <span className="italic text-brand-accent">worth finding.</span>
             </h2>
             <p className="text-xl text-white/70 mb-12 max-w-lg">
               Tell me about your business. No pressure, no pitch. Just an honest conversation about what would actually help you.

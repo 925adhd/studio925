@@ -21,15 +21,15 @@ export default function Hero() {
           </h1>
 
           <h2 className="text-4xl sm:text-5xl md:text-7xl mb-5 md:mb-6 leading-[1.05] sm:leading-[1.1]">
-            You deserve a website that <span className="italic text-brand-accent">works as hard as you do.</span>
+            You don't just need a website. You need one <span className="italic text-brand-accent">built to bring you customers.</span>
           </h2>
 
           <p className="text-[15px] md:text-xl text-brand-primary/70 mb-3 md:mb-4 max-w-2xl leading-[1.65] md:leading-relaxed mx-auto">
-            Studio 925 builds custom websites for local businesses in Grayson County that need more calls, more leads, and real growth. Built locally. Built personally. No outsourcing. No templates.<span className="hidden sm:inline"> Just focused, strategic work that helps your business get found and convert.</span>
+            Custom-built websites for local businesses in Grayson County. No templates. No figuring it out yourself. Built to be found and actually convert.<span className="hidden sm:inline"> Designed for more calls, more leads, and real growth.</span>
           </p>
 
           <p className="text-[13px] text-brand-primary/45 mb-6 md:mb-8">
-            Most websites just sit there. This one is built to bring you customers.
+            You can build your own site. Most businesses never finish — or never get results.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center">

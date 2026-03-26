@@ -59,27 +59,24 @@ export default function LocalSection() {
 
           <div className="space-y-3.5 text-brand-primary/70 text-lg leading-relaxed">
             <p>
-              I'm a Grayson County–based web designer who works directly with small business owners. When you hire Studio 925, you're working with the person building your site.
+              You're not hiring an agency. You're working directly with the person building your site.
             </p>
             <p>
-              No agencies. No outsourcing. No middlemen.
+              I'm a web designer based in Leitchfield, Kentucky — right here in Grayson County. No outsourcing. No middlemen. No hand-offs to someone you've never talked to.
             </p>
             <p>
-              Clear, focused work that helps your business get found and look professional online. If needed, we can talk through your goals in person.
+              When you have a question, you call me. When something needs to change, I handle it. If you want to sit down and talk through your goals in person, we can do that too.
             </p>
             <p className="text-brand-primary/90 font-medium">
-              That kind of access is rare.
+              That kind of access is rare — and it's the whole point.
             </p>
             <p>
-              Local businesses don't need flashy tech. They need results — clear, easy to use, built to be found, and built to be trusted.
-            </p>
-            <p className="text-brand-primary/90 font-medium">
-              Built for local businesses serious about growth.
+              Local businesses don't need flashy tech. They need a site that's easy to find, easy to trust, and makes it simple for someone to reach out.
             </p>
           </div>
 
           <p className="text-brand-primary/90 font-semibold text-lg mt-5">
-            You're not getting a template. You're getting something built for your business.
+            Built for local businesses serious about growth.
           </p>
 
           <div className="mt-6">

@@ -23,7 +23,7 @@ const items = [
 
 export default function NoHomework() {
   return (
-    <section className="py-24 px-6 bg-white">
+    <section className="py-20 px-6 bg-[#edeae5]">
       <div className="max-w-7xl mx-auto">
         <div className="mb-10 max-w-2xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4">
@@ -54,7 +54,7 @@ export default function NoHomework() {
         </div>
 
         <p className="text-sm text-brand-primary/50 mt-12 max-w-xl mx-auto text-center leading-relaxed">
-          No confusion. No back-and-forth. Just a website that gets built and gets results.
+          No confusion. No back-and-forth. Just a website that gets built right.
         </p>
       </div>
     </section>

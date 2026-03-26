@@ -19,7 +19,7 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           <a href="/#services" className="text-sm font-medium hover:text-brand-accent transition-colors">Services</a>
-          <a href="/#process" className="text-sm font-medium hover:text-brand-accent transition-colors">Process</a>
+          <a href="/#local" className="text-sm font-medium hover:text-brand-accent transition-colors">About</a>
           <a href="/#pricing" className="text-sm font-medium hover:text-brand-accent transition-colors">Pricing</a>
           <a href="/#contact" className="bg-brand-primary text-white px-5 py-2 rounded-xl text-sm font-medium flex items-center gap-2 hover:bg-brand-primary/90 transition-all">
             Build My Website <ArrowRight size={16} />
@@ -46,7 +46,7 @@ export default function Navbar() {
         >
           <div className="flex flex-col gap-5 items-start">
             <a href="/#services" onClick={() => setIsOpen(false)} className="text-lg font-medium">Services</a>
-            <a href="/#process" onClick={() => setIsOpen(false)} className="text-lg font-medium">Process</a>
+            <a href="/#local" onClick={() => setIsOpen(false)} className="text-lg font-medium">About</a>
             <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-lg font-medium">Pricing</a>
             <a href="/#contact" onClick={() => setIsOpen(false)} className="bg-brand-primary text-white px-4 py-2.5 rounded-xl font-medium text-base mt-1">
               Contact

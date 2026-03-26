@@ -74,11 +74,12 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 px-6">
+    <section id="pricing" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
+          <p className="text-sm font-medium tracking-widest uppercase text-brand-primary/40 mb-4">Clear pricing. No surprises. Built for real businesses.</p>
           <h2 className="text-4xl md:text-5xl mb-4">Every serious local business needs a website <span className="italic text-brand-accent">that works.</span></h2>
-          <p className="text-brand-primary/50 text-lg mt-3">Custom-built. Clear pricing. No surprises.</p>
+          <p className="text-brand-primary/50 text-lg mt-3">Custom-built. One flat price. No hidden fees.</p>
           <p className="text-sm text-brand-primary/40 mt-4">Introductory pricing currently available for new projects.</p>
         </div>
 
@@ -153,7 +154,10 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-sm text-brand-primary/50 mt-16">
+        <p className="text-center text-base text-brand-primary/50 mt-12 mb-2">
+          Not sure which one fits? We'll figure it out together.
+        </p>
+        <p className="text-center text-sm text-brand-primary/40 mt-4">
           Projects begin with a 50% deposit. The remaining balance is due at launch.<br />
           Full ownership of all website files transfers upon final payment.
         </p>
