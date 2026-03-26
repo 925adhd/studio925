@@ -4,35 +4,36 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const featured = {
-  title: 'Townly',
-  tag: 'Community Platform',
+  title: 'CS Media',
+  tag: 'Media Brand',
   description:
-    'A clean, structured platform that replaces scattered posts with something people can actually use.',
-  impact: 'Built to organize and power a local community.',
+    'A modern media brand site built for strong visual presence and clear service positioning.',
+  impact: 'Clean, professional identity that builds trust fast.',
   bullets: [
-    'Helps residents find local businesses faster',
-    'Builds neighborhood trust instantly',
-    'Designed to keep communities connected and growing',
+    'Helps clients understand services at a glance',
+    'Builds credibility instantly',
+    'Designed to generate real inquiries',
   ],
-  proof: 'Built for real users in Grayson County',
-  href: 'https://townly.us',
-  image: '/townly.png',
+  proof: 'Built for a real client ready to scale their brand',
+  href: 'https://csmedia.vercel.app',
+  image: '/csmedia.png',
 };
 
 const projects = [
   {
-    title: 'CS Media',
+    title: 'Townly',
     description:
-      'A modern media brand site built for strong visual presence and clear service positioning.',
-    impact: 'Clean, professional identity that builds trust fast.',
+      'A clean, structured platform that replaces scattered posts with something people can actually use.',
+    impact: 'Built to organize and power a local community.',
     bullets: [
-      'Helps clients understand services at a glance',
-      'Builds credibility instantly',
-      'Designed to generate real inquiries',
+      'Helps residents find local businesses faster',
+      'Builds neighborhood trust instantly',
+      'Designed to keep communities connected and growing',
     ],
-    href: 'https://csmedia.vercel.app',
-    tag: 'Media Brand',
-    image: '/csmedia.png',
+    proof: 'Built for real users in Grayson County',
+    href: 'https://townly.us',
+    tag: 'Community Platform',
+    image: '/townly.png',
   },
   {
     title: 'Four Chariots',
@@ -62,20 +63,6 @@ const projects = [
     href: 'https://925adhd.com',
     tag: 'SaaS Platform',
     image: '/925adhd.png',
-  },
-  {
-    title: 'Studio 925',
-    description:
-      'The site you\'re on right now. Built for performance, clarity, and real lead generation.',
-    impact: 'Conversion-focused design that generates real business leads.',
-    bullets: [
-      'Helps customers find the business faster',
-      'Builds trust instantly',
-      'Designed to convert visitors into leads',
-    ],
-    href: 'https://studio925.design',
-    tag: 'Service Business Website',
-    image: '/studio925.png',
   },
 ];
 
@@ -128,10 +115,10 @@ export default function Portfolio() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-3 py-1 rounded-lg bg-brand-accent/10 text-brand-accent text-[11px] font-bold tracking-widest uppercase mb-1.5">
-              Featured Project
+              Latest Project
             </span>
             <p className="text-xs text-brand-primary/50 mb-4">
-              Real product. Real users. Real impact.
+              Real client. Real brand. Real results.
             </p>
 
             <div className="relative grid md:grid-cols-2 overflow-hidden rounded-[2.5rem] border border-brand-primary/10 shadow-lg shadow-brand-primary/10 bg-white">

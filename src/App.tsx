@@ -64,7 +64,7 @@ function HomePage() {
               {[
                 { step: "01", title: "Discovery", desc: "We clarify your goals, customers, and what success looks like — together. You'll know exactly what we're building and why before anything begins." },
                 { step: "02", title: "Strategy", desc: "I map out the structure and user flow for your site based on your goals and your customers. You review and approve the plan before we move forward." },
-                { step: "03", title: "Build", desc: "Your website is built from scratch — not from a template — section by section. You'll see progress and receive a private preview before anything goes live." },
+                { step: "03", title: "Build", desc: <>Your website is built from scratch, not from a template, <strong className="font-semibold text-brand-primary/80">section by section</strong>. You'll see progress and receive a private preview before anything goes live.</> },
                 { step: "04", title: "Launch", desc: "Once everything is finalized and approved, we launch with confidence. You'll know exactly how your site works and what to expect moving forward." }
               ].map((item, i) => (
                 <div key={i} className="relative p-10 glass rounded-3xl">
