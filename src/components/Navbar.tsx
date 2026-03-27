@@ -68,11 +68,11 @@ export default function Navbar() {
 
     {/* Sticky mobile call button */}
     <a
-      href="tel:+12705512210"
+      href="sms:+12705512210?body=Hi%2C%20I%27m%20interested%20in%20a%20website"
       className="fixed bottom-5 right-5 z-50 md:hidden bg-brand-accent text-white p-4 rounded-full shadow-lg shadow-brand-accent/30 hover:scale-105 transition-transform"
-      aria-label="Call Studio 925"
+      aria-label="Text Studio 925"
     >
-      <Phone size={22} />
+      <MessageCircle size={22} />
     </a>
     </>
   );
