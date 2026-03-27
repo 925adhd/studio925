@@ -6,7 +6,7 @@ import { Layout, Zap, ShieldCheck, Search, Smartphone, Globe } from 'lucide-reac
 const services = [
   {
     title: "Your site actually fits your business",
-    description: "No templates. No drag-and-drop builders. Your site is built from scratch to say the right things and work the way your business needs it to.",
+    description: "No templates. No drag-and-drop builders. Your site is coded from scratch, page by page, to say the right things and work the way your business needs it to.",
     icon: Layout,
   },
   {
@@ -54,7 +54,7 @@ export default function Services() {
         <div className="mb-10 max-w-2xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4">Your website should be<br /><span className="text-brand-accent italic">working for you right now.</span></h2>
           <p className="text-lg text-brand-primary/60">
-            Here's what your website actually does for you.
+            Here's what a Studio 925 website does for you.
           </p>
         </div>
 
