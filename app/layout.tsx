@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     url: '/',
     title: 'Web Design in Grayson County, KY | Studio 925',
     description: 'Professional web design for small businesses in Grayson County, Kentucky. Modern, fast, and built to support real growth.',
-    images: ['/og-image.png'],
+    images: ['/studio925.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design in Grayson County, KY | Studio 925',
     description: 'Professional web design for small businesses in Grayson County, Kentucky. Modern, fast, and built to support real growth.',
-    images: ['/og-image.png'],
+    images: ['/studio925.png'],
   },
   icons: {
     icon: '/fav.png',
