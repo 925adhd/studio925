@@ -42,15 +42,16 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl mb-3">How it works.</h2>
-              <p className="text-brand-primary/50 text-sm">Simple, direct, and transparent from start to finish.</p>
+              <p className="text-brand-primary/60 text-lg mb-1">This shouldn't feel like <span className="italic text-brand-accent">a second job.</span></p>
+              <p className="text-brand-primary/40 text-sm">No homework. No confusion. Just a clear process from start to finish.</p>
             </div>
 
             <div className="grid md:grid-cols-4 gap-8">
               {[
-                { step: "01", title: "Discovery", desc: "We talk through your goals, your customers, and what success looks like." },
-                { step: "02", title: "Strategy", desc: "I map out the structure and flow. You review and approve before anything is built." },
-                { step: "03", title: "Build", desc: "Your site is built from scratch, section by section. You'll see progress along the way." },
-                { step: "04", title: "Launch", desc: "We launch when you're confident. You'll know exactly how everything works." }
+                { step: "01", title: "Quick Conversation", desc: "Tell me about your business — or just point me to your current website or Facebook page. That's enough to get started." },
+                { step: "02", title: "48-Hour Draft", desc: "You'll have a rough draft to look at within 48 hours. No weeks of waiting around." },
+                { step: "03", title: "Review & Refine", desc: "You tell me what you like, what to change, and I handle the rest." },
+                { step: "04", title: "Launch", desc: "Your site goes live. I'll walk you through setting up your domain, and handle the rest." }
               ].map((item, i) => (
                 <div key={i} className="relative p-8 glass rounded-3xl">
                   <span className="text-4xl font-serif font-bold italic text-brand-accent/15 absolute top-3 right-5">{item.step}</span>

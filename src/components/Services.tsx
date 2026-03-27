@@ -36,6 +36,17 @@ const services = [
   }
 ];
 
+const mobileServices = [
+  services[0],
+  services[1],
+  {
+    title: "Fast, secure, and looks right on every device",
+    description: "Most customers decide on their phone. Your site loads fast, stays secure, and looks right immediately — no pinching, no waiting, no broken layouts.",
+    icon: Smartphone,
+  },
+  services[5],
+];
+
 export default function Services() {
   return (
     <section id="services" className="pt-10 pb-14 md:py-28 px-6 bg-white">
@@ -47,7 +58,32 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Mobile: horizontal compact layout, condensed items */}
+        <div className="md:hidden grid gap-4">
+          {mobileServices.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="flex items-start gap-4 p-4"
+            >
+              <div className="shrink-0 w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center">
+                <service.icon size={20} strokeWidth={2} className="text-brand-accent" />
+              </div>
+              <div>
+                <h3 className="text-base font-sans font-bold mb-1">{service.title}</h3>
+                <p className="text-sm text-brand-primary/60 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Desktop: original layout, all 6 items */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
