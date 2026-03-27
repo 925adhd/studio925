@@ -11,7 +11,9 @@ const plans = [
       "I keep your website live and running",
       "Secure hosting & backups handled"
     ],
-    featured: false
+    featured: false,
+    cta: "Start Basic Hosting",
+    stripeLink: "https://buy.stripe.com/9B6cN79kn2Lm8gs8yscIE01"
   },
   {
     name: "Full Support",
@@ -24,7 +26,9 @@ const plans = [
       "Ongoing SEO — I keep your site updated with current best practices",
       "Ongoing support whenever you need it"
     ],
-    featured: true
+    featured: true,
+    cta: "Get Full Support",
+    stripeLink: "https://buy.stripe.com/14A5kFeEHgCceEQcOIcIE00"
   }
 ];
 
@@ -64,7 +68,7 @@ export default function WebsiteCare() {
                 <span className="text-sm text-brand-primary/50">/month</span>
               </div>
 
-              <ul className="space-y-3">
+              <ul className="space-y-3 flex-1">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3 text-sm">
                     <Check size={16} className="text-brand-accent mt-0.5 shrink-0" />
@@ -72,6 +76,26 @@ export default function WebsiteCare() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-8">
+                <a
+                  href={plan.stripeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block w-full py-3.5 rounded-2xl font-bold text-center transition-all ${
+                    plan.featured
+                      ? 'bg-brand-accent text-white hover:bg-brand-accent/90'
+                      : 'border-2 border-brand-primary/20 text-brand-primary hover:border-brand-primary/40'
+                  }`}
+                >
+                  {plan.cta}
+                </a>
+                {plan.featured && (
+                  <p className="text-center text-xs text-brand-primary/40 mt-3">
+                    Most clients choose this for peace of mind
+                  </p>
+                )}
+              </div>
             </motion.div>
           ))}
         </div>
