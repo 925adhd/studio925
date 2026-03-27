@@ -58,9 +58,6 @@ export default function Navbar() {
                 <MessageCircle size={16} /> Text
               </a>
             </div>
-            <a href="/#contact" onClick={() => setIsOpen(false)} className="text-brand-primary/70 underline text-base">
-              Or send a message online
-            </a>
           </div>
         </motion.div>
       )}
