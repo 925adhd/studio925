@@ -54,7 +54,7 @@ export default function Services() {
         <div className="mb-10 max-w-2xl">
           <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4">Your website should be<br /><span className="text-brand-accent italic">working for you right now.</span></h2>
           <p className="text-lg text-brand-primary/60">
-            Not a list of features. These are the outcomes you actually need.
+            Here's what your website actually does for you.
           </p>
         </div>
 
