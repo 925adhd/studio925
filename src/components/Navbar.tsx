@@ -23,7 +23,7 @@ export default function Navbar() {
           <a href="/#local" className="text-sm font-medium hover:text-brand-accent transition-colors">About</a>
           <a href="/#pricing" className="text-sm font-medium hover:text-brand-accent transition-colors">Pricing</a>
           <a href="/#contact" className="bg-brand-primary text-white px-5 py-2 rounded-xl text-sm font-medium flex items-center gap-2 hover:bg-brand-primary/90 transition-all">
-            Build My Website <ArrowRight size={16} />
+            Get Started <ArrowRight size={16} />
           </a>
         </div>
 
