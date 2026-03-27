@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
 
           <p className="text-[13px] text-brand-primary/45 mb-6 md:mb-8">
-            You can build your own site. Most businesses never finish — or never get results.
+            You could build your own site. But will it actually bring you customers?
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center">
@@ -42,7 +42,7 @@ export default function Hero() {
           </div>
 
           <div className="mt-6 sm:mt-12 flex flex-row flex-wrap gap-2 sm:gap-x-6 gap-y-2 sm:gap-y-3 items-center justify-center">
-            {['48-Hour First Draft', 'Built to Be Found', 'Easy to Contact'].map((item) => (
+            {['48-Hour First Draft', 'Built to Be Found', 'Get More Customers'].map((item) => (
               <div key={item} className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-sm font-medium text-brand-primary/60 whitespace-nowrap">
                 <CheckCircle2 size={14} className="text-brand-accent" />
                 {item}
