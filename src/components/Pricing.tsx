@@ -76,10 +76,10 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-4">Every serious local business needs a website <span className="italic text-brand-accent">that works.</span></h2>
-          <p className="text-brand-primary/50 text-lg mt-3">Clear pricing. One flat price. No hidden fees.</p>
-          <p className="text-sm text-brand-primary/40 mt-4">Introductory pricing currently available for new projects.</p>
+        <div className="text-center mb-12 md:mb-16 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl mb-3 md:mb-4 leading-snug">Every serious local business needs a website <span className="italic text-brand-accent">that works.</span></h2>
+          <p className="text-brand-primary/50 text-sm md:text-lg mt-2 md:mt-3">Clear pricing. One flat price. No hidden fees.</p>
+          <p className="text-[11px] md:text-sm text-brand-primary/40 mt-2 md:mt-4">Introductory pricing currently available for new projects.</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-14 lg:gap-8">
