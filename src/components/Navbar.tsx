@@ -54,9 +54,9 @@ export default function Navbar() {
               <a href="tel:+12705512210" onClick={() => setIsOpen(false)} className="bg-brand-accent text-white px-4 py-2.5 rounded-xl font-medium text-base flex items-center gap-2">
                 <Phone size={16} /> Call
               </a>
-              <a href="sms:+12705512210?body=Hi%2C%20I%27m%20interested%20in%20a%20website" onClick={() => setIsOpen(false)} className="bg-brand-primary text-white px-4 py-2.5 rounded-xl font-medium text-base flex items-center gap-2">
+              <button onClick={() => { setIsOpen(false); window.location.href = 'sms:+12705512210?body=Hi%2C%20I%27m%20interested%20in%20a%20website'; }} className="bg-brand-primary text-white px-4 py-2.5 rounded-xl font-medium text-base flex items-center gap-2">
                 <MessageCircle size={16} /> Text
-              </a>
+              </button>
             </div>
           </div>
         </motion.div>
@@ -64,13 +64,13 @@ export default function Navbar() {
     </nav>
 
     {/* Sticky mobile call button */}
-    <a
-      href="sms:+12705512210?body=Hi%2C%20I%27m%20interested%20in%20a%20website"
+    <button
+      onClick={() => { window.location.href = 'sms:+12705512210?body=Hi%2C%20I%27m%20interested%20in%20a%20website'; }}
       className="fixed bottom-5 right-5 z-50 md:hidden bg-brand-accent text-white p-4 rounded-full shadow-lg shadow-brand-accent/30 hover:scale-105 transition-transform"
       aria-label="Text Studio 925"
     >
       <MessageCircle size={22} />
-    </a>
+    </button>
     </>
   );
 }
