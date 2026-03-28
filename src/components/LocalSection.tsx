@@ -12,7 +12,7 @@ export default function LocalSection() {
         .county-bg {
           position: absolute;
           left: 50%;
-          top: 50%;
+          top: 55%;
           transform: translate(-50%, -50%);
           width: 1200px;
           opacity: 0.4;
@@ -57,17 +57,17 @@ export default function LocalSection() {
             Based in Kentucky. Built for local businesses.
           </p>
 
-          <div className="space-y-3.5 text-brand-primary/70 text-lg leading-relaxed">
+          <div className="space-y-3.5 text-brand-primary/70 text-base leading-relaxed">
             <p>
-              You're not hiring an agency. You're working directly with the person building your site.
+              <span className="text-brand-primary font-semibold">You're not hiring an agency.</span> You're working directly with the person building your site.
             </p>
             <p>
-              I'm a web designer based in Leitchfield, Kentucky — right here in Grayson County. No outsourcing. No middlemen. No hand-offs to someone you've never talked to.
+              I'm a web designer based in Leitchfield, Kentucky — right here in Grayson County. No outsourcing. No middlemen. No one 3 states away.
             </p>
             <p>
               When you have a question, you call me. When something needs to change, I handle it. If you want to sit down and talk through your goals in person, we can do that too.
             </p>
-            <p className="text-brand-primary/90 font-medium">
+            <p className="text-brand-primary font-semibold mt-2 mb-2">
               That kind of access is rare — and it's the whole point.
             </p>
             <p>
@@ -75,18 +75,15 @@ export default function LocalSection() {
             </p>
           </div>
 
-          <p className="text-brand-primary/90 font-semibold text-lg mt-5">
-            Built for local businesses serious about growth.
+          <p className="text-brand-primary/90 text-base mt-5 leading-relaxed">
+            I know what it's like to want to show off your business and have no idea where to start or who to call.
           </p>
-
-          <div className="mt-6">
-            <a
-              href="/#pricing"
-              className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-semibold hover:scale-[1.02] transition-transform"
-            >
-              See Pricing
-            </a>
-          </div>
+          <p className="text-brand-primary/55 text-[15px] mt-4">
+            So when you hire me, you're not just paying for a website.
+          </p>
+          <p className="text-brand-primary font-bold text-xl md:text-2xl mt-6">
+            You're paying for someone <span className="italic text-brand-accent">in your corner.</span>
+          </p>
         </motion.div>
 
         {/* Photo */}
@@ -95,7 +92,7 @@ export default function LocalSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="flex flex-col items-center order-1 md:order-2"
+          className="flex flex-col items-center order-1 md:order-2 md:mt-24"
         >
           <img
             src="/me.png"
@@ -108,6 +105,7 @@ export default function LocalSection() {
             </div>
             <span className="block text-xs font-normal text-brand-primary/75">Kara Gibson</span>
             <span className="block text-xs font-normal text-brand-primary/40 mt-0.5">Owner, Studio 925</span>
+            <a href="tel:2705512210" className="block text-xs text-brand-primary/50 mt-2 hover:text-brand-accent transition-colors">Call or text: 270-551-2210</a>
           </div>
         </motion.div>
 
