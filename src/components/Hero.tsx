@@ -28,8 +28,8 @@ export default function Hero() {
             <span className="font-semibold text-brand-primary/70">Grayson County, KY</span>
           </p>
 
-          <p className="text-[15px] md:text-xl text-brand-primary/70 mb-3 md:mb-4 max-w-2xl leading-[1.65] md:leading-relaxed mx-auto">
-            Custom-built websites for local businesses in Grayson County. No&nbsp;templates. No figuring it out yourself. Built to be found and actually&nbsp;convert.<span className="hidden sm:inline"> Designed for more calls, more leads, and real growth.</span>
+          <p className="text-sm sm:text-[15px] md:text-xl text-brand-primary/70 mb-3 md:mb-4 max-w-2xl leading-[1.65] md:leading-relaxed mx-auto">
+            Custom-built websites for local businesses in Grayson County. Built to be found on Google, load fast, and make your business look professional&nbsp;online.<span className="hidden sm:inline"> Designed for more calls, more leads, and real growth.</span>
           </p>
 
           <p className="text-xs text-brand-primary/55 font-semibold tracking-normal mb-6 md:mb-8">
