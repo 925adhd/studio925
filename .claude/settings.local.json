@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install react-router-dom @types/react-router-dom)",
+      "Bash(npm run:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm install:*)",
+      "Bash(npx next:*)"
+    ]
+  }
+}

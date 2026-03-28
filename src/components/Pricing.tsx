@@ -8,10 +8,9 @@ const tiers = [
     name: "Foundation",
     standardPrice: "1,200",
     price: "900",
-    description: "A clean, professional website that makes your business look credible and easy to contact.",
+    description: "Homepage + Up to 3 Core Pages (typically About, Services, Contact)",
     features: [
       "48-Hour Rough Draft to Review",
-      "Up to 3 Core Pages (typically Home, About, and Contact or Services)",
       "Fully Mobile Responsive",
       "Custom Homepage Layout",
       "Simple Logo Creation or Cleanup (if needed)",
@@ -24,7 +23,7 @@ const tiers = [
       "Complete Launch & Deployment",
       "Full Ownership of Files"
     ],
-    bestFor: "Best for businesses that need a solid, trustworthy online presence without the extras.",
+      bestFor: "Best for getting online fast",
     cta: "Start Your Website",
     stripeLink: "https://buy.stripe.com/eVqbJ368b1Hi2W8160cIE02",
     featured: false
@@ -33,11 +32,8 @@ const tiers = [
     name: "Growth",
     standardPrice: "2,400",
     price: "1,800",
-    description: "Built to help you attract more customers, build trust faster, and turn visitors into real leads.",
+    description: "Homepage + Up to 6 Core Pages (includes dedicated pages for your main services or portfolio)",
     features: [
-      "Everything in Foundation, plus:",
-      "Up to 6 Core Pages",
-      "Separate Pages for Your Main Services",
       "Structured Layout Designed to Encourage Calls & Inquiries",
       "Blog or Content Management System",
       "Google Analytics & Search Console Setup",
@@ -47,7 +43,7 @@ const tiers = [
       "30 Days Post-Launch Support",
       "Basic Legal Pages Included (Privacy Policy, Terms, Cookie Notice as needed)"
     ],
-    bestFor: "Best for businesses ready to expand their online presence and see what's actually working.",
+      bestFor: "Best for growing your business",
     cta: "Start Your Website",
     stripeLink: "https://buy.stripe.com/cNi3cx9kngCc9kw6qkcIE03",
     featured: true
@@ -68,7 +64,7 @@ const tiers = [
       "Performance & Security Optimization",
       "Full Launch Setup + 60 Days Guided Support"
     ],
-    bestFor: "Best for businesses ready to accept payments, offer memberships, or add secure account functionality to their website.",
+      bestFor: "Best for selling or scaling",
     cta: "Start Your Website",
     stripeLink: "https://buy.stripe.com/6oU00l0NR2LmgMYcOIcIE04",
     featured: false
@@ -106,7 +102,8 @@ export default function Pricing() {
               )}
 
               <div className="mb-8">
-                <h3 className={`text-2xl mb-2 ${tier.featured ? 'text-white' : 'text-brand-primary'}`}>{tier.name}</h3>
+                 <div className={`text-xs mb-1 font-semibold tracking-wide ${tier.featured ? 'text-white/60' : 'text-brand-primary/50'}`}>{tier.bestFor}</div>
+                 <h3 className={`text-2xl mb-2 ${tier.featured ? 'text-white' : 'text-brand-primary'}`}>{tier.name}</h3>
                 <div className="mb-7">
                   <span className={`text-xs font-semibold uppercase tracking-widest ${tier.featured ? 'text-brand-accent' : 'text-brand-accent'}`}>
                     Introductory Price
@@ -162,7 +159,7 @@ export default function Pricing() {
                     : 'text-brand-primary/40 hover:text-brand-primary/60'
                 }`}
               >
-                Already ready? Pay your deposit →
+                  Already ready? Secure your spot →
               </a>
             </motion.div>
           ))}
