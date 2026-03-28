@@ -32,10 +32,6 @@ export default function Hero() {
             Custom-built websites for local businesses in Grayson County. No templates. No figuring it out yourself. Built to be found and actually convert.<span className="hidden sm:inline"> Designed for more calls, more leads, and real growth.</span>
           </p>
 
-          <p className="text-[13px] text-brand-primary/40 mb-6 md:mb-8">
-            Based in Grayson County. Working directly with local businesses.
-          </p>
-
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center">
             <a href="/#contact" className="w-full sm:w-auto bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
               Get Started <ArrowRight size={20} />
