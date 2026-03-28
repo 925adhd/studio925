@@ -29,7 +29,11 @@ export default function Hero() {
           </p>
 
           <p className="text-[15px] md:text-xl text-brand-primary/70 mb-3 md:mb-4 max-w-2xl leading-[1.65] md:leading-relaxed mx-auto">
-            Custom-built websites for local businesses in Grayson County. No templates. No figuring it out yourself. Built to be found and actually convert.<span className="hidden sm:inline"> Designed for more calls, more leads, and real growth.</span>
+            Custom-built websites for local businesses in Grayson County. No&nbsp;templates. No figuring it out yourself. Built to be found and actually&nbsp;convert.<span className="hidden sm:inline"> Designed for more calls, more leads, and real growth.</span>
+          </p>
+
+          <p className="text-xs text-brand-primary/55 font-semibold tracking-normal mb-6 md:mb-8">
+            Local. No outsourcing. No templates.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center">
@@ -41,10 +45,6 @@ export default function Hero() {
               See My Work
             </Link>
           </div>
-
-          <p className="text-xs text-brand-primary/55 mt-4 font-semibold tracking-normal">
-            Local. No outsourcing. No templates.
-          </p>
 
           <div className="mt-6 sm:mt-12 flex flex-row flex-wrap gap-2 sm:gap-x-6 gap-y-2 sm:gap-y-3 items-center justify-center">
             {['48-Hour First Draft', 'Built to Be Found', 'Get More Customers'].map((item) => (
