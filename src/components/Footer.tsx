@@ -68,6 +68,14 @@ export default function Footer() {
         
         <div className="pt-8 border-t border-brand-primary/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-brand-primary/40">
           <p>© {new Date().getFullYear()} Studio 925. All rights reserved.</p>
+          <a
+            href="https://billing.stripe.com/p/login/14A5kFeEHgCceEQcOIcIE00"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-brand-accent transition-colors"
+          >
+            Manage My Subscription
+          </a>
         </div>
       </div>
     </footer>

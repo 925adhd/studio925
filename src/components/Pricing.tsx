@@ -25,7 +25,8 @@ const tiers = [
       "Full Ownership of Files"
     ],
     bestFor: "Best for businesses that need a solid, trustworthy online presence without the extras.",
-    cta: "Start My Project",
+    cta: "Start Your Website",
+    stripeLink: "https://buy.stripe.com/eVqbJ368b1Hi2W8160cIE02",
     featured: false
   },
   {
@@ -47,7 +48,8 @@ const tiers = [
       "Basic Legal Pages Included (Privacy Policy, Terms, Cookie Notice as needed)"
     ],
     bestFor: "Best for businesses ready to expand their online presence and see what's actually working.",
-    cta: "Start My Project",
+    cta: "Start Your Website",
+    stripeLink: "https://buy.stripe.com/cNi3cx9kngCc9kw6qkcIE03",
     featured: true
   },
   {
@@ -67,7 +69,8 @@ const tiers = [
       "Full Launch Setup + 60 Days Guided Support"
     ],
     bestFor: "Best for businesses ready to accept payments, offer memberships, or add secure account functionality to their website.",
-    cta: "Start My Project",
+    cta: "Start Your Website",
+    stripeLink: "https://buy.stripe.com/6oU00l0NR2LmgMYcOIcIE04",
     featured: false
   }
 ];
@@ -149,6 +152,18 @@ export default function Pricing() {
                 }`}>
                 {tier.cta} <ArrowRight size={18} />
               </button>
+              <a
+                href={tier.stripeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block w-full text-center text-[11px] mt-4 cursor-pointer transition-all hover:underline ${
+                  tier.featured
+                    ? 'text-white/50 hover:text-white/80'
+                    : 'text-brand-primary/40 hover:text-brand-primary/60'
+                }`}
+              >
+                Already ready? Pay your deposit →
+              </a>
             </motion.div>
           ))}
         </div>
