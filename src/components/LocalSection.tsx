@@ -62,7 +62,7 @@ export default function LocalSection() {
               <span className="text-brand-primary font-semibold">You're not hiring an agency.</span> You're working directly with the person building your site.
             </p>
             <p>
-              I'm a web designer based in Leitchfield, Kentucky — right here in Grayson County. No outsourcing. No middlemen. No one 3 states away.
+              I'm a web designer based in Leitchfield, Kentucky — right here in Grayson County. You're working with me. Not a middleman. Not someone three states away.
             </p>
             <p>
               When you have a question, you call me. When something needs to change, I handle it. If you want to sit down and talk through your goals in person, we can do that too.
