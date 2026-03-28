@@ -58,11 +58,13 @@ const jsonLd = {
   name: 'Studio 925',
   url: 'https://studio925.design',
   email: 'kara@studio925.design',
+  telephone: '+1-270-551-2210',
   description: 'Professional web design services for small businesses in Grayson County, Kentucky and surrounding areas.',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Grayson County',
+    addressLocality: 'Leitchfield',
     addressRegion: 'KY',
+    postalCode: '42754',
     addressCountry: 'US',
   },
   areaServed: [
@@ -70,9 +72,88 @@ const jsonLd = {
     { '@type': 'AdministrativeArea', name: 'Grayson County' },
     { '@type': 'State', name: 'Kentucky' },
   ],
-  serviceType: ['Website Design', 'Web Design', 'Small Business Website Design'],
   priceRange: '$$',
   knowsAbout: ['Web Design', 'Website Design Leitchfield KY', 'Small Business Websites', 'Local Web Development', 'Website Design Kentucky'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Web Design Services',
+    itemListElement: [
+      {
+        '@type': 'OfferCatalog',
+        name: 'Website Design',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Foundation Website',
+              description: 'A clean, professional website with up to 3 pages, mobile responsive design, contact form, and full ownership of files.',
+            },
+            price: '900',
+            priceCurrency: 'USD',
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Growth Website',
+              description: 'Up to 6 pages with separate service pages, blog or CMS, Google Analytics setup, lead capture forms, and 30 days post-launch support.',
+            },
+            price: '1800',
+            priceCurrency: 'USD',
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Membership & Payments Website',
+              description: 'Full website with online store, secure checkout, customer accounts, admin dashboard, and 60 days guided support.',
+            },
+            price: '2600',
+            priceCurrency: 'USD',
+          },
+        ],
+      },
+      {
+        '@type': 'OfferCatalog',
+        name: 'Website Care & Support',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Basic Hosting',
+              description: 'Website hosting, secure backups, and keeping your site live and running.',
+            },
+            price: '25',
+            priceCurrency: 'USD',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '25',
+              priceCurrency: 'USD',
+              unitText: 'MONTH',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Full Support',
+              description: 'Everything in hosting plus content updates, text edits, layout tweaks, and ongoing SEO improvements.',
+            },
+            price: '49',
+            priceCurrency: 'USD',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '49',
+              priceCurrency: 'USD',
+              unitText: 'MONTH',
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
