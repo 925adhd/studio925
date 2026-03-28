@@ -32,10 +32,6 @@ export default function Hero() {
             Custom-built websites for local businesses in Grayson County. Built to be found on Google, load fast, and make your business look professional&nbsp;online.<span className="hidden sm:inline"> Designed for more calls, more leads, and real growth.</span>
           </p>
 
-          <p className="text-xs text-brand-primary/55 font-semibold tracking-normal mb-6 md:mb-8">
-            Local. No outsourcing. No templates.
-          </p>
-
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center">
             <a href="/#contact" className="w-full sm:w-auto bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
               Get Started <ArrowRight size={20} />
@@ -46,7 +42,11 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="mt-6 sm:mt-12 flex flex-row flex-wrap gap-2 sm:gap-x-6 gap-y-2 sm:gap-y-3 items-center justify-center">
+          <p className="text-xs text-brand-primary/55 font-semibold tracking-normal mt-6 sm:mt-10 mb-3">
+            Local. No outsourcing. No templates.
+          </p>
+
+          <div className="flex flex-row flex-wrap gap-2 sm:gap-x-6 gap-y-2 sm:gap-y-3 items-center justify-center">
             {['48-Hour First Draft', 'Built to Be Found', 'Get More Customers'].map((item) => (
               <div key={item} className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-sm font-medium text-brand-primary/60 whitespace-nowrap">
                 <CheckCircle2 size={14} className="text-brand-accent" />
