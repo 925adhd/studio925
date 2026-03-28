@@ -8,8 +8,9 @@ const plans = [
     name: "Basic Hosting",
     price: "25",
     features: [
-      "I keep your website live and running",
-      "Secure hosting & backups handled"
+      "Website hosting",
+      "Secure backups",
+      "Keeping your site live and running"
     ],
     featured: false,
     cta: "Start Basic Hosting",
@@ -20,11 +21,10 @@ const plans = [
     price: "49",
     features: [
       "Everything in Hosting",
-      "Need something changed? Just tell me — I handle it",
-      "Text edits, new photos, layout tweaks — all covered",
-      "You never touch the backend or figure anything out",
-      "Ongoing SEO — I keep your site updated with current best practices",
-      "Ongoing support whenever you need it"
+      "Need something changed? Just message me — I handle it",
+      "Text edits, new photos, layout tweaks",
+      "You don't have to deal with the technical side",
+      "Ongoing SEO improvements"
     ],
     featured: true,
     cta: "Get Full Support",
@@ -34,15 +34,17 @@ const plans = [
 
 export default function WebsiteCare() {
   return (
-    <section className="py-24 px-6 bg-white border-t border-brand-primary/5">
+    <section className="py-16 md:py-24 px-6 bg-white border-t border-brand-primary/5">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl mb-3">Website Care & Support</h2>
-          <p className="text-brand-primary/50 text-lg">Keep your site running smoothly after launch — without dealing with the technical side.</p>
-          <p className="text-brand-primary/60 text-sm mt-3">You'll purchase your domain (usually around $10–$20/year) so it's fully yours. Already have one? I'll help you connect it. Either way, I handle the rest.</p>
+
+        <div className="text-center mb-10 md:mb-14">
+          <h2 className="text-2xl md:text-4xl mb-3">Website Care & Support</h2>
+          <p className="text-brand-primary/50 text-sm md:text-lg">Keep your site running smoothly after launch — without dealing with the technical side.</p>
+          <p className="text-brand-primary/60 text-xs md:text-sm mt-3">You'll purchase your domain (usually around $10–$20/year) so it's fully yours. Already have one? I'll help you connect it. Either way, I handle the rest.</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        {/* Plans */}
+        <div className="grid sm:grid-cols-2 gap-8 md:gap-6">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -50,7 +52,7 @@ export default function WebsiteCare() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`relative p-8 rounded-3xl border flex flex-col ${
+              className={`relative p-6 md:p-8 rounded-3xl border flex flex-col ${
                 plan.featured
                   ? 'border-brand-accent/30 bg-brand-accent/[0.03]'
                   : 'border-brand-primary/10 bg-white'
@@ -62,8 +64,8 @@ export default function WebsiteCare() {
                 </span>
               )}
 
-              <h3 className="text-xl font-bold mb-1">{plan.name}</h3>
-              <div className="flex items-baseline gap-1 mb-6">
+              <h3 className="text-lg md:text-xl font-bold mb-1">{plan.name}</h3>
+              <div className="flex items-baseline gap-1 mb-5 md:mb-6">
                 <span className="text-3xl font-serif font-bold italic">${plan.price}</span>
                 <span className="text-sm text-brand-primary/50">/month</span>
               </div>
@@ -77,7 +79,7 @@ export default function WebsiteCare() {
                 ))}
               </ul>
 
-              <div className="mt-8">
+              <div className="mt-7 md:mt-8">
                 <a
                   href={plan.stripeLink}
                   target="_blank"
@@ -99,6 +101,7 @@ export default function WebsiteCare() {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -168,13 +168,39 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-base text-brand-primary/50 mt-12 mb-2">
-          Not sure which one fits? We'll figure it out together.
-        </p>
-        <p className="text-center text-sm text-brand-primary/40 mt-4">
-          Projects begin with a 50% deposit. The remaining balance is due at launch.<br />
-          Full ownership of all website files transfers upon final payment.
-        </p>
+        {/* Desktop */}
+        <div className="hidden md:block text-center mt-12">
+          <p className="text-base text-brand-primary/50 mb-2">
+            Not sure which one fits? We'll figure it out together.
+          </p>
+          <p className="text-sm text-brand-primary/40 mt-4">
+            Projects begin with a 50% deposit. The remaining balance is due at launch.<br />
+            Full ownership of all website files transfers upon final payment.
+          </p>
+        </div>
+
+        {/* Mobile */}
+        <div className="md:hidden mt-10 mx-auto max-w-sm">
+          <div className="rounded-2xl border border-brand-primary/10 bg-brand-warm/50 p-6 text-center">
+            <p className="text-base font-semibold text-brand-primary mb-4">
+              Not sure which one fits?<br />We'll figure it out together.
+            </p>
+            <ul className="space-y-2 text-sm text-brand-primary/60 text-left">
+              <li className="flex items-start gap-2">
+                <span className="text-brand-accent mt-0.5">•</span>
+                50% deposit to get started
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-brand-accent mt-0.5">•</span>
+                Remaining balance due at launch
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-brand-accent mt-0.5">•</span>
+                Full ownership of your website files after final payment
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );
