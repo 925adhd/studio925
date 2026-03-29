@@ -18,7 +18,7 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="/#services" className="text-sm font-medium hover:text-brand-accent transition-colors">Services</a>
+          <a href="/#services" className="text-sm font-medium hover:text-brand-accent transition-colors">What You Get</a>
           <Link href="/portfolio" className="text-sm font-medium hover:text-brand-accent transition-colors">Portfolio</Link>
           <a href="/#local" className="text-sm font-medium hover:text-brand-accent transition-colors">About</a>
           <a href="/#pricing" className="text-sm font-medium hover:text-brand-accent transition-colors">Pricing</a>
@@ -46,7 +46,7 @@ export default function Navbar() {
           className="absolute top-full left-0 right-0 bg-brand-warm border-b border-brand-primary/5 shadow-lg p-6 md:hidden"
         >
           <div className="flex flex-col gap-5 items-start">
-            <a href="/#services" onClick={() => setIsOpen(false)} className="text-lg font-medium">Services</a>
+            <a href="/#services" onClick={() => setIsOpen(false)} className="text-lg font-medium">What You Get</a>
             <Link href="/portfolio" onClick={() => setIsOpen(false)} className="text-lg font-medium">Portfolio</Link>
             <a href="/#local" onClick={() => setIsOpen(false)} className="text-lg font-medium">About</a>
             <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-lg font-medium">Pricing</a>
