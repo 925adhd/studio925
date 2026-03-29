@@ -5,7 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 import Navbar from '../src/components/Navbar';
 import Footer from '../src/components/Footer';
 
-const lastUpdated = 'February 27, 2026';
+const lastUpdated = 'March 29, 2026';
 const email = 'kara@studio925.design';
 const company = 'Studio 925';
 const location = 'Grayson County, Kentucky';
@@ -234,12 +234,57 @@ function TermsOfService() {
         <p>Any disputes shall be resolved in the courts located in {location}.</p>
       </Section>
 
-      <Section title="12. Changes to These Terms">
+      <Section title="12. Disclaimer">
+        <p>{company} builds websites designed to improve online visibility and help businesses attract customers. However, search rankings, website traffic, leads, and sales depend on many factors outside our control, including market conditions, competition, and marketing efforts.</p>
+        <p>{company} does not guarantee specific rankings, traffic, leads, customers, or revenue. Our services are designed to give your business the best possible foundation online, but results will vary based on your industry, location, audience, and ongoing efforts.</p>
+        <p>Any examples, case studies, or testimonials shared on our website reflect individual results and should not be interpreted as a promise of similar outcomes.</p>
+      </Section>
+
+      <Section title="13. Changes to These Terms">
         <p>We may update these Terms at any time. Continued use of our website or services after changes are posted constitutes acceptance of the updated Terms.</p>
       </Section>
 
-      <Section title="13. Contact">
+      <Section title="14. Contact">
         <p>Questions about these Terms?</p>
+        <p><strong>{email}</strong></p>
+        <p>{company}<br />Kentucky, United States</p>
+      </Section>
+    </>
+  );
+}
+
+function Disclaimer() {
+  return (
+    <>
+      <h1 className="text-3xl md:text-4xl font-serif font-bold mb-2">Disclaimer</h1>
+      <p className="text-sm text-brand-primary/40 mb-8">Last Updated: {lastUpdated}</p>
+
+      <Section title="What We Do">
+        <p>{company} builds custom websites designed to improve your online visibility, present your business professionally, and help you attract customers. We take pride in creating fast, modern websites that give small businesses a strong foundation online.</p>
+      </Section>
+
+      <Section title="No Guaranteed Results">
+        <p>While a well-built website is an important part of growing your business, we cannot guarantee specific outcomes. Search rankings, website traffic, leads, customers, and revenue depend on many factors outside our control, including:</p>
+        <ul>
+          <li>Market conditions and competition in your area</li>
+          <li>Your industry and target audience</li>
+          <li>Ongoing marketing and advertising efforts</li>
+          <li>Content quality and frequency of updates</li>
+          <li>Changes to search engine algorithms</li>
+        </ul>
+        <p>{company} does not guarantee specific rankings, traffic, leads, customers, or revenue.</p>
+      </Section>
+
+      <Section title="Third-Party Services">
+        <p>Your website may rely on third-party platforms for hosting, analytics, scheduling, payment processing, or other functionality. {company} is not responsible for the performance, uptime, or policies of these third-party services.</p>
+      </Section>
+
+      <Section title="Examples and Testimonials">
+        <p>Any examples, case studies, or testimonials shared on our website reflect individual results. Every business is different, and past results should not be interpreted as a promise of similar outcomes for your project.</p>
+      </Section>
+
+      <Section title="Contact">
+        <p>If you have questions about this disclaimer, reach out at:</p>
         <p><strong>{email}</strong></p>
         <p>{company}<br />Kentucky, United States</p>
       </Section>
@@ -306,6 +351,7 @@ const pages = {
   'privacy-policy': { component: PrivacyPolicy, title: 'Privacy Policy' },
   'terms-of-service': { component: TermsOfService, title: 'Terms of Service' },
   'cookie-policy': { component: CookiePolicy, title: 'Cookie Policy' },
+  'disclaimer': { component: Disclaimer, title: 'Disclaimer' },
 } as const;
 
 export default function LegalContent({ type }: { type: keyof typeof pages }) {

@@ -62,11 +62,17 @@ export default function Footer() {
               <li><Link href="/privacy-policy" className="hover:text-brand-accent transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms-of-service" className="hover:text-brand-accent transition-colors">Terms of Service</Link></li>
               <li><Link href="/cookie-policy" className="hover:text-brand-accent transition-colors">Cookie Policy</Link></li>
+              <li><Link href="/disclaimer" className="hover:text-brand-accent transition-colors">Disclaimer</Link></li>
             </ul>
           </div>
         </div>
         
-        <div className="pt-8 border-t border-brand-primary/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-brand-primary/40">
+        <div className="pt-8 border-t border-brand-primary/5 text-sm text-brand-primary/40">
+          <p className="mb-4 max-w-3xl text-xs leading-relaxed">
+            Studio 925 builds websites designed to improve online visibility and help businesses attract customers. Results such as search rankings, traffic, leads, and revenue are not guaranteed.{' '}
+            <Link href="/disclaimer" className="underline hover:text-brand-accent transition-colors">Read our full disclaimer</Link>.
+          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p>© {new Date().getFullYear()} Studio 925. All rights reserved.</p>
           <a
             href="https://billing.stripe.com/p/login/14A5kFeEHgCceEQcOIcIE00"
@@ -76,6 +82,7 @@ export default function Footer() {
           >
             Manage My Subscription
           </a>
+          </div>
         </div>
       </div>
     </footer>
