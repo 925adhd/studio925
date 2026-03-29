@@ -10,12 +10,12 @@ const services = [
     icon: Layout,
   },
   {
-    title: "Built to be found",
+    title: "Google understands your business",
     description: "When someone searches for what you do, your business has a real chance to show up. Your site is structured so Google understands what you offer and where.",
     icon: Search,
   },
   {
-    title: "Looks right on every phone",
+    title: "Looks right on every screen",
     description: "Most customers decide on their phone. Your site will load fast and look right immediately — no pinching, no waiting, no broken layouts.",
     icon: Smartphone,
   },
