@@ -73,7 +73,7 @@ export default function Footer() {
             <Link href="/disclaimer" className="underline hover:text-brand-accent transition-colors">Read our full disclaimer</Link>.
           </p>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© {new Date().getFullYear()} Studio 925. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Studio 925. A service operated by 925 ADHD LLC. All rights reserved.</p>
           <a
             href="https://billing.stripe.com/p/login/14A5kFeEHgCceEQcOIcIE00"
             target="_blank"

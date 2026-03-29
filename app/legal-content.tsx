@@ -8,6 +8,7 @@ import Footer from '../src/components/Footer';
 const lastUpdated = 'March 29, 2026';
 const email = 'kara@studio925.design';
 const company = 'Studio 925';
+const llc = '925 ADHD LLC';
 const location = 'Grayson County, Kentucky';
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -28,7 +29,8 @@ function PrivacyPolicy() {
       <p className="text-sm text-brand-primary/40 mb-8">Last Updated: {lastUpdated}</p>
 
       <Section title="1. Introduction">
-        <p>{company} ("we," "us," or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard information when you visit studio925.design or interact with our services.</p>
+        <p>{company} is a service operated by {llc}. References to "we," "us," or "our" in this policy refer to {llc}, doing business as {company}.</p>
+        <p>We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard information when you visit studio925.design or interact with our services.</p>
         <p>By using this website, you agree to the terms of this Privacy Policy.</p>
       </Section>
 
@@ -102,31 +104,55 @@ function PrivacyPolicy() {
           <li>Request access to your personal data</li>
           <li>Request correction of inaccurate data</li>
           <li>Request deletion of your data</li>
+          <li>Request a copy of your data in a portable format</li>
           <li>Withdraw consent to marketing communications</li>
+          <li>Opt out of the sale or sharing of your personal information (we do not sell your data, but you may still make this request)</li>
         </ul>
-        <p>To exercise any of these rights, contact: <strong>{email}</strong></p>
+        <p>To exercise any of these rights, contact: <strong>{email}</strong>. We will respond to your request within 30 days.</p>
       </Section>
 
-      <Section title="8. Data Security">
+      <Section title="8. For Visitors in the European Economic Area (GDPR)">
+        <p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, the following applies:</p>
+        <ul>
+          <li>We process your personal data based on your consent (e.g., when you submit a contact form) or where necessary to fulfill a contract or legitimate business interest.</li>
+          <li>You have the right to access, correct, delete, restrict processing, or port your personal data.</li>
+          <li>You have the right to withdraw consent at any time without affecting the lawfulness of processing before withdrawal.</li>
+          <li>You have the right to lodge a complaint with your local data protection authority.</li>
+        </ul>
+        <p>We do not have a physical presence in the EEA. If you are located in the EEA and wish to exercise your rights, contact: <strong>{email}</strong></p>
+      </Section>
+
+      <Section title="9. For Visitors in California (CCPA)">
+        <p>If you are a California resident, the California Consumer Privacy Act (CCPA) provides you with additional rights:</p>
+        <ul>
+          <li><strong>Right to Know:</strong> You can request what personal information we collect, use, and disclose.</li>
+          <li><strong>Right to Delete:</strong> You can request deletion of the personal information we hold about you.</li>
+          <li><strong>Right to Opt Out:</strong> You can opt out of the sale of personal information. We do not sell your personal information.</li>
+          <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your CCPA rights.</li>
+        </ul>
+        <p>To submit a request, contact: <strong>{email}</strong>. We will verify your identity before processing your request and respond within 45 days.</p>
+      </Section>
+
+      <Section title="10. Data Security">
         <p>We implement reasonable administrative, technical, and organizational safeguards to protect your information. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security.</p>
       </Section>
 
-      <Section title="9. Intended Audience">
-        <p>This website is intended for business owners and individuals over the age of 18. We do not knowingly collect personal information from children.</p>
+      <Section title="11. Intended Audience">
+        <p>This website is intended for business owners and individuals over the age of 18. We do not knowingly collect personal information from children under 16. If we become aware that we have collected information from a child under 16, we will take steps to delete it promptly.</p>
       </Section>
 
-      <Section title="10. International Visitors">
-        <p>If you access this website from outside the United States, you understand that your information may be transferred to and processed in the United States.</p>
+      <Section title="12. International Visitors">
+        <p>If you access this website from outside the United States, you understand that your information may be transferred to and processed in the United States, where data protection laws may differ from those in your jurisdiction. By using this website, you consent to this transfer.</p>
       </Section>
 
-      <Section title="11. Changes to This Policy">
-        <p>We may update this Privacy Policy periodically. Updates will be posted on this page with a revised "Last Updated" date.</p>
+      <Section title="13. Changes to This Policy">
+        <p>We may update this Privacy Policy periodically. Updates will be posted on this page with a revised "Last Updated" date. If we make significant changes, we will make reasonable efforts to notify you.</p>
       </Section>
 
-      <Section title="12. Contact">
+      <Section title="14. Contact">
         <p>For questions regarding this Privacy Policy:</p>
         <p><strong>{email}</strong></p>
-        <p>{company}<br />Kentucky, United States</p>
+        <p>{company} ({llc})<br />Kentucky, United States</p>
       </Section>
     </>
   );
@@ -139,7 +165,7 @@ function TermsOfService() {
       <p className="text-sm text-brand-primary/40 mb-8">Last Updated: {lastUpdated}</p>
 
       <Section title="1. Agreement to Terms">
-        <p>By accessing this website or engaging {company} for web design and development services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our website or services.</p>
+        <p>{company} is a service operated by {llc}. By accessing this website or engaging {company} for web design and development services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our website or services.</p>
         <p>A separate written proposal or project agreement will govern the specific scope, timeline, and deliverables for each client project.</p>
       </Section>
 
@@ -204,23 +230,59 @@ function TermsOfService() {
         <p>{company} is not responsible for outages, performance issues, or security breaches caused by third-party hosting providers, plugins, or integrations.</p>
       </Section>
 
-      <Section title="8. Limitation of Liability">
-        <p>To the fullest extent permitted by law:</p>
-        <p>{company} shall not be liable for indirect, incidental, special, or consequential damages arising from the use of our services.</p>
+      <Section title="8. Refunds and Cancellations">
+        <p>Project deposits are non-refundable. Deposits cover the time and resources reserved for your project start date.</p>
+        <p>If you cancel a project after work has begun:</p>
+        <ul>
+          <li>You will be billed for all work completed up to the cancellation date.</li>
+          <li>Any unused portion of payment beyond completed work may be refunded at {company}'s discretion.</li>
+          <li>Completed deliverables will only be transferred after all outstanding balances are paid.</li>
+        </ul>
+        <p>If {company} cancels a project, any payments beyond the value of completed work will be refunded.</p>
+        <p>Monthly care plan subscriptions can be cancelled at any time. Cancellation takes effect at the end of the current billing period. No partial-month refunds are provided.</p>
+      </Section>
+
+      <Section title="9. Use of AI Tools">
+        <p>{company} may use artificial intelligence tools as part of the design and development process. These tools may assist with tasks such as code generation, content drafting, image optimization, or layout suggestions.</p>
+        <p>All AI-assisted work is reviewed, refined, and approved by {company} before delivery. The final product is always shaped by human judgment and tailored to your specific project needs.</p>
+        <p>If you have questions or preferences about the use of AI in your project, let us know and we will accommodate where possible.</p>
+      </Section>
+
+      <Section title="10. Accessibility">
+        <p>{company} is committed to building websites that are accessible and usable for as many people as possible. We follow widely accepted web accessibility guidelines (WCAG) as a reference during development and aim to meet Level AA standards where practical.</p>
+        <p>Accessibility considerations include:</p>
+        <ul>
+          <li>Readable text with sufficient color contrast</li>
+          <li>Keyboard-navigable layouts</li>
+          <li>Descriptive alt text for images</li>
+          <li>Semantic HTML structure</li>
+          <li>Mobile-responsive design</li>
+        </ul>
+        <p>While we strive to follow best practices, we cannot guarantee full compliance with all accessibility standards across every browser, device, or assistive technology. If you encounter an accessibility issue on our website, please contact us at <strong>{email}</strong> and we will work to address it.</p>
+      </Section>
+
+      <Section title="11. Disclaimer of Warranties">
+        <p className="uppercase font-semibold text-brand-primary/80">OUR SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. {company.toUpperCase()} MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT OUR SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR COMPLETELY SECURE.</p>
+        <p>In plain terms: we stand behind the quality of our work and will always do our best to deliver a great website. But we cannot promise that every aspect of a website will work perfectly in every scenario, on every device, or with every third-party service at all times.</p>
+      </Section>
+
+      <Section title="12. Limitation of Liability">
+        <p className="uppercase font-semibold text-brand-primary/80">TO THE FULLEST EXTENT PERMITTED BY LAW, {company.toUpperCase()} SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE OF OUR SERVICES, INCLUDING BUT NOT LIMITED TO LOST PROFITS, LOST DATA, BUSINESS INTERRUPTION, OR DAMAGES RESULTING FROM THIRD-PARTY SERVICES.</p>
         <p>Our total liability for any claim related to a project shall not exceed the total amount paid by you for that project.</p>
         <p>{company} does not guarantee specific business outcomes, search rankings, traffic levels, or revenue results.</p>
       </Section>
 
-      <Section title="9. Indemnification">
+      <Section title="13. Indemnification">
         <p>You agree to indemnify and hold harmless {company} from any claims, damages, or liabilities arising from:</p>
         <ul>
           <li>Content you provide</li>
           <li>Unauthorized use of third-party materials</li>
           <li>Misrepresentation of business information</li>
+          <li>Your use of the delivered website in ways not contemplated by the project agreement</li>
         </ul>
       </Section>
 
-      <Section title="10. Termination">
+      <Section title="14. Termination">
         <p>Either party may terminate a project agreement with written notice.</p>
         <ul>
           <li>Work completed up to the termination date will be billed accordingly.</li>
@@ -229,25 +291,35 @@ function TermsOfService() {
         </ul>
       </Section>
 
-      <Section title="11. Governing Law">
+      <Section title="15. Governing Law">
         <p>These Terms are governed by the laws of the Commonwealth of Kentucky.</p>
         <p>Any disputes shall be resolved in the courts located in {location}.</p>
       </Section>
 
-      <Section title="12. Disclaimer">
+      <Section title="16. Disclaimer">
         <p>{company} builds websites designed to improve online visibility and help businesses attract customers. However, search rankings, website traffic, leads, and sales depend on many factors outside our control, including market conditions, competition, and marketing efforts.</p>
         <p>{company} does not guarantee specific rankings, traffic, leads, customers, or revenue. Our services are designed to give your business the best possible foundation online, but results will vary based on your industry, location, audience, and ongoing efforts.</p>
         <p>Any examples, case studies, or testimonials shared on our website reflect individual results and should not be interpreted as a promise of similar outcomes.</p>
       </Section>
 
-      <Section title="13. Changes to These Terms">
+      <Section title="17. Waiver and Severability">
+        <p>If {company} does not enforce any right or provision of these Terms at any time, that does not mean we are waiving that right or any other right. We can still enforce it later.</p>
+        <p>If any part of these Terms is found to be invalid or unenforceable by a court, that part will be limited or removed to the minimum extent necessary, and the rest of these Terms will remain in full effect.</p>
+      </Section>
+
+      <Section title="18. Entire Agreement">
+        <p>These Terms of Service, together with our <Link href="/privacy-policy" className="text-brand-accent hover:underline">Privacy Policy</Link>, <Link href="/cookie-policy" className="text-brand-accent hover:underline">Cookie Policy</Link>, and <Link href="/disclaimer" className="text-brand-accent hover:underline">Disclaimer</Link>, make up the full agreement between you and {company} regarding the use of this website.</p>
+        <p>For client projects, a separate signed proposal or project agreement will govern the specific scope, deliverables, and payment terms. In the event of a conflict between these Terms and a signed project agreement, the project agreement takes priority.</p>
+      </Section>
+
+      <Section title="19. Changes to These Terms">
         <p>We may update these Terms at any time. Continued use of our website or services after changes are posted constitutes acceptance of the updated Terms.</p>
       </Section>
 
-      <Section title="14. Contact">
+      <Section title="20. Contact">
         <p>Questions about these Terms?</p>
         <p><strong>{email}</strong></p>
-        <p>{company}<br />Kentucky, United States</p>
+        <p>{company} ({llc})<br />Kentucky, United States</p>
       </Section>
     </>
   );
@@ -260,7 +332,7 @@ function Disclaimer() {
       <p className="text-sm text-brand-primary/40 mb-8">Last Updated: {lastUpdated}</p>
 
       <Section title="What We Do">
-        <p>{company} builds custom websites designed to improve your online visibility, present your business professionally, and help you attract customers. We take pride in creating fast, modern websites that give small businesses a strong foundation online.</p>
+        <p>{company} is a service operated by {llc}. We build custom websites designed to improve your online visibility, present your business professionally, and help you attract customers. We take pride in creating fast, modern websites that give small businesses a strong foundation online.</p>
       </Section>
 
       <Section title="No Guaranteed Results">
@@ -286,7 +358,7 @@ function Disclaimer() {
       <Section title="Contact">
         <p>If you have questions about this disclaimer, reach out at:</p>
         <p><strong>{email}</strong></p>
-        <p>{company}<br />Kentucky, United States</p>
+        <p>{company} ({llc})<br />Kentucky, United States</p>
       </Section>
     </>
   );
@@ -341,7 +413,7 @@ function CookiePolicy() {
       <Section title="7. Contact">
         <p>For questions about this Cookie Policy:</p>
         <p><strong>{email}</strong></p>
-        <p>{company}<br />Kentucky, United States</p>
+        <p>{company} ({llc})<br />Kentucky, United States</p>
       </Section>
     </>
   );
