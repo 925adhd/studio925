@@ -8,7 +8,7 @@ import Pricing from '../src/components/Pricing';
 import Contact from '../src/components/Contact';
 import Footer from '../src/components/Footer';
 import LocalSection from '../src/components/LocalSection';
-
+import TrustStrip from '../src/components/TrustStrip';
 import WebsiteCare from '../src/components/WebsiteCare';
 
 export default function HomePage() {
@@ -34,6 +34,7 @@ export default function HomePage() {
 
       <main id="main-content">
         <Hero />
+        <TrustStrip />
         <Services />
         <LocalSection />
 

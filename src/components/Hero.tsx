@@ -2,11 +2,11 @@
 
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative pt-20 md:pt-32 pb-4 md:pb-20 px-6 overflow-hidden">
+    <section className="relative pt-20 md:pt-32 pb-4 md:pb-28 px-6 overflow-hidden">
       <div className="absolute inset-0 grid-pattern -z-10" />
 
       <div className="max-w-4xl mx-auto text-center">
@@ -29,10 +29,10 @@ export default function Hero() {
           </p>
 
           <p className="text-sm sm:text-[15px] md:text-xl text-brand-primary/70 mb-3 md:mb-4 max-w-2xl leading-[1.65] md:leading-relaxed mx-auto">
-            Custom-built websites for local businesses in Grayson County. Built to be found on Google, load fast, and make your business look professional&nbsp;online.<span className="hidden sm:inline"> Designed for more calls, more leads, and real growth.</span>
+            Custom websites for local businesses in Grayson County. Built to be found on Google, load fast, and make your business look professional&nbsp;online.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-5 sm:gap-4 justify-center">
             <a href="/#contact" className="w-full sm:w-auto bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
               Get Started <ArrowRight size={20} />
             </a>
@@ -42,18 +42,9 @@ export default function Hero() {
             </Link>
           </div>
 
-          <p className="text-xs text-brand-primary/55 font-semibold tracking-normal mt-6 sm:mt-10 mb-3">
+          <p className="text-xs text-brand-primary/55 font-semibold tracking-normal mt-6 sm:mt-5">
             Local. No outsourcing. No templates.
           </p>
-
-          <div className="flex flex-row flex-wrap gap-2 sm:gap-x-6 gap-y-2 sm:gap-y-3 items-center justify-center">
-            {['48-Hour First Draft', 'Built to Be Found', 'Get More Customers'].map((item) => (
-              <div key={item} className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-sm font-medium text-brand-primary/60 whitespace-nowrap">
-                <CheckCircle2 size={14} className="text-brand-accent" />
-                {item}
-              </div>
-            ))}
-          </div>
         </motion.div>
       </div>
     </section>
