@@ -20,7 +20,7 @@ const items = [
 
 export default function TrustStrip() {
   return (
-    <section className="py-14 md:py-16 mb-8 md:mb-6 px-8 md:px-6 bg-brand-primary/[0.02] border-y border-brand-primary/5">
+    <section className="py-14 md:py-16 mb-6 md:mb-6 px-8 md:px-6 bg-white md:bg-brand-primary/[0.02] md:border-y border-brand-primary/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-20">
           {items.map((item, i) => (

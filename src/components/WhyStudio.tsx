@@ -4,15 +4,15 @@ import { motion } from 'motion/react';
 import { CheckCircle2 } from 'lucide-react';
 
 const points = [
-  '48-hour website preview',
-  'Clean, fast code without unnecessary plugins',
-  'Mobile-first from the start',
-  'Simple upfront pricing with no monthly builder fees',
-  'No long contracts',
-  'You own your code and files',
-  'One developer builds and supports your site',
-  'Hosting and ongoing support available',
-  'You focus on your business, we handle the website',
+  '48-hour live website preview before you commit',
+  'No waiting weeks. See your website take shape fast',
+  'You work directly with the developer. No middlemen',
+  'Designed to turn visitors into calls, messages, and customers',
+  'Local, not outsourced or passed between teams',
+  'You fully own your website and files after final payment',
+  'Simple, upfront pricing with no hidden fees',
+  'Clear communication from start to launch',
+  'No confusing tools or dashboards to learn',
 ];
 
 export default function WhyStudio() {
@@ -27,7 +27,7 @@ export default function WhyStudio() {
         >
           <div className="text-center mb-10 md:mb-14">
             <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
-              Why Work With <span className="italic text-brand-accent">Studio 925</span>
+              What Makes <span className="italic text-brand-accent">Studio 925 Different</span>
             </h2>
             <p className="text-xs md:text-base text-brand-primary/55 max-w-xs md:max-w-2xl mx-auto leading-relaxed">
               No templates. No page builders. Just clean code built specifically for your business.
