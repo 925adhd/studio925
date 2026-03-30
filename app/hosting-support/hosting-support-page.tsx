@@ -13,7 +13,7 @@ const plans = [
     features: [
       'Website hosting',
       'Secure backups',
-      'Keeping your site live and running',
+      'Keeps your website live and online',
     ],
     featured: false,
     cta: 'Start Basic Hosting',
@@ -23,13 +23,12 @@ const plans = [
     name: 'Full Support',
     price: '49',
     features: [
-      'Everything in Basic Hosting, plus:',
       'Text changes, image swaps, layout tweaks — just message me',
       'New photos, menu updates, seasonal changes — handled',
-      'You never have to touch the backend',
+      'You never have to deal with the technical side',
       'Priority support — I respond first',
       'Ongoing speed and security checks',
-      'Technical SEO maintained — meta tags, indexing, and site health',
+      'Ongoing SEO basics handled — meta tags, indexing, and site health',
     ],
     featured: true,
     cta: 'Get Full Support',
@@ -49,7 +48,7 @@ export default function HostingSupportPage() {
             Hosting <span className="italic text-brand-accent">& Support</span>
           </h1>
           <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed max-w-lg mx-auto">
-            You own your website and can host it anywhere. But if you want everything handled for you, I offer website care plans where I manage hosting, backups, updates, and keep your site running smoothly.
+            You own your website. Choose whether you want to manage it yourself or have everything handled.
           </p>
         </div>
 
@@ -83,7 +82,7 @@ export default function HostingSupportPage() {
 
                 <ul className="space-y-3 flex-1">
                   {plan.features.map((feature) =>
-                    feature.endsWith('plus:') ? (
+                    feature.endsWith(':') ? (
                       <li key={feature} className="text-xs font-bold uppercase tracking-widest pt-1 text-brand-primary/30">
                         {feature}
                       </li>
