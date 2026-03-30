@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
 
@@ -19,6 +20,7 @@ const featuredProjects = [
     ],
     href: 'https://csmedia.vercel.app',
     image: '/csmedia.png',
+    images: ['/csmedia.png', '/cs1.png', '/cs2.png', '/cs3.png', '/cs4.png', '/cs5.png'],
     tags: ['Lead Generation', 'Branding'],
   },
   {
@@ -34,6 +36,7 @@ const featuredProjects = [
     ],
     href: 'https://townly.us',
     image: '/townly.png',
+    images: undefined as string[] | undefined,
     tags: ['Community Platform', 'Local Business'],
   },
   {
@@ -49,6 +52,7 @@ const featuredProjects = [
     ],
     href: 'https://4chariots.com',
     image: '/4chariots.png',
+    images: undefined as string[] | undefined,
     tags: ['E-commerce', 'Branding'],
   },
 ];
@@ -76,6 +80,100 @@ const features = [
   'Clear Calls to Action',
   'Secure deployment',
 ];
+
+function FeaturedProject({ project, index, isReversed }: { project: typeof featuredProjects[number]; index: number; isReversed: boolean }) {
+  const hasCarousel = !!project.images && project.images.length > 1;
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    if (!hasCarousel) return;
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % project.images!.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, [hasCarousel, project.images]);
+
+  return (
+    <section className="max-w-6xl mx-auto mb-16 md:mb-24">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="grid md:grid-cols-2 gap-6 md:gap-12 items-center"
+      >
+        {/* Image / Video */}
+        <div className={isReversed ? 'md:order-2' : ''}>
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-lg shadow-brand-primary/10 bg-brand-primary/5"
+          >
+            {hasCarousel ? (
+              <div className="relative">
+                {project.images!.map((img, i) => (
+                  <img
+                    key={img}
+                    src={img}
+                    alt={`${project.title} screenshot ${i + 1}`}
+                    className={`w-full h-auto object-cover scale-110 transition-opacity duration-700 ${i === 0 ? '' : 'absolute inset-0'} ${i === activeIndex ? 'opacity-100' : 'opacity-0'}`}
+                  />
+                ))}
+              </div>
+            ) : (
+              <img
+                src={project.image}
+                alt={`${project.title} screenshot`}
+                className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+              />
+            )}
+          </a>
+        </div>
+
+        {/* Details */}
+        <div className={isReversed ? 'md:order-1' : ''}>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 rounded-lg bg-brand-accent/10 text-brand-accent text-[11px] font-bold tracking-widest uppercase"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <h2 className="text-2xl md:text-4xl mb-2 md:mb-3">{project.title}</h2>
+          <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-5 md:mb-6">
+            {project.description}
+          </p>
+
+          <h3 className="text-xs font-bold uppercase tracking-widest text-brand-primary/40 mb-3">
+            What this site was built to do
+          </h3>
+          <ul className="space-y-2.5 mb-6 md:mb-8">
+            {project.purpose.map((item) => (
+              <li key={item} className="flex items-start gap-2.5 text-sm text-brand-primary/70">
+                <CheckCircle2 size={16} className="text-brand-accent shrink-0 mt-0.5" />
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-semibold text-sm hover:bg-brand-primary/90 transition-all group"
+          >
+            View Website <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
 
 export default function PortfolioPage() {
   return (
@@ -107,76 +205,7 @@ export default function PortfolioPage() {
         {featuredProjects.map((project, index) => {
           const isReversed = index % 2 !== 0;
           return (
-            <section key={project.title} className="max-w-6xl mx-auto mb-16 md:mb-24">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className={`grid md:grid-cols-2 gap-6 md:gap-12 items-center ${isReversed ? 'md:direction-rtl' : ''}`}
-              >
-                {/* Image */}
-                <div className={`${isReversed ? 'md:order-2' : ''}`}>
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-lg shadow-brand-primary/10 bg-brand-primary/5"
-                  >
-                    <img
-                      src={project.image}
-                      alt={`${project.title} screenshot`}
-                      className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/60 transition-all duration-300 flex items-center justify-center">
-                      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-brand-primary px-6 py-3 rounded-2xl font-semibold text-sm flex items-center gap-2">
-                        View Live Site <ArrowRight size={16} />
-                      </span>
-                    </div>
-                  </a>
-                </div>
-
-                {/* Details */}
-                <div className={`${isReversed ? 'md:order-1' : ''}`}>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 rounded-lg bg-brand-accent/10 text-brand-accent text-[11px] font-bold tracking-widest uppercase"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <h2 className="text-2xl md:text-4xl mb-2 md:mb-3">{project.title}</h2>
-                  <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-5 md:mb-6">
-                    {project.description}
-                  </p>
-
-                  <h3 className="text-xs font-bold uppercase tracking-widest text-brand-primary/40 mb-3">
-                    What this site was built to do
-                  </h3>
-                  <ul className="space-y-2.5 mb-6 md:mb-8">
-                    {project.purpose.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-sm text-brand-primary/70">
-                        <CheckCircle2 size={16} className="text-brand-accent shrink-0 mt-0.5" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-semibold text-sm hover:bg-brand-primary/90 transition-all group"
-                  >
-                    View Website <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </div>
-              </motion.div>
-            </section>
+            <FeaturedProject key={project.title} project={project} index={index} isReversed={isReversed} />
           );
         })}
 
