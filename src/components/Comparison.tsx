@@ -5,19 +5,13 @@ import { X, Check } from 'lucide-react';
 import Link from 'next/link';
 
 const rows = [
-  { label: 'Who handles it', diy: 'You manage everything', studio: 'We handle everything for you', diyShort: 'You handle everything', studioShort: 'We handle everything' },
+  { label: 'Who handles it', diy: 'You handle everything yourself', studio: 'We handle everything for you', diyShort: 'You handle it', studioShort: 'We handle it' },
   { label: "How it's built", diy: 'Templates and drag-and-drop builders', studio: 'Custom built website', diyShort: 'Templates', studioShort: 'Custom built' },
-  { label: 'Who builds it', diy: 'You build it yourself', studio: 'We build it for you', diyShort: 'You build it', studioShort: 'Built for you' },
-  { label: 'Works on phones', diy: 'You adjust it yourself', studio: 'Works from the start', diyShort: 'You adjust it', studioShort: 'Works from the start' },
-  { label: 'Making updates later', diy: 'You make updates', studio: 'We update it (with hosting)', diyShort: 'You update it', studioShort: 'We update it (with hosting)' },
-  { label: 'Keeping everything running', diy: 'You manage it', studio: 'Full Support (with hosting)', diyShort: 'You manage it', studioShort: 'Full Support (with hosting)' },
-  { label: 'When something breaks', diy: 'You troubleshoot issues', studio: 'Full Support (with hosting)', diyShort: 'You troubleshoot', studioShort: 'Full Support (with hosting)' },
-  { label: 'Getting found on Google', diy: 'You set it up', studio: 'Google setup included', diyShort: 'You set it up', studioShort: 'Included' },
-  { label: 'Speed and performance', diy: 'Varies by builder and templates', studio: 'Optimized for speed', diyShort: 'Varies', studioShort: 'Optimized' },
-  { label: 'How customizable it is', diy: 'Limited customization', studio: 'Fully customizable', diyShort: 'Limited', studioShort: 'Fully custom' },
-  { label: 'Ability to grow later', diy: 'Harder to expand or customize later', studio: 'Flexible and expandable', diyShort: 'Limited', studioShort: 'Flexible' },
-  { label: 'Your time involved', diy: 'Many hours', studio: 'Minimal time from you', diyShort: 'Many hours', studioShort: 'Minimal time' },
-  { label: 'Ongoing help and support', diy: 'None', studio: 'Ongoing support (with hosting)', diyShort: 'None', studioShort: 'Ongoing support (with hosting)' },
+  { label: 'Mobile ready', diy: 'You have to adjust it yourself', studio: 'Works from the start', diyShort: 'You fix it', studioShort: 'Works from the start' },
+  { label: 'Updating later', diy: 'You figure it out yourself', studio: 'We update it (with hosting)', diyShort: 'Up to you', studioShort: 'We update it' },
+  { label: 'If something breaks', diy: "You're on your own", studio: 'We fix it for you (with hosting)', diyShort: 'On your own', studioShort: 'We fix it' },
+  { label: 'Found on Google', diy: 'You set it up yourself', studio: 'Google setup included', diyShort: 'You set it up', studioShort: 'Set up for you' },
+  { label: 'Your time', diy: 'Takes hours of your time', studio: 'Minimal time from you', diyShort: 'Takes hours', studioShort: 'Almost none' },
 ];
 
 const platforms = ['Wix', 'Squarespace', 'Shopify', 'WordPress'];
@@ -42,8 +36,8 @@ export default function Comparison() {
         >
           {/* Title & Description */}
           <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-[22px] md:text-4xl mb-3 md:mb-4">
-              Do It Yourself <span className="italic text-brand-accent">vs Let Us Handle It</span>
+            <h2 className="text-xl md:text-4xl mb-3 md:mb-4">
+              Do It Yourself <span className="italic text-brand-accent">or Have It Handled</span>
             </h2>
             <p className="hidden md:block text-base text-brand-primary/55 max-w-2xl mx-auto leading-relaxed">
               Platforms like Wix, Squarespace, Shopify, and WordPress are great tools if you want to build your own website. Studio 925 is for business owners who just want everything handled.
@@ -98,12 +92,12 @@ export default function Comparison() {
                 <div className="px-3 py-2 text-[11px] font-semibold text-brand-primary/70 border-r border-brand-primary/5">
                   {row.label}
                 </div>
-                <div className="px-2 py-2 flex items-center justify-center gap-1 border-r border-brand-primary/5">
-                  <X size={11} className="text-brand-primary/25 shrink-0" />
+                <div className="px-2 py-2 flex items-start gap-1.5 border-r border-brand-primary/5">
+                  <X size={11} className="text-brand-primary/25 shrink-0 mt-[3px]" />
                   <p className="text-[10px] text-brand-primary/40 leading-tight">{row.diyShort}</p>
                 </div>
-                <div className="px-2 py-2 flex items-center justify-center gap-1">
-                  <Check size={11} className="text-brand-accent shrink-0" />
+                <div className="px-2 py-2 flex items-start gap-1.5">
+                  <Check size={11} className="text-brand-accent shrink-0 mt-[3px]" />
                   <p className="text-[10px] text-brand-primary/80 font-medium leading-tight">{row.studioShort}</p>
                 </div>
               </div>

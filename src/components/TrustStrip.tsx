@@ -1,28 +1,35 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Clock, Eye, Target } from 'lucide-react';
 
 const items = [
   {
     title: '48-Hour First Draft',
+    mobileTitle: '48-Hour Draft',
     desc: 'See a working version of your website in days, not weeks.',
+    icon: Clock,
   },
   {
     title: 'Built to Be Found',
+    mobileTitle: 'Be Found',
     desc: 'Show up when people search for what you do.',
+    icon: Eye,
   },
   {
     title: 'Built to Convert',
+    mobileTitle: 'Convert',
     desc: 'Turn visitors into calls, messages, and booked work.',
+    icon: Target,
   },
 ];
 
 export default function TrustStrip() {
   return (
-    <section className="py-14 md:py-16 mb-6 md:mb-6 px-8 md:px-6 bg-white md:bg-brand-primary/[0.02] md:border-y border-brand-primary/5">
+    <section className="pt-12 pb-8 md:py-16 mb-6 md:mb-6 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-20">
+        {/* Desktop */}
+        <div className="hidden sm:grid sm:grid-cols-3 gap-20">
           {items.map((item, i) => (
             <motion.div
               key={item.title}
@@ -39,6 +46,20 @@ export default function TrustStrip() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        {/* Mobile: single 48-hour pill */}
+        <div className="sm:hidden flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-brand-primary/[0.03] border border-brand-primary/5"
+          >
+            <Clock size={14} className="text-brand-accent shrink-0" />
+            <span className="text-xs font-semibold text-brand-primary/70">48-Hour First Draft</span>
+          </motion.div>
         </div>
       </div>
     </section>
