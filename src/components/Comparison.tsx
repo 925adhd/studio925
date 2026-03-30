@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { X, Check } from 'lucide-react';
+import Link from 'next/link';
 
 const rows = [
   { label: 'Who handles it', diy: 'You manage everything', studio: 'We handle everything for you', diyShort: 'You handle everything', studioShort: 'We handle everything' },
@@ -31,7 +32,7 @@ function PlatformLogo({ name }: { name: string }) {
 
 export default function Comparison() {
   return (
-    <section className="py-16 md:py-28 px-6 bg-brand-primary/[0.02] border-y border-brand-primary/5">
+    <section className="py-16 md:py-28 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -110,7 +111,7 @@ export default function Comparison() {
           </div>
 
           <p className="text-center text-xs text-brand-primary/40 mt-6 md:mt-8">
-            Ongoing updates, support, and maintenance are included with optional hosting plans ($49/month).
+            Ongoing updates, support, and maintenance are included with optional <Link href="/hosting-support" className="text-brand-accent hover:underline">hosting plans</Link>.
           </p>
 
         </motion.div>

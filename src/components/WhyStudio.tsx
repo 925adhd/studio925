@@ -17,7 +17,7 @@ const points = [
 
 export default function WhyStudio() {
   return (
-    <section className="py-16 md:py-24 px-6 bg-brand-primary/[0.02] border-t border-brand-primary/5">
+    <section className="py-16 md:py-24 px-6 bg-brand-warm">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
