@@ -10,11 +10,11 @@ const items = [
   },
   {
     title: 'Built to Be Found',
-    desc: 'Designed so customers can find you on Google and contact you easily.',
+    desc: 'Show up when people search for what you do.',
   },
   {
-    title: 'Built to Bring You Customers',
-    desc: 'Your website should generate calls, messages, and new business.',
+    title: 'Built to Convert',
+    desc: 'Turn visitors into calls, messages, and booked work.',
   },
 ];
 
