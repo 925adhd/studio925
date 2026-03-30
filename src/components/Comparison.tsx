@@ -43,8 +43,11 @@ export default function Comparison() {
             <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
               Website Builders <span className="italic text-brand-accent">vs Studio 925</span>
             </h2>
-            <p className="text-[13px] md:text-base text-brand-primary/55 max-w-xs md:max-w-2xl mx-auto leading-relaxed">
+            <p className="hidden md:block text-base text-brand-primary/55 max-w-2xl mx-auto leading-relaxed">
               Platforms like Wix, Squarespace, Shopify, and WordPress are great tools if you want to build your own website. Studio 925 is for business owners who just want everything handled.
+            </p>
+            <p className="md:hidden text-xs text-brand-primary/55 max-w-xs mx-auto leading-relaxed">
+              Don't want to build your own website? We handle everything for you.
             </p>
           </div>
 
