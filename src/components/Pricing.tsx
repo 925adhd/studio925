@@ -204,11 +204,8 @@ export default function Pricing() {
       {/* After Launch Bridge */}
       <div className="max-w-2xl mx-auto text-center mt-16 md:mt-20 pt-12 md:pt-16 border-t border-brand-primary/5">
         <h3 className="text-xl md:text-3xl mb-3 md:mb-4">Keep Your Website Running Smoothly</h3>
-        <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-2 md:mb-3 max-w-lg mx-auto">
-          Once your website is live, you can host and manage it yourself, or I offer optional website care plans where I handle hosting, backups, updates, and keeping everything running smoothly.
-        </p>
         <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-6 md:mb-8 max-w-lg mx-auto">
-          Most clients choose a care plan so they don't have to worry about technical issues, updates, or their site going down.
+          After launch, most clients choose a care plan so they don't have to worry about updates, backups, or technical issues. I handle everything so your website stays online and working for your business.
         </p>
         <Link
           href="/hosting-support"

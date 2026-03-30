@@ -46,10 +46,10 @@ export default function HostingSupportPage() {
         {/* Hero */}
         <div className="max-w-2xl mx-auto text-center mb-14 md:mb-20">
           <h1 className="text-3xl md:text-5xl mb-4 md:mb-5">
-            Website Care <span className="italic text-brand-accent">& Support</span>
+            Hosting <span className="italic text-brand-accent">& Support</span>
           </h1>
           <p className="text-sm md:text-lg text-brand-primary/60 leading-relaxed max-w-xl mx-auto">
-            Keep your site running smoothly after launch without dealing with the technical side. These website care plans are available for websites built by Studio 925 so performance, security, and reliability can be properly maintained.
+            You own your website and can host it anywhere. But if you want everything handled for you, I offer website care plans where I manage hosting, backups, updates, and keep your site running smoothly.
           </p>
         </div>
 
