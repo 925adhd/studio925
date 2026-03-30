@@ -29,8 +29,8 @@ export default function WhyStudio() {
             <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
               Why Work With <span className="italic text-brand-accent">Studio 925</span>
             </h2>
-            <p className="text-sm md:text-base text-brand-primary/55 max-w-2xl mx-auto leading-relaxed">
-              Every website is hand-coded in a professional development environment. No templates, no page builders, no cookie-cutter designs. Just clean code built specifically for your business.
+            <p className="text-xs md:text-base text-brand-primary/55 max-w-xs md:max-w-2xl mx-auto leading-relaxed">
+              No templates. No page builders. Just clean code built specifically for your business.
             </p>
           </div>
 
