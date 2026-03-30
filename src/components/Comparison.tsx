@@ -41,7 +41,7 @@ export default function Comparison() {
         >
           {/* Title & Description */}
           <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
+            <h2 className="text-[22px] md:text-4xl mb-3 md:mb-4">
               Do It Yourself <span className="italic text-brand-accent">vs Let Us Handle It</span>
             </h2>
             <p className="hidden md:block text-base text-brand-primary/55 max-w-2xl mx-auto leading-relaxed">

@@ -166,50 +166,20 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Desktop */}
-        <div className="hidden md:block text-center mt-12">
-          <p className="text-base text-brand-primary/50 mb-2">
-            Not sure which one fits? We'll figure it out together.
-          </p>
-          <p className="text-sm text-brand-primary/40 mt-4">
-            Projects begin with a 50% deposit. The remaining balance is due at launch.<br />
-            Full ownership of all website files transfers upon final payment.
-          </p>
-        </div>
-
-        {/* Mobile */}
-        <div className="md:hidden mt-10 mx-auto max-w-sm">
-          <div className="rounded-2xl border border-brand-primary/10 bg-brand-warm/50 p-6 text-center">
-            <p className="text-base font-semibold text-brand-primary mb-4">
-              Not sure which one fits?<br />We'll figure it out together.
-            </p>
-            <ul className="space-y-2 text-sm text-brand-primary/60 text-left">
-              <li className="flex items-start gap-2">
-                <span className="text-brand-accent mt-0.5">•</span>
-                50% deposit to get started
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand-accent mt-0.5">•</span>
-                Remaining balance due at launch
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-brand-accent mt-0.5">•</span>
-                Full ownership of your website files after final payment
-              </li>
-            </ul>
-          </div>
-        </div>
+        <p className="text-center text-xs text-brand-primary/40 mt-8 md:mt-12">
+          50% deposit to get started. You fully own your website after final payment.
+        </p>
       </div>
 
       {/* After Launch Bridge */}
-      <div className="max-w-2xl mx-auto text-center mt-16 md:mt-20 pt-12 md:pt-16 border-t border-brand-primary/5">
+      <div className="max-w-2xl mx-auto text-center mt-16 md:mt-20 pt-10 md:pt-16 border-t border-brand-primary/5">
         <h3 className="text-xl md:text-3xl mb-3 md:mb-4">Keep Your Website Running Smoothly</h3>
-        <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-6 md:mb-8 max-w-lg mx-auto">
-          After launch, most clients choose a care plan so they don't have to worry about updates, backups, or technical issues. I handle everything so your website stays online and working for your business.
+        <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-8 md:mb-10 max-w-lg mx-auto">
+          We handle updates, backups, and support so your website stays online and working for your business.
         </p>
         <Link
           href="/hosting-support"
-          className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-semibold hover:bg-brand-primary/90 transition-all"
+          className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3.5 rounded-2xl font-semibold hover:bg-brand-primary/90 transition-all"
         >
           View Hosting & Support <ArrowRight size={18} />
         </Link>
