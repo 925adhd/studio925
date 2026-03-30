@@ -5,66 +5,67 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
 
-const featured = {
-  title: 'CS Media',
-  tag: 'Media Brand',
-  description:
-    'A modern media brand site built for strong visual presence and clear service positioning.',
-  impact: 'Clean, professional identity that builds trust fast.',
-  bullets: [
-    'Helps clients understand services at a glance',
-    'Builds credibility instantly',
-    'Designed to generate real inquiries',
-  ],
-  proof: 'Built for a real client ready to scale their brand',
-  href: 'https://csmedia.vercel.app',
-  image: '/csmedia.png',
-};
-
-const projects = [
+const featuredProjects = [
+  {
+    title: 'CS Media',
+    tag: 'Media Brand',
+    description:
+      'A modern media brand site built for strong visual presence and clear service positioning.',
+    purpose: [
+      'Present services clearly so potential clients understand the value immediately',
+      'Build professional credibility and trust at first glance',
+      'Generate real inquiries through clear calls to action',
+      'Establish a strong brand identity online',
+    ],
+    href: 'https://csmedia.vercel.app',
+    image: '/csmedia.png',
+    tags: ['Lead Generation', 'Branding'],
+  },
   {
     title: 'Townly',
+    tag: 'Community Platform',
     description:
       'A clean, structured platform that replaces scattered posts with something people can actually use.',
-    impact: 'Built to organize and power a local community.',
-    bullets: [
-      'Helps residents find local businesses faster',
-      'Builds neighborhood trust instantly',
-      'Designed to keep communities connected and growing',
+    purpose: [
+      'Help residents find local businesses and services faster',
+      'Organize community information in one place',
+      'Build neighborhood trust and keep communities connected',
+      'Replace scattered social media posts with real structure',
     ],
-    proof: 'Built for real users in Grayson County',
     href: 'https://townly.us',
-    tag: 'Community Platform',
     image: '/townly.png',
+    tags: ['Community Platform', 'Local Business'],
   },
   {
     title: 'Four Chariots',
+    tag: 'E-Commerce Brand',
     description:
       'Apparel brand site with strong visual identity and a streamlined purchasing flow.',
-    impact: 'Brand-focused e-commerce built for identity and storytelling.',
-    bullets: [
-      'Helps customers find products faster',
-      'Builds brand trust instantly',
-      'Designed to convert browsers into buyers',
+    purpose: [
+      'Showcase products with a brand-first visual experience',
+      'Make purchasing fast and intuitive on any device',
+      'Build brand trust through clean design and storytelling',
+      'Convert browsers into buyers with clear product pages',
     ],
     href: 'https://4chariots.com',
-    tag: 'E-Commerce Brand',
     image: '/4chariots.png',
+    tags: ['E-commerce', 'Branding'],
   },
+];
+
+const smallProjects = [
   {
     title: '925 ADHD',
     description:
       'Flexible remote work platform designed around how ADHD minds actually work — with a gated resource library, blog, and Stripe-powered subscriptions.',
-    impact: 'Helps ADHD individuals earn online with clarity and structure.',
-    bullets: [
-      'Helps users find the right opportunities faster',
-      'Builds confidence through clear structure',
-      'Designed to convert visitors into subscribers',
+    purpose: [
+      'Help users find the right remote work opportunities',
+      'Convert visitors into paying subscribers',
+      'Provide structured resources for ADHD professionals',
     ],
-    proof: 'Designed for real-world usage, not just display',
     href: 'https://925adhd.com',
-    tag: 'SaaS Platform',
     image: '/925adhd.png',
+    tags: ['SaaS', 'Lead Generation'],
   },
 ];
 
@@ -84,7 +85,7 @@ export default function PortfolioPage() {
       <main className="pt-28 pb-20 px-6">
 
         {/* Intro */}
-        <section className="max-w-6xl mx-auto mb-10">
+        <section className="max-w-6xl mx-auto mb-16 md:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -93,134 +94,161 @@ export default function PortfolioPage() {
             <p className="text-xs font-medium tracking-widest uppercase text-brand-primary/40 mb-3">
               Portfolio
             </p>
-            <h1 className="text-3xl md:text-5xl mb-2 leading-[1.1]">
-              Latest Projects
+            <h1 className="text-3xl md:text-5xl mb-3 leading-[1.1]">
+              Featured Projects
             </h1>
-            <p className="text-lg text-brand-primary/80 max-w-xl leading-relaxed">
-              Real websites built to bring in more calls, leads, and customers.
-            </p>
-            <p className="text-sm text-brand-primary/50 mt-1">
-              Scroll to see how I help businesses grow online.
-            </p>
-            <p className="text-sm text-brand-primary/40 mt-3">
-              Most websites just sit there. These are built to actually do something.
+            <p className="text-base md:text-lg text-brand-primary/60 max-w-xl leading-relaxed">
+              These are real websites built to bring in calls, leads, customers, and growth — not just look nice.
             </p>
           </motion.div>
         </section>
 
-        {/* Featured Project */}
-        <section className="max-w-6xl mx-auto mb-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="inline-block px-3 py-1 rounded-lg bg-brand-accent/10 text-brand-accent text-[11px] font-bold tracking-widest uppercase mb-1.5">
-              Latest Project
-            </span>
-            <p className="text-xs text-brand-primary/50 mb-4">
-              Real client. Real brand. Real results.
-            </p>
-
-            <div className="relative grid md:grid-cols-2 overflow-hidden rounded-[2.5rem] border border-brand-primary/10 shadow-lg shadow-brand-primary/10 bg-white">
-              <div className="bg-brand-primary/5 p-4 md:p-10 md:flex md:items-center md:justify-center md:min-h-[400px]">
-                <div className="h-56 md:h-auto rounded-xl md:rounded-2xl overflow-hidden shadow-lg shadow-brand-primary/15">
-                  <img
-                    src={featured.image}
-                    alt={`${featured.title} screenshot`}
-                    className="w-full h-full object-contain object-top"
-                  />
+        {/* Featured Projects — Alternating Layout */}
+        {featuredProjects.map((project, index) => {
+          const isReversed = index % 2 !== 0;
+          return (
+            <section key={project.title} className="max-w-6xl mx-auto mb-16 md:mb-24">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className={`grid md:grid-cols-2 gap-6 md:gap-12 items-center ${isReversed ? 'md:direction-rtl' : ''}`}
+              >
+                {/* Image */}
+                <div className={`${isReversed ? 'md:order-2' : ''}`}>
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-lg shadow-brand-primary/10 bg-brand-primary/5"
+                  >
+                    <img
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                      className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/60 transition-all duration-300 flex items-center justify-center">
+                      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-brand-primary px-6 py-3 rounded-2xl font-semibold text-sm flex items-center gap-2">
+                        View Live Site <ArrowRight size={16} />
+                      </span>
+                    </div>
+                  </a>
                 </div>
-              </div>
 
-              <div className="p-7 md:p-14 flex flex-col justify-center">
-                <span className="inline-block px-3 py-1 rounded-lg bg-brand-primary/5 text-brand-primary/60 text-xs font-medium tracking-wide mb-4 self-start">
-                  {featured.tag}
-                </span>
-                <h2 className="text-xl md:text-4xl mb-2 md:mb-3">{featured.title}</h2>
-                <p className="text-brand-primary/70 font-medium text-sm md:text-base mb-2">
-                  {featured.impact}
-                </p>
-                <p className="text-brand-primary/60 leading-relaxed mb-3 text-sm md:text-[16px]">
-                  {featured.description}
-                </p>
-                <ul className="space-y-1.5 mb-4">
-                  {featured.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-brand-primary/60 text-sm">
-                      <CheckCircle2 size={16} className="text-brand-accent shrink-0 mt-0.5" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={featured.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-semibold text-base text-brand-accent hover:text-brand-accent/80 transition-colors self-start group mt-1 mb-4 max-md:after:content-[''] max-md:after:absolute max-md:after:inset-0"
-                >
-                  View Website
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </a>
-                <p className="text-xs text-brand-primary/40 italic">{featured.proof}</p>
-              </div>
-            </div>
-          </motion.div>
-        </section>
+                {/* Details */}
+                <div className={`${isReversed ? 'md:order-1' : ''}`}>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-lg bg-brand-accent/10 text-brand-accent text-[11px] font-bold tracking-widest uppercase"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-        {/* Secondary Grid */}
+                  <h2 className="text-2xl md:text-4xl mb-2 md:mb-3">{project.title}</h2>
+                  <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-5 md:mb-6">
+                    {project.description}
+                  </p>
+
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-brand-primary/40 mb-3">
+                    What this site was built to do
+                  </h3>
+                  <ul className="space-y-2.5 mb-6 md:mb-8">
+                    {project.purpose.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-sm text-brand-primary/70">
+                        <CheckCircle2 size={16} className="text-brand-accent shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-semibold text-sm hover:bg-brand-primary/90 transition-all group"
+                  >
+                    View Website <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </motion.div>
+            </section>
+          );
+        })}
+
+        {/* Divider */}
+        <div className="max-w-6xl mx-auto mb-12 md:mb-16">
+          <div className="border-t border-brand-primary/5" />
+        </div>
+
+        {/* Smaller Projects */}
         <section className="max-w-6xl mx-auto mb-20">
-          <div className="grid md:grid-cols-3 gap-4">
-            {projects.map((project, index) => (
+          <h2 className="text-xl md:text-3xl mb-6 md:mb-8">More Projects</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {smallProjects.map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="relative bg-white rounded-3xl border border-brand-primary/10 shadow-sm shadow-brand-primary/5 hover:shadow-md hover:shadow-brand-primary/10 hover:-translate-y-1 transition-all overflow-hidden"
+                className="relative bg-white rounded-3xl border border-brand-primary/10 shadow-sm shadow-brand-primary/5 overflow-hidden"
               >
                 {project.image && (
-                  <div className="bg-brand-primary/5 p-2.5 md:p-4">
-                    <div className="h-44 rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 bg-white flex items-center justify-center">
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block relative group bg-brand-primary/5 p-2.5 md:p-4"
+                  >
+                    <div className="h-44 rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 bg-white flex items-center justify-center relative">
                       <img
                         src={project.image}
                         alt={`${project.title} screenshot`}
-                        className="w-full h-full object-contain object-center"
+                        className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-105"
                       />
+                      <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/60 transition-all duration-300 flex items-center justify-center rounded-xl">
+                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-brand-primary px-5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2">
+                          View Live Site <ArrowRight size={14} />
+                        </span>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 )}
                 <div className="p-5">
-                  <span className="inline-block px-3 py-1 rounded-lg bg-brand-primary/5 text-brand-primary/60 text-xs font-medium tracking-wide mb-2.5">
-                    {project.tag}
-                  </span>
-                  <h3 className="text-xl font-bold mb-1">{project.title}</h3>
-                  <p className="text-brand-primary/70 font-medium text-sm mb-2.5">{project.impact}</p>
+                  <div className="flex flex-wrap gap-1.5 mb-3">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2.5 py-0.5 rounded-md bg-brand-primary/5 text-brand-primary/60 text-[10px] font-medium tracking-wide"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="text-xl font-bold mb-1.5">{project.title}</h3>
+                  <p className="text-sm text-brand-primary/60 leading-relaxed mb-4">{project.description}</p>
                   <ul className="space-y-1.5 mb-4">
-                    {project.bullets.map((b) => (
-                      <li key={b} className="flex items-start gap-2 text-brand-primary/60 text-[13px]">
+                    {project.purpose.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-brand-primary/60 text-[13px]">
                         <CheckCircle2 size={14} className="text-brand-accent shrink-0 mt-0.5" />
-                        {b}
+                        {item}
                       </li>
                     ))}
                   </ul>
-                  {project.href ? (
-                    <a
-                      href={project.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-[15px] font-semibold text-brand-accent hover:text-brand-accent/80 transition-colors group mt-1 max-md:after:content-[''] max-md:after:absolute max-md:after:inset-0"
-                    >
-                      View Website
-                      <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-                    </a>
-                  ) : (
-                    <span className="text-sm text-brand-primary/30 italic">Coming soon</span>
-                  )}
-                  {project.proof && (
-                    <p className="text-xs text-brand-primary/40 italic mt-3">{project.proof}</p>
-                  )}
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-[15px] font-semibold text-brand-accent hover:text-brand-accent/80 transition-colors group"
+                  >
+                    View Website
+                    <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </div>
               </motion.div>
             ))}
