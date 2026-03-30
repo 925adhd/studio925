@@ -105,9 +105,6 @@ export default function Comparison() {
             ))}
           </div>
 
-          <p className="text-center text-xs md:text-sm text-brand-primary/50 mt-6 md:mt-10 max-w-xs md:max-w-xl mx-auto leading-relaxed">
-            Website builders expect you to do everything. Studio 925 builds it, launches it, and supports it for you.
-          </p>
         </motion.div>
       </div>
     </section>
