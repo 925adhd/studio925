@@ -9,6 +9,8 @@ import Contact from '../src/components/Contact';
 import Footer from '../src/components/Footer';
 import LocalSection from '../src/components/LocalSection';
 import TrustStrip from '../src/components/TrustStrip';
+import Comparison from '../src/components/Comparison';
+import WhyStudio from '../src/components/WhyStudio';
 
 export default function HomePage() {
   const { scrollYProgress } = useScroll();
@@ -69,6 +71,8 @@ export default function HomePage() {
 
 
         <Pricing />
+        <Comparison />
+        <WhyStudio />
         <Contact />
       </main>
 

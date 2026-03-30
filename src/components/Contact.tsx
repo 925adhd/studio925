@@ -44,6 +44,13 @@ export default function Contact() {
 
   return (
     <section id="contact" className="scroll-mt-16 pt-10 pb-24 md:py-36 px-6 bg-brand-primary text-white overflow-hidden relative">
+      <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none select-none hidden md:block" aria-hidden="true">
+        <img
+          src="/custom-website-code-development.jpg"
+          alt="Custom website code in a professional development environment"
+          className="w-full h-full object-cover opacity-[0.08] -scale-x-100"
+        />
+      </div>
       <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-accent/5 -skew-x-12 translate-x-1/4" />
 
       <div className="max-w-7xl mx-auto relative z-10">
