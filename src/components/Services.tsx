@@ -16,7 +16,7 @@ const services = [
   },
   {
     title: "Looks right on every screen",
-    description: "Most customers decide on their phone. Your site will load fast and look right immediately — no pinching, no waiting, no broken layouts.",
+    description: "Most customers decide on their phone. Your site will load fast and look right immediately — no waiting, no pinching, no broken layouts.",
     icon: Smartphone,
   },
   {
@@ -41,7 +41,7 @@ const mobileServices = [
   services[1],
   {
     title: "Fast, secure, and looks right on every device",
-    description: "Most customers decide on their phone. Your site loads fast, stays secure, and looks right immediately — no pinching, no waiting, no broken layouts.",
+    description: "Most customers decide on their phone. Your site loads fast, stays secure, and looks right immediately — no waiting, no pinching, no broken layouts.",
     icon: Smartphone,
   },
   services[5],
