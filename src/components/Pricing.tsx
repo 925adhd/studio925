@@ -38,7 +38,7 @@ const tiers = [
     pages: "Homepage + up to 6 core pages, including dedicated pages for your main services",
     features: [
       "Includes everything in the Foundation plan, plus:",
-      "Custom website dashboard to update photos, text, and services anytime",
+      "Simple dashboard for quick edits (or we handle it with optional Full Support)",
       "Structured to guide visitors to contact you and take action",
       "Easy call, text, and contact buttons for mobile visitors",
       "Set up to show what's driving calls and inquiries",
