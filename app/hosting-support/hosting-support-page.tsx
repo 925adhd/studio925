@@ -44,18 +44,18 @@ export default function HostingSupportPage() {
 
       <main className="pt-32 pb-20 px-6">
         {/* Hero */}
-        <div className="max-w-2xl mx-auto text-center mb-14 md:mb-20">
-          <h1 className="text-3xl md:text-5xl mb-4 md:mb-5">
+        <div className="max-w-4xl mx-auto text-center mb-10 md:mb-14">
+          <h1 className="text-3xl md:text-4xl mb-3 md:mb-4">
             Hosting <span className="italic text-brand-accent">& Support</span>
           </h1>
-          <p className="text-sm md:text-lg text-brand-primary/60 leading-relaxed max-w-xl mx-auto">
+          <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed max-w-lg mx-auto">
             You own your website and can host it anywhere. But if you want everything handled for you, I offer website care plans where I manage hosting, backups, updates, and keep your site running smoothly.
           </p>
         </div>
 
         {/* Plans */}
-        <div className="max-w-3xl mx-auto mb-20 md:mb-28">
-          <div className="grid sm:grid-cols-2 gap-8 md:gap-6">
+        <div className="max-w-5xl mx-auto mb-20 md:mb-28">
+          <div className="grid sm:grid-cols-2 gap-8">
             {plans.map((plan, index) => (
               <motion.div
                 key={plan.name}
@@ -129,7 +129,7 @@ export default function HostingSupportPage() {
         </div>
 
         {/* Who This Is For */}
-        <div className="max-w-2xl mx-auto mb-16 md:mb-24">
+        <div className="max-w-4xl mx-auto mb-16 md:mb-24">
           <h2 className="text-xl md:text-3xl mb-4 md:mb-6">Who This Is For</h2>
           <ul className="space-y-3">
             {[
@@ -146,7 +146,7 @@ export default function HostingSupportPage() {
         </div>
 
         {/* Why I Only Host Websites I Build */}
-        <div className="max-w-2xl mx-auto mb-16 md:mb-24">
+        <div className="max-w-4xl mx-auto mb-16 md:mb-24">
           <h2 className="text-xl md:text-3xl mb-3 md:mb-4">Why I Only Host Websites I Build</h2>
           <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed">
             I only host websites I build so I can maintain speed, security, and reliability. This allows me to properly support and maintain every website I manage because I know exactly how everything is built and structured.
@@ -154,7 +154,7 @@ export default function HostingSupportPage() {
         </div>
 
         {/* CTA */}
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <p className="text-base md:text-lg text-brand-primary/60 mb-5">Need a website first?</p>
           <Link
             href="/#pricing"
