@@ -5,22 +5,21 @@ import { CheckCircle2, Clock, Users, Sparkles } from 'lucide-react';
 
 const items = [
   {
-    title: '48-Hour First Draft',
+    title: '48-Hour Draft',
     mobileTitle: '48-Hour Draft',
-
     desc: 'See a working version of your website in days, not weeks.',
     icon: Clock,
   },
   {
-    title: 'Built to Be Found',
+    title: 'Local',
     mobileTitle: 'Local',
-    desc: 'Show up when people search for what you do.',
+    desc: 'One developer, right here in Leitchfield, KY. No outsourcing.',
     icon: Users,
   },
   {
-    title: 'Built to Convert',
+    title: 'Fully Custom',
     mobileTitle: 'Fully Custom',
-    desc: 'Turn visitors into calls, messages, and booked work.',
+    desc: 'Built with real code specifically for your business. No templates.',
     icon: Sparkles,
   },
 ];
