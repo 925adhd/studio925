@@ -10,6 +10,7 @@ const tiers = [
     standardPrice: "1,200",
     price: "900",
     description: "A simple, professional website so people can find you and contact you.",
+    pages: "Homepage + up to 3 core pages (About, Services, Contact)",
     features: [
       "48-hour draft so you can see it fast",
       "Custom homepage designed for your business",
@@ -33,8 +34,10 @@ const tiers = [
     name: "Growth",
     standardPrice: "2,400",
     price: "1,800",
-    description: "A website designed to generate calls, leads, and help grow your business.",
+    description: "A website designed to turn more visitors into calls and inquiries for your business.",
+    pages: "Homepage + up to 6 core pages, including dedicated pages for your main services",
     features: [
+      "Includes everything in the Foundation plan, plus:",
       "Structured to guide visitors to contact you and take action",
       "Easy call, text, and contact buttons for mobile visitors",
       "Set up to show what's driving calls and inquiries",
@@ -121,6 +124,11 @@ export default function Pricing() {
                 <p className={`text-sm ${tier.featured ? 'text-white/70' : 'text-brand-primary/60'}`}>
                   {tier.description}
                 </p>
+                {'pages' in tier && tier.pages && (
+                  <p className={`text-xs mt-2 ${tier.featured ? 'text-white/50' : 'text-brand-primary/45'}`}>
+                    {tier.pages}
+                  </p>
+                )}
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
