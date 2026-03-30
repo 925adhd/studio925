@@ -38,6 +38,8 @@ export default function HomePage() {
         <TrustStrip />
         <Services />
         <LocalSection />
+        <Comparison />
+        <WhyStudio />
 
         {/* Process Section */}
         <section id="process" className="pt-16 md:pt-24 pb-14 px-6 bg-white border-t border-brand-primary/5">
@@ -69,10 +71,7 @@ export default function HomePage() {
           </div>
         </section>
 
-
         <Pricing />
-        <Comparison />
-        <WhyStudio />
         <Contact />
       </main>
 
