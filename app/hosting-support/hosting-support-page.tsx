@@ -109,9 +109,13 @@ export default function HostingSupportPage() {
                   >
                     {plan.cta}
                   </a>
-                  {plan.featured && (
+                  {plan.featured ? (
                     <p className="text-center text-xs text-brand-primary/40 mt-3">
                       Most clients choose this for peace of mind
+                    </p>
+                  ) : (
+                    <p className="text-center text-xs text-brand-primary/40 mt-3">
+                      Updates and content changes are not included in Basic Hosting.
                     </p>
                   )}
                 </div>
