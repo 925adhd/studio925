@@ -42,9 +42,6 @@ export default function Hero() {
             </Link>
           </div>
 
-          <p className="text-xs text-brand-primary/55 font-semibold tracking-normal mt-6 sm:mt-5">
-            Local. No outsourcing. No templates.
-          </p>
         </motion.div>
       </div>
     </section>

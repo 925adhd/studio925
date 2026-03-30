@@ -1,26 +1,27 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { CheckCircle2, Clock, Eye, Target } from 'lucide-react';
+import { CheckCircle2, Clock, Users, Sparkles } from 'lucide-react';
 
 const items = [
   {
     title: '48-Hour First Draft',
     mobileTitle: '48-Hour Draft',
+
     desc: 'See a working version of your website in days, not weeks.',
     icon: Clock,
   },
   {
     title: 'Built to Be Found',
-    mobileTitle: 'Be Found',
+    mobileTitle: 'Local',
     desc: 'Show up when people search for what you do.',
-    icon: Eye,
+    icon: Users,
   },
   {
     title: 'Built to Convert',
-    mobileTitle: 'Convert',
+    mobileTitle: 'Fully Custom',
     desc: 'Turn visitors into calls, messages, and booked work.',
-    icon: Target,
+    icon: Sparkles,
   },
 ];
 
@@ -28,6 +29,23 @@ export default function TrustStrip() {
   return (
     <section className="pt-12 pb-8 md:py-16 mb-6 md:mb-6 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
+        {/* Mobile: plain text row */}
+        <div className="sm:hidden flex items-center justify-center gap-4">
+          {items.map((item, i) => (
+            <motion.div
+              key={item.mobileTitle}
+              initial={{ opacity: 0, y: 8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: i * 0.1 }}
+              className="flex items-center gap-1.5"
+            >
+              <item.icon size={12} className="text-brand-accent shrink-0" />
+              <span className="text-[11px] font-semibold text-brand-primary/50 whitespace-nowrap">{item.mobileTitle}</span>
+            </motion.div>
+          ))}
+        </div>
+
         {/* Desktop */}
         <div className="hidden sm:grid sm:grid-cols-3 gap-20">
           {items.map((item, i) => (
@@ -46,20 +64,6 @@ export default function TrustStrip() {
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* Mobile: single 48-hour pill */}
-        <div className="sm:hidden flex justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3 }}
-            className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-brand-primary/[0.03] border border-brand-primary/5"
-          >
-            <Clock size={14} className="text-brand-accent shrink-0" />
-            <span className="text-xs font-semibold text-brand-primary/70">48-Hour First Draft</span>
-          </motion.div>
         </div>
       </div>
     </section>
