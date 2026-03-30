@@ -148,7 +148,7 @@ export default function Pricing() {
                     ? 'bg-brand-accent text-white hover:bg-brand-accent/90'
                     : 'bg-brand-primary text-white hover:bg-brand-primary/90'
                 }`}>
-                {tier.cta} <ArrowRight size={18} />
+                Let's Talk <ArrowRight size={18} />
               </button>
               <a
                 href={tier.stripeLink}
@@ -160,7 +160,7 @@ export default function Pricing() {
                     : 'text-brand-primary/40 hover:text-brand-primary/60'
                 }`}
               >
-                  Already ready? Secure your spot →
+                  Already decided? Pay and get started →
               </a>
             </motion.div>
           ))}
