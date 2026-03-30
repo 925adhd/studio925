@@ -20,8 +20,8 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <a href="/#services" className="text-sm font-medium hover:text-brand-accent transition-colors">What You Get</a>
           <Link href="/portfolio" className="text-sm font-medium hover:text-brand-accent transition-colors">Portfolio</Link>
-          <a href="/#local" className="text-sm font-medium hover:text-brand-accent transition-colors">About</a>
           <a href="/#pricing" className="text-sm font-medium hover:text-brand-accent transition-colors">Pricing</a>
+          <Link href="/hosting-support" className="text-sm font-medium hover:text-brand-accent transition-colors">Hosting & Support</Link>
           <a href="/#contact" className="bg-brand-primary text-white px-5 py-2 rounded-xl text-sm font-medium flex items-center gap-2 hover:bg-brand-primary/90 transition-all">
             Get Started <ArrowRight size={16} />
           </a>
@@ -48,8 +48,8 @@ export default function Navbar() {
           <div className="flex flex-col gap-5 items-start">
             <a href="/#services" onClick={() => setIsOpen(false)} className="text-lg font-medium">What You Get</a>
             <Link href="/portfolio" onClick={() => setIsOpen(false)} className="text-lg font-medium">Portfolio</Link>
-            <a href="/#local" onClick={() => setIsOpen(false)} className="text-lg font-medium">About</a>
             <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-lg font-medium">Pricing</a>
+            <Link href="/hosting-support" onClick={() => setIsOpen(false)} className="text-lg font-medium">Hosting & Support</Link>
             <div className="flex gap-3 mt-1">
               <a href="tel:+12705512210" onClick={() => setIsOpen(false)} className="bg-brand-accent text-white px-4 py-2.5 rounded-xl font-medium text-base flex items-center gap-2">
                 <Phone size={16} /> Call

@@ -9,7 +9,6 @@ import Contact from '../src/components/Contact';
 import Footer from '../src/components/Footer';
 import LocalSection from '../src/components/LocalSection';
 import TrustStrip from '../src/components/TrustStrip';
-import WebsiteCare from '../src/components/WebsiteCare';
 
 export default function HomePage() {
   const { scrollYProgress } = useScroll();
@@ -70,7 +69,6 @@ export default function HomePage() {
 
 
         <Pricing />
-        <WebsiteCare />
         <Contact />
       </main>
 
