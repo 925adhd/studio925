@@ -57,8 +57,7 @@ export default function HomePage() {
                 { step: "03", title: "Review & Refine", desc: "You tell me what you like, what to change, and I handle the rest. Revisions until you're happy." },
                 { step: "04", title: "Launch", desc: "Your site goes live. Domain connected, SSL secured, Google notified. You're online and ready for customers." }
               ].map((item, i) => (
-                <div key={i} className="relative p-5 md:p-8 glass rounded-2xl md:rounded-3xl">
-                  <span className="text-lg md:text-4xl font-serif font-bold italic text-brand-primary/40 absolute top-1.5 right-2.5 md:top-3 md:right-5" aria-hidden="true">{item.step}</span>
+                <div key={i} className="relative p-5 md:p-8 glass rounded-2xl md:rounded-3xl step-card" data-step={item.step}>
                   <h3 className="text-sm md:text-lg font-sans font-bold mb-2 md:mb-3 mt-1 md:mt-2 pr-6 md:pr-0">{item.title}</h3>
                   <p className="text-xs md:text-sm text-brand-primary/65 leading-relaxed">{item.desc}</p>
                 </div>
