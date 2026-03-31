@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Professional website design for small businesses in Leitchfield, Kentucky. Custom-built websites that bring in real customers. No templates. No page builders.',
   alternates: { canonical: '/website-design-leitchfield-ky' },
   openGraph: {
+    type: 'website',
     title: 'Website Design in Leitchfield, KY | Studio 925',
     description: 'Professional website design for small businesses in Leitchfield, Kentucky. Custom-built websites that bring in real customers. No templates. No page builders.',
     url: '/website-design-leitchfield-ky',

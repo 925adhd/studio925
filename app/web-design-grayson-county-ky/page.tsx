@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Professional web design for small businesses in Grayson County, Kentucky. Custom-built websites that bring in real customers and grow your business.',
   alternates: { canonical: '/web-design-grayson-county-ky' },
   openGraph: {
+    type: 'website',
     title: 'Web Design in Grayson County, KY | Studio 925',
     description: 'Professional web design for small businesses in Grayson County, Kentucky. Custom-built websites that bring in real customers and grow your business.',
     url: '/web-design-grayson-county-ky',

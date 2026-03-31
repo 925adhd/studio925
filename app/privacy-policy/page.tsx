@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Read the Studio 925 privacy policy. Learn how we collect, use, and protect your personal information when you use our web design services and website.',
   alternates: { canonical: '/privacy-policy' },
   openGraph: {
+    type: 'website',
     title: 'Privacy Policy | Studio 925',
     description: 'Read the Studio 925 privacy policy. Learn how we collect, use, and protect your personal information when you use our web design services and website.',
     url: '/privacy-policy',

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Studio 925 disclaimer. Understand the limitations of web design services and what results we can and cannot guarantee.',
   alternates: { canonical: '/disclaimer' },
   openGraph: {
+    type: 'website',
     title: 'Disclaimer | Studio 925',
     description: 'Studio 925 disclaimer. Understand the limitations of web design services and what results we can and cannot guarantee.',
     url: '/disclaimer',

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Website design costs explained. Learn what affects pricing, compare DIY vs custom, and see transparent pricing from a local Kentucky web designer.',
   alternates: { canonical: '/website-cost' },
   openGraph: {
+    type: 'website',
     title: 'How Much Does a Website Cost? | Studio 925',
     description: 'Website design costs explained. Learn what affects pricing, compare DIY vs custom, and see transparent pricing from a local Kentucky web designer.',
     url: '/website-cost',

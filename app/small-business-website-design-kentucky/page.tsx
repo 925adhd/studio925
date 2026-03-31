@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Custom website design for small businesses across Kentucky. No templates. Built from scratch to help your business get found online and convert visitors.',
   alternates: { canonical: '/small-business-website-design-kentucky' },
   openGraph: {
+    type: 'website',
     title: 'Small Business Website Design in Kentucky | Studio 925',
     description: 'Custom website design for small businesses across Kentucky. No templates. Built from scratch to help your business get found online and convert visitors.',
     url: '/small-business-website-design-kentucky',
