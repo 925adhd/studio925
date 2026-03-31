@@ -46,7 +46,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8 md:mb-12">
               <h2 className="text-2xl md:text-4xl mb-2 md:mb-3">How it works.</h2>
-              <p className="text-brand-primary/60 text-base md:text-lg mb-1">This shouldn't feel like <span className="italic text-brand-accent">a second job.</span></p>
+              <p className="text-brand-primary/60 text-base md:text-lg mb-1">This shouldn't feel like <span className="italic text-emerald-700">a second job.</span></p>
               <p className="text-brand-primary/65 text-xs md:text-sm">No homework. No confusion. Just a clear process from start to finish.</p>
             </div>
 
@@ -58,7 +58,7 @@ export default function HomePage() {
                 { step: "04", title: "Launch", desc: "Your site goes live. Domain connected, SSL secured, Google notified. You're online and ready for customers." }
               ].map((item, i) => (
                 <div key={i} className="relative p-5 md:p-8 glass rounded-2xl md:rounded-3xl">
-                  <span className="text-lg md:text-4xl font-serif font-bold italic text-brand-accent/30 absolute top-1.5 right-2.5 md:top-3 md:right-5">{item.step}</span>
+                  <span className="text-lg md:text-4xl font-serif font-bold italic text-brand-primary/15 absolute top-1.5 right-2.5 md:top-3 md:right-5">{item.step}</span>
                   <h3 className="text-sm md:text-lg font-sans font-bold mb-2 md:mb-3 mt-1 md:mt-2 pr-6 md:pr-0">{item.title}</h3>
                   <p className="text-xs md:text-sm text-brand-primary/65 leading-relaxed">{item.desc}</p>
                 </div>
