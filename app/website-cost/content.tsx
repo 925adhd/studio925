@@ -86,6 +86,15 @@ const factors = [
   { icon: Zap, title: 'Ongoing Maintenance', desc: 'Hosting runs $3–$300/month. Updates and support cost $50–$200/month. These recurring costs are often overlooked when budgeting.' },
 ];
 
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://studio925.design' },
+    { '@type': 'ListItem', position: 2, name: 'How Much Does a Website Cost?', item: 'https://studio925.design/website-cost' },
+  ],
+};
+
 export default function WebsiteCostContent() {
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
@@ -96,6 +105,10 @@ export default function WebsiteCostContent() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <Navbar />
 

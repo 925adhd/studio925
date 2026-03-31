@@ -65,6 +65,15 @@ const faqItems = [
   },
 ];
 
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://studio925.design' },
+    { '@type': 'ListItem', position: 2, name: 'Small Business Website Design in Kentucky', item: 'https://studio925.design/small-business-website-design-kentucky' },
+  ],
+};
+
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -88,6 +97,10 @@ export default function KentuckyContent() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <Navbar />
 

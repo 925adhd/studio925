@@ -60,6 +60,15 @@ const faqItems = [
   },
 ];
 
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://studio925.design' },
+    { '@type': 'ListItem', position: 2, name: 'Web Design in Grayson County, KY', item: 'https://studio925.design/web-design-grayson-county-ky' },
+  ],
+};
+
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -92,6 +101,10 @@ export default function GraysonCountyContent() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <Navbar />
 

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display, JetBrains_Mono } from 'next/font/google';
+import Script from 'next/script';
 import '../src/index.css';
 
 const inter = Inter({
@@ -52,6 +53,23 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Studio 925',
+  url: 'https://studio925.design',
+  logo: 'https://studio925.design/logo.png',
+  email: 'kara@studio925.design',
+  telephone: '+1-270-551-2210',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Leitchfield',
+    addressRegion: 'KY',
+    postalCode: '42754',
+    addressCountry: 'US',
+  },
+};
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
@@ -60,6 +78,14 @@ const jsonLd = {
   email: 'kara@studio925.design',
   telephone: '+1-270-551-2210',
   description: 'Professional web design services for small businesses in Grayson County, Kentucky and surrounding areas.',
+  image: [
+    'https://studio925.design/studio925.png',
+  ],
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 37.4801,
+    longitude: -86.2938,
+  },
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Leitchfield',
@@ -159,7 +185,18 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${jetbrains.variable}`}>
+      <head>
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="4aAbtU0hK7mRoLOqZCAPEg"
+          strategy="afterInteractive"
+        />
+      </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

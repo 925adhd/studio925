@@ -44,12 +44,25 @@ const includedMore = [
   'Full ownership of all files',
 ];
 
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://studio925.design' },
+    { '@type': 'ListItem', position: 2, name: 'Website Design in Leitchfield, KY', item: 'https://studio925.design/website-design-leitchfield-ky' },
+  ],
+};
+
 export default function LeitchfieldContent() {
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
       <Navbar />
 
