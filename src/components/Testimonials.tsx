@@ -8,6 +8,7 @@ const testimonials = [
     quote: "Not even exaggerating — this is hands down the cleanest, smoothest, most professional site I've ever had. Everything flows, loads fast, and actually reflects the quality I bring. Studio 925 doesn't just build websites — she builds brands that convert. If you're serious about leveling up your business, I highly recommend reaching out to Kara.",
     name: 'CS Media',
     role: 'Media Brand · Leitchfield, KY',
+    link: 'https://csmedia.vercel.app',
     placeholder: false,
   },
 ];
@@ -18,7 +19,7 @@ export default function Testimonials() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10 md:mb-14">
           <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
-            What business owners are <span className="italic text-brand-accent">saying</span>
+            What business owners <span className="italic text-brand-accent">are&nbsp;saying</span>
           </h2>
           <p className="text-sm md:text-base text-brand-primary/50 max-w-lg mx-auto">
             Real feedback from real businesses.
@@ -45,7 +46,9 @@ export default function Testimonials() {
               </p>
               <div>
                 <p className={`text-sm font-semibold ${t.placeholder ? 'text-brand-primary/30' : 'text-brand-primary'}`}>
-                  {t.name}
+                  {t.link ? (
+                    <a href={t.link} target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2">{t.name}</a>
+                  ) : t.name}
                 </p>
                 <p className="text-xs text-brand-primary/40">{t.role}</p>
               </div>

@@ -11,7 +11,7 @@ const businesses = [
   { name: 'Healthcare & wellness', icon: Heart },
   { name: 'Real estate', icon: Home },
   { name: 'Auto shops & dealers', icon: Car },
-  { name: 'Community orgs', icon: Users },
+  { name: 'Community groups', icon: Users },
 ];
 
 export default function WhoItsFor() {
