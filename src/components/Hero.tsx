@@ -6,7 +6,7 @@ import { ArrowRight, MapPin } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative pt-20 md:pt-32 pb-4 md:pb-28 px-6 overflow-hidden">
+    <section className="relative pt-20 md:pt-32 pb-2 md:pb-20 px-6 overflow-hidden">
       <div className="absolute inset-0 grid-pattern -z-10" />
 
       <div className="max-w-4xl mx-auto text-center">
