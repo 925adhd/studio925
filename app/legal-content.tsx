@@ -58,7 +58,7 @@ function PrivacyPolicy() {
         <p>We use collected information to:</p>
         <ul>
           <li>Respond to inquiries and project requests</li>
-          <li>Communicate about proposals, timelines, and deliverables</li>
+          <li>Communicate about projects, timelines, and deliverables</li>
           <li>Improve website performance and user experience</li>
           <li>Analyze traffic and usage trends</li>
           <li>Comply with legal obligations</li>
@@ -287,11 +287,7 @@ function TermsOfService() {
       </Section>
 
       <Section title="15. Termination">
-        <p>Either party may terminate a project with written notice.</p>
-        <ul>
-          <li>Work completed up to the termination date will be billed accordingly.</li>
-          <li>Any unpaid balances remain due.</li>
-        </ul>
+        <p>Either party may terminate a project with written notice. Refunds and file transfers are handled according to our <Link href="/terms-of-service" className="text-brand-accent hover:underline">Refunds and Cancellations</Link> policy in Section 8.</p>
       </Section>
 
       <Section title="16. Governing Law and Disputes">
