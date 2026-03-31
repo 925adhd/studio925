@@ -286,13 +286,13 @@ export default function DomainGuide() {
           </p>
         </motion.div>
 
-        {/* Link to other guide */}
+        {/* Back to setup */}
         <div className="text-center mt-10">
           <Link
-            href="/setup/contact"
+            href="/setup"
             className="inline-flex items-center gap-2 text-sm font-sans font-semibold text-brand-accent hover:underline"
           >
-            Need to set up your contact form? Follow the Contact Form Guide <ChevronRight size={14} />
+            Back to Setup Guides <ChevronRight size={14} />
           </Link>
         </div>
 
