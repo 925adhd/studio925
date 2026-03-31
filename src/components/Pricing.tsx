@@ -188,7 +188,7 @@ export default function Pricing() {
                     : 'text-brand-primary/65 hover:text-brand-primary/70'
                 }`}
               >
-                  Already decided? Pay and get started →
+                  Already decided? Pay for {tier.name} →
               </a>
             </motion.div>
           ))}
