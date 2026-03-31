@@ -9,22 +9,22 @@ const tiers = [
     name: "Foundation",
     standardPrice: "1,200",
     price: "900",
-    description: "A simple, professional website so people can find you and contact you.",
-    pages: "Homepage + up to 3 core pages (About, Services, Contact)",
+    description: "Get your business online with a clean, professional site that makes you easy to find and easy to contact.",
+    pages: "Up to 5 pages",
+    pageDetail: "Homepage, About, Services, Contact + 1 more",
     features: [
       "48-hour draft so you can see it fast",
-      "Custom homepage designed for your business",
-      "Your website is live and ready for customers",
-      "Looks great on every phone and screen",
+      "Custom design built around your business",
+      "Mobile-first — looks great on every phone",
       "Contact form so customers can reach you",
-      "Set up so customers can find you on Google",
-      "Simple logo creation or cleanup if needed",
-      "Domain setup and secure connection included",
-      "Custom favicon for a polished look",
-      "Optimized to load fast",
-      "We work with you to refine everything until you're happy before launch",
-      "You own everything after final payment"
+      "Google-ready SEO setup",
+      "Domain setup + secure connection",
+      "Simple logo cleanup if needed",
+      "Optimized for fast load times",
+      "Revisions until you're happy before launch",
+      "You own everything after final payment",
     ],
+    support: "Launch support included",
     bestFor: "Get your business online",
     cta: "Start Your Website",
     stripeLink: "https://buy.stripe.com/eVqbJ368b1Hi2W8160cIE02",
@@ -34,42 +34,44 @@ const tiers = [
     name: "Growth",
     standardPrice: "2,400",
     price: "1,800",
-    description: "A website designed to turn more visitors into calls and inquiries for your business.",
-    pages: "Homepage + up to 6 core pages, including dedicated pages for your main services",
+    description: "Built to turn more visitors into calls and inquiries. Dedicated service pages, analytics, and lead tracking to help your business grow.",
+    pages: "Up to 8 pages",
+    pageDetail: "Everything in Foundation + dedicated service pages",
     features: [
-      "Includes everything in the Foundation plan, plus:",
-      "Simple website dashboard for small content updates like photos, text, and services",
-      "Structured to guide visitors to contact you and take action",
-      "Easy call, text, and contact buttons for mobile visitors",
-      "Set up to show what's driving calls and inquiries",
-      "Built-in tracking to capture calls and messages from your website",
-      "We work with you to refine everything until you're happy before launch",
+      "Everything in Foundation, plus:",
+      "Dedicated pages for each of your main services",
+      "Website dashboard for quick content updates",
+      "Structured to guide visitors toward contacting you",
+      "Click-to-call and text buttons for mobile",
+      "Google Analytics to see what's working",
+      "Built-in lead tracking — know where calls come from",
       "Legal pages included (Privacy, Terms, Cookies)",
-      "Support after launch if you need it"
+      "30 days of post-launch support",
     ],
+    support: "30 days post-launch support",
     bestFor: "Most businesses choose this",
     cta: "Start Your Website",
     stripeLink: "https://buy.stripe.com/cNi3cx9kngCc9kw6qkcIE03",
     featured: true
   },
   {
-    name: "Membership & Payments",
+    name: "Online Store",
     standardPrice: "3,200",
     price: "2,600",
-    description: "Not just a website. A system to sell online, manage customers, and grow your business.",
+    description: "Sell online, manage customers, and take payments — all from your own website. A complete system, not just a storefront.",
+    pages: "Up to 12 pages",
+    pageDetail: "Everything in Growth + store, accounts, checkout",
     features: [
-      "Includes everything in the Growth plan, plus:",
-      "Online store with secure checkout",
-      "Customers can create accounts and log in",
-      "Customers can view and manage their orders",
-      "Everything is clearly organized so nothing feels confusing",
-      "Simple admin area to stay on top of orders and customers",
-      "Customers receive confirmation emails after every order",
-      "Fast, secure, and built to handle payments and customer data",
-      "We work with you to refine everything until you're happy before launch",
-      "Extended support after launch"
+      "Everything in Growth, plus:",
+      "Online store with secure Stripe checkout",
+      "Customer accounts — sign up, log in, manage orders",
+      "Admin dashboard to manage products and customers",
+      "Order confirmation emails sent automatically",
+      "Built to handle payments and customer data securely",
+      "60 days of guided post-launch support",
     ],
-    bestFor: "Sell online and manage customers",
+    support: "60 days guided support",
+    bestFor: "Sell online & manage customers",
     cta: "Start Your Website",
     stripeLink: "https://buy.stripe.com/6oU00l0NR2LmgMYcOIcIE04",
     featured: false
@@ -81,8 +83,8 @@ export default function Pricing() {
     <section id="pricing" className="py-20 px-6 bg-brand-warm">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 md:mb-16 max-w-2xl md:max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 md:mb-4 leading-snug">Every serious local business needs a website <span className="italic text-brand-accent">that works.</span></h2>
-          <p className="text-brand-primary/50 text-sm md:text-lg mt-2 md:mt-3">Clear pricing. One flat price. No hidden fees.</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 md:mb-4 leading-snug">Simple pricing. <span className="italic text-brand-accent">Real results.</span></h2>
+          <p className="text-brand-primary/50 text-sm md:text-lg mt-2 md:mt-3">One flat price per project. No hourly billing, no hidden fees, no monthly platform costs.</p>
           <p className="text-[11px] md:text-sm text-brand-primary/40 mt-2 md:mt-4">Introductory pricing currently available for new projects.</p>
         </div>
 
@@ -109,8 +111,8 @@ export default function Pricing() {
               <div className="mb-8">
                  <div className={`text-xs mb-1 font-semibold tracking-wide ${tier.featured ? 'text-white/60' : 'text-brand-primary/50'}`}>{tier.bestFor}</div>
                  <h3 className={`text-2xl mb-2 ${tier.featured ? 'text-white' : 'text-brand-primary'}`}>{tier.name}</h3>
-                <div className="mb-7">
-                  <span className={`text-xs font-semibold uppercase tracking-widest ${tier.featured ? 'text-brand-accent' : 'text-brand-accent'}`}>
+                <div className="mb-5">
+                  <span className={`text-xs font-semibold uppercase tracking-widest text-brand-accent`}>
                     Introductory Price
                   </span>
                   <div className="mt-1">
@@ -122,20 +124,28 @@ export default function Pricing() {
                     Standard Price ${tier.standardPrice}
                   </p>
                 </div>
+
+                {/* Page count badge */}
+                <div className={`inline-flex items-center px-3 py-1.5 rounded-xl text-xs font-bold mb-4 ${
+                  tier.featured
+                    ? 'bg-white/10 text-white/80'
+                    : 'bg-brand-accent/10 text-brand-accent'
+                }`}>
+                  {tier.pages}
+                </div>
+
                 <p className={`text-sm ${tier.featured ? 'text-white/70' : 'text-brand-primary/60'}`}>
                   {tier.description}
                 </p>
-                {'pages' in tier && tier.pages && (
-                  <p className={`text-xs mt-2 ${tier.featured ? 'text-white/50' : 'text-brand-primary/45'}`}>
-                    {tier.pages}
-                  </p>
-                )}
+                <p className={`text-xs mt-2 ${tier.featured ? 'text-white/40' : 'text-brand-primary/35'}`}>
+                  {tier.pageDetail}
+                </p>
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
                 {tier.features.map((feature) =>
                   feature.endsWith('plus:') ? (
-                    <li key={feature} className={`text-xs font-bold uppercase tracking-widest pt-1 ${tier.featured ? 'text-white/40' : 'text-brand-primary/30'}`}>
+                    <li key={feature} className={`text-xs font-bold uppercase tracking-widest pt-1 ${tier.featured ? 'text-brand-accent/70' : 'text-brand-accent/50'}`}>
                       {feature}
                     </li>
                   ) : (
@@ -146,6 +156,15 @@ export default function Pricing() {
                   )
                 )}
               </ul>
+
+              {/* Support callout */}
+              <div className={`text-xs font-medium mb-5 px-3 py-2 rounded-xl ${
+                tier.featured
+                  ? 'bg-white/10 text-white/60'
+                  : 'bg-brand-primary/[0.03] text-brand-primary/45'
+              }`}>
+                {tier.support}
+              </div>
 
               <button
                 onClick={() => {
@@ -175,9 +194,14 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-xs text-brand-primary/40 mt-8 md:mt-12">
-          50% deposit to get started. You fully own your website after final payment.
-        </p>
+        <div className="text-center mt-8 md:mt-12 space-y-2">
+          <p className="text-xs text-brand-primary/40">
+            50% deposit to get started. You fully own your website and all files after final payment.
+          </p>
+          <p className="text-xs text-brand-primary/35">
+            Hosting is separate — <Link href="/hosting-support" className="text-brand-accent hover:underline">plans start at $25/month</Link>. Want to understand pricing? Read the <Link href="/website-cost" className="text-brand-accent hover:underline">website cost guide</Link>.
+          </p>
+        </div>
       </div>
 
       {/* After Launch Bridge */}

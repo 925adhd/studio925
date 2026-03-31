@@ -52,9 +52,9 @@ export default function Services() {
     <section id="services" className="pt-16 pb-14 md:py-28 px-6 bg-white scroll-mt-16 md:scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <div className="mb-10 max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4">Your website should be<br /><span className="text-brand-accent italic">working for you right now.</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl mb-4">A professional online presence<br /><span className="text-brand-accent italic">that actually grows your business.</span></h2>
           <p className="text-lg text-brand-primary/60">
-            Here's what a Studio 925 website does for you.
+            Here's what you get when your website is built to perform.
           </p>
         </div>
 

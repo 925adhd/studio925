@@ -16,11 +16,11 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-[9px] sm:text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/60 mb-4 sm:mb-5">
-            Web Design for Local Businesses in Grayson County, Kentucky
+            Helping Local Businesses Grow Online · Grayson County, Kentucky
           </h1>
 
           <h2 className="text-4xl sm:text-5xl md:text-7xl mb-3 md:mb-4 leading-[1.05] sm:leading-[1.1]">
-            You don't just need a website. You need one <span className="italic text-brand-accent">built to bring you customers.</span>
+            Your business deserves a website <span className="italic text-brand-accent">that actually works.</span>
           </h2>
 
           <p className="flex items-center justify-center gap-1.5 text-sm md:text-base mb-4 md:mb-5">
@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
 
           <p className="text-sm sm:text-[15px] md:text-xl text-brand-primary/70 mb-3 md:mb-4 max-w-2xl leading-[1.65] md:leading-relaxed mx-auto">
-            Custom websites for local businesses in Grayson County. Built to be found on Google, load fast, and make your business look professional&nbsp;online.
+            Fast, mobile-first websites built for small businesses in Grayson County. Built to look professional, load fast, and make it easy for customers to find and contact&nbsp;you.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 sm:gap-4 justify-center">

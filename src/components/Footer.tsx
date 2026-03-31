@@ -30,6 +30,7 @@ export default function Footer() {
             <ul className="space-y-4 text-brand-primary/60">
               <li><a href="/#services" className="hover:text-brand-accent transition-colors">Services</a></li>
               <li><a href="/#pricing" className="hover:text-brand-accent transition-colors">Pricing</a></li>
+              <li><Link href="/website-cost" className="hover:text-brand-accent transition-colors">Website Cost Guide</Link></li>
               <li><a href="/#process" className="hover:text-brand-accent transition-colors">Process</a></li>
               <li><a href="/#contact" className="hover:text-brand-accent transition-colors">Contact</a></li>
             </ul>

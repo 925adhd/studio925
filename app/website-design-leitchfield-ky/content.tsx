@@ -89,6 +89,7 @@ export default function LeitchfieldContent() {
             </div>
           </motion.div>
 
+          {/* Desktop photo */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -102,6 +103,24 @@ export default function LeitchfieldContent() {
                 alt="Kara Gibson — web designer in Leitchfield, KY"
                 className="relative w-full max-w-sm mx-auto rounded-[2rem] shadow-xl shadow-brand-primary/10"
               />
+            </div>
+          </motion.div>
+
+          {/* Mobile photo */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="md:hidden flex items-center gap-4 mt-2"
+          >
+            <img
+              src="/me.png"
+              alt="Kara Gibson — web designer in Leitchfield, KY"
+              className="w-14 h-14 rounded-full object-cover shadow-md shadow-brand-primary/10 border-2 border-white"
+            />
+            <div>
+              <p className="text-sm font-semibold text-brand-primary">Kara Gibson</p>
+              <p className="text-xs text-brand-primary/50">Owner, Studio 925 · Leitchfield, KY</p>
             </div>
           </motion.div>
         </div>
@@ -238,7 +257,7 @@ export default function LeitchfieldContent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-4 md:mb-6">Website design pricing</h2>
           <p className="text-brand-primary/70 text-sm md:text-lg leading-relaxed mb-6 md:mb-8">
-            Website projects start at <strong>$900</strong> for a clean, professional Foundation site. Growth and Membership plans are available for businesses that need expanded pages, content systems, or online payments. Every project includes full ownership of your files.
+            Website projects start at <strong>$900</strong> for a clean, professional Foundation site. Growth and Online Store plans are available for businesses that need expanded pages, content systems, or online payments. Every project includes full ownership of your files. Want to understand what goes into website pricing? Read our <Link href="/website-cost" className="text-brand-accent hover:underline">website cost guide</Link>.
           </p>
           <a
             href="/#pricing"

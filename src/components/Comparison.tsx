@@ -14,16 +14,6 @@ const rows = [
   { label: 'Your time', diy: 'Takes hours of your time', studio: 'Minimal time from you', diyShort: 'Takes hours', studioShort: 'Almost none' },
 ];
 
-const platforms = ['Wix', 'Squarespace', 'Shopify', 'WordPress'];
-
-function PlatformLogo({ name }: { name: string }) {
-  return (
-    <span className="text-xs md:text-base font-semibold text-brand-primary/30 tracking-wide">
-      {name}
-    </span>
-  );
-}
-
 export default function Comparison() {
   return (
     <section className="py-16 md:py-28 px-6 bg-white">
@@ -40,10 +30,10 @@ export default function Comparison() {
               Do It Yourself <span className="italic text-brand-accent">or Have It Handled</span>
             </h2>
             <p className="hidden md:block text-base text-brand-primary/55 max-w-2xl mx-auto leading-relaxed">
-              Platforms like Wix, Squarespace, Shopify, and WordPress are great tools if you want to build your own website. Studio 925 is for business owners who just want everything handled.
+              Platforms like Wix, Squarespace, Shopify, and WordPress are great tools if you have the time. Studio 925 is for business owners who want a professional online presence without doing it themselves.
             </p>
             <p className="md:hidden text-xs text-brand-primary/55 max-w-xs mx-auto leading-relaxed">
-              Skip the hassle of building it yourself. We handle everything for you.
+              Focus on running your business. We handle your online presence.
             </p>
           </div>
 
@@ -106,6 +96,7 @@ export default function Comparison() {
 
           <p className="text-center text-xs text-brand-primary/40 mt-6 md:mt-8">
             Ongoing updates, support, and maintenance are included with optional <Link href="/hosting-support" className="text-brand-accent hover:underline">hosting plans</Link>.
+            {' '}Wondering about pricing? See our <Link href="/website-cost" className="text-brand-accent hover:underline">website cost guide</Link>.
           </p>
 
         </motion.div>

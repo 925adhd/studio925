@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import { Mail, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-const plans = ['Foundation', 'Growth', 'Membership & Payments', 'Not Sure Yet'];
+const plans = ['Foundation', 'Growth', 'Online Store', 'Not Sure Yet'];
 
 export default function Contact() {
   const [selectedPlan, setSelectedPlan] = useState('Not Sure Yet');

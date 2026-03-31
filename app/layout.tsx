@@ -106,7 +106,7 @@ const jsonLd = {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Membership & Payments Website',
+              name: 'Online Store Website',
               description: 'Full website with online store, secure checkout, customer accounts, admin dashboard, and 60 days guided support.',
             },
             price: '2600',

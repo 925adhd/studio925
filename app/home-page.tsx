@@ -11,6 +11,8 @@ import LocalSection from '../src/components/LocalSection';
 import TrustStrip from '../src/components/TrustStrip';
 import Comparison from '../src/components/Comparison';
 import WhyStudio from '../src/components/WhyStudio';
+import WhoItsFor from '../src/components/WhoItsFor';
+import Testimonials from '../src/components/Testimonials';
 
 export default function HomePage() {
   const { scrollYProgress } = useScroll();
@@ -37,9 +39,7 @@ export default function HomePage() {
         <Hero />
         <TrustStrip />
         <Services />
-        <LocalSection />
         <Comparison />
-        <WhyStudio />
 
         {/* Process Section */}
         <section id="process" className="pt-16 md:pt-24 pb-14 px-6 bg-white border-t border-brand-primary/5">
@@ -53,9 +53,9 @@ export default function HomePage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
               {[
                 { step: "01", title: "Quick Conversation", desc: "Tell me about your business, or just point me to your current website or Facebook page. That's enough to get started." },
-                { step: "02", title: "48-Hour Draft", desc: "You'll have a rough draft to look at within 48 hours. No weeks of waiting around." },
-                { step: "03", title: "Review & Refine", desc: "You tell me what you like, what to change, and I handle the rest." },
-                { step: "04", title: "Launch", desc: "Your site goes live. I'll walk you through setting up your domain, and handle the rest." }
+                { step: "02", title: "48-Hour Draft", desc: "You'll have a working draft of your website within 48 hours. No weeks of waiting around." },
+                { step: "03", title: "Review & Refine", desc: "You tell me what you like, what to change, and I handle the rest. Revisions until you're happy." },
+                { step: "04", title: "Launch", desc: "Your site goes live. Domain connected, SSL secured, Google notified. You're online and ready for customers." }
               ].map((item, i) => (
                 <div key={i} className="relative p-5 md:p-8 glass rounded-2xl md:rounded-3xl">
                   <span className="text-lg md:text-4xl font-serif font-bold italic text-brand-accent/15 absolute top-1.5 right-2.5 md:top-3 md:right-5">{item.step}</span>
@@ -71,7 +71,11 @@ export default function HomePage() {
           </div>
         </section>
 
+        <WhyStudio />
         <Pricing />
+        <WhoItsFor />
+        <Testimonials />
+        <LocalSection />
         <Contact />
       </main>
 
