@@ -5,6 +5,12 @@ export const metadata: Metadata = {
   title: 'Disclaimer | Studio 925',
   description: 'Studio 925 disclaimer. Understand the limitations of web design services and what results we can and cannot guarantee.',
   alternates: { canonical: '/disclaimer' },
+  openGraph: {
+    title: 'Disclaimer | Studio 925',
+    description: 'Studio 925 disclaimer. Understand the limitations of web design services and what results we can and cannot guarantee.',
+    url: '/disclaimer',
+    images: ['/studio925.png'],
+  },
 };
 
 export default function Page() {

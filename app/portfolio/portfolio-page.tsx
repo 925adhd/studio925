@@ -19,8 +19,8 @@ const featuredProjects = [
       'Establish a strong brand identity online',
     ],
     href: 'https://csmedia.vercel.app',
-    image: '/csmedia.png',
-    images: ['/csmedia.png', '/cs1.png', '/cs2.png', '/cs3.png', '/cs4.png', '/cs5.png'],
+    image: '/csmedia.webp',
+    images: ['/csmedia.webp', '/cs1.png', '/cs2.png', '/cs3.png', '/cs4.png', '/cs5.png'],
     tags: ['Lead Generation', 'Branding'],
   },
   {

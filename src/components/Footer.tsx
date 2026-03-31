@@ -17,7 +17,7 @@ export default function Footer() {
               href="https://www.facebook.com/studio925design"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-brand-primary/55 hover:text-brand-accent transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-brand-primary/65 hover:text-brand-accent transition-colors text-sm"
               aria-label="Studio 925 on Facebook"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-brand-primary/5 text-sm text-brand-primary/55">
+        <div className="pt-8 border-t border-brand-primary/5 text-sm text-brand-primary/65">
           <p className="mb-4 max-w-3xl text-xs leading-relaxed">
             Studio 925 builds websites designed to improve online visibility and help businesses attract customers. Results such as search rankings, traffic, leads, and revenue are not guaranteed.{' '}
             <Link href="/disclaimer" className="underline hover:text-brand-accent transition-colors">Read our full disclaimer</Link>.

@@ -22,7 +22,7 @@ export default function WhoItsFor() {
           <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
             Built for businesses like <span className="italic text-brand-accent">yours</span>
           </h2>
-          <p className="text-sm md:text-base text-brand-primary/55 leading-relaxed">
+          <p className="text-sm md:text-base text-brand-primary/65 leading-relaxed">
             If you run a local business and your phone isn't ringing because of your website, this is for you.
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function WhoItsFor() {
           ))}
         </div>
 
-        <p className="text-center text-xs text-brand-primary/55 mt-6 md:mt-8">
+        <p className="text-center text-xs text-brand-primary/65 mt-6 md:mt-8">
           Don't see your industry? If you serve local customers, we can help.
         </p>
       </div>

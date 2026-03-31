@@ -29,7 +29,7 @@ export default function LocalSection() {
       `}</style>
       <img
         src="/county.png"
-        alt=""
+        alt="Map of Grayson County, Kentucky service area for Studio 925 web design"
         aria-hidden="true"
         className="county-bg"
       />
