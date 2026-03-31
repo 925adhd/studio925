@@ -28,7 +28,7 @@ export default function LocalSection() {
         }
       `}</style>
       <img
-        src="/county.png"
+        src="/county.webp"
         alt="Map of Grayson County, Kentucky service area for Studio 925 web design"
         aria-hidden="true"
         className="county-bg"
@@ -98,6 +98,7 @@ export default function LocalSection() {
             src="/me.webp"
             alt="Kara Gibson, local web designer in Grayson County, Kentucky"
             width={320} height={320}
+            loading="lazy"
             className="w-64 md:w-full max-w-xs object-cover rounded-3xl shadow-xl shadow-brand-primary/10"
           />
           <div className="mt-4 text-center">

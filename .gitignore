@@ -9,3 +9,5 @@ coverage/
 .env*
 !.env.example
 Client Onboarding/
+assets/
+SEO-PROMPT.md

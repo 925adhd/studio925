@@ -48,6 +48,7 @@ export default function Contact() {
         <img
           src="/custom-website-code-development.webp"
           alt="Custom website code being built for a small business by Studio 925"
+          loading="lazy"
           className="w-full h-full object-cover opacity-[0.08] -scale-x-100"
         />
       </div>

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-5 gap-12 mb-16">
           <div className="col-span-2">
             <div className="mb-6">
-              <img src={logo} alt="Studio 925 — custom websites for small businesses in Kentucky" width={162} height={56} className="h-10 w-auto" />
+              <img src={logo} alt="Studio 925 — custom websites for small businesses in Kentucky" width={162} height={56} loading="lazy" className="h-10 w-auto" />
             </div>
             <p className="text-brand-primary/60 max-w-sm mb-4">
               Custom websites built right.<br />Solo developer based in Kentucky.

@@ -56,6 +56,7 @@ const breadcrumbLd = {
 export default function LeitchfieldContent() {
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
+      <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -114,6 +115,8 @@ export default function LeitchfieldContent() {
               <img
                 src="/me.webp"
                 alt="Kara Gibson — web designer in Leitchfield, KY"
+                width={384} height={384}
+                loading="lazy"
                 className="relative w-full max-w-sm mx-auto rounded-[2rem] shadow-xl shadow-brand-primary/10"
               />
             </div>
@@ -129,6 +132,8 @@ export default function LeitchfieldContent() {
             <img
               src="/me.webp"
               alt="Kara Gibson — web designer in Leitchfield, KY"
+              width={56} height={56}
+              loading="lazy"
               className="w-14 h-14 rounded-full object-cover shadow-md shadow-brand-primary/10 border-2 border-white"
             />
             <div>
@@ -323,6 +328,7 @@ export default function LeitchfieldContent() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );

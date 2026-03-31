@@ -98,6 +98,7 @@ const breadcrumbLd = {
 export default function WebsiteCostContent() {
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
+      <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -479,6 +480,7 @@ export default function WebsiteCostContent() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </div>
   );
