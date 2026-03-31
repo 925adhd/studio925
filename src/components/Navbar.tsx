@@ -13,7 +13,7 @@ export default function Navbar() {
     <><nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-primary/5 shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center">
-          <img src={logo} alt="Studio 925" className="h-8 md:h-[50px] w-auto" />
+          <img src={logo} alt="Studio 925 — custom websites for small businesses in Kentucky" className="h-8 md:h-[50px] w-auto" />
         </Link>
 
         {/* Desktop Nav */}

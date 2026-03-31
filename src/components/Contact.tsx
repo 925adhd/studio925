@@ -47,7 +47,7 @@ export default function Contact() {
       <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none select-none hidden md:block" aria-hidden="true">
         <img
           src="/custom-website-code-development.jpg"
-          alt="Custom website code in a professional development environment"
+          alt="Custom website code being built for a small business by Studio 925"
           className="w-full h-full object-cover opacity-[0.08] -scale-x-100"
         />
       </div>

@@ -116,7 +116,7 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
                   <img
                     key={img}
                     src={img}
-                    alt={`${project.title} screenshot ${i + 1}`}
+                    alt={`${project.title} website designed by Studio 925 — screenshot ${i + 1}`}
                     className={`w-full h-auto object-cover scale-110 transition-opacity duration-700 ${i === 0 ? '' : 'absolute inset-0'} ${i === activeIndex ? 'opacity-100' : 'opacity-0'}`}
                   />
                 ))}
@@ -124,7 +124,7 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
             ) : (
               <img
                 src={project.image}
-                alt={`${project.title} screenshot`}
+                alt={`${project.title} website designed by Studio 925`}
                 className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
               />
             )}
@@ -237,7 +237,7 @@ export default function PortfolioPage() {
                     <div className="h-44 rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 bg-white flex items-center justify-center relative">
                       <img
                         src={project.image}
-                        alt={`${project.title} screenshot`}
+                        alt={`${project.title} website designed by Studio 925`}
                         className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/60 transition-all duration-300 flex items-center justify-center rounded-xl">

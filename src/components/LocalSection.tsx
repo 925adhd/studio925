@@ -96,7 +96,7 @@ export default function LocalSection() {
         >
           <img
             src="/me.png"
-            alt="Studio 925 — local web designer in Grayson County, KY"
+            alt="Kara Gibson, local web designer in Grayson County, Kentucky"
             className="w-64 md:w-full max-w-xs object-cover rounded-3xl shadow-xl shadow-brand-primary/10"
           />
           <div className="mt-4 text-center">
