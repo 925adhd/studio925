@@ -78,7 +78,7 @@ export default function NoHomework() {
           ))}
         </div>
 
-        <p className="text-xs md:text-sm text-brand-primary/50 mt-8 md:mt-12 max-w-xl mx-auto text-center leading-relaxed">
+        <p className="text-xs md:text-sm text-brand-primary/60 mt-8 md:mt-12 max-w-xl mx-auto text-center leading-relaxed">
           No confusion. No back-and-forth. Just a website that gets built right.
         </p>
       </div>

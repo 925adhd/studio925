@@ -112,7 +112,7 @@ export default function LeitchfieldContent() {
             <div className="relative">
               <div className="absolute -inset-4 bg-brand-accent/10 rounded-[2.5rem] -rotate-3" />
               <img
-                src="/me.png"
+                src="/me.webp"
                 alt="Kara Gibson — web designer in Leitchfield, KY"
                 className="relative w-full max-w-sm mx-auto rounded-[2rem] shadow-xl shadow-brand-primary/10"
               />
@@ -127,7 +127,7 @@ export default function LeitchfieldContent() {
             className="md:hidden flex items-center gap-4 mt-2"
           >
             <img
-              src="/me.png"
+              src="/me.webp"
               alt="Kara Gibson — web designer in Leitchfield, KY"
               className="w-14 h-14 rounded-full object-cover shadow-md shadow-brand-primary/10 border-2 border-white"
             />

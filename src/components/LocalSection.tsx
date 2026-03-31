@@ -95,8 +95,9 @@ export default function LocalSection() {
           className="flex flex-col items-center order-1 md:order-2 md:mt-24"
         >
           <img
-            src="/me.png"
+            src="/me.webp"
             alt="Kara Gibson, local web designer in Grayson County, Kentucky"
+            width={320} height={320}
             className="w-64 md:w-full max-w-xs object-cover rounded-3xl shadow-xl shadow-brand-primary/10"
           />
           <div className="mt-4 text-center">

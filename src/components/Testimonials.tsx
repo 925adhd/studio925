@@ -21,7 +21,7 @@ export default function Testimonials() {
           <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
             What business owners <span className="italic text-brand-accent">are&nbsp;saying</span>
           </h2>
-          <p className="text-sm md:text-base text-brand-primary/50 max-w-lg mx-auto">
+          <p className="text-sm md:text-base text-brand-primary/60 max-w-lg mx-auto">
             Real feedback from real businesses.
           </p>
         </div>
@@ -50,7 +50,7 @@ export default function Testimonials() {
                     <a href={t.link} target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2">{t.name}</a>
                   ) : t.name}
                 </p>
-                <p className="text-xs text-brand-primary/40">{t.role}</p>
+                <p className="text-xs text-brand-primary/55">{t.role}</p>
               </div>
             </motion.div>
           ))}

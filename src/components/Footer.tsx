@@ -1,5 +1,5 @@
 import Link from 'next/link';
-const logo = '/logo.png';
+const logo = '/logo.webp';
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-5 gap-12 mb-16">
           <div className="col-span-2">
             <div className="mb-6">
-              <img src={logo} alt="Studio 925 — custom websites for small businesses in Kentucky" className="h-10 w-auto" />
+              <img src={logo} alt="Studio 925 — custom websites for small businesses in Kentucky" width={162} height={56} className="h-10 w-auto" />
             </div>
             <p className="text-brand-primary/60 max-w-sm mb-4">
               Custom websites built right.<br />Solo developer based in Kentucky.
@@ -17,7 +17,7 @@ export default function Footer() {
               href="https://www.facebook.com/studio925design"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-brand-primary/40 hover:text-brand-accent transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-brand-primary/55 hover:text-brand-accent transition-colors text-sm"
               aria-label="Studio 925 on Facebook"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -26,7 +26,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-sans font-bold mb-6">Quick Links</h4>
+            <h3 className="font-sans font-bold mb-6 text-base">Quick Links</h3>
             <ul className="space-y-4 text-brand-primary/60">
               <li><a href="/#services" className="hover:text-brand-accent transition-colors">Services</a></li>
               <li><a href="/#pricing" className="hover:text-brand-accent transition-colors">Pricing</a></li>
@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-sans font-bold mb-6">Web Design Services</h4>
+            <h3 className="font-sans font-bold mb-6 text-base">Web Design Services</h3>
             <ul className="space-y-4 text-brand-primary/60">
               <li>
                 <Link href="/web-design-grayson-county-ky" className="hover:text-brand-accent transition-colors">
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-sans font-bold mb-6">Legal</h4>
+            <h3 className="font-sans font-bold mb-6 text-base">Legal</h3>
             <ul className="space-y-4 text-brand-primary/60">
               <li><Link href="/privacy-policy" className="hover:text-brand-accent transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms-of-service" className="hover:text-brand-accent transition-colors">Terms of Service</Link></li>
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-brand-primary/5 text-sm text-brand-primary/40">
+        <div className="pt-8 border-t border-brand-primary/5 text-sm text-brand-primary/55">
           <p className="mb-4 max-w-3xl text-xs leading-relaxed">
             Studio 925 builds websites designed to improve online visibility and help businesses attract customers. Results such as search rankings, traffic, leads, and revenue are not guaranteed.{' '}
             <Link href="/disclaimer" className="underline hover:text-brand-accent transition-colors">Read our full disclaimer</Link>.

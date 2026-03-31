@@ -40,7 +40,7 @@ export default function TrustStrip() {
               className="flex items-center gap-1.5"
             >
               <item.icon size={12} className="text-brand-accent shrink-0" />
-              <span className="text-[11px] font-semibold text-brand-primary/50 whitespace-nowrap">{item.mobileTitle}</span>
+              <span className="text-[11px] font-semibold text-brand-primary/65 whitespace-nowrap">{item.mobileTitle}</span>
             </motion.div>
           ))}
         </div>

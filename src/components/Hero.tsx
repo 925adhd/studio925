@@ -24,7 +24,7 @@ export default function Hero() {
           </h2>
 
           <p className="flex items-center justify-center gap-1.5 text-sm md:text-base mb-4 md:mb-5">
-            <MapPin size={14} className="shrink-0 text-brand-primary/35" />
+            <MapPin size={14} className="shrink-0 text-brand-primary/55" />
             <span className="font-semibold text-brand-primary/70">Grayson County, KY</span>
           </p>
 
@@ -37,7 +37,7 @@ export default function Hero() {
               Get Started <ArrowRight size={20} />
             </a>
             <Link href="/portfolio" className="sm:bg-white sm:border sm:border-brand-primary/10 sm:px-8 sm:py-4 sm:rounded-2xl text-lg font-semibold sm:hover:bg-brand-primary/5 transition-colors text-brand-primary/70 sm:text-brand-primary underline sm:no-underline flex items-center justify-center gap-2">
-              <img src="/me.png" alt="Kara Gibson, owner of Studio 925 web design in Grayson County, KY" className="w-7 h-7 rounded-full object-cover shrink-0 sm:hidden" />
+              <img src="/me.webp" alt="Kara Gibson, owner of Studio 925 web design in Grayson County, KY" width={28} height={28} className="w-7 h-7 rounded-full object-cover shrink-0 sm:hidden" />
               See My Work
             </Link>
           </div>
