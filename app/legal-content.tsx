@@ -166,17 +166,17 @@ function TermsOfService() {
 
       <Section title="1. Agreement to Terms">
         <p>{company} is a service operated by {llc}. By accessing this website or engaging {company} for web design and development services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our website or services.</p>
-        <p>A separate written proposal or project agreement will govern the specific scope, timeline, and deliverables for each client project.</p>
+        <p>By purchasing a package through our checkout process, you agree to these Terms of Service. The specific scope, timeline, and deliverables for each project are defined by the package selected at checkout.</p>
       </Section>
 
       <Section title="2. Services">
-        <p>{company} provides custom website design, development, and related digital services. The exact scope of services, deliverables, timelines, and pricing are defined in a separate written proposal or agreement signed by both parties.</p>
-        <p>No services begin until a signed agreement and required deposit are received.</p>
+        <p>{company} provides custom website design, development, and related digital services. The exact scope of services, deliverables, timelines, and pricing are defined by the package selected at checkout.</p>
+        <p>No services begin until the client has completed checkout and the required deposit or payment is received.</p>
       </Section>
 
       <Section title="3. Project Agreements and Payment">
         <ul>
-          <li>A signed proposal or contract is required before work begins.</li>
+          <li>Completing checkout and agreeing to these Terms is required before work begins.</li>
           <li>A non-refundable deposit (typically 50%) is required to reserve a project start date.</li>
           <li>The remaining balance is due prior to final website launch or transfer of deliverables.</li>
           <li>Late payments may result in work being paused until outstanding balances are settled.</li>
@@ -197,7 +197,7 @@ function TermsOfService() {
       </Section>
 
       <Section title="5. Revisions and Scope Changes">
-        <p>Each package includes a defined number of revision rounds as outlined in your project agreement.</p>
+        <p>Each package includes a defined number of revision rounds as outlined in your selected package details.</p>
         <p>Requests beyond the agreed scope may:</p>
         <ul>
           <li>Require a written change order</li>
@@ -221,7 +221,7 @@ function TermsOfService() {
       </Section>
 
       <Section title="7. Hosting, Maintenance, and Third-Party Platforms">
-        <p>Unless explicitly stated in your project agreement:</p>
+        <p>Unless explicitly included in your selected package:</p>
         <ul>
           <li>{company} does not provide ongoing hosting.</li>
           <li>We assist with setup and handoff to your selected hosting provider.</li>
@@ -295,12 +295,12 @@ function TermsOfService() {
           <li>Content you provide</li>
           <li>Unauthorized use of third-party materials</li>
           <li>Misrepresentation of business information</li>
-          <li>Your use of the delivered website in ways not contemplated by the project agreement</li>
+          <li>Your use of the delivered website in ways not contemplated by the original project scope</li>
         </ul>
       </Section>
 
       <Section title="17. Termination">
-        <p>Either party may terminate a project agreement with written notice.</p>
+        <p>Either party may terminate a project with written notice.</p>
         <ul>
           <li>Work completed up to the termination date will be billed accordingly.</li>
           <li>Deposits are non-refundable.</li>
@@ -326,7 +326,7 @@ function TermsOfService() {
 
       <Section title="21. Entire Agreement">
         <p>These Terms of Service, together with our <Link href="/privacy-policy" className="text-brand-accent hover:underline">Privacy Policy</Link>, <Link href="/cookie-policy" className="text-brand-accent hover:underline">Cookie Policy</Link>, and <Link href="/disclaimer" className="text-brand-accent hover:underline">Disclaimer</Link>, make up the full agreement between you and {company} regarding the use of this website.</p>
-        <p>For client projects, a separate signed proposal or project agreement will govern the specific scope, deliverables, and payment terms. In the event of a conflict between these Terms and a signed project agreement, the project agreement takes priority.</p>
+        <p>For client projects, the selected package and these Terms together govern the scope, deliverables, and payment terms. By completing checkout, the client agrees to these Terms in full.</p>
       </Section>
 
       <Section title="22. Changes to These Terms">
