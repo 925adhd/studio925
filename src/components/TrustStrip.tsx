@@ -59,7 +59,7 @@ export default function TrustStrip() {
               <CheckCircle2 size={22} className="text-brand-accent shrink-0 mt-0.5 md:w-6 md:h-6" />
               <div>
                 <p className="font-bold text-sm md:text-lg text-brand-primary mb-1.5">{item.title}</p>
-                <p className="text-xs md:text-sm text-brand-primary/55 leading-relaxed mb-1">{item.desc}</p>
+                <p className="text-xs md:text-sm text-brand-primary/65 leading-relaxed mb-1">{item.desc}</p>
               </div>
             </motion.div>
           ))}
