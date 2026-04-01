@@ -44,6 +44,46 @@ const includedMore = [
   'Full ownership of all files',
 ];
 
+const faqs = [
+  {
+    question: 'How much does a website cost for a small business in Leitchfield?',
+    answer: 'Website projects start at $900 for a Foundation site with up to 5 pages. Growth sites with dedicated service pages start at $1,800, and online stores with checkout start at $2,600. Every project includes full ownership of your files — no monthly platform fees or locked-in contracts.',
+  },
+  {
+    question: 'How long does it take to build a website?',
+    answer: 'You\'ll have a working draft within 48 hours of our first conversation. Most projects launch within 1–2 weeks after revisions. You review everything before it goes live, and I handle revisions until you\'re happy.',
+  },
+  {
+    question: 'Do I really need a custom website? Can\'t I just use Wix or Squarespace?',
+    answer: 'You can, but template sites all look and perform similarly. They load slower, rank lower, and limit what you can do. A custom-built site is faster, ranks better on Google, and is designed specifically around your business — not a generic template with your name on it.',
+  },
+  {
+    question: 'What if I already have a website but it\'s not bringing in customers?',
+    answer: 'That\'s one of the most common reasons business owners reach out. If your current site is outdated, slow, or not showing up on Google, a rebuild can make a real difference. I\'ll look at what you have and tell you honestly whether it makes sense to fix it or start fresh.',
+  },
+  {
+    question: 'Will my website show up on Google?',
+    answer: 'Every site I build includes on-page SEO structure, Google Search Console submission, and proper metadata so Google can find and index your pages. Ranking takes time, but the technical foundation is built in from day one.',
+  },
+  {
+    question: 'Do I need to provide content for my website?',
+    answer: 'No. Most clients just point me to their Facebook page or tell me about their business over a quick call. I handle the writing, images, and layout. You just review and approve.',
+  },
+];
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+
 const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -64,6 +104,10 @@ export default function LeitchfieldContent() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
       <Navbar />
 
@@ -266,6 +310,59 @@ export default function LeitchfieldContent() {
             <p>
               You might've seen sites that create hundreds of "city pages" just to rank. This isn't that. I'm <em className="italic text-brand-accent not-italic">actually</em> local, and this page exists because I work with businesses here. I built <a href="https://csmedia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">CS Media's website</a> right here in Leitchfield, and <a href="https://townly.us" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">Townly</a> was built specifically for the Grayson County community.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="py-12 md:py-20 px-6 bg-white border-t border-brand-primary/5">
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-6 md:p-10 glass rounded-3xl"
+          >
+            <div className="flex gap-1 mb-4">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-5 h-5 text-brand-accent" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <blockquote className="text-base md:text-lg text-brand-primary/80 leading-relaxed mb-4">
+              "Studio 925 built a site that actually represents what we do. It loads fast, looks professional, and we've gotten real inquiries from it. Working with someone local who understood our business made all the difference."
+            </blockquote>
+            <div className="flex items-center gap-3">
+              <div>
+                <p className="font-semibold text-sm">CS Media</p>
+                <p className="text-xs text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-4xl mb-6 md:mb-10">
+            Common questions about website design in <span className="italic text-brand-accent">Leitchfield</span>
+          </h2>
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="p-5 md:p-6 rounded-2xl bg-white border border-brand-primary/5"
+              >
+                <h3 className="text-sm md:text-base font-bold mb-2">{faq.question}</h3>
+                <p className="text-sm text-brand-primary/65 leading-relaxed">{faq.answer}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
