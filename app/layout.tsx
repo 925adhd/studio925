@@ -26,8 +26,8 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Web Design in Grayson County, KY | Studio 925',
-  description: 'Professional web design for small businesses in Grayson County, Kentucky. Modern, fast, and built to support real growth. View pricing and book a consultation.',
+  title: 'Studio 925 — Custom Websites for Small Businesses in Kentucky',
+  description: 'Studio 925 builds custom websites for small businesses. No templates, no page builders — just fast, professional sites designed to bring in real customers.',
   metadataBase: new URL('https://studio925.design'),
   alternates: {
     canonical: '/',
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: '/',
-    title: 'Web Design in Grayson County, KY | Studio 925',
-    description: 'Professional web design for small businesses in Grayson County, Kentucky. Modern, fast, and built to support real growth.',
+    title: 'Studio 925 — Custom Websites for Small Businesses in Kentucky',
+    description: 'Studio 925 builds custom websites for small businesses. No templates, no page builders — just fast, professional sites designed to bring in real customers.',
     images: ['/studio925.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design in Grayson County, KY | Studio 925',
-    description: 'Professional web design for small businesses in Grayson County, Kentucky. Modern, fast, and built to support real growth.',
+    title: 'Studio 925 — Custom Websites for Small Businesses in Kentucky',
+    description: 'Studio 925 builds custom websites for small businesses. No templates, no page builders — just fast, professional sites designed to bring in real customers.',
     images: ['/studio925.png'],
   },
   icons: {
@@ -97,6 +97,14 @@ const jsonLd = {
     { '@type': 'City', name: 'Leitchfield', containedInPlace: { '@type': 'State', name: 'Kentucky' } },
     { '@type': 'AdministrativeArea', name: 'Grayson County' },
     { '@type': 'State', name: 'Kentucky' },
+  ],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '17:00',
+    },
   ],
   priceRange: '$$',
   knowsAbout: ['Web Design', 'Website Design Leitchfield KY', 'Small Business Websites', 'Local Web Development', 'Website Design Kentucky'],

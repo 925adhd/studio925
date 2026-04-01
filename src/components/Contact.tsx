@@ -65,6 +65,20 @@ export default function Contact() {
               Tell me about your business. No pressure, no pitch. Just an honest conversation about what would actually help you.
             </p>
 
+            <div className="flex items-center gap-4 mb-8">
+              <img
+                src="/me-small.webp"
+                alt="Kara Gibson, owner of Studio 925"
+                width={48}
+                height={48}
+                className="rounded-full ring-2 ring-white/20"
+              />
+              <div>
+                <p className="font-semibold">Kara Gibson</p>
+                <p className="text-white/50 text-sm">Owner, Studio 925</p>
+              </div>
+            </div>
+
             <div className="space-y-6">
               <a href="mailto:kara@studio925.design" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-brand-accent transition-colors">
