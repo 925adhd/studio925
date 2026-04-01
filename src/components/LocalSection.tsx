@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react';
 import { MapPin } from 'lucide-react';
+import Link from 'next/link';
 
 export default function LocalSection() {
   return (
@@ -45,7 +46,7 @@ export default function LocalSection() {
           className="order-2 md:order-1"
         >
           <div className="hidden md:inline-flex items-center gap-1.5 px-3 py-0.5 rounded-md bg-brand-primary/10 text-brand-primary/60 text-xs font-medium mb-6">
-            <MapPin size={12} className="shrink-0" /> Grayson County, KY
+            <MapPin size={12} className="shrink-0" /> <Link href="/web-design-grayson-county-ky" className="hover:text-brand-accent transition-colors">Grayson County, KY</Link>
           </div>
 
           <p className="text-xs font-medium tracking-widest uppercase text-brand-primary/40 mb-3">Behind the work</p>
@@ -62,7 +63,7 @@ export default function LocalSection() {
               <span className="text-brand-primary font-semibold">You're not hiring an agency.</span> You're working directly with the person building your site.
             </p>
             <p>
-              I'm a web designer based in Leitchfield, Kentucky — right here in Grayson County. You're working with me. Not a middleman. Not someone three states away.
+              I'm a web designer based in <Link href="/website-design-leitchfield-ky" className="text-brand-accent hover:underline">Leitchfield, Kentucky</Link> — right here in Grayson County. You're working with me. Not a middleman. Not someone three states away.
             </p>
             <p>
               When you have a question, you call me. When something needs to change, I handle it. If you want to sit down and talk through your goals in person, we can do that too.
@@ -102,9 +103,9 @@ export default function LocalSection() {
             className="w-64 md:w-full max-w-xs object-cover rounded-3xl shadow-xl shadow-brand-primary/10"
           />
           <div className="mt-4 text-center">
-            <div className="md:hidden inline-flex items-center gap-1.5 px-3 py-0.5 rounded-md bg-brand-primary text-white text-xs font-medium mb-4">
+            <Link href="/web-design-grayson-county-ky" className="md:hidden inline-flex items-center gap-1.5 px-3 py-0.5 rounded-md bg-brand-primary text-white text-xs font-medium mb-4 hover:bg-brand-primary/90 transition-colors">
               <MapPin size={12} className="shrink-0" /> Grayson County, KY
-            </div>
+            </Link>
             <span className="block text-xs font-normal text-brand-primary/75">Kara Gibson</span>
             <span className="block text-xs font-normal text-brand-primary/40 mt-0.5">Owner, Studio 925</span>
             <a href="tel:2705512210" className="block text-xs text-brand-primary/50 mt-2 hover:text-brand-accent transition-colors">Call or text: 270-551-2210</a>

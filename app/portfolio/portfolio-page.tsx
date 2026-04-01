@@ -318,6 +318,10 @@ export default function PortfolioPage() {
           <p className="text-white/50 text-sm mt-5">
             No templates. No outsourcing. Built personally for your business.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mt-6 text-sm">
+            <a href="/#pricing" className="text-white/60 hover:text-white underline underline-offset-2 transition-colors">View pricing</a>
+            <a href="/hosting-support" className="text-white/60 hover:text-white underline underline-offset-2 transition-colors">Hosting & Support</a>
+          </div>
         </section>
 
       </main>

@@ -1,13 +1,14 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Star } from 'lucide-react';
+import { Star, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const testimonials = [
   {
     quote: "Not even exaggerating — this is hands down the cleanest, smoothest, most professional site I've ever had. Everything flows, loads fast, and actually reflects the quality I bring. Studio 925 doesn't just build websites — she builds brands that convert. If you're serious about leveling up your business, I highly recommend reaching out to Kara.",
     name: 'CS Media',
-    role: 'Media Brand · Leitchfield, KY',
+    role: 'Real Estate Media · Leitchfield, KY',
     link: 'https://csmedia.vercel.app',
     placeholder: false,
   },
@@ -54,6 +55,15 @@ export default function Testimonials() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-accent hover:text-brand-accent/80 transition-colors group"
+          >
+            See more work <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>
