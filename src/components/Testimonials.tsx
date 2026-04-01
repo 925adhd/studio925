@@ -20,7 +20,7 @@ export default function Testimonials() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10 md:mb-14">
           <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
-            What business owners <span className="italic text-brand-accent">are&nbsp;saying</span>
+            What business owners <span className="italic text-emerald-800">are&nbsp;saying</span>
           </h2>
           <p className="text-sm md:text-base text-brand-primary/60 max-w-lg mx-auto">
             Real feedback from real businesses.
@@ -48,7 +48,7 @@ export default function Testimonials() {
               <div>
                 <p className={`text-sm font-semibold ${t.placeholder ? 'text-brand-primary/30' : 'text-brand-primary'}`}>
                   {t.link ? (
-                    <a href={t.link} target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2">{t.name}</a>
+                    <a href={t.link} target="_blank" rel="noopener noreferrer" className="text-emerald-800 underline underline-offset-2 hover:text-emerald-900">{t.name}</a>
                   ) : t.name}
                 </p>
                 <p className="text-xs text-brand-primary/55">{t.role}</p>
@@ -60,7 +60,7 @@ export default function Testimonials() {
         <div className="text-center mt-10">
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-accent hover:text-brand-accent/80 transition-colors group"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-800 hover:text-emerald-900 transition-colors group"
           >
             See more work <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </Link>
