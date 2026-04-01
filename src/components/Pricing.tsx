@@ -199,7 +199,13 @@ export default function Pricing() {
             50% deposit to get started. You fully own your website and all files after final payment.
           </p>
           <p className="text-xs text-brand-primary/65">
-            Hosting is separate — <Link href="/hosting-support" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">plans start at $25/month</Link>. Want to understand pricing? Read the <Link href="/website-cost" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">website cost guide</Link>.
+            Hosting is separate — <Link href="/hosting-support" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">plans start at $25/month</Link>.
+          </p>
+          <p className="text-xs text-brand-primary/65 mt-2">
+            Want to understand pricing?
+          </p>
+          <p className="text-xs mt-1">
+            <Link href="/website-cost" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">Read the website cost guide</Link>.
           </p>
         </div>
       </div>
