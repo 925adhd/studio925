@@ -21,7 +21,7 @@ const faqItems = [
   },
   {
     question: 'What are the ongoing costs of a website?',
-    answer: 'After launch, expect to pay for hosting ($3–$300/month), domain renewal ($10–$20/year), and optional maintenance ($50–$200/month). Studio 925 offers hosting starting at $25/month and full support at $49/month, which covers hosting, backups, content updates, and SEO improvements.',
+    answer: 'After launch, expect to pay for hosting ($3–$300/month), domain renewal ($10–$20/year), and optional maintenance ($50–$200/month). Studio 925 offers hosting starting at $25/month and full support at $49/month, which covers hosting, backups, content updates, SEO improvements, and a free custom domain for as long as your plan is active.',
   },
   {
     question: 'What is the 3-second rule in website design?',

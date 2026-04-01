@@ -23,12 +23,21 @@ const plans = [
     name: 'Full Support',
     price: '49',
     features: [
+      'Hosting & support:',
+      'Secure website hosting',
+      'Website backups and security',
+      'Performance monitoring',
+      'Ongoing SEO basics — meta tags, indexing, and site health',
+      'Domain & setup:',
+      'Free custom domain included',
+      'DNS setup + email routing',
+      'SSL included',
+      'Google submission',
+      'Updates & support:',
       'Text changes, image swaps, layout tweaks — just message me',
       'New photos, menu updates, seasonal changes — handled',
       'You never have to deal with the technical side',
       'Priority support — I respond first',
-      'Ongoing speed and security checks',
-      'Ongoing SEO basics handled — meta tags, indexing, and site health',
     ],
     featured: true,
     cta: 'Get Full Support',
@@ -123,7 +132,10 @@ export default function HostingSupportPage() {
           </div>
 
           <p className="text-center text-xs md:text-sm text-brand-primary/40 mt-8">
-            You'll purchase your domain (usually around $10–$20/year) so it's fully yours. Already have one? I'll help you connect it. Either way, I handle the rest.
+            Full Support includes a free custom domain for as long as your plan is active. Basic Hosting clients purchase their own domain — I'll help you connect it either way.
+          </p>
+          <p className="text-center text-xs text-brand-primary/30 mt-3">
+            Cancel anytime. You own your website files and domain — full details in our <a href="/terms-of-service#hosting" className="text-brand-accent hover:underline">terms</a>.
           </p>
         </div>
 

@@ -11,9 +11,9 @@ const company = 'Studio 925';
 const llc = '925 ADHD LLC';
 const location = 'Grayson County, Kentucky';
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, children, id }: { title: string; children: React.ReactNode; id?: string }) {
   return (
-    <div className="mb-8">
+    <div className="mb-8" id={id}>
       <h3 className="text-lg font-bold mb-3 text-brand-primary">{title}</h3>
       <div className="text-brand-primary/70 leading-relaxed space-y-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2">
         {children}
@@ -166,11 +166,12 @@ function TermsOfService() {
 
       <Section title="1. Agreement to Terms">
         <p>{company} is a service operated by {llc}. By accessing this website or engaging {company} for web design and development services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our website or services.</p>
-        <p>By purchasing a package through our checkout process, you agree to these Terms of Service. The specific scope, timeline, and deliverables for each project are defined by the package selected at checkout.</p>
+        <p>By purchasing a package through our checkout process, you agree to these Terms of Service.</p>
       </Section>
 
       <Section title="2. Services">
-        <p>{company} provides custom website design, development, and related digital services. The exact scope of services, deliverables, timelines, and pricing are defined by the package selected at checkout.</p>
+        <p>{company} provides custom website design, development, and related digital services. The scope of each project is defined by the package selected at checkout.</p>
+        <p>A first draft is delivered within 48 hours of receiving the client's content. From there, the project timeline depends on client feedback and revisions. The website launches once the client is happy with the final result.</p>
         <p>No services begin until the client has completed checkout and the required deposit or payment is received.</p>
       </Section>
 
@@ -219,39 +220,48 @@ function TermsOfService() {
         <p>Third-party assets (fonts, stock photos, plugins, integrations) remain subject to their respective licensing terms.</p>
       </Section>
 
-      <Section title="7. Hosting, Maintenance, and Website Files">
-        <p>{company} offers optional monthly hosting and website care plans. Hosting and ongoing maintenance are not included in website build packages unless a separate hosting or care plan is purchased. Details of each plan are listed on our <Link href="/hosting-support" className="text-brand-accent hover:underline">Hosting & Support</Link> page.</p>
+      <Section title="7. Hosting, Maintenance, and Website Files" id="hosting">
+        <p>{company} offers optional monthly hosting and website care plans. These are separate from website build packages. Details of each plan are listed on our <Link href="/hosting-support" className="text-brand-accent hover:underline">Hosting & Support</Link> page.</p>
         <ul>
-          <li>Hosting and support plans are billed monthly and can be cancelled at any time.</li>
-          <li>Hosting and maintenance services are provided only while the subscription remains active and paid.</li>
+          <li>Both plans include hosting and are billed monthly. Either plan can be cancelled at any time.</li>
+          <li>Services are provided only while the subscription remains active and paid.</li>
           <li>Clients may request a copy of their website files at any time after full payment for the website build has been received.</li>
         </ul>
-        <p>If a hosting or website care subscription is cancelled, the website will be removed from {company} hosting at the end of the current billing period. A copy of the website files will be provided so the client may host the website elsewhere.</p>
-        <p>If a hosting subscription payment fails, {company} may attempt to retry payment automatically. If payment remains unpaid for more than 7 days, the website may be suspended. If payment remains unpaid for more than 30 days, hosting services may be terminated and the website removed from {company} hosting. A copy of the website files will be provided upon request after termination.</p>
-        <p>{company} may retain backups of hosted websites for a limited period after hosting ends and reserves the right to delete backups after a reasonable period of time.</p>
+        <p>If a subscription is cancelled, the website will be removed from {company} hosting at the end of the current billing period. If a payment fails and remains unpaid for more than 7 days, the website may be suspended. After 30 days unpaid, hosting may be terminated.</p>
+        <p>In all cases, a copy of the website files will be provided so the client may host the website elsewhere. {company} may retain backups for a limited period after hosting ends and reserves the right to delete them after a reasonable time.</p>
         <p>{company} is not responsible for outages, performance issues, security breaches, or downtime caused by third-party hosting providers, plugins, integrations, non-payment, or cancelled hosting services.</p>
       </Section>
 
-      <Section title="8. Refunds and Cancellations">
+      <Section title="8. Domain Registration">
+        <p>The Full Support plan includes a custom domain at no additional cost for as long as the plan remains active. The domain is registered and managed by {company} on behalf of the client.</p>
+        <ul>
+          <li><strong>BEFORE 12 months:</strong> if the Full Support plan is cancelled, the cost of the domain registration will be billed to the client before the domain is transferred.</li>
+          <li><strong>AFTER 12 months:</strong> if the Full Support plan is cancelled, the domain will be transferred to the client at no additional cost upon request.</li>
+          <li>Clients on the Basic Hosting plan purchase and own their domain independently. {company} will assist with connecting the domain at no additional charge.</li>
+        </ul>
+        <p>Domain transfers require all outstanding balances to be paid. The client retains the right to request a domain transfer at any time, subject to the terms above.</p>
+      </Section>
+
+      <Section title="9. Refunds and Cancellations">
         <p>Project deposits are non-refundable. Deposits cover the time and resources reserved for your project start date.</p>
         <p>If you cancel a project after work has begun, {company} retains the deposit and all work completed up to the cancellation date. No files or deliverables will be transferred for cancelled projects.</p>
         <p>If {company} cancels a project, the deposit will be refunded in full.</p>
         <p>Monthly care plan subscriptions can be cancelled at any time. Cancellation takes effect at the end of the current billing period. No partial-month refunds are provided.</p>
       </Section>
 
-      <Section title="9. Use of AI Tools">
+      <Section title="10. Use of AI Tools">
         <p>{company} may use artificial intelligence tools as part of the design and development process. These tools may assist with tasks such as code generation, content drafting, image optimization, or layout suggestions.</p>
         <p>All AI-assisted work is reviewed, refined, and approved by {company} before delivery. The final product is always shaped by human judgment and tailored to your specific project needs.</p>
         <p>If you have questions or preferences about the use of AI in your project, let us know and we will accommodate where possible.</p>
       </Section>
 
-      <Section title="10. Content Accuracy and Client Approval">
+      <Section title="11. Content Accuracy and Client Approval">
         <p>The client is responsible for reviewing and approving all website content before launch, including text, images, pricing, service descriptions, business information, and contact information.</p>
         <p>{company} is not responsible for errors, omissions, or inaccurate information after the website has been approved or launched.</p>
         <p>Any content generated using AI tools, client-provided content, or third-party materials must be reviewed and approved by the client before publication.</p>
       </Section>
 
-      <Section title="11. Accessibility">
+      <Section title="12. Accessibility">
         <p>{company} is committed to building websites that are accessible and usable for as many people as possible. We follow widely accepted web accessibility guidelines (WCAG) as a reference during development and aim to meet Level AA standards where practical.</p>
         <p>Accessibility considerations include:</p>
         <ul>
@@ -264,52 +274,53 @@ function TermsOfService() {
         <p>While we strive to follow best practices, we cannot guarantee full compliance with all accessibility standards across every browser, device, or assistive technology. If you encounter an accessibility issue on our website, please contact us at <strong>{email}</strong> and we will work to address it.</p>
       </Section>
 
-      <Section title="12. Disclaimers">
+      <Section title="13. Disclaimers">
         <p className="uppercase font-semibold text-brand-primary/80">OUR SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. {company.toUpperCase()} MAKES NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT OUR SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR COMPLETELY SECURE.</p>
         <p>In plain terms: we stand behind the quality of our work and will always do our best to deliver a great website. But we cannot promise that every aspect of a website will work perfectly in every scenario, on every device, or with every third-party service at all times.</p>
         <p>{company} builds websites designed to improve online visibility and help businesses attract customers. However, search rankings, website traffic, leads, and sales depend on many factors outside our control, including market conditions, competition, and marketing efforts. {company} does not guarantee specific rankings, traffic, leads, customers, or revenue. Results will vary based on your industry, location, audience, and ongoing efforts.</p>
         <p>Any examples, case studies, or testimonials shared on our website reflect individual results and should not be interpreted as a promise of similar outcomes.</p>
       </Section>
 
-      <Section title="13. Limitation of Liability">
+      <Section title="14. Limitation of Liability">
         <p className="uppercase font-semibold text-brand-primary/80">TO THE FULLEST EXTENT PERMITTED BY LAW, {company.toUpperCase()} SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE OF OUR SERVICES, INCLUDING BUT NOT LIMITED TO LOST PROFITS, LOST DATA, BUSINESS INTERRUPTION, OR DAMAGES RESULTING FROM THIRD-PARTY SERVICES.</p>
         <p>Our total liability for any claim related to a project shall not exceed the total amount paid by you for that project.</p>
       </Section>
 
-      <Section title="14. Indemnification">
+      <Section title="15. Indemnification">
         <p>You agree to indemnify and hold harmless {company} from any claims, damages, or liabilities arising from:</p>
         <ul>
           <li>Content you provide</li>
+          <li>Content approved by the client before or after launch, including AI-generated content</li>
           <li>Unauthorized use of third-party materials</li>
           <li>Misrepresentation of business information</li>
           <li>Your use of the delivered website in ways not contemplated by the original project scope</li>
         </ul>
       </Section>
 
-      <Section title="15. Termination">
-        <p>Either party may terminate a project with written notice. Refunds and file transfers are handled according to our <Link href="/terms-of-service" className="text-brand-accent hover:underline">Refunds and Cancellations</Link> policy in Section 8.</p>
+      <Section title="16. Termination">
+        <p>Either party may terminate a project with written notice. Refunds and file transfers are handled according to our <Link href="/terms-of-service" className="text-brand-accent hover:underline">Refunds and Cancellations</Link> policy in Section 9.</p>
       </Section>
 
-      <Section title="16. Governing Law and Disputes">
+      <Section title="17. Governing Law and Disputes">
         <p>These Terms are governed by the laws of the Commonwealth of Kentucky.</p>
         <p>If a dispute arises, both parties agree to first attempt to resolve it informally by contacting <strong>{email}</strong>. If the dispute is not resolved within 30 days, either party may pursue resolution in the courts located in {location}.</p>
       </Section>
 
-      <Section title="17. Waiver and Severability">
+      <Section title="18. Waiver and Severability">
         <p>If {company} does not enforce any right or provision of these Terms at any time, that does not mean we are waiving that right or any other right. We can still enforce it later.</p>
         <p>If any part of these Terms is found to be invalid or unenforceable by a court, that part will be limited or removed to the minimum extent necessary, and the rest of these Terms will remain in full effect.</p>
       </Section>
 
-      <Section title="18. Entire Agreement">
+      <Section title="19. Entire Agreement">
         <p>These Terms of Service, together with our <Link href="/privacy-policy" className="text-brand-accent hover:underline">Privacy Policy</Link>, <Link href="/cookie-policy" className="text-brand-accent hover:underline">Cookie Policy</Link>, and <Link href="/disclaimer" className="text-brand-accent hover:underline">Disclaimer</Link>, make up the full agreement between you and {company} regarding the use of this website.</p>
         <p>For client projects, the selected package and these Terms together govern the scope, deliverables, and payment terms. By completing checkout, the client agrees to these Terms in full.</p>
       </Section>
 
-      <Section title="19. Changes to These Terms">
+      <Section title="20. Changes to These Terms">
         <p>We may update these Terms at any time. Continued use of our website or services after changes are posted constitutes acceptance of the updated Terms.</p>
       </Section>
 
-      <Section title="20. Contact">
+      <Section title="21. Contact">
         <p>Questions about these Terms?</p>
         <p><strong>{email}</strong></p>
         <p>{company} ({llc})<br />Kentucky, United States</p>
