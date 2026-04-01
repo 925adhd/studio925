@@ -24,7 +24,6 @@ const plans = [
       "Free custom domain included",
       "DNS setup + email routing",
       "SSL included",
-      "Google submission",
       "Need something changed? Just message me — I handle it",
       "Text edits, new photos, layout tweaks",
       "You don't have to deal with the technical side",

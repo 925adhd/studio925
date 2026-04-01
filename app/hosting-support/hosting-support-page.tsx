@@ -32,7 +32,6 @@ const plans = [
       'Free custom domain included',
       'DNS setup + email routing',
       'SSL included',
-      'Google submission',
       'Updates & support:',
       'Text changes, image swaps, layout tweaks — just message me',
       'New photos, menu updates, seasonal changes — handled',
