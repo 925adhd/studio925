@@ -13,6 +13,7 @@ import Comparison from '../src/components/Comparison';
 import WhyStudio from '../src/components/WhyStudio';
 import WhoItsFor from '../src/components/WhoItsFor';
 import Testimonials from '../src/components/Testimonials';
+import PortfolioPreview from '../src/components/PortfolioPreview';
 
 export default function HomePage() {
   const { scrollYProgress } = useScroll();
@@ -73,6 +74,7 @@ export default function HomePage() {
         <WhyStudio />
         <Pricing />
         <WhoItsFor />
+        <PortfolioPreview />
         <Testimonials />
         <LocalSection />
         <Contact />
