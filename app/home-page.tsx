@@ -1,19 +1,21 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { motion, useScroll, useSpring } from 'motion/react';
 import Navbar from '../src/components/Navbar';
 import Hero from '../src/components/Hero';
-import Services from '../src/components/Services';
-import Pricing from '../src/components/Pricing';
-import Contact from '../src/components/Contact';
-import Footer from '../src/components/Footer';
-import LocalSection from '../src/components/LocalSection';
 import TrustStrip from '../src/components/TrustStrip';
-import Comparison from '../src/components/Comparison';
-import WhyStudio from '../src/components/WhyStudio';
-import WhoItsFor from '../src/components/WhoItsFor';
-import Testimonials from '../src/components/Testimonials';
-import PortfolioPreview from '../src/components/PortfolioPreview';
+
+// Lazy load everything below the fold to unblock LCP
+const Services = dynamic(() => import('../src/components/Services'), { ssr: true });
+const Comparison = dynamic(() => import('../src/components/Comparison'), { ssr: true });
+const WhyStudio = dynamic(() => import('../src/components/WhyStudio'), { ssr: true });
+const Pricing = dynamic(() => import('../src/components/Pricing'), { ssr: true });
+const PortfolioPreview = dynamic(() => import('../src/components/PortfolioPreview'), { ssr: true });
+const WhoItsFor = dynamic(() => import('../src/components/WhoItsFor'), { ssr: true });
+const LocalSection = dynamic(() => import('../src/components/LocalSection'), { ssr: true });
+const Contact = dynamic(() => import('../src/components/Contact'), { ssr: true });
+const Footer = dynamic(() => import('../src/components/Footer'), { ssr: true });
 
 export default function HomePage() {
   const { scrollYProgress } = useScroll();
