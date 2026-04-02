@@ -28,20 +28,13 @@ export default function TrustStrip() {
   return (
     <section className="pt-6 pb-8 md:pt-8 md:pb-14 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Mobile: plain text row */}
+        {/* Mobile: plain text row — no animation, instant */}
         <div className="sm:hidden flex items-center justify-center gap-4">
-          {items.map((item, i) => (
-            <motion.div
-              key={item.mobileTitle}
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: i * 0.1 }}
-              className="flex items-center gap-1.5"
-            >
+          {items.map((item) => (
+            <div key={item.mobileTitle} className="flex items-center gap-1.5">
               <item.icon size={12} className="text-brand-accent shrink-0" />
               <span className="text-[11px] font-semibold text-brand-primary/65 whitespace-nowrap">{item.mobileTitle}</span>
-            </motion.div>
+            </div>
           ))}
         </div>
 

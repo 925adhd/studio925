@@ -259,10 +259,10 @@ export default function Pricing() {
                   const card = el.children[i] as HTMLElement;
                   card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                 }}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
+                className={`h-1.5 w-6 rounded-full transition-[transform,background-color] duration-300 origin-center ${
                   i === activeIndex
-                    ? 'w-6 bg-brand-accent'
-                    : 'w-1.5 bg-brand-primary/15'
+                    ? 'bg-brand-accent scale-x-100'
+                    : 'bg-brand-primary/15 scale-x-[0.25]'
                 }`}
               />
             ))}
