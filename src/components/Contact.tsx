@@ -67,7 +67,7 @@ export default function Contact() {
 
             <div className="flex items-center gap-4 mb-8">
               <img
-                src="/me-small.webp"
+                src="/kara-gibson-small.webp"
                 alt="Kara Gibson, owner of Studio 925"
                 width={48}
                 height={48}

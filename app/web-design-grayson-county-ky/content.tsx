@@ -154,7 +154,7 @@ export default function GraysonCountyContent() {
             <div className="relative">
               <div className="absolute -inset-4 bg-brand-accent/10 rounded-[2.5rem] -rotate-3" />
               <img
-                src="/me.webp"
+                src="/kara-gibson.webp"
                 alt="Kara Gibson — web designer in Grayson County, KY"
                 width={384} height={384}
                 loading="lazy"
@@ -171,7 +171,7 @@ export default function GraysonCountyContent() {
             className="md:hidden flex items-center gap-4 mt-2"
           >
             <img
-              src="/me.webp"
+              src="/kara-gibson.webp"
               alt="Kara Gibson — web designer in Grayson County, KY"
               width={56} height={56}
               loading="lazy"

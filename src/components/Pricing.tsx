@@ -1,5 +1,6 @@
 'use client';
 
+import { useRef, useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
 import { Check, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -78,7 +79,136 @@ const tiers = [
   }
 ];
 
+function PricingCard({ tier, index, className = '' }: { tier: typeof tiers[number]; index: number; className?: string }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className={`relative p-8 rounded-[2.5rem] border flex flex-col ${
+        tier.featured
+          ? 'bg-brand-primary text-white border-brand-primary shadow-2xl lg:scale-105 z-10'
+          : 'bg-white border-brand-primary/5'
+      } ${className}`}
+    >
+      {tier.featured && (
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+          Most Popular
+        </div>
+      )}
+
+      <div className="mb-8">
+        <div className={`text-xs mb-1 font-semibold tracking-wide ${tier.featured ? 'text-white/70' : 'text-brand-primary/60'}`}>{tier.bestFor}</div>
+        <h3 className={`text-2xl mb-2 ${tier.featured ? 'text-white' : 'text-brand-primary'}`}>{tier.name}</h3>
+        <div className="mb-5">
+          <span className="text-xs font-semibold uppercase tracking-widest text-brand-accent">
+            Introductory Price
+          </span>
+          <div className="mt-1">
+            <span className="text-5xl font-serif font-bold italic">
+              ${tier.price}
+            </span>
+          </div>
+          <p className={`text-xs mt-3 ${tier.featured ? 'text-white/55' : 'text-brand-primary/65'}`}>
+            Standard Price ${tier.standardPrice}
+          </p>
+        </div>
+
+        <div className={`inline-flex items-center px-3 py-1.5 rounded-xl text-xs font-bold mb-4 ${
+          tier.featured
+            ? 'bg-white/10 text-white/80'
+            : 'bg-brand-accent/10 text-brand-accent'
+        }`}>
+          {tier.pages}
+        </div>
+
+        <p className={`text-sm ${tier.featured ? 'text-white/70' : 'text-brand-primary/60'}`}>
+          {tier.description}
+        </p>
+        <p className={`text-xs mt-2 ${tier.featured ? 'text-white/55' : 'text-brand-primary/65'}`}>
+          {tier.pageDetail}
+        </p>
+      </div>
+
+      <ul className="space-y-3 mb-8 flex-1">
+        {tier.features.map((feature) =>
+          feature.endsWith('plus:') ? (
+            <li key={feature} className={`text-xs font-bold uppercase tracking-widest pt-1 ${tier.featured ? 'text-brand-accent/70' : 'text-brand-accent/50'}`}>
+              {feature}
+            </li>
+          ) : (
+            <li key={feature} className="flex items-start gap-3 text-sm">
+              <Check size={16} className="text-brand-accent mt-0.5 shrink-0" />
+              <span className={tier.featured ? 'text-white/90' : 'text-brand-primary/80'}>{feature}</span>
+            </li>
+          )
+        )}
+      </ul>
+
+      <div className={`text-xs font-medium mb-5 px-3 py-2 rounded-xl ${
+        tier.featured
+          ? 'bg-white/10 text-white/60'
+          : 'bg-brand-primary/[0.03] text-brand-primary/65'
+      }`}>
+        {tier.support}
+      </div>
+
+      <button
+        onClick={() => {
+          window.dispatchEvent(new CustomEvent('planSelected', { detail: tier.name }));
+          window.location.href = '/#contact';
+        }}
+        className={`w-full py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all ${
+          tier.featured
+            ? 'bg-brand-accent text-white hover:bg-brand-accent/90'
+            : 'bg-brand-primary text-white hover:bg-brand-primary/90'
+        }`}>
+        Let's Talk <ArrowRight size={18} />
+      </button>
+      <a
+        href={tier.stripeLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`block w-full text-center text-[11px] mt-4 cursor-pointer transition-all hover:underline ${
+          tier.featured
+            ? 'text-white/60 hover:text-white/80'
+            : 'text-brand-primary/65 hover:text-brand-primary/70'
+        }`}
+      >
+        Already decided? Pay for {tier.name} →
+      </a>
+    </motion.div>
+  );
+}
+
 export default function Pricing() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(1); // Start on Growth (index 1)
+
+  // Scroll to Growth card on mount
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    // Small delay to ensure layout is ready
+    const t = setTimeout(() => {
+      const card = el.children[1] as HTMLElement;
+      if (card) {
+        el.scrollLeft = card.offsetLeft - (el.offsetWidth - card.offsetWidth) / 2;
+      }
+    }, 100);
+    return () => clearTimeout(t);
+  }, []);
+
+  const handleScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.firstElementChild?.getBoundingClientRect().width ?? 1;
+    const gap = 16;
+    const index = Math.round(el.scrollLeft / (cardWidth + gap));
+    setActiveIndex(Math.min(Math.max(index, 0), tiers.length - 1));
+  }, []);
+
   return (
     <section id="pricing" className="py-20 px-6 bg-brand-warm">
       <div className="max-w-7xl mx-auto">
@@ -86,112 +216,57 @@ export default function Pricing() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 md:mb-4 leading-snug">Simple pricing. <span className="italic text-brand-accent">Real results.</span></h2>
           <p className="text-brand-primary/60 text-sm md:text-lg mt-2 md:mt-3">One flat price per project. No hourly billing, no hidden fees, no monthly platform costs.</p>
           <p className="text-[11px] md:text-sm text-brand-primary/65 mt-2 md:mt-4">Introductory pricing currently available for new projects.</p>
+          <p className="lg:hidden text-[11px] text-brand-primary/40 mt-3 flex items-center justify-center gap-1.5">
+            <span>Swipe to compare plans</span>
+            <ArrowRight size={12} />
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-14 lg:gap-8">
+        {/* Desktop: grid */}
+        <div className="hidden lg:grid lg:grid-cols-3 gap-8">
           {tiers.map((tier, index) => (
-            <motion.div
-              key={tier.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className={`relative p-8 rounded-[2.5rem] border flex flex-col ${
-                tier.featured
-                  ? 'bg-brand-primary text-white border-brand-primary shadow-2xl lg:scale-105 z-10'
-                  : 'bg-white border-brand-primary/5'
-              }`}
-            >
-              {tier.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
-                  Most Popular
-                </div>
-              )}
-
-              <div className="mb-8">
-                 <div className={`text-xs mb-1 font-semibold tracking-wide ${tier.featured ? 'text-white/70' : 'text-brand-primary/60'}`}>{tier.bestFor}</div>
-                 <h3 className={`text-2xl mb-2 ${tier.featured ? 'text-white' : 'text-brand-primary'}`}>{tier.name}</h3>
-                <div className="mb-5">
-                  <span className={`text-xs font-semibold uppercase tracking-widest text-brand-accent`}>
-                    Introductory Price
-                  </span>
-                  <div className="mt-1">
-                    <span className="text-5xl font-serif font-bold italic">
-                      ${tier.price}
-                    </span>
-                  </div>
-                  <p className={`text-xs mt-3 ${tier.featured ? 'text-white/55' : 'text-brand-primary/65'}`}>
-                    Standard Price ${tier.standardPrice}
-                  </p>
-                </div>
-
-                {/* Page count badge */}
-                <div className={`inline-flex items-center px-3 py-1.5 rounded-xl text-xs font-bold mb-4 ${
-                  tier.featured
-                    ? 'bg-white/10 text-white/80'
-                    : 'bg-brand-accent/10 text-brand-accent'
-                }`}>
-                  {tier.pages}
-                </div>
-
-                <p className={`text-sm ${tier.featured ? 'text-white/70' : 'text-brand-primary/60'}`}>
-                  {tier.description}
-                </p>
-                <p className={`text-xs mt-2 ${tier.featured ? 'text-white/55' : 'text-brand-primary/65'}`}>
-                  {tier.pageDetail}
-                </p>
-              </div>
-
-              <ul className="space-y-3 mb-8 flex-1">
-                {tier.features.map((feature) =>
-                  feature.endsWith('plus:') ? (
-                    <li key={feature} className={`text-xs font-bold uppercase tracking-widest pt-1 ${tier.featured ? 'text-brand-accent/70' : 'text-brand-accent/50'}`}>
-                      {feature}
-                    </li>
-                  ) : (
-                    <li key={feature} className="flex items-start gap-3 text-sm">
-                      <Check size={16} className="text-brand-accent mt-0.5 shrink-0" />
-                      <span className={tier.featured ? 'text-white/90' : 'text-brand-primary/80'}>{feature}</span>
-                    </li>
-                  )
-                )}
-              </ul>
-
-              {/* Support callout */}
-              <div className={`text-xs font-medium mb-5 px-3 py-2 rounded-xl ${
-                tier.featured
-                  ? 'bg-white/10 text-white/60'
-                  : 'bg-brand-primary/[0.03] text-brand-primary/65'
-              }`}>
-                {tier.support}
-              </div>
-
-              <button
-                onClick={() => {
-                  window.dispatchEvent(new CustomEvent('planSelected', { detail: tier.name }));
-                  window.location.href = '/#contact';
-                }}
-                className={`w-full py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition-all ${
-                  tier.featured
-                    ? 'bg-brand-accent text-white hover:bg-brand-accent/90'
-                    : 'bg-brand-primary text-white hover:bg-brand-primary/90'
-                }`}>
-                Let's Talk <ArrowRight size={18} />
-              </button>
-              <a
-                href={tier.stripeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`block w-full text-center text-[11px] mt-4 cursor-pointer transition-all hover:underline ${
-                  tier.featured
-                    ? 'text-white/60 hover:text-white/80'
-                    : 'text-brand-primary/65 hover:text-brand-primary/70'
-                }`}
-              >
-                  Already decided? Pay for {tier.name} →
-              </a>
-            </motion.div>
+            <PricingCard key={tier.name} tier={tier} index={index} />
           ))}
+        </div>
+
+        {/* Mobile: swipable carousel starting on Growth */}
+        <div className="lg:hidden -mx-6">
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth px-6 pb-4"
+            style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none' }}
+          >
+            {tiers.map((tier, index) => (
+              <PricingCard
+                key={tier.name}
+                tier={tier}
+                index={index}
+                className="shrink-0 w-[85vw] snap-center"
+              />
+            ))}
+          </div>
+
+          {/* Dot indicators */}
+          <div className="flex justify-center gap-2 mt-4">
+            {tiers.map((_, i) => (
+              <button
+                key={i}
+                aria-label={`Go to ${tiers[i].name} plan`}
+                onClick={() => {
+                  const el = scrollRef.current;
+                  if (!el) return;
+                  const card = el.children[i] as HTMLElement;
+                  card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === activeIndex
+                    ? 'w-6 bg-brand-accent'
+                    : 'w-1.5 bg-brand-primary/15'
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="text-center mt-8 md:mt-12 space-y-2">

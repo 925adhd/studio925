@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function LocalSection() {
   return (
-    <section className="relative pt-10 md:pt-24 pb-24 px-6 bg-brand-warm overflow-hidden" id="local">
+    <section className="relative pt-4 md:pt-10 pb-24 px-6 bg-brand-warm overflow-hidden" id="local">
 
       {/* County outline — decorative background */}
       <style>{`
@@ -96,7 +96,7 @@ export default function LocalSection() {
           className="flex flex-col items-center order-1 md:order-2 md:mt-24"
         >
           <img
-            src="/me.webp"
+            src="/kara-gibson.webp"
             alt="Kara Gibson, local web designer in Grayson County, Kentucky"
             width={320} height={320}
             loading="lazy"

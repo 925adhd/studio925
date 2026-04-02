@@ -7,7 +7,7 @@ const reasons = [
   {
     icon: Clock,
     title: '48-hour draft',
-    text: 'See a working version of your site within 48 hours. No weeks of waiting to find out what you\'re getting.',
+    text: 'You shouldn\'t have to wait weeks wondering what you\'re getting. You\'ll have a working draft in 48 hours — so you can finally see your business the way it deserves to look.',
   },
   {
     icon: Code,

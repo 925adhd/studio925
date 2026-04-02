@@ -73,9 +73,8 @@ export default function HomePage() {
 
         <WhyStudio />
         <Pricing />
-        <WhoItsFor />
         <PortfolioPreview />
-        <Testimonials />
+        <WhoItsFor />
         <LocalSection />
         <Contact />
       </main>
