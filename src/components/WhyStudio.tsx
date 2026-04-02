@@ -1,77 +1,48 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Clock, Key, MessageCircle, DollarSign, MapPin, Code } from 'lucide-react';
-
-const reasons = [
-  {
-    icon: Clock,
-    title: '48-hour draft',
-    text: 'You shouldn\'t have to wait weeks wondering what you\'re getting. You\'ll have a working draft in 48 hours — so you can finally see your business the way it deserves to look.',
-  },
-  {
-    icon: Code,
-    title: 'Custom code, not templates',
-    text: 'Your site is written from scratch. Faster load times, better Google rankings, and a design that\'s actually yours.',
-  },
-  {
-    icon: Key,
-    title: 'You own everything',
-    text: 'After final payment, every file is yours. No platform lock-in, no monthly fees just to keep your site.',
-  },
-  {
-    icon: MapPin,
-    title: 'Local, not outsourced',
-    text: 'Based in Grayson County. You work directly with the person building your site — not a middleman.',
-  },
-  {
-    icon: DollarSign,
-    title: 'One clear price',
-    text: 'No hourly billing. No surprise invoices. You know exactly what your website costs before we start.',
-  },
-  {
-    icon: MessageCircle,
-    title: 'Direct communication',
-    text: 'Call, text, or email. You get a real answer the same day — not a support ticket.',
-  },
-];
+import { Handshake } from 'lucide-react';
 
 export default function WhyStudio() {
   return (
-    <section className="py-16 md:py-24 px-6 bg-brand-warm">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-28 md:py-40 px-6 bg-brand-primary text-white relative overflow-hidden">
+      {/* Premium background motif — abstract crest */}
+      <div className="absolute right-[10%] top-1/2 -translate-y-1/2 pointer-events-none select-none" aria-hidden="true">
+        <Handshake size={500} className="text-white opacity-[0.04]" strokeWidth={0.75} />
+      </div>
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
+          className="border-l-2 border-brand-accent pl-8 md:pl-12"
         >
-          <div className="text-center mb-10 md:mb-14">
-            <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
-              Why business owners choose <span className="italic text-brand-accent">Studio 925</span>
-            </h2>
-            <p className="text-sm md:text-base text-brand-primary/55 max-w-xl mx-auto leading-relaxed">
-              No templates. No page builders. No runaround. Here's what makes working with Studio 925 different.
-            </p>
+          <h2 className="text-2xl md:text-4xl mb-8 md:mb-10 leading-snug">
+            Why small businesses trust <span className="italic text-brand-accent">Studio 925</span>
+          </h2>
+
+          <div className="space-y-8 md:space-y-12 text-base md:text-xl">
+            {[
+              { bold: '48-hour draft.', rest: 'Not weeks of waiting.' },
+              { bold: 'Custom code.', rest: 'Not a template with your logo on it.' },
+              { bold: 'One clear price.', rest: 'Not hourly surprises.' },
+              { bold: 'You own everything.', rest: 'Not locked into a platform.' },
+              { bold: 'Direct communication.', rest: 'Not a support ticket.' },
+            ].map((line, i) => (
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.7, delay: i * 0.2 }}
+              >
+                <span className="font-bold text-white">{line.bold}</span>{' '}
+                <span className="text-white/50">{line.rest}</span>
+              </motion.p>
+            ))}
           </div>
         </motion.div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-          {reasons.map((reason, i) => (
-            <motion.div
-              key={reason.title}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              className="p-4 md:p-7 rounded-2xl md:rounded-3xl bg-white border border-brand-primary/5"
-            >
-              <reason.icon size={18} className="text-brand-accent mb-3 md:mb-4 md:!w-5 md:!h-5" />
-              <h3 className="text-sm md:text-base font-sans font-bold mb-1.5 md:mb-2">{reason.title}</h3>
-              <p className="text-xs md:text-sm text-brand-primary/55 leading-relaxed">{reason.text}</p>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );

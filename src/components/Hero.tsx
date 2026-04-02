@@ -13,25 +13,25 @@ const fade = (delay: number) => ({
 
 export default function Hero() {
   return (
-    <section className="relative pt-20 md:pt-32 pb-2 md:pb-20 px-6 overflow-hidden">
+    <section className="relative pt-24 md:pt-36 pb-6 md:pb-28 px-6 overflow-hidden">
       <div className="absolute inset-0 grid-pattern -z-10" />
 
       <div className="max-w-4xl mx-auto text-center">
         {/* Desktop: staggered fade-in */}
         <div className="hidden md:block">
-          <motion.h1
+          <motion.p
             {...fade(0)}
             className="text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/60 mb-5"
           >
             Helping Local Businesses Grow Online · Grayson County, Kentucky
-          </motion.h1>
+          </motion.p>
 
-          <motion.h2
+          <motion.h1
             {...fade(0.1)}
             className="text-5xl md:text-7xl mb-4 leading-[1.1]"
           >
             Your business deserves a website <span className="italic text-brand-accent">that actually works.</span>
-          </motion.h2>
+          </motion.h1>
 
           <motion.p
             {...fade(0.2)}
@@ -63,13 +63,13 @@ export default function Hero() {
 
         {/* Mobile: fully static, no animation — critical for LCP */}
         <div className="md:hidden">
-          <h1 className="text-[9px] sm:text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/60 mb-4 sm:mb-5">
+          <p className="text-[9px] sm:text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/60 mb-4 sm:mb-5">
             Helping Local Businesses Grow Online · Grayson County, Kentucky
-          </h1>
+          </p>
 
-          <h2 className="text-4xl sm:text-5xl mb-3 leading-[1.05] sm:leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl mb-3 leading-[1.05] sm:leading-[1.1]">
             Your business deserves a website <span className="italic text-brand-accent">that actually works.</span>
-          </h2>
+          </h1>
 
           <p className="flex items-center justify-center gap-1.5 text-sm mb-4">
             <MapPin size={14} className="shrink-0 text-brand-primary/55" />

@@ -8,7 +8,7 @@ import Footer from '../../src/components/Footer';
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["ProfessionalService", "Service"],
   "name": "Studio 925 — Small Business Website Design in Kentucky",
   "url": "https://studio925.design/small-business-website-design-kentucky",
   "email": "kara@studio925.design",

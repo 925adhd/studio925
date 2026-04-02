@@ -8,7 +8,7 @@ import Footer from '../../src/components/Footer';
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["ProfessionalService", "Service"],
   "name": "Studio 925 — Web Design in Grayson County, KY",
   "url": "https://studio925.design/web-design-grayson-county-ky",
   "email": "kara@studio925.design",

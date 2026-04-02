@@ -26,7 +26,7 @@ const items = [
 
 export default function TrustStrip() {
   return (
-    <section className="pt-6 pb-8 md:pt-8 md:pb-14 px-6 bg-white">
+    <section className="pt-8 pb-10 md:pt-12 md:pb-20 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Mobile: plain text row — no animation, instant */}
         <div className="sm:hidden flex items-center justify-center gap-4">

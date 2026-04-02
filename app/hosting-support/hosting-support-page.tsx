@@ -30,7 +30,7 @@ const plans = [
       'Performance monitoring',
       'Ongoing SEO basics — meta tags, indexing, and site health',
       'Domain & setup:',
-      'Free custom domain included',
+      'Free custom domain included~',
       'DNS setup + email routing',
       'SSL included',
       'Updates & support:',
@@ -94,6 +94,14 @@ export default function HostingSupportPage() {
                     feature.endsWith(':') ? (
                       <li key={feature} className="text-xs font-bold uppercase tracking-widest pt-1 text-brand-primary/30">
                         {feature}
+                      </li>
+                    ) : feature.endsWith('~') ? (
+                      <li key={feature} className="flex items-start gap-3 text-sm">
+                        <Check size={16} className="text-brand-accent mt-0.5 shrink-0" />
+                        <span className="text-brand-primary/80">
+                          {feature.slice(0, -1)}
+                          <span className="ml-2 inline-block text-[10px] font-bold uppercase tracking-widest bg-brand-accent/10 text-brand-accent px-2 py-0.5 rounded-full">Included</span>
+                        </span>
                       </li>
                     ) : (
                       <li key={feature} className="flex items-start gap-3 text-sm">

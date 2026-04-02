@@ -35,7 +35,7 @@ function CarouselImage() {
 
 export default function PortfolioPreview() {
   return (
-    <section className="pt-16 md:pt-24 pb-10 md:pb-14 px-6 bg-white border-t border-brand-primary/5">
+    <section className="py-20 md:py-36 px-6 bg-white border-t border-brand-primary/5">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10 md:mb-14">
           <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">

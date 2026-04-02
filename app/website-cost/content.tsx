@@ -69,6 +69,13 @@ const webPageJsonLd = {
     '@type': 'LocalBusiness',
     name: 'Studio 925',
     url: 'https://studio925.design',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Leitchfield',
+      addressRegion: 'KY',
+      postalCode: '42754',
+      addressCountry: 'US',
+    },
   },
 };
 

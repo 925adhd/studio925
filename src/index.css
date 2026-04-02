@@ -7,7 +7,7 @@
   
   --color-brand-primary: #0f172a;
   --color-brand-accent: #059669;
-  --color-brand-warm: #f8f5f2;
+  --color-brand-warm: #f9f7f5;
 }
 
 @layer base {
@@ -69,13 +69,53 @@
   }
 }
 
-/* Clock hand animations — hour does 2 full rotations (48hrs), minute goes faster */
-@keyframes clock-hour {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(720deg); }
-}
+/* Process timeline illustration animations */
+@layer base {
+  @keyframes reply-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-@keyframes clock-minute {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(4320deg); }
+  @keyframes dot-pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+  }
+
+  @keyframes hand-spin {
+    to { transform: rotate(3600deg); }
+  }
+
+  @keyframes speed-lines {
+    0% { opacity: 0; transform: translateX(4px); }
+    40% { opacity: 0.2; }
+    100% { opacity: 0; transform: translateX(-10px); }
+  }
+
+  @keyframes pencil-write {
+    0% { transform: translate(28px, 11px) rotate(-30deg); }
+    25% { transform: translate(36px, 21px) rotate(-30deg); }
+    50% { transform: translate(28px, 31px) rotate(-30deg); }
+    75% { transform: translate(34px, 41px) rotate(-30deg); }
+    100% { transform: translate(28px, 11px) rotate(-30deg); }
+  }
+
+  @keyframes check-pop {
+    from { opacity: 0; transform: scale(0); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes rocket-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @keyframes flame-flicker {
+    0%, 100% { opacity: 0.25; transform: scaleY(1); }
+    50% { opacity: 0.15; transform: scaleY(1.15); }
+  }
+
+  @keyframes star-twinkle {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.4; }
+  }
 }
