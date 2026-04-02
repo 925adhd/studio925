@@ -89,7 +89,7 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
     if (!hasCarousel) return;
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % project.images!.length);
-    }, 2500);
+    }, 2000);
     return () => clearInterval(interval);
   }, [hasCarousel, project.images]);
 
