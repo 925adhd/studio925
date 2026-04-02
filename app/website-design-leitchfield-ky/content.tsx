@@ -331,7 +331,7 @@ export default function LeitchfieldContent() {
               ))}
             </div>
             <blockquote className="text-base md:text-lg text-brand-primary/80 leading-relaxed mb-4">
-              "Studio 925 built a site that actually represents what we do. It loads fast, looks professional, and we've gotten real inquiries from it. Working with someone local who understood our business made all the difference."
+              "Not even exaggerating — this is hands down the cleanest, smoothest, most professional site I've ever had. Everything flows, loads fast, and actually reflects the quality I bring. Studio 925 doesn't just build websites — she builds brands that convert. If you're serious about leveling up your business, I highly recommend reaching out to Kara."
             </blockquote>
             <div className="flex items-center gap-3">
               <div>
