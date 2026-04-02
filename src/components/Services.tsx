@@ -534,7 +534,13 @@ function ResponsiveDemo() {
           Responsive on every device
         </span>
         <div className="flex items-end gap-3 justify-center mb-5">
-          <div className="w-28 bg-white rounded-lg shadow-md border border-brand-primary/8 p-2">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 15 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0, duration: 0.4 }}
+            className="w-28 bg-white rounded-lg shadow-md border border-brand-primary/8 p-2"
+          >
             <div className="bg-brand-accent/5 rounded p-1.5 mb-1">
               <div className="h-1 bg-brand-accent/20 rounded w-[70%] mb-1" />
               <div className="h-0.5 bg-brand-primary/8 rounded w-full" />
@@ -545,8 +551,14 @@ function ResponsiveDemo() {
               <div className="h-4 bg-brand-primary/5 rounded" />
             </div>
             <p className="text-[8px] text-brand-primary/30 text-center mt-1">Desktop</p>
-          </div>
-          <div className="w-16 bg-white rounded-lg shadow-md border border-brand-primary/8 p-1.5">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 15 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15, duration: 0.4 }}
+            className="w-16 bg-white rounded-lg shadow-md border border-brand-primary/8 p-1.5"
+          >
             <div className="bg-brand-accent/5 rounded p-1 mb-1">
               <div className="h-1 bg-brand-accent/20 rounded w-[70%] mb-0.5" />
               <div className="h-0.5 bg-brand-primary/8 rounded w-full" />
@@ -556,8 +568,14 @@ function ResponsiveDemo() {
               <div className="h-3 bg-brand-primary/5 rounded" />
             </div>
             <p className="text-[8px] text-brand-primary/30 text-center mt-0.5">Tablet</p>
-          </div>
-          <div className="w-11 bg-white rounded-lg shadow-md border-2 border-brand-accent/20 p-1">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 15 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.4 }}
+            className="w-11 bg-white rounded-lg shadow-md border-2 border-brand-accent/20 p-1"
+          >
             <div className="w-4 h-0.5 bg-brand-primary/10 rounded-full mx-auto mb-1" />
             <div className="bg-brand-accent/5 rounded p-1 mb-0.5">
               <div className="h-0.5 bg-brand-accent/20 rounded w-[70%]" />
@@ -565,7 +583,7 @@ function ResponsiveDemo() {
             <div className="h-2.5 bg-brand-primary/5 rounded mb-0.5" />
             <div className="h-2.5 bg-brand-primary/5 rounded" />
             <p className="text-[7px] text-brand-accent/60 text-center mt-0.5 font-semibold">Mobile</p>
-          </div>
+          </motion.div>
         </div>
         <h3 className="text-2xl mb-2">Looks right on every screen.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed">

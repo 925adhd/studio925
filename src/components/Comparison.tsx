@@ -28,7 +28,7 @@ export default function Comparison() {
           <h2 className="text-xl md:text-4xl mb-3 md:mb-4">
             Do It Yourself <span className="italic text-brand-accent">or Have It Handled</span>
           </h2>
-          <p className="text-sm md:text-base text-brand-primary/50 max-w-lg mx-auto">
+          <p className="text-sm md:text-base text-brand-primary/60 max-w-lg mx-auto">
             You could spend hours building it yourself. Or tell us about your business and we'll take it from here.
           </p>
         </motion.div>
@@ -73,9 +73,9 @@ export default function Comparison() {
           </motion.div>
         </div>
 
-        <p className="text-center text-xs text-brand-primary/40 mt-8 md:mt-10">
-          Ongoing updates, support, and maintenance are included with optional <Link href="/hosting-support" className="text-brand-accent hover:underline">hosting plans</Link>.
-          {' '}Wondering about pricing? See our <Link href="/website-cost" className="text-brand-accent hover:underline">website cost guide</Link>.
+        <p className="text-center text-xs text-brand-primary/60 mt-8 md:mt-10">
+          Ongoing updates, support, and maintenance are included with optional <Link href="/hosting-support" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">hosting plans</Link>.
+          {' '}Wondering about pricing? See our <Link href="/website-cost" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">website cost guide</Link>.
         </p>
       </div>
     </section>

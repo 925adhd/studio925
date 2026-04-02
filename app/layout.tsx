@@ -194,6 +194,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${jetbrains.variable}`}>
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://analytics.ahrefs.com" />
         <Script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="4aAbtU0hK7mRoLOqZCAPEg"
