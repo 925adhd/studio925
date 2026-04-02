@@ -60,8 +60,8 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Mobile: instant render, subtle CSS fade */}
-        <div className="md:hidden animate-[fadeIn_0.4s_ease-out]">
+        {/* Mobile: fully static, no animation — critical for LCP */}
+        <div className="md:hidden">
           <h1 className="text-[9px] sm:text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/60 mb-4 sm:mb-5">
             Helping Local Businesses Grow Online · Grayson County, Kentucky
           </h1>

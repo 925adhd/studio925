@@ -69,11 +69,6 @@
   }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 /* Clock hand animations — hour does 2 full rotations (48hrs), minute goes faster */
 @keyframes clock-hour {
   from { transform: rotate(0deg); }

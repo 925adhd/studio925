@@ -110,7 +110,7 @@ function PricingCard({ tier, index, className = '' }: { tier: typeof tiers[numbe
               ${tier.price}
             </span>
           </div>
-          <p className={`text-xs mt-3 ${tier.featured ? 'text-white/55' : 'text-brand-primary/65'}`}>
+          <p className={`text-xs mt-3 ${tier.featured ? 'text-white/55' : 'text-brand-primary/70'}`}>
             Standard Price ${tier.standardPrice}
           </p>
         </div>
@@ -126,7 +126,7 @@ function PricingCard({ tier, index, className = '' }: { tier: typeof tiers[numbe
         <p className={`text-sm ${tier.featured ? 'text-white/70' : 'text-brand-primary/60'}`}>
           {tier.description}
         </p>
-        <p className={`text-xs mt-2 ${tier.featured ? 'text-white/55' : 'text-brand-primary/65'}`}>
+        <p className={`text-xs mt-2 ${tier.featured ? 'text-white/55' : 'text-brand-primary/70'}`}>
           {tier.pageDetail}
         </p>
       </div>
@@ -149,7 +149,7 @@ function PricingCard({ tier, index, className = '' }: { tier: typeof tiers[numbe
       <div className={`text-xs font-medium mb-5 px-3 py-2 rounded-xl ${
         tier.featured
           ? 'bg-white/10 text-white/60'
-          : 'bg-brand-primary/[0.03] text-brand-primary/65'
+          : 'bg-brand-primary/[0.03] text-brand-primary/70'
       }`}>
         {tier.support}
       </div>
@@ -173,7 +173,7 @@ function PricingCard({ tier, index, className = '' }: { tier: typeof tiers[numbe
         className={`block w-full text-center text-[11px] mt-4 cursor-pointer transition-all hover:underline ${
           tier.featured
             ? 'text-white/60 hover:text-white/80'
-            : 'text-brand-primary/65 hover:text-brand-primary/70'
+            : 'text-brand-primary/70 hover:text-brand-primary/70'
         }`}
       >
         Already decided? Pay for {tier.name} →
@@ -215,8 +215,8 @@ export default function Pricing() {
         <div className="text-center mb-12 md:mb-16 max-w-2xl md:max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 md:mb-4 leading-snug">Simple pricing. <span className="italic text-brand-accent">Real results.</span></h2>
           <p className="text-brand-primary/60 text-sm md:text-lg mt-2 md:mt-3">One flat price per project. No hourly billing, no hidden fees, no monthly platform costs.</p>
-          <p className="text-[11px] md:text-sm text-brand-primary/65 mt-2 md:mt-4">Introductory pricing currently available for new projects.</p>
-          <p className="lg:hidden text-[11px] text-brand-primary/40 mt-3 flex items-center justify-center gap-1.5">
+          <p className="text-[11px] md:text-sm text-brand-primary/70 mt-2 md:mt-4">Introductory pricing currently available for new projects.</p>
+          <p className="lg:hidden text-[11px] text-brand-primary/60 mt-3 flex items-center justify-center gap-1.5">
             <span>Swipe to compare plans</span>
             <ArrowRight size={12} />
           </p>
@@ -248,7 +248,7 @@ export default function Pricing() {
           </div>
 
           {/* Dot indicators */}
-          <div className="flex justify-center gap-2 mt-4">
+          <div className="flex justify-center gap-3 mt-4">
             {tiers.map((_, i) => (
               <button
                 key={i}
@@ -259,24 +259,26 @@ export default function Pricing() {
                   const card = el.children[i] as HTMLElement;
                   card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                 }}
-                className={`h-1.5 w-6 rounded-full transition-[transform,background-color] duration-300 origin-center ${
+                className="p-3 -m-3"
+              >
+                <div className={`h-1.5 w-6 rounded-full transition-[transform,background-color] duration-300 origin-center ${
                   i === activeIndex
                     ? 'bg-brand-accent scale-x-100'
                     : 'bg-brand-primary/15 scale-x-[0.25]'
-                }`}
-              />
+                }`} />
+              </button>
             ))}
           </div>
         </div>
 
         <div className="text-center mt-8 md:mt-12 space-y-2">
-          <p className="text-xs text-brand-primary/65">
+          <p className="text-xs text-brand-primary/70">
             50% deposit to get started. You fully own your website and all files after final payment.
           </p>
-          <p className="text-xs text-brand-primary/65">
+          <p className="text-xs text-brand-primary/70">
             Hosting is separate — <Link href="/hosting-support" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">plans start at $25/month</Link>.
           </p>
-          <p className="text-xs text-brand-primary/65 mt-2">
+          <p className="text-xs text-brand-primary/70 mt-2">
             Want to understand pricing?
           </p>
           <p className="text-xs mt-1">
