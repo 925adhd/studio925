@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import { Mail, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { trackEvent } from '../lib/gtag';
 
 const plans = ['Foundation', 'Growth', 'Online Store', 'Not Sure Yet'];
 
@@ -34,6 +35,7 @@ export default function Contact() {
 
     const data = await response.json();
     if (data.success) {
+      trackEvent('submit_contact_form', selectedPlan);
       setStatus('success');
       (e.target as HTMLFormElement).reset();
       setSelectedPlan('Not Sure Yet');
@@ -80,7 +82,7 @@ export default function Contact() {
             </div>
 
             <div className="space-y-6">
-              <a href="mailto:kara@studio925.design" className="flex items-center gap-4 group">
+              <a href="mailto:kara@studio925.design" onClick={() => trackEvent('click_email', 'contact')} className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-brand-accent transition-colors">
                   <Mail size={20} />
                 </div>

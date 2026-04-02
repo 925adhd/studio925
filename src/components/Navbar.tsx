@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { Menu, X, ArrowRight, Phone, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
+import { trackEvent } from '../lib/gtag';
 const logo = '/logo.webp';
 
 export default function Navbar() {
@@ -22,7 +23,7 @@ export default function Navbar() {
           <Link href="/portfolio" className="text-sm font-medium hover:text-brand-accent transition-colors">Portfolio</Link>
           <a href="/#pricing" className="text-sm font-medium hover:text-brand-accent transition-colors">Pricing</a>
           <Link href="/hosting-support" className="text-sm font-medium hover:text-brand-accent transition-colors">Hosting & Support</Link>
-          <a href="/#contact" className="bg-brand-primary text-white px-5 py-2 rounded-xl text-sm font-medium flex items-center gap-2 hover:bg-brand-primary/90 transition-all">
+          <a href="/#contact" onClick={() => trackEvent('click_get_started', 'navbar')} className="bg-brand-primary text-white px-5 py-2 rounded-xl text-sm font-medium flex items-center gap-2 hover:bg-brand-primary/90 transition-all">
             Get Started <ArrowRight size={16} />
           </a>
         </div>
@@ -51,10 +52,10 @@ export default function Navbar() {
             <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-lg font-medium">Pricing</a>
             <Link href="/hosting-support" onClick={() => setIsOpen(false)} className="text-lg font-medium">Hosting & Support</Link>
             <div className="flex gap-3 mt-1">
-              <a href="tel:+12705512210" onClick={() => setIsOpen(false)} className="bg-brand-accent text-white px-4 py-2.5 rounded-xl font-medium text-base flex items-center gap-2">
+              <a href="tel:+12705512210" onClick={() => { trackEvent('click_call', 'mobile_menu'); setIsOpen(false); }} className="bg-brand-accent text-white px-4 py-2.5 rounded-xl font-medium text-base flex items-center gap-2">
                 <Phone size={16} /> Call
               </a>
-              <button onClick={() => { setIsOpen(false); window.location.href = 'sms:+12705512210?body=Hi%2C%20I%27m%20interested%20in%20a%20website'; }} className="bg-brand-primary text-white px-4 py-2.5 rounded-xl font-medium text-base flex items-center gap-2">
+              <button onClick={() => { trackEvent('click_text', 'mobile_menu'); setIsOpen(false); window.location.href = 'sms:+12705512210?body=Hi%2C%20I%27m%20interested%20in%20a%20website'; }} className="bg-brand-primary text-white px-4 py-2.5 rounded-xl font-medium text-base flex items-center gap-2">
                 <MessageCircle size={16} /> Text
               </button>
             </div>
@@ -65,7 +66,7 @@ export default function Navbar() {
 
     {/* Sticky mobile call button */}
     <button
-      onClick={() => { window.location.href = 'sms:+12705512210?body=Hi%2C%20I%27m%20interested%20in%20a%20website'; }}
+      onClick={() => { trackEvent('click_text', 'sticky_mobile'); window.location.href = 'sms:+12705512210?body=Hi%2C%20I%27m%20interested%20in%20a%20website'; }}
       className="fixed bottom-5 right-5 z-50 md:hidden bg-brand-accent text-white p-4 rounded-full shadow-lg shadow-brand-accent/30 hover:scale-105 transition-transform"
       aria-label="Text Studio 925"
     >

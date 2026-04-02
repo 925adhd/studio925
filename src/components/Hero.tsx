@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import { ArrowRight, MapPin } from 'lucide-react';
+import { trackEvent } from '../lib/gtag';
 
 const fade = (delay: number) => ({
   initial: { opacity: 0, y: 14 } as const,
@@ -51,10 +52,10 @@ export default function Hero() {
             {...fade(0.4)}
             className="flex flex-row gap-4 justify-center"
           >
-            <a href="/#contact" className="bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
+            <a href="/#contact" onClick={() => trackEvent('click_get_started', 'hero_desktop')} className="bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
               Get Started <ArrowRight size={20} />
             </a>
-            <Link href="/portfolio" className="bg-white border border-brand-primary/10 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-primary/5 transition-colors text-brand-primary flex items-center justify-center gap-2">
+            <Link href="/portfolio" onClick={() => trackEvent('click_see_my_work', 'hero_desktop')} className="bg-white border border-brand-primary/10 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-primary/5 transition-colors text-brand-primary flex items-center justify-center gap-2">
               See My Work
             </Link>
           </motion.div>
@@ -80,10 +81,10 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col gap-5 justify-center">
-            <a href="/#contact" className="w-full bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 shadow-lg shadow-brand-primary/20">
+            <a href="/#contact" onClick={() => trackEvent('click_get_started', 'hero_mobile')} className="w-full bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 shadow-lg shadow-brand-primary/20">
               Get Started <ArrowRight size={20} />
             </a>
-            <Link href="/portfolio" className="text-lg font-semibold text-brand-primary/70 underline flex items-center justify-center gap-2">
+            <Link href="/portfolio" onClick={() => trackEvent('click_see_my_work', 'hero_mobile')} className="text-lg font-semibold text-brand-primary/70 underline flex items-center justify-center gap-2">
               <img src="/kara-gibson-small.webp" alt="Kara Gibson, owner of Studio 925 web design in Grayson County, KY" width={28} height={28} className="w-7 h-7 rounded-full object-cover shrink-0" />
               See My Work
             </Link>

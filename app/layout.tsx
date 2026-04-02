@@ -199,6 +199,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           data-key="4aAbtU0hK7mRoLOqZCAPEg"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-0XT038VM5Z"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0XT038VM5Z');`}
+        </Script>
       </head>
       <body>
         <script

@@ -5,6 +5,7 @@ import { Check, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
+import { trackEvent } from '../../src/lib/gtag';
 
 const plans = [
   {
@@ -108,6 +109,7 @@ export default function HostingSupportPage() {
                     href={plan.stripeLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackEvent('click_hosting_plan', plan.name)}
                     className={`block w-full py-3.5 rounded-2xl font-bold text-center transition-all ${
                       plan.featured
                         ? 'bg-brand-accent text-white hover:bg-brand-accent/90'
@@ -168,6 +170,7 @@ export default function HostingSupportPage() {
           <p className="text-base md:text-lg text-brand-primary/60 mb-5">Need a website first?</p>
           <Link
             href="/#pricing"
+            onClick={() => trackEvent('click_view_packages', 'hosting_page')}
             className="inline-flex items-center gap-2 bg-brand-primary text-white px-7 py-3.5 rounded-2xl font-semibold hover:bg-brand-primary/90 transition-all"
           >
             View Website Packages <ArrowRight size={18} />

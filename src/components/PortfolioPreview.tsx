@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Star } from 'lucide-react';
 import Link from 'next/link';
+import { trackEvent } from '../lib/gtag';
 
 const images = ['/csmedia.webp', '/cs1.webp', '/cs2.webp', '/cs3.webp', '/cs4.webp', '/cs5.webp'];
 
@@ -91,6 +92,7 @@ export default function PortfolioPreview() {
             </div>
             <Link
               href="/portfolio"
+              onClick={() => trackEvent('click_view_portfolio', 'portfolio_preview')}
               className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm font-semibold hover:bg-brand-primary/90 transition-all group"
             >
               View Full Portfolio <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -142,6 +144,7 @@ export default function PortfolioPreview() {
           <div className="text-center mt-8">
             <Link
               href="/portfolio"
+              onClick={() => trackEvent('click_view_portfolio', 'portfolio_preview_mobile')}
               className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm font-semibold hover:bg-brand-primary/90 transition-all group"
             >
               View Full Portfolio <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

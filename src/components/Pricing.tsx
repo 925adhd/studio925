@@ -4,6 +4,7 @@ import { useRef, useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
 import { Check, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { trackEvent } from '../lib/gtag';
 
 const tiers = [
   {
@@ -156,6 +157,7 @@ function PricingCard({ tier, index, className = '' }: { tier: typeof tiers[numbe
 
       <button
         onClick={() => {
+          trackEvent('click_lets_talk', tier.name);
           window.dispatchEvent(new CustomEvent('planSelected', { detail: tier.name }));
           window.location.href = '/#contact';
         }}
@@ -170,6 +172,7 @@ function PricingCard({ tier, index, className = '' }: { tier: typeof tiers[numbe
         href={tier.stripeLink}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackEvent('click_pay_now', tier.name)}
         className={`block w-full text-center text-[11px] mt-4 cursor-pointer transition-all hover:underline ${
           tier.featured
             ? 'text-white/60 hover:text-white/80'
