@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
@@ -18,10 +18,14 @@ const featuredProjects = [
       'Generate real inquiries through clear calls to action',
       'Establish a strong brand identity online',
     ],
-    href: 'https://csmedia.vercel.app',
+    href: 'https://cscreatesmedia.com',
     image: '/csmedia.webp',
     images: ['/csmedia.webp', '/cs1.webp', '/cs2.webp', '/cs3.webp', '/cs4.webp', '/cs5.webp'],
     tags: ['Lead Generation', 'Branding'],
+    results: {
+      desktop: { performance: 100, accessibility: 100, bestPractices: 100, seo: 100, fcp: '0.3s', lcp: '0.7s', cls: '0', speedIndex: '0.6s', image: '/csmedia-speed-desktop.webp' },
+      mobile: { performance: 93, accessibility: 100, bestPractices: 100, seo: 100, fcp: '0.9s', lcp: '3.2s', cls: '0', speedIndex: '1.9s', image: '/csmedia-speed-mobile.webp' },
+    },
   },
   {
     title: 'Townly',
@@ -38,6 +42,7 @@ const featuredProjects = [
     image: '/townly.webp',
     images: undefined as string[] | undefined,
     tags: ['Community Platform', 'Local Business'],
+    results: undefined as typeof featuredProjects[0]['results'] | undefined,
   },
   {
     title: 'Four Chariots',
@@ -54,6 +59,7 @@ const featuredProjects = [
     image: '/4chariots.webp',
     images: undefined as string[] | undefined,
     tags: ['E-commerce', 'Branding'],
+    results: undefined as typeof featuredProjects[0]['results'] | undefined,
   },
 ];
 
@@ -81,8 +87,72 @@ const features = [
   'Secure deployment',
 ];
 
+function PageSpeedResults({ title, results }: { title: string; results: NonNullable<typeof featuredProjects[0]['results']> }) {
+  const [modalImage, setModalImage] = useState<string | null>(null);
+
+  return (
+    <div className="mb-6 md:mb-8">
+      <h3 className="text-xs font-bold uppercase tracking-widest text-brand-primary/40 mb-3">
+        Google PageSpeed Results
+      </h3>
+      <div className="rounded-2xl border border-brand-primary/5 bg-brand-primary/[0.02] p-4">
+        <div className="grid grid-cols-2 gap-3">
+          <button
+            onClick={() => setModalImage(results.desktop.image)}
+            className="rounded-xl overflow-hidden bg-white shadow-sm cursor-zoom-in hover:shadow-md transition-shadow"
+          >
+            <img
+              src={results.desktop.image}
+              alt={`${title} Google PageSpeed desktop score — ${results.desktop.performance}/100`}
+              loading="lazy"
+              className="w-full h-auto"
+            />
+          </button>
+          <button
+            onClick={() => setModalImage(results.mobile.image)}
+            className="rounded-xl overflow-hidden bg-white shadow-sm cursor-zoom-in hover:shadow-md transition-shadow"
+          >
+            <img
+              src={results.mobile.image}
+              alt={`${title} Google PageSpeed mobile score — ${results.mobile.performance}/100`}
+              loading="lazy"
+              className="w-full h-auto"
+            />
+          </button>
+        </div>
+        <p className="text-[10px] text-brand-primary/50 mt-3 text-center">
+          Desktop: {results.desktop.performance}/100 · Mobile: {results.mobile.performance}/100 — Accessibility, Best Practices & SEO all 100
+        </p>
+      </div>
+
+      {/* Modal */}
+      {modalImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          onClick={() => setModalImage(null)}
+        >
+          <button
+            onClick={() => setModalImage(null)}
+            className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
+            aria-label="Close"
+          >
+            <X size={28} />
+          </button>
+          <img
+            src={modalImage}
+            alt="Google PageSpeed Insights result"
+            className="max-w-full max-h-[90vh] rounded-2xl shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
 function FeaturedProject({ project, index, isReversed }: { project: typeof featuredProjects[number]; index: number; isReversed: boolean }) {
   const hasCarousel = !!project.images && project.images.length > 1;
+  const hasResults = !!project.results;
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -93,6 +163,97 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
     return () => clearInterval(interval);
   }, [hasCarousel, project.images]);
 
+  /* Stacked layout for projects with results, side-by-side for others */
+  if (hasResults) {
+    return (
+      <section className="max-w-6xl mx-auto mb-16 md:mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          {/* Full-width image on top */}
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-lg shadow-brand-primary/10 bg-brand-primary/5 mb-8 md:mb-10"
+          >
+            {hasCarousel ? (
+              <div className="relative">
+                {project.images!.map((img, i) => (
+                  <img
+                    key={img}
+                    src={img}
+                    alt={`${project.title} website designed by Studio 925 — screenshot ${i + 1}`}
+                    loading={i === 0 ? undefined : 'lazy'}
+                    className={`w-full h-auto object-cover scale-110 transition-opacity duration-700 ${i === 0 ? '' : 'absolute inset-0'} ${i === activeIndex ? 'opacity-100' : 'opacity-0'}`}
+                  />
+                ))}
+              </div>
+            ) : (
+              <img
+                src={project.image}
+                alt={`${project.title} website designed by Studio 925`}
+                loading="lazy"
+                className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+              />
+            )}
+          </a>
+
+          {/* Details below — two columns on desktop */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 rounded-lg bg-brand-accent/10 text-brand-accent text-[11px] font-bold tracking-widest uppercase"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <h2 className="text-2xl md:text-4xl mb-2 md:mb-3">{project.title}</h2>
+              <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-5 md:mb-6">
+                {project.description}
+              </p>
+
+              <h3 className="text-xs font-bold uppercase tracking-widest text-brand-primary/40 mb-3">
+                What this site was built to do
+              </h3>
+              <ul className="space-y-2.5 mb-6 md:mb-8">
+                {project.purpose.map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-brand-primary/70">
+                    <CheckCircle2 size={16} className="text-brand-accent shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-semibold text-sm hover:bg-brand-primary/90 transition-all group"
+              >
+                View Website <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+
+            {/* PageSpeed results on the right */}
+            <div>
+              <PageSpeedResults title={project.title} results={project.results!} />
+            </div>
+          </div>
+        </motion.div>
+      </section>
+    );
+  }
+
+  /* Default side-by-side layout */
   return (
     <section className="max-w-6xl mx-auto mb-16 md:mb-24">
       <motion.div

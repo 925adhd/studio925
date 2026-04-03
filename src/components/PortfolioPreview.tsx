@@ -50,7 +50,7 @@ export default function PortfolioPreview() {
         <div className="hidden md:grid md:grid-cols-[1.2fr_1fr] gap-8 items-center">
           {/* Portfolio card */}
           <motion.a
-            href="https://csmedia.vercel.app"
+            href="https://cscreatesmedia.com"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
@@ -86,7 +86,7 @@ export default function PortfolioPreview() {
             </p>
             <div className="mb-6">
               <p className="text-sm font-semibold">
-                <a href="https://csmedia.vercel.app" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline">CS Media</a>
+                <a href="https://cscreatesmedia.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline">CS Media</a>
               </p>
               <p className="text-xs text-brand-primary/55">Real Estate Media · Leitchfield, KY</p>
             </div>
@@ -103,7 +103,7 @@ export default function PortfolioPreview() {
         {/* Mobile: stacked */}
         <div className="md:hidden">
           <motion.a
-            href="https://csmedia.vercel.app"
+            href="https://cscreatesmedia.com"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}

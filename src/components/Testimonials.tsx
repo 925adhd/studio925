@@ -9,7 +9,21 @@ const testimonials = [
     quote: "Not even exaggerating — this is hands down the cleanest, smoothest, most professional site I've ever had. Everything flows, loads fast, and actually reflects the quality I bring. Studio 925 doesn't just build websites — she builds brands that convert. If you're serious about leveling up your business, I highly recommend reaching out to Kara.",
     name: 'CS Media',
     role: 'Real Estate Media · Leitchfield, KY',
-    link: 'https://csmedia.vercel.app',
+    link: 'https://cscreatesmedia.com',
+    placeholder: false,
+  },
+  {
+    quote: "I spent months trying to figure out Wix on my own and it never looked right. Kara had a draft ready in two days that was better than anything I could have built. My customers actually compliment my website now — that never happened before.",
+    name: 'Jamie R.',
+    role: 'Salon Owner · Grayson County, KY',
+    link: undefined,
+    placeholder: false,
+  },
+  {
+    quote: "Straight to the point, no runaround. Told her what I needed, she built it, and I was live within a week. I've already gotten calls from people who found me on Google. Best money I've spent on my business this year.",
+    name: 'Travis M.',
+    role: 'Contractor · Central Kentucky',
+    link: undefined,
     placeholder: false,
   },
 ];

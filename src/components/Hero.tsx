@@ -56,6 +56,7 @@ export default function Hero() {
               Get Started <ArrowRight size={20} />
             </a>
             <Link href="/portfolio" onClick={() => trackEvent('click_see_my_work', 'hero_desktop')} className="bg-white border border-brand-primary/10 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-primary/5 transition-colors text-brand-primary flex items-center justify-center gap-2">
+              <img src="/kara-gibson-small.webp" alt="Kara Gibson, owner of Studio 925" width={28} height={28} className="w-7 h-7 rounded-full object-cover shrink-0" />
               See My Work
             </Link>
           </motion.div>

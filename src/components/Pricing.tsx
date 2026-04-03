@@ -58,7 +58,7 @@ export default function Pricing() {
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 md:mb-4 leading-snug">Simple pricing. <span className="italic text-brand-accent">Real results.</span></h2>
           <p className="text-brand-primary/60 text-sm md:text-lg mt-2 md:mt-3">One flat price per project. No hourly billing, no hidden fees, no monthly platform costs.</p>
-          <p className="text-[11px] md:text-sm text-brand-primary/70 mt-2 md:mt-4">Introductory pricing currently available for new projects.</p>
+          <Link href="/blog/is-custom-website-worth-it" className="inline-block text-xs text-emerald-700 underline underline-offset-2 hover:text-emerald-800 mt-2 md:mt-3 transition-colors">See how a $900 website pays for itself →</Link>
         </div>
 
         {/* Hero card — Foundation */}
@@ -172,24 +172,13 @@ export default function Pricing() {
           ))}
         </div>
 
-        <div className="text-center mt-8 md:mt-12 space-y-2">
-          <p className="text-xs text-brand-primary/70">
-            50% deposit to get started. You fully own your website and all files after final payment.
-          </p>
-          <p className="text-xs text-brand-primary/70">
-            Hosting is separate — <Link href="/hosting-support" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">plans start at $25/month</Link>.
-          </p>
-          <p className="text-xs text-brand-primary/70 mt-2">
-            Want to understand pricing?
-          </p>
-          <p className="text-xs mt-1">
-            <Link href="/website-cost" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">Read the website cost guide</Link>.
-          </p>
-        </div>
+        <p className="text-center text-xs text-brand-primary/70 mt-8 md:mt-12">
+          50% deposit to start. You own everything after final payment.
+        </p>
       </div>
 
       {/* After Launch Bridge */}
-      <div className="max-w-2xl mx-auto text-center mt-16 md:mt-20 pt-10 md:pt-16 border-t border-brand-primary/5">
+      <div className="max-w-2xl mx-auto text-center mt-12 md:mt-16 pt-8 md:pt-12 border-t border-brand-primary/5">
         <h3 className="text-xl md:text-3xl mb-3 md:mb-4">Keep Your Website Running Smoothly</h3>
         <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-8 md:mb-10 max-w-lg mx-auto">
           We handle updates, backups, and support so your website stays online and working for your business.
