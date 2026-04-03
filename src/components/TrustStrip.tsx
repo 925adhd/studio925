@@ -9,18 +9,21 @@ const items = [
     mobileTitle: '48-Hour Draft',
     desc: 'See a working version of your website in days, not weeks.',
     icon: Clock,
+    href: undefined as string | undefined,
   },
   {
     title: 'Local',
     mobileTitle: 'Local',
     desc: 'One developer, right here in Leitchfield, KY. No outsourcing.',
     icon: Users,
+    href: '#local',
   },
   {
     title: 'Fully Custom',
     mobileTitle: 'Fully Custom',
     desc: 'Built with real code specifically for your business. No templates.',
     icon: Sparkles,
+    href: undefined as string | undefined,
   },
 ];
 
@@ -51,7 +54,11 @@ export default function TrustStrip() {
             >
               <CheckCircle2 size={22} className="text-brand-accent shrink-0 mt-0.5 md:w-6 md:h-6" />
               <div>
-                <p className="font-bold text-sm md:text-lg text-brand-primary mb-1.5">{item.title}</p>
+                {item.href ? (
+                  <a href={item.href} className="font-bold text-sm md:text-lg text-brand-primary mb-1.5 block hover:text-brand-accent transition-colors">{item.title}</a>
+                ) : (
+                  <p className="font-bold text-sm md:text-lg text-brand-primary mb-1.5">{item.title}</p>
+                )}
                 <p className="text-xs md:text-sm text-brand-primary/65 leading-relaxed mb-1">{item.desc}</p>
               </div>
             </motion.div>
