@@ -37,6 +37,17 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             <p className="text-brand-primary/50 text-sm mb-10">April 2, 2026 · 6 min read</p>
           </motion.div>
 
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-10">
+            <img
+              src="/wix-vs-custom-website-comparison.webp"
+              alt="Wix vs custom website comparison — scale balancing low-cost Wix template against a custom-built website with better SEO and performance"
+              width={1024}
+              height={1024}
+              className="w-full rounded-2xl"
+              loading="eager"
+            />
+          </motion.div>
+
           {/* Intro */}
           <div className="prose-studio">
             <p className="text-base md:text-lg text-brand-primary/70 leading-relaxed mb-8">

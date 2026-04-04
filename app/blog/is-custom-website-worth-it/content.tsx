@@ -37,6 +37,17 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             <p className="text-brand-primary/50 text-sm mb-10">April 2, 2026 · 5 min read</p>
           </motion.div>
 
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-10">
+            <img
+              src="/custom-website-worth-it-roi.webp"
+              alt="Is a custom website worth it — two business owners shaking hands in front of a laptop showing a $900 website investment with $2,400 ROI"
+              width={1024}
+              height={1024}
+              className="w-full rounded-2xl"
+              loading="eager"
+            />
+          </motion.div>
+
           <div className="prose-studio">
             {/* Intro */}
             <p className="text-base md:text-lg text-brand-primary/70 leading-relaxed mb-8">

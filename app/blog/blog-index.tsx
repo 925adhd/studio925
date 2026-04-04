@@ -8,6 +8,14 @@ import Footer from '../../src/components/Footer';
 
 const posts = [
   {
+    slug: 'your-website-is-a-tax-write-off',
+    title: 'Your Website Is a Tax Write-Off — Here\'s What to Know',
+    excerpt: 'A business website is generally tax-deductible under Section 179. Here\'s what small business owners need to know to keep more money in their pocket.',
+    date: '2026-04-04',
+    readTime: '4 min read',
+    tags: ['Tax Tips', 'Small Business'],
+  },
+  {
     slug: 'is-custom-website-worth-it',
     title: 'Is a Custom Website Worth It? Here\'s the Math.',
     excerpt: 'Your website is a business tool, not an expense. See how a $900 site can pay for itself with just one new customer.',

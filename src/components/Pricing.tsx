@@ -175,6 +175,13 @@ export default function Pricing() {
         <p className="text-center text-xs text-brand-primary/70 mt-8 md:mt-12">
           50% deposit to start. You own everything after final payment.
         </p>
+
+        <div className="mt-4 text-center">
+          <Link href="/blog/your-website-is-a-tax-write-off" className="inline-block text-xs text-emerald-700 underline underline-offset-2 hover:text-emerald-800 transition-colors">
+            Did you know? Your website may be fully tax-deductible as a business expense.
+          </Link>
+          <p className="text-[10px] text-brand-primary/65 mt-1">Consult a tax professional for your specific situation.</p>
+        </div>
       </div>
 
       {/* After Launch Bridge */}
