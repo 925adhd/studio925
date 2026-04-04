@@ -14,6 +14,7 @@ const posts = [
     date: '2026-04-04',
     readTime: '4 min read',
     tags: ['Tax Tips', 'Small Business'],
+    image: '/small-business-website-tax-write-off.webp',
   },
   {
     slug: 'is-custom-website-worth-it',
@@ -22,6 +23,7 @@ const posts = [
     date: '2026-04-02',
     readTime: '5 min read',
     tags: ['ROI', 'Small Business'],
+    image: '/custom-website-worth-it-roi.webp',
   },
   {
     slug: 'wix-vs-custom-website',
@@ -30,6 +32,7 @@ const posts = [
     date: '2026-04-02',
     readTime: '6 min read',
     tags: ['Comparison', 'Small Business'],
+    image: '/wix-vs-custom-website-comparison.webp',
   },
 ];
 
@@ -39,7 +42,7 @@ export default function BlogIndex() {
       <Navbar />
 
       <main className="pt-28 pb-20 px-6">
-        <section className="max-w-3xl mx-auto mb-16">
+        <section className="max-w-4xl mx-auto mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,8 +60,9 @@ export default function BlogIndex() {
           </motion.div>
         </section>
 
-        <section className="max-w-3xl mx-auto">
-          <div className="space-y-6">
+        <section className="max-w-4xl mx-auto">
+
+          <div className="grid md:grid-cols-2 gap-6">
             {posts.map((post, i) => (
               <motion.article
                 key={post.slug}
@@ -69,29 +73,39 @@ export default function BlogIndex() {
               >
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="block p-6 md:p-8 rounded-3xl bg-white border border-brand-primary/5 hover:border-brand-accent/20 hover:shadow-lg hover:shadow-brand-accent/5 transition-all group"
+                  className="block rounded-3xl bg-white border border-brand-primary/5 hover:border-brand-accent/20 hover:shadow-lg hover:shadow-brand-accent/5 transition-all group overflow-hidden"
                 >
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-0.5 rounded-lg bg-brand-accent/10 text-brand-accent text-[10px] font-bold tracking-widest uppercase"
-                      >
-                        {tag}
+                  <img
+                    src={post.image}
+                    alt=""
+                    width={896}
+                    height={300}
+                    className="w-full object-contain"
+                    loading="lazy"
+                  />
+                  <div className="p-6 md:p-8">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {post.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2.5 py-0.5 rounded-lg bg-brand-accent/10 text-brand-accent text-[10px] font-bold tracking-widest uppercase"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <h2 className="text-xl md:text-2xl mb-2 group-hover:text-brand-accent transition-colors">
+                      {post.title}
+                    </h2>
+                    <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-4">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-brand-primary/40">{post.readTime}</span>
+                      <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent group-hover:gap-2.5 transition-all">
+                        Read More <ArrowRight size={14} />
                       </span>
-                    ))}
-                  </div>
-                  <h2 className="text-xl md:text-2xl mb-2 group-hover:text-brand-accent transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-4">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-brand-primary/40">{post.readTime}</span>
-                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent group-hover:gap-2.5 transition-all">
-                      Read More <ArrowRight size={14} />
-                    </span>
+                    </div>
                   </div>
                 </Link>
               </motion.article>
@@ -100,7 +114,7 @@ export default function BlogIndex() {
         </section>
 
         {/* CTA */}
-        <section className="max-w-3xl mx-auto text-center mt-16 py-14 px-8 bg-brand-primary text-white rounded-[2.5rem]">
+        <section className="max-w-4xl mx-auto text-center mt-16 py-14 px-8 bg-brand-primary text-white rounded-[2.5rem]">
           <h2 className="text-2xl md:text-3xl mb-3">
             Ready to stop researching and start building?
           </h2>
