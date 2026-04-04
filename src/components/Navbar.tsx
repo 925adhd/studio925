@@ -23,6 +23,7 @@ export default function Navbar() {
           <Link href="/portfolio" className="text-sm font-medium hover:text-brand-accent transition-colors">Portfolio</Link>
           <a href="/#pricing" className="text-sm font-medium hover:text-brand-accent transition-colors">Pricing</a>
           <Link href="/hosting-support" className="text-sm font-medium hover:text-brand-accent transition-colors">Hosting & Support</Link>
+          <Link href="/blog" className="text-sm font-medium hover:text-brand-accent transition-colors">Blog</Link>
           <a href="/#contact" onClick={() => trackEvent('click_get_started', 'navbar')} className="bg-brand-primary text-white px-5 py-2 rounded-xl text-sm font-medium flex items-center gap-2 hover:bg-brand-primary/90 transition-all">
             Get Started <ArrowRight size={16} />
           </a>
@@ -51,6 +52,7 @@ export default function Navbar() {
             <Link href="/portfolio" onClick={() => setIsOpen(false)} className="text-lg font-medium">Portfolio</Link>
             <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-lg font-medium">Pricing</a>
             <Link href="/hosting-support" onClick={() => setIsOpen(false)} className="text-lg font-medium">Hosting & Support</Link>
+            <Link href="/blog" onClick={() => setIsOpen(false)} className="text-lg font-medium">Blog</Link>
             <div className="flex gap-3 mt-1">
               <a href="tel:+12705512210" onClick={() => { trackEvent('click_call', 'mobile_menu'); setIsOpen(false); }} className="bg-brand-accent text-white px-4 py-2.5 rounded-xl font-medium text-base flex items-center gap-2">
                 <Phone size={16} /> Call
