@@ -13,10 +13,15 @@
 @layer base {
   body {
     @apply bg-brand-warm text-brand-primary font-sans antialiased;
+    cursor: default;
   }
 
   h1, h2, h3, h4 {
     @apply font-serif font-bold tracking-tight;
+  }
+
+  a, button, [role="button"] {
+    cursor: pointer;
   }
 
   /* Visible focus ring for keyboard navigation */
