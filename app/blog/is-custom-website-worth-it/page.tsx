@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: 'Is a Custom Website Worth It? Here\'s the Math.',
     description: 'See how a $900 custom website pays for itself with one new customer.',
     url: '/blog/is-custom-website-worth-it',
+    images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],
   },
 };
 

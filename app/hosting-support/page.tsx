@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Website Care & Support | Studio 925',
     description: 'Hosting, backups, updates, and ongoing support for websites built by Studio 925. Keep your site running smoothly without dealing with the technical side.',
     url: '/hosting-support',
-    images: ['/studio925.png'],
+    images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],
   },
 };
 

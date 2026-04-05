@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: 'Your Website Is a Tax Write-Off. Here\'s What to Know',
     description: 'A business website is a tax-deductible expense. Here\'s what small business owners need to know.',
     url: '/blog/your-website-is-a-tax-write-off',
+    images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],
   },
 };
 

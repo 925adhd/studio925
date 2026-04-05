@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     url: '/',
     title: 'Studio 925 — Custom Websites for Small Businesses in Kentucky',
     description: 'Studio 925 builds custom websites for small businesses. No templates, no page builders — just fast, professional sites designed to bring in real customers.',
-    images: ['/studio925.png'],
+    images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Studio 925 — Custom Websites for Small Businesses in Kentucky',
     description: 'Studio 925 builds custom websites for small businesses. No templates, no page builders — just fast, professional sites designed to bring in real customers.',
-    images: ['/studio925.png'],
+    images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],
   },
   icons: {
     icon: '/fav.png',

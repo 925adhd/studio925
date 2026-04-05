@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: 'Blog — Web Design Tips for Small Businesses | Studio 925',
     description: 'Honest advice on web design, pricing, DIY vs custom websites, and how to get more customers online.',
     url: '/blog',
+    images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],
   },
 };
 

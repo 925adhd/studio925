@@ -10,13 +10,13 @@ export const metadata: Metadata = {
     title: 'How Much Does a Website Cost? | Studio 925',
     description: 'Website design costs explained. Learn what affects pricing, compare DIY vs custom, and see transparent pricing from a local Kentucky web designer.',
     url: '/website-cost',
-    images: ['/studio925.png'],
+    images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'How Much Does a Website Cost? | Studio 925',
     description: 'Website design costs explained. Learn what affects pricing, compare DIY vs custom, and see transparent pricing from a local Kentucky web designer.',
-    images: ['/studio925.png'],
+    images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],
   },
 };
 
