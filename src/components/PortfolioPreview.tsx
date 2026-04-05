@@ -1,35 +1,18 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Star } from 'lucide-react';
 import Link from 'next/link';
 import { trackEvent } from '../lib/gtag';
 
-const images = ['/csmedia-real-estate-media-homepage.webp', '/csmedia-listing-sold-hero.webp', '/csmedia-virtual-staging-service.webp', '/csmedia-featured-projects-portfolio.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'];
-
 function CarouselImage() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % images.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="relative">
-      {images.map((img, i) => (
-        <img
-          key={img}
-          src={img}
-          alt={`CS Media website screenshot ${i + 1}`}
-          loading="lazy"
-          className={`w-full h-full object-cover transition-opacity duration-700 ${i === 0 ? '' : 'absolute inset-0'} ${i === activeIndex ? 'opacity-100' : 'opacity-0'}`}
-        />
-      ))}
-    </div>
+    <img
+      src="/csmedia-listing-sold-hero.webp"
+      alt="CS Media website — Get your listing sold faster"
+      loading="lazy"
+      className="w-full h-full object-cover"
+    />
   );
 }
 

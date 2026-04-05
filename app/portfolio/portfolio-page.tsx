@@ -19,8 +19,8 @@ const featuredProjects = [
       'Establish a strong brand identity online',
     ],
     href: 'https://cscreatesmedia.com',
-    image: '/csmedia-real-estate-media-homepage.webp',
-    images: ['/csmedia-real-estate-media-homepage.webp', '/csmedia-listing-sold-hero.webp', '/csmedia-virtual-staging-service.webp', '/csmedia-featured-projects-portfolio.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'],
+    image: '/csmedia-listing-sold-hero.webp',
+    images: ['/csmedia-listing-sold-hero.webp', '/csmedia-virtual-staging-service.webp', '/csmedia-featured-projects-portfolio.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'],
     tags: ['Lead Generation', 'Branding'],
     results: {
       desktop: { performance: 100, accessibility: 100, bestPractices: 100, seo: 100, fcp: '0.3s', lcp: '0.7s', cls: '0', speedIndex: '0.6s', image: '/csmedia-speed-desktop.webp' },
@@ -61,11 +61,9 @@ const featuredProjects = [
     tags: ['E-commerce', 'Branding'],
     results: undefined as typeof featuredProjects[0]['results'] | undefined,
   },
-];
-
-const smallProjects = [
   {
     title: '925 ADHD',
+    tag: 'SaaS Platform',
     description:
       'Flexible remote work platform designed around how ADHD minds actually work — with a gated resource library, blog, and Stripe-powered subscriptions.',
     purpose: [
@@ -75,7 +73,9 @@ const smallProjects = [
     ],
     href: 'https://925adhd.com',
     image: '/925adhd.webp',
+    images: undefined as string[] | undefined,
     tags: ['SaaS', 'Lead Generation'],
+    results: undefined as typeof featuredProjects[0]['results'] | undefined,
   },
 ];
 
@@ -85,6 +85,7 @@ const features = [
   'Fast performance',
   'Clear Calls to Action',
   'Secure deployment',
+  'Custom-built, no templates',
 ];
 
 function PageSpeedResults({ title, results }: { title: string; results: NonNullable<typeof featuredProjects[0]['results']> }) {
@@ -188,7 +189,7 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
                     src={img}
                     alt={`${project.title} website designed by Studio 925 — screenshot ${i + 1}`}
                     loading={i === 0 ? undefined : 'lazy'}
-                    className={`w-full h-auto object-cover scale-110 transition-opacity duration-700 ${i === 0 ? '' : 'absolute inset-0'} ${i === activeIndex ? 'opacity-100' : 'opacity-0'}`}
+                    className={`w-full h-auto object-cover transition-opacity duration-700 ${i === 0 ? '' : 'absolute inset-0'} ${i === activeIndex ? 'opacity-100' : 'opacity-0'}`}
                   />
                 ))}
               </div>
@@ -372,81 +373,6 @@ export default function PortfolioPage() {
           );
         })}
 
-        {/* Divider */}
-        <div className="max-w-6xl mx-auto mb-12 md:mb-16">
-          <div className="border-t border-brand-primary/5" />
-        </div>
-
-        {/* Smaller Projects */}
-        <section className="max-w-6xl mx-auto mb-20">
-          <h2 className="text-xl md:text-3xl mb-6 md:mb-8">More Projects</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {smallProjects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="relative bg-white rounded-3xl border border-brand-primary/10 shadow-sm shadow-brand-primary/5 overflow-hidden"
-              >
-                {project.image && (
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block relative group bg-brand-primary/5 p-2.5 md:p-4"
-                  >
-                    <div className="h-44 rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 bg-white flex items-center justify-center relative">
-                      <img
-                        src={project.image}
-                        alt={`${project.title} website designed by Studio 925`}
-                        loading="lazy"
-                        className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/60 transition-all duration-300 flex items-center justify-center rounded-xl">
-                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-brand-primary px-5 py-2.5 rounded-xl font-semibold text-xs flex items-center gap-2">
-                          View Live Site <ArrowRight size={14} />
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                )}
-                <div className="p-5">
-                  <div className="flex flex-wrap gap-1.5 mb-3">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-0.5 rounded-md bg-brand-primary/5 text-brand-primary/60 text-[10px] font-medium tracking-wide"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <h3 className="text-xl font-bold mb-1.5">{project.title}</h3>
-                  <p className="text-sm text-brand-primary/60 leading-relaxed mb-4">{project.description}</p>
-                  <ul className="space-y-1.5 mb-4">
-                    {project.purpose.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-brand-primary/60 text-[13px]">
-                        <CheckCircle2 size={14} className="text-brand-accent shrink-0 mt-0.5" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[15px] font-semibold text-brand-accent hover:text-brand-accent/80 transition-colors group"
-                  >
-                    View Website
-                    <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
 
         {/* What Every Project Includes */}
         <section className="max-w-4xl mx-auto mb-12">
@@ -454,7 +380,7 @@ export default function PortfolioPage() {
             <h2 className="text-3xl md:text-4xl mb-8">
               What every project <span className="italic text-brand-accent">includes.</span>
             </h2>
-            <ul className="space-y-4">
+            <ul className="grid md:grid-cols-2 gap-4">
               {features.map((item) => (
                 <li key={item} className="flex items-center gap-3 text-brand-primary/80 text-lg">
                   <CheckCircle2 size={20} className="text-brand-accent shrink-0" />
