@@ -7,7 +7,7 @@ import Footer from '../src/components/Footer';
 
 const lastUpdated = 'March 31, 2026';
 const email = 'kara@studio925.design';
-const company = 'Studio 925';
+const company = 'Studio 925 Web Design';
 const llc = '925 ADHD LLC';
 const location = 'Grayson County, Kentucky';
 

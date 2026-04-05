@@ -50,11 +50,14 @@ export const metadata: Metadata = {
 const organizationLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Studio 925',
+  name: 'Studio 925 Web Design',
   url: 'https://studio925.design',
   logo: 'https://studio925.design/logo.png',
   email: 'kara@studio925.design',
   telephone: '+1-270-551-2210',
+  sameAs: [
+    'https://www.facebook.com/studio925design',
+  ],
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Leitchfield',
@@ -67,10 +70,13 @@ const organizationLd = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Studio 925',
+  name: 'Studio 925 Web Design',
   url: 'https://studio925.design',
   email: 'kara@studio925.design',
   telephone: '+1-270-551-2210',
+  sameAs: [
+    'https://www.facebook.com/studio925design',
+  ],
   description: 'Professional web design services for small businesses in Grayson County, Kentucky and surrounding areas.',
   image: [
     'https://studio925.design/studio925.png',

@@ -23,7 +23,7 @@ export default function Hero() {
             {...fade(0)}
             className="text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/60 mb-5"
           >
-            Helping Local Businesses Grow Online · Grayson County, Kentucky
+            Helping Local Businesses Grow Online · Leitchfield &amp; Grayson County, Kentucky
           </motion.p>
 
           <motion.h1
@@ -38,14 +38,14 @@ export default function Hero() {
             className="flex items-center justify-center gap-1.5 text-base mb-5"
           >
             <MapPin size={14} className="shrink-0 text-brand-primary/55" />
-            <span className="font-semibold text-brand-primary/70">Grayson County, KY</span>
+            <span className="font-semibold text-brand-primary/70">Leitchfield, KY</span>
           </motion.p>
 
           <motion.p
             {...fade(0.3)}
             className="text-xl text-brand-primary/70 mb-4 max-w-2xl leading-relaxed mx-auto"
           >
-            Fast, mobile-first websites built for small businesses in Grayson County. Built to look professional, load fast, and make it easy for customers to find and contact&nbsp;you.
+            Fast, mobile-first websites built for small businesses in Leitchfield and Grayson County. Built to look professional, load fast, and make it easy for customers to find and contact&nbsp;you.
           </motion.p>
 
           <motion.div
@@ -65,7 +65,7 @@ export default function Hero() {
         {/* Mobile: fully static, no animation — critical for LCP */}
         <div className="md:hidden">
           <p className="text-[9px] sm:text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/60 mb-4 sm:mb-5">
-            Helping Local Businesses Grow Online · Grayson County, Kentucky
+            Helping Local Businesses Grow Online · Leitchfield &amp; Grayson County, Kentucky
           </p>
 
           <h1 className="text-4xl sm:text-5xl mb-3 leading-[1.05] sm:leading-[1.1]">
@@ -74,11 +74,11 @@ export default function Hero() {
 
           <p className="flex items-center justify-center gap-1.5 text-sm mb-4">
             <MapPin size={14} className="shrink-0 text-brand-primary/55" />
-            <span className="font-semibold text-brand-primary/70">Grayson County, KY</span>
+            <span className="font-semibold text-brand-primary/70">Leitchfield, KY</span>
           </p>
 
           <p className="text-sm sm:text-[15px] text-brand-primary/70 mb-3 max-w-2xl leading-[1.65] mx-auto">
-            Fast, mobile-first websites built for small businesses in Grayson County. Built to look professional, load fast, and make it easy for customers to find and contact&nbsp;you.
+            Fast, mobile-first websites for small businesses in Leitchfield and Grayson County. Built to look professional, load fast, and help customers find&nbsp;you.
           </p>
 
           <div className="flex flex-col gap-5 justify-center">

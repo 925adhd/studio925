@@ -11,7 +11,7 @@ export default function Footer() {
               <img src={logo} alt="Studio 925 — custom websites for small businesses in Kentucky" width={162} height={56} loading="lazy" className="h-10 w-auto" />
             </div>
             <p className="text-brand-primary/60 max-w-sm mb-4">
-              Custom websites built right.<br />Solo developer based in Kentucky.
+              Custom websites built right.<br />Web designer in Leitchfield, KY.
             </p>
             <a
               href="https://www.facebook.com/studio925design"
@@ -76,7 +76,7 @@ export default function Footer() {
             <Link href="/disclaimer" className="underline hover:text-brand-accent transition-colors">Read our full disclaimer</Link>.
           </p>
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© {new Date().getFullYear()} Studio 925. A service operated by 925 ADHD LLC. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Studio 925 Web Design. A service operated by 925 ADHD LLC. All rights reserved.</p>
           <a
             href="https://billing.stripe.com/p/login/14A5kFeEHgCceEQcOIcIE00"
             target="_blank"
