@@ -13,7 +13,7 @@ const jsonLd = {
   "url": "https://studio925.design/web-design-grayson-county-ky",
   "email": "kara@studio925.design",
   "telephone": "+1-270-551-2210",
-  "description": "Custom web design for small businesses in Grayson County, Kentucky. Hand-coded websites built by a local developer to help businesses get found online and convert visitors into customers.",
+  "description": "Custom web design for small businesses in Grayson County, Kentucky. Custom-built websites by a local developer to help businesses get found online and convert visitors into customers.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Leitchfield",

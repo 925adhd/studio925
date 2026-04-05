@@ -13,7 +13,7 @@ const jsonLd = {
   "url": "https://studio925.design/small-business-website-design-kentucky",
   "email": "kara@studio925.design",
   "telephone": "+1-270-551-2210",
-  "description": "Custom website design for small businesses across Kentucky. Hand-coded websites built to help local businesses get found online, build trust, and convert visitors into customers.",
+  "description": "Custom website design for small businesses across Kentucky. Custom-built websites designed to help local businesses get found online, build trust, and convert visitors into customers.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Leitchfield",
@@ -214,7 +214,7 @@ export default function KentuckyContent() {
             What makes a Studio 925 website <span className="italic text-brand-accent">different</span>
           </h2>
           <p className="text-brand-primary/60 text-sm md:text-lg leading-relaxed mb-8 md:mb-12 max-w-2xl">
-            Every website is hand-coded. No templates. No page builders. Here's what that means for your business.
+            Every website is custom-built. No templates. No page builders. Here's what that means for your business.
           </p>
 
           <div className="grid md:grid-cols-3 gap-4 md:gap-6">
@@ -316,7 +316,7 @@ export default function KentuckyContent() {
               Every project in my portfolio was built for a real business with real goals. <a href="https://cscreatesmedia.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">CS Media</a> needed a site to generate leads for their media brand. <a href="https://4chariots.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">Four Chariots</a> needed an e-commerce store that reflected their brand. <a href="https://townly.us" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">Townly</a> was built to connect a local community with local businesses.
             </p>
             <p>
-              None of these are template sites. None of them use page builders. They're all hand-coded, fast, and designed around each business's specific audience and goals.
+              None of these are template sites. None of them use page builders. They're all custom-built, fast, and designed around each business's specific audience and goals.
             </p>
           </div>
           <div className="mt-6 md:mt-8">

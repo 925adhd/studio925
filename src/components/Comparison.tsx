@@ -10,7 +10,7 @@ const points = [
   { diy: 'You fix mobile issues yourself', studio: 'Mobile-ready from the start' },
   { diy: 'You figure out updates alone', studio: 'We update it for you' },
   { diy: 'Something breaks? You\'re on your own', studio: 'Something breaks? We fix it' },
-  { diy: 'SEO? Set it up yourself', studio: 'Google setup included' },
+  { diy: 'SEO? Set it up yourself', studio: 'SEO setup included' },
   { diy: 'Hours of your time', studio: 'Minimal time from you' },
 ];
 

@@ -280,7 +280,7 @@ function CustomBuiltDemo() {
       <div className="hidden md:grid md:grid-cols-[1fr_auto_1.2fr] gap-8 items-center">
         <div className="pr-4">
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-4 px-3 py-1 bg-brand-accent/8 rounded-md">
-            Hand-coded for you
+            Custom-built for you
           </span>
           <h3 className="text-3xl lg:text-4xl mb-4">Your site actually fits your business.</h3>
           <p className="text-brand-primary/60 leading-relaxed">
@@ -360,7 +360,7 @@ function CustomBuiltDemo() {
       {/* Mobile — same concept, smaller */}
       <div className="md:hidden">
         <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-3 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
-          Hand-coded for you
+          Custom-built for you
         </span>
         <div className="grid grid-cols-2 gap-3 mb-5">
           {/* Template — messy */}

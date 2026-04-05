@@ -204,7 +204,7 @@ export default function LeitchfieldContent() {
             {[
               { title: 'Get found first', text: 'When someone in Leitchfield searches for a contractor, a restaurant, or a local service, they go to Google first. If your business doesn\'t show up, they\'re calling someone else.' },
               { title: 'Build instant trust', text: 'A professional website tells potential customers that you\'re serious. In a town like Leitchfield where reputation matters, your website should reflect the quality of your work.' },
-              { title: 'Work with a local', text: 'Most designers serving Leitchfield are based hours away or use cookie-cutter templates. Studio 925 is right here in Grayson County. I build every site by hand.' },
+              { title: 'Work with a local', text: 'Most designers serving Leitchfield are based hours away or use cookie-cutter templates. Studio 925 is right here in Grayson County. Every site is custom-built from scratch.' },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -302,7 +302,7 @@ export default function LeitchfieldContent() {
           </h2>
           <div className="space-y-4 md:space-y-6 text-brand-primary/70 text-sm md:text-lg leading-relaxed">
             <p>
-              Most web designers use templates and page builders like Wix, Squarespace, or WordPress themes. I don't. Every Studio 925 website is hand-coded from scratch, which means faster load times, better Google rankings, and a site that actually looks like your business — not everyone else's.
+              Most web designers use templates and page builders like Wix, Squarespace, or WordPress themes. I don't. Every Studio 925 website is custom-built from scratch, which means faster load times, better Google rankings, and a site that actually looks like your business — not everyone else's.
             </p>
             <p>
               I'm based in Grayson County, not a remote agency three states away. When you work with me, you're talking directly to the person building your site. No account managers. No outsourcing. No runaround.
