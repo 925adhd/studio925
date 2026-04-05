@@ -32,7 +32,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             </div>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl mb-4 leading-[1.1]">
-              Your Website Is a Tax Write-Off — Here's What to Know
+              Your Website Is a Tax Write-Off. Here's What to Know
             </h1>
             <p className="text-brand-primary/50 text-sm mb-10">April 4, 2026 · 4 min read</p>
           </motion.div>
@@ -40,7 +40,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-10">
             <img
               src="/small-business-website-tax-write-off.webp"
-              alt="Small business website tax write-off under Section 179 — laptop showing tax deduction form next to a small business storefront and piggy bank"
+              alt="Small business website tax write-off under Section 179, laptop showing tax deduction form next to a small business storefront and piggy bank"
               width={1024}
               height={1024}
               className="w-full rounded-2xl"
@@ -51,7 +51,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
           <div className="prose-studio">
             {/* Intro */}
             <p className="text-base md:text-lg text-brand-primary/70 leading-relaxed mb-8">
-              If you're a small business owner, here's something you might not know: <strong>the money you spend on your business website is generally tax-deductible.</strong> That means the IRS lets you subtract it from your taxable income — putting real money back in your pocket.
+              If you're a small business owner, here's something you might not know: <strong>the money you spend on your business website is generally tax-deductible.</strong> That means the IRS lets you subtract it from your taxable income, putting real money back in your pocket.
             </p>
 
             <div className="p-5 rounded-2xl bg-amber-50 border border-amber-200/60 mb-8">
@@ -93,7 +93,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             </div>
 
             <p className="text-brand-primary/70 leading-relaxed mb-8">
-              Either way, it reduces your taxable income — which means you pay less in taxes. Your tax professional can tell you which option makes the most sense for your business.
+              Either way, it reduces your taxable income, which means you pay less in taxes. Your tax professional can tell you which option makes the most sense for your business.
             </p>
 
             {/* What you can deduct */}
@@ -104,12 +104,12 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
 
             <div className="p-6 rounded-2xl bg-brand-primary/[0.03] border border-brand-primary/5 mb-8">
               <ul className="space-y-3 text-sm text-brand-primary/70">
-                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">1.</span><span><strong>Website design & development</strong> — the cost of building your site</span></li>
-                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">2.</span><span><strong>Domain name registration</strong> — your .com or other domain</span></li>
-                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">3.</span><span><strong>Hosting fees</strong> — monthly or annual hosting costs</span></li>
-                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">4.</span><span><strong>Maintenance & updates</strong> — ongoing support and changes</span></li>
-                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">5.</span><span><strong>SSL certificates</strong> — security for your site</span></li>
-                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">6.</span><span><strong>SEO services</strong> — work done to help your site rank on Google</span></li>
+                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">1.</span><span><strong>Website design & development:</strong> the cost of building your site</span></li>
+                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">2.</span><span><strong>Domain name registration:</strong> your .com or other domain</span></li>
+                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">3.</span><span><strong>Hosting fees:</strong> monthly or annual hosting costs</span></li>
+                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">4.</span><span><strong>Maintenance & updates:</strong> ongoing support and changes</span></li>
+                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">5.</span><span><strong>SSL certificates:</strong> security for your site</span></li>
+                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">6.</span><span><strong>SEO services:</strong> work done to help your site rank on Google</span></li>
               </ul>
             </div>
 
@@ -140,18 +140,18 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
                     <p className="text-2xl font-bold text-emerald-600">~$327</p>
                   </div>
                 </div>
-                <p className="text-xs text-brand-primary/50">At the 22% bracket. Your actual savings depend on your tax situation — ask your accountant for your specific number.</p>
+                <p className="text-xs text-brand-primary/50">At the 22% bracket. Your actual savings depend on your tax situation. Ask your accountant for your specific number.</p>
               </div>
             </div>
 
             <p className="text-brand-primary/70 leading-relaxed mb-8">
-              That's money back in your pocket just for investing in something your business already needs. And remember — the website is also <Link href="/blog/is-custom-website-worth-it" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">bringing in new customers on top of that</Link>.
+              That's money back in your pocket just for investing in something your business already needs. And the website is also <Link href="/blog/is-custom-website-worth-it" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">bringing in new customers on top of that</Link>.
             </p>
 
             {/* Callout */}
             <div className="p-6 md:p-8 rounded-2xl bg-brand-primary text-white mb-8">
               <p className="text-white/85 leading-relaxed text-center">
-                <strong className="text-lg">Your website isn't just a business tool — it's a business deduction.</strong><br />
+                <strong className="text-lg">Your website isn't just a business tool. It's a business deduction.</strong><br />
                 <span className="text-white/65 text-sm">Invest in your business. Write it off. Keep more of what you earn.</span>
               </p>
             </div>
@@ -163,19 +163,19 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
               <ul className="space-y-3 text-sm text-brand-primary/70">
                 <li className="flex items-start gap-3">
                   <ShieldCheck size={16} className="text-brand-accent mt-0.5 shrink-0" />
-                  <span><strong>Keep every invoice and receipt</strong> — your website build, hosting payments, domain renewals, all of it</span>
+                  <span><strong>Keep every invoice and receipt.</strong> Your website build, hosting payments, domain renewals, all of it.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ShieldCheck size={16} className="text-brand-accent mt-0.5 shrink-0" />
-                  <span><strong>Pay from a business account</strong> — makes it easier to track and prove the expense</span>
+                  <span><strong>Pay from a business account.</strong> Makes it easier to track and prove the expense.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ShieldCheck size={16} className="text-brand-accent mt-0.5 shrink-0" />
-                  <span><strong>Talk to your tax professional</strong> — they'll tell you exactly how to claim it and which method saves you the most</span>
+                  <span><strong>Talk to your tax professional.</strong> They'll tell you exactly how to claim it and which method saves you the most.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ShieldCheck size={16} className="text-brand-accent mt-0.5 shrink-0" />
-                  <span><strong>Don't wait until tax season</strong> — invest now and deduct it this year</span>
+                  <span><strong>Don't wait until tax season.</strong> Invest now and deduct it this year.</span>
                 </li>
               </ul>
             </div>
@@ -183,7 +183,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             {/* Bottom line */}
             <h2 className="text-2xl md:text-3xl mt-12 mb-6">The Bottom Line</h2>
             <p className="text-brand-primary/70 leading-relaxed mb-6">
-              You need a website for your business. The IRS generally lets you deduct it. That makes a $900 website even more affordable than it already is. Talk to your accountant, keep your receipts, and put your website to work — for your customers <em>and</em> your tax return.
+              You need a website for your business. The IRS generally lets you deduct it. That makes a $900 website even more affordable than it already is. Talk to your accountant, keep your receipts, and put your website to work for your customers <em>and</em> your tax return.
             </p>
 
             <div className="p-5 rounded-2xl bg-amber-50 border border-amber-200/60 mb-8">
