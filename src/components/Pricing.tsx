@@ -69,7 +69,7 @@ export default function Pricing() {
           className="relative bg-brand-primary text-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl mb-4"
         >
           <div className="absolute -top-4 left-8 md:left-12 bg-brand-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
-            Ready to go
+            Foundation
           </div>
 
           <div className="md:flex md:gap-12 md:items-start">

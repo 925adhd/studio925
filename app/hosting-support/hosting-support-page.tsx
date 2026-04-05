@@ -28,7 +28,7 @@ const plans = [
       'Secure hosting, backups, and performance monitoring',
       'Ongoing SEO — meta tags, indexing, and site health',
       'Domain & setup:',
-      'Free custom domain included~',
+      'Free custom domain~',
       'DNS, email routing, and SSL included',
       'Updates & support:',
       'Text, images, and layout changes — just message me',

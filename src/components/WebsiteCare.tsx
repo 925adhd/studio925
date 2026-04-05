@@ -21,7 +21,7 @@ const plans = [
     price: "49",
     features: [
       "Everything in Hosting",
-      "Free custom domain included",
+      "Free custom domain",
       "DNS setup + email routing",
       "SSL included",
       "Need something changed? Just message me — I handle it",

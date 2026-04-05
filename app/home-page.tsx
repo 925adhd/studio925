@@ -61,23 +61,23 @@ export default function HomePage() {
                 { step: "01", title: "Quick Conversation", desc: "Tell me about your business, or just point me to your current website or Facebook page. That's enough to get started.", time: "Day 1", illustration: (
                   <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-28 h-auto">
                     {/* First chat bubble */}
-                    <rect x="8" y="20" width="58" height="38" rx="12" fill="#059669" opacity="0.12" />
-                    <rect x="12" y="24" width="50" height="30" rx="10" fill="#059669" opacity="0.18" />
-                    <circle cx="27" cy="39" r="3" fill="#059669" style={{ animation: 'dot-pulse 1.5s ease-in-out infinite' }} />
-                    <circle cx="37" cy="39" r="3" fill="#059669" style={{ animation: 'dot-pulse 1.5s ease-in-out 0.2s infinite' }} />
-                    <circle cx="47" cy="39" r="3" fill="#059669" style={{ animation: 'dot-pulse 1.5s ease-in-out 0.4s infinite' }} />
-                    <path d="M18 54 L12 66 L28 54" fill="#059669" opacity="0.18" />
+                    <rect x="8" y="20" width="58" height="38" rx="12" fill="#059669" opacity="0.15" />
+                    <rect x="12" y="24" width="50" height="30" rx="10" fill="#059669" opacity="0.22" />
+                    <circle cx="27" cy="39" r="3" fill="#059669" style={{ animation: 'dot-typing 1.8s ease-in-out infinite' }} />
+                    <circle cx="37" cy="39" r="3" fill="#059669" style={{ animation: 'dot-typing 1.8s ease-in-out 0.3s infinite' }} />
+                    <circle cx="47" cy="39" r="3" fill="#059669" style={{ animation: 'dot-typing 1.8s ease-in-out 0.6s infinite' }} />
+                    <path d="M18 54 L12 66 L28 54" fill="#059669" opacity="0.22" />
                     {/* Reply bubble — slides in */}
                     <g style={{ animation: 'reply-in 0.6s ease-out 0.5s both' }}>
-                      <rect x="50" y="48" width="62" height="32" rx="10" fill="#059669" opacity="0.10" />
-                      <rect x="54" y="52" width="54" height="24" rx="8" fill="#059669" opacity="0.15" />
-                      <rect x="62" y="61" width="20" height="3" rx="1.5" fill="#059669" opacity="0.35" />
-                      <rect x="62" y="67" width="32" height="3" rx="1.5" fill="#059669" opacity="0.25" />
-                      <path d="M100 80 L108 90 L94 80" fill="#059669" opacity="0.15" />
+                      <rect x="50" y="48" width="62" height="32" rx="10" fill="#059669" opacity="0.13" />
+                      <rect x="54" y="52" width="54" height="24" rx="8" fill="#059669" opacity="0.2" />
+                      <rect x="62" y="61" width="20" height="3" rx="1.5" fill="#059669" opacity="0.4" />
+                      <rect x="62" y="67" width="32" height="3" rx="1.5" fill="#059669" opacity="0.3" />
+                      <path d="M100 80 L108 90 L94 80" fill="#059669" opacity="0.2" />
                     </g>
                     {/* Person silhouette */}
-                    <circle cx="98" cy="16" r="8" fill="#0f172a" opacity="0.08" />
-                    <path d="M86 38 Q98 28 110 38" fill="#0f172a" opacity="0.06" />
+                    <circle cx="98" cy="16" r="8" fill="#0f172a" opacity="0.1" />
+                    <path d="M86 38 Q98 28 110 38" fill="#0f172a" opacity="0.08" />
                   </svg>
                 )},
                 { step: "02", title: "48-Hour Draft", desc: "You'll have a working draft of your website within 48 hours. No weeks of waiting around.", time: "Day 2–3", illustration: (
@@ -92,9 +92,9 @@ export default function HomePage() {
                     <rect x="86" y="49" width="6" height="2" rx="1" fill="#059669" opacity="0.4" />
                     <rect x="28" y="49" width="6" height="2" rx="1" fill="#059669" opacity="0.4" />
                     {/* Hour hand */}
-                    <line x1="60" y1="50" x2="60" y2="34" stroke="#0f172a" strokeWidth="2.5" strokeLinecap="round" opacity="0.5" style={{ transformOrigin: '60px 50px', animation: 'hand-spin 50s linear infinite' }} />
+                    <line x1="60" y1="50" x2="60" y2="34" stroke="#0f172a" strokeWidth="2.5" strokeLinecap="round" opacity="0.5" style={{ transformOrigin: '60px 50px', animation: 'hand-spin 120s linear infinite' }} />
                     {/* Minute hand */}
-                    <line x1="60" y1="50" x2="60" y2="28" stroke="#059669" strokeWidth="2" strokeLinecap="round" opacity="0.7" style={{ transformOrigin: '60px 50px', animation: 'hand-spin 10s linear infinite' }} />
+                    <line x1="60" y1="50" x2="60" y2="28" stroke="#059669" strokeWidth="2" strokeLinecap="round" opacity="0.7" style={{ transformOrigin: '60px 50px', animation: 'hand-spin 20s linear infinite' }} />
                     <circle cx="60" cy="50" r="3" fill="#059669" opacity="0.6" />
                     {/* "48h" label */}
                     <rect x="74" y="62" width="34" height="18" rx="9" fill="#059669" opacity="0.15" />
@@ -131,32 +131,25 @@ export default function HomePage() {
                     {/* Rocket — gentle float */}
                     <g style={{ animation: 'rocket-float 3s ease-in-out infinite' }}>
                       {/* Rocket body */}
-                      <path d="M60 8 Q68 20 68 40 L52 40 Q52 20 60 8Z" fill="#059669" opacity="0.2" />
-                      <path d="M56 12 Q60 8 64 12 Q66 22 66 38 L54 38 Q54 22 56 12Z" fill="#059669" opacity="0.3" />
+                      <path d="M60 8 Q68 20 68 40 L52 40 Q52 20 60 8Z" fill="#059669" opacity="0.25" />
+                      <path d="M56 12 Q60 8 64 12 Q66 22 66 38 L54 38 Q54 22 56 12Z" fill="#059669" opacity="0.35" />
                       {/* Rocket window */}
-                      <circle cx="60" cy="26" r="4" fill="white" opacity="0.8" />
-                      <circle cx="60" cy="26" r="2.5" fill="#059669" opacity="0.2" />
+                      <circle cx="60" cy="26" r="4" fill="white" opacity="0.85" />
+                      <circle cx="60" cy="26" r="2.5" fill="#059669" opacity="0.25" />
                       {/* Rocket fins */}
-                      <path d="M52 32 L44 42 L52 40Z" fill="#059669" opacity="0.18" />
-                      <path d="M68 32 L76 42 L68 40Z" fill="#059669" opacity="0.18" />
+                      <path d="M52 32 L44 42 L52 40Z" fill="#059669" opacity="0.22" />
+                      <path d="M68 32 L76 42 L68 40Z" fill="#059669" opacity="0.22" />
                       {/* Flame — flickers */}
-                      <path d="M54 40 Q57 52 60 56 Q63 52 66 40Z" fill="#059669" opacity="0.15" style={{ transformOrigin: '60px 40px', animation: 'flame-flicker 0.8s ease-in-out infinite' }} />
-                      <path d="M56 40 Q58 48 60 52 Q62 48 64 40Z" fill="#059669" opacity="0.25" style={{ transformOrigin: '60px 40px', animation: 'flame-flicker 0.8s ease-in-out 0.4s infinite' }} />
+                      <path d="M54 40 Q57 52 60 56 Q63 52 66 40Z" fill="#059669" opacity="0.2" style={{ transformOrigin: '60px 40px', animation: 'flame-flicker 0.8s ease-in-out infinite' }} />
+                      <path d="M56 40 Q58 48 60 52 Q62 48 64 40Z" fill="#059669" opacity="0.3" style={{ transformOrigin: '60px 40px', animation: 'flame-flicker 0.8s ease-in-out 0.4s infinite' }} />
                     </g>
                     {/* Smoke trail — static */}
-                    <circle cx="60" cy="62" r="5" fill="#0f172a" opacity="0.04" />
-                    <circle cx="55" cy="70" r="7" fill="#0f172a" opacity="0.03" />
-                    <circle cx="66" cy="72" r="6" fill="#0f172a" opacity="0.03" />
-                    <circle cx="58" cy="80" r="8" fill="#0f172a" opacity="0.02" />
-                    {/* Stars — twinkle */}
-                    <circle cx="28" cy="18" r="2" fill="#059669" style={{ animation: 'star-twinkle 2s ease-in-out infinite' }} />
-                    <circle cx="88" cy="14" r="1.5" fill="#059669" style={{ animation: 'star-twinkle 2s ease-in-out 0.5s infinite' }} />
-                    <circle cx="20" cy="40" r="1.5" fill="#059669" style={{ animation: 'star-twinkle 2s ease-in-out 1s infinite' }} />
-                    <circle cx="96" cy="32" r="2" fill="#059669" style={{ animation: 'star-twinkle 2s ease-in-out 1.5s infinite' }} />
-                    <circle cx="38" cy="10" r="1" fill="#059669" style={{ animation: 'star-twinkle 2s ease-in-out 0.3s infinite' }} />
-                    <circle cx="82" cy="28" r="1" fill="#059669" style={{ animation: 'star-twinkle 2s ease-in-out 0.8s infinite' }} />
+                    <circle cx="60" cy="62" r="5" fill="#0f172a" opacity="0.08" />
+                    <circle cx="55" cy="70" r="7" fill="#0f172a" opacity="0.06" />
+                    <circle cx="66" cy="72" r="6" fill="#0f172a" opacity="0.06" />
+                    <circle cx="58" cy="80" r="8" fill="#0f172a" opacity="0.04" />
                     {/* Ground line */}
-                    <path d="M20 90 Q40 85 60 88 Q80 91 100 86" stroke="#059669" strokeWidth="1.5" strokeLinecap="round" opacity="0.12" />
+                    <path d="M20 90 Q40 85 60 88 Q80 91 100 86" stroke="#059669" strokeWidth="1.5" strokeLinecap="round" opacity="0.15" />
                   </svg>
                 )}
               ].map((item, i) => (
