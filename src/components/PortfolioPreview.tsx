@@ -6,7 +6,7 @@ import { ArrowRight, Star } from 'lucide-react';
 import Link from 'next/link';
 import { trackEvent } from '../lib/gtag';
 
-const images = ['/csmedia.webp', '/cs1.webp', '/cs2.webp', '/cs3.webp', '/cs4.webp', '/cs5.webp'];
+const images = ['/csmedia-real-estate-media-homepage.webp', '/csmedia-listing-sold-hero.webp', '/csmedia-virtual-staging-service.webp', '/csmedia-featured-projects-portfolio.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'];
 
 function CarouselImage() {
   const [activeIndex, setActiveIndex] = useState(0);

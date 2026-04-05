@@ -52,7 +52,7 @@ const organizationLd = {
   '@type': 'Organization',
   name: 'Studio 925 Web Design',
   url: 'https://studio925.design',
-  logo: 'https://studio925.design/logo.png',
+  logo: 'https://studio925.design/fav.png',
   email: 'kara@studio925.design',
   telephone: '+1-270-551-2210',
   sameAs: [

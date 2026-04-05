@@ -19,8 +19,8 @@ const featuredProjects = [
       'Establish a strong brand identity online',
     ],
     href: 'https://cscreatesmedia.com',
-    image: '/csmedia.webp',
-    images: ['/csmedia.webp', '/cs1.webp', '/cs2.webp', '/cs3.webp', '/cs4.webp', '/cs5.webp'],
+    image: '/csmedia-real-estate-media-homepage.webp',
+    images: ['/csmedia-real-estate-media-homepage.webp', '/csmedia-listing-sold-hero.webp', '/csmedia-virtual-staging-service.webp', '/csmedia-featured-projects-portfolio.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'],
     tags: ['Lead Generation', 'Branding'],
     results: {
       desktop: { performance: 100, accessibility: 100, bestPractices: 100, seo: 100, fcp: '0.3s', lcp: '0.7s', cls: '0', speedIndex: '0.6s', image: '/csmedia-speed-desktop.webp' },
