@@ -9,7 +9,7 @@ import Footer from '../../src/components/Footer';
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["ProfessionalService", "Service"],
-  "name": "Studio 925 — Small Business Website Design in Kentucky",
+  "name": "Studio 925 Web Design — Custom Websites for Small Businesses in Kentucky",
   "url": "https://studio925.design/small-business-website-design-kentucky",
   "email": "kara@studio925.design",
   "telephone": "+1-270-551-2210",
@@ -25,9 +25,9 @@ const jsonLd = {
     "@type": "State",
     "name": "Kentucky"
   },
-  "serviceType": ["Website Design", "Web Design", "Small Business Website Design", "E-Commerce Website Design", "Local SEO"],
+  "serviceType": ["Custom Website Design", "Web Design", "Small Business Website Design", "E-Commerce Website Design", "Local SEO"],
   "priceRange": "$$",
-  "knowsAbout": ["Web Design", "Small Business Website Design Kentucky", "Custom Website Development", "Local SEO", "E-Commerce"]
+  "knowsAbout": ["Custom Websites for Small Businesses", "Custom Website Design Kentucky", "Small Business Website Design Kentucky", "Local SEO", "E-Commerce"]
 };
 
 const faqItems = [
@@ -70,7 +70,7 @@ const breadcrumbLd = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://studio925.design' },
-    { '@type': 'ListItem', position: 2, name: 'Small Business Website Design in Kentucky', item: 'https://studio925.design/small-business-website-design-kentucky' },
+    { '@type': 'ListItem', position: 2, name: 'Custom Websites for Small Businesses in Kentucky', item: 'https://studio925.design/small-business-website-design-kentucky' },
   ],
 };
 
@@ -120,7 +120,7 @@ export default function KentuckyContent() {
               <MapPin size={12} className="shrink-0" /> Based in Kentucky
             </div>
             <h1 className="text-3xl md:text-6xl mb-4 md:mb-6 leading-[1.1]">
-              Small Business Website Design in <span className="italic text-brand-accent">Kentucky</span>
+              Custom Websites for Small Businesses in <span className="italic text-brand-accent">Kentucky</span>
             </h1>
             <p className="text-base md:text-xl text-brand-primary/70 max-w-xl leading-relaxed">
               Custom websites for Kentucky small businesses — built from scratch by a solo developer, not a template factory. Designed to get you found on Google and turn visitors into paying customers.
