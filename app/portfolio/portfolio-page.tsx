@@ -86,6 +86,7 @@ const features = [
   'Clear Calls to Action',
   'Secure deployment',
   'Custom-built, no templates',
+  'SEO backlink from Studio 925 to your site',
 ];
 
 function PageSpeedResults({ title, results }: { title: string; results: NonNullable<typeof featuredProjects[0]['results']> }) {
@@ -381,8 +382,8 @@ export default function PortfolioPage() {
               What every project <span className="italic text-brand-accent">includes.</span>
             </h2>
             <ul className="grid md:grid-cols-2 gap-4">
-              {features.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-brand-primary/80 text-lg">
+              {features.map((item, i) => (
+                <li key={item} className={`flex items-center gap-3 text-brand-primary/80 text-lg ${i === features.length - 1 ? 'md:col-span-2' : ''}`}>
                   <CheckCircle2 size={20} className="text-brand-accent shrink-0" />
                   {item}
                 </li>

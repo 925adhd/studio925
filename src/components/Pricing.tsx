@@ -17,6 +17,7 @@ const foundation = {
     "Mobile-first — looks great on every phone",
     "Contact form so customers can reach you",
     "Google-ready SEO setup",
+    "SEO backlink from Studio 925 to your site",
     "Domain setup + secure connection",
     "Simple logo cleanup if needed",
     "Optimized for fast load times",
