@@ -11,7 +11,7 @@ const points = [
   { diy: 'You figure out updates alone', studio: 'We update it for you' },
   { diy: 'Something breaks? You\'re on your own', studio: 'Something breaks? We fix it' },
   { diy: 'SEO? Set it up yourself', studio: 'SEO setup included' },
-  { diy: 'No backlinks to help your ranking', studio: 'SEO backlink from Studio 925 to your site' },
+  { diy: 'No backlinks to boost your ranking', studio: 'We link to your site, which helps your Google ranking' },
   { diy: 'Hours of your time', studio: 'Minimal time from you' },
 ];
 
