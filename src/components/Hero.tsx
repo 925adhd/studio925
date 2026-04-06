@@ -45,7 +45,7 @@ export default function Hero() {
             {...fade(0.3)}
             className="text-xl text-brand-primary/70 mb-4 max-w-2xl leading-relaxed mx-auto"
           >
-            Fast, mobile-first websites built for small businesses in Leitchfield and Grayson County. Built to look professional, load fast, and make it easy for customers to find and contact&nbsp;you.
+            Fast, mobile-first websites built to look professional, load fast, and make it easy for customers to find and contact&nbsp;you.
           </motion.p>
 
           <motion.div
@@ -78,7 +78,7 @@ export default function Hero() {
           </p>
 
           <p className="text-sm sm:text-[15px] text-brand-primary/70 mb-3 max-w-2xl leading-[1.65] mx-auto">
-            Fast, mobile-first websites built for small businesses in Leitchfield and Grayson County. Built to look professional, load fast, and make it easy for customers to find and contact&nbsp;you.
+            Fast, mobile-first websites built to look professional, load fast, and make it easy for customers to find and contact&nbsp;you.
           </p>
 
           <div className="flex flex-col gap-5 justify-center">
