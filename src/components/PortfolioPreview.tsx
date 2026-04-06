@@ -65,7 +65,7 @@ export default function PortfolioPreview() {
             </div>
             <div className="p-6 flex items-center justify-between gap-4">
               <div>
-                <p className="font-bold text-lg">CS Media</p>
+                <p className="font-bold text-lg">CS Media LLC</p>
                 <p className="text-sm text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
               </div>
               <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent shrink-0">
@@ -86,9 +86,10 @@ export default function PortfolioPreview() {
                 <Star key={j} size={16} className="text-brand-accent fill-brand-accent" />
               ))}
             </div>
-            <p className="text-base lg:text-lg text-brand-primary/70 leading-relaxed mb-6 italic">
-              "Not even exaggerating — this is hands down the cleanest, smoothest, most professional site I've ever had. Everything flows, loads fast, and actually reflects the quality I bring. Studio 925 doesn't just build websites — she builds brands that convert. If you're serious about leveling up your business, I highly recommend reaching out to Kara."
+            <p className="text-base lg:text-lg text-brand-primary/70 leading-relaxed mb-4 italic">
+              "Not even exaggerating, this is hands down the cleanest, smoothest, most professional site I've ever had. Everything flows, loads fast, and actually reflects the quality I bring. Studio 925 doesn't just build websites, she builds brands that convert. If you're serious about leveling up your business, I highly recommend reaching out to Kara."
             </p>
+            <p className="text-sm font-semibold text-brand-primary mb-6">Cheris, Owner of CS Media LLC</p>
             <Link
               href="/portfolio"
               onClick={() => trackEvent('click_view_portfolio', 'portfolio_preview')}
@@ -117,7 +118,7 @@ export default function PortfolioPreview() {
             </div>
             <div className="p-4 flex items-center justify-between gap-3">
               <div>
-                <p className="font-bold text-base">CS Media</p>
+                <p className="font-bold text-base">CS Media LLC</p>
                 <p className="text-xs text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
               </div>
               <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand-accent shrink-0">
@@ -138,11 +139,10 @@ export default function PortfolioPreview() {
                 <Star key={j} size={14} className="text-brand-accent fill-brand-accent" />
               ))}
             </div>
-            <p className="text-sm text-brand-primary/70 leading-relaxed mb-4 italic">
-              "Not even exaggerating — this is hands down the cleanest, smoothest, most professional site I've ever had. Studio 925 doesn't just build websites — she builds brands that convert."
+            <p className="text-sm text-brand-primary/70 leading-relaxed mb-3 italic">
+              "Not even exaggerating, this is hands down the cleanest, smoothest, most professional site I've ever had. Studio 925 doesn't just build websites, she builds brands that convert."
             </p>
-            <p className="text-xs font-semibold text-brand-primary">CS Media</p>
-            <p className="text-[11px] text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
+            <p className="text-xs font-semibold text-brand-primary">Cheris, Owner of CS Media LLC</p>
           </motion.div>
 
           <div className="text-center mt-8">
