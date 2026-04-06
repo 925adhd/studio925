@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight, Star, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { trackEvent } from '../lib/gtag';
 
@@ -63,9 +63,14 @@ export default function PortfolioPreview() {
                 <CarouselImage />
               </div>
             </div>
-            <div className="p-6">
-              <p className="font-bold text-lg">CS Media</p>
-              <p className="text-sm text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
+            <div className="p-6 flex items-center justify-between gap-4">
+              <div>
+                <p className="font-bold text-lg">CS Media</p>
+                <p className="text-sm text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
+              </div>
+              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent shrink-0">
+                Visit Site <ExternalLink size={13} />
+              </span>
             </div>
           </motion.a>
 
@@ -84,12 +89,6 @@ export default function PortfolioPreview() {
             <p className="text-base lg:text-lg text-brand-primary/70 leading-relaxed mb-6 italic">
               "Not even exaggerating — this is hands down the cleanest, smoothest, most professional site I've ever had. Everything flows, loads fast, and actually reflects the quality I bring. Studio 925 doesn't just build websites — she builds brands that convert. If you're serious about leveling up your business, I highly recommend reaching out to Kara."
             </p>
-            <div className="mb-6">
-              <p className="text-sm font-semibold">
-                <a href="https://cscreatesmedia.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent hover:underline">CS Media</a>
-              </p>
-              <p className="text-xs text-brand-primary/55">Real Estate Media · Leitchfield, KY</p>
-            </div>
             <Link
               href="/portfolio"
               onClick={() => trackEvent('click_view_portfolio', 'portfolio_preview')}
@@ -116,9 +115,14 @@ export default function PortfolioPreview() {
                 <CarouselImage />
               </div>
             </div>
-            <div className="p-4">
-              <p className="font-bold text-base">CS Media</p>
-              <p className="text-xs text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
+            <div className="p-4 flex items-center justify-between gap-3">
+              <div>
+                <p className="font-bold text-base">CS Media</p>
+                <p className="text-xs text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
+              </div>
+              <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand-accent shrink-0">
+                Visit Site <ExternalLink size={11} />
+              </span>
             </div>
           </motion.a>
 

@@ -166,9 +166,9 @@ function SearchIntentDemo() {
           transition={{ duration: 0.4, delay: 0.2 }}
           className="pl-4"
         >
-          <h3 className="text-3xl lg:text-4xl mb-4">Google understands your business.</h3>
+          <h3 className="text-3xl lg:text-4xl mb-4">Stop being invisible when customers search.</h3>
           <p className="text-brand-primary/60 leading-relaxed">
-            When someone searches for what you do, your business has a real chance to show up. Your site is structured so Google understands what you offer and where.
+            When someone searches for what you do, your business has a real chance to show up. Your site is structured so Google, ChatGPT, and other AI search tools understand what you offer and where.
           </p>
         </motion.div>
       </div>
@@ -225,9 +225,9 @@ function SearchIntentDemo() {
             </div>
           </div>
 
-          <h3 className="text-2xl mb-2">Google understands your business.</h3>
+          <h3 className="text-2xl mb-2">Stop being invisible when customers search.</h3>
           <p className="text-sm text-brand-primary/60 leading-relaxed">
-            When someone searches for what you do, your business has a real chance to show up. Your site is structured so Google understands what you offer and where.
+            When someone searches for what you do, your business has a real chance to show up. Your site is structured so Google, ChatGPT, and other AI search tools understand what you offer and where.
           </p>
         </motion.div>
       </div>
@@ -282,7 +282,7 @@ function CustomBuiltDemo() {
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-4 px-3 py-1 bg-brand-accent/8 rounded-md">
             Custom-built for you
           </span>
-          <h3 className="text-3xl lg:text-4xl mb-4">Your site actually fits your business.</h3>
+          <h3 className="text-3xl lg:text-4xl mb-4">Look like the real business you are.</h3>
           <p className="text-brand-primary/60 leading-relaxed">
             No templates. No drag-and-drop builders. Your site is coded from scratch, page by page, to say the right things and work the way your business needs it&nbsp;to.
           </p>
@@ -410,7 +410,7 @@ function CustomBuiltDemo() {
             </CustomBlock>
           </div>
         </div>
-        <h3 className="text-2xl mb-2">Your site actually fits your business.</h3>
+        <h3 className="text-2xl mb-2">Look like the real business you are.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed">
           No templates. No drag-and-drop builders. Your site is coded from scratch to say the right things and work the way your business needs it to.
         </p>
@@ -513,7 +513,7 @@ function ResponsiveDemo() {
         </div>
 
         <div>
-          <h3 className="text-3xl lg:text-4xl mb-4">Looks right on every screen.</h3>
+          <h3 className="text-3xl lg:text-4xl mb-4">Win the customers who decide on their phone.</h3>
           <p className="text-brand-primary/60 leading-relaxed mb-4">
             Most customers decide on their phone. Your site will load fast and look right immediately — no waiting, no pinching, no broken layouts.
           </p>
@@ -585,7 +585,7 @@ function ResponsiveDemo() {
             <p className="text-[7px] text-brand-accent/60 text-center mt-0.5 font-semibold">Mobile</p>
           </motion.div>
         </div>
-        <h3 className="text-2xl mb-2">Looks right on every screen.</h3>
+        <h3 className="text-2xl mb-2">Win the customers who decide on their phone.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed">
           Most customers decide on their phone. Your site will load fast and look right immediately — no waiting, no pinching, no broken layouts.
         </p>
@@ -698,7 +698,7 @@ function PerformanceDemo() {
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-4 px-3 py-1 bg-brand-accent/8 rounded-md">
             Built for speed &amp; security
           </span>
-          <h3 className="text-3xl lg:text-4xl mb-4">Fast, secure, and always online.</h3>
+          <h3 className="text-3xl lg:text-4xl mb-4">A slow site loses customers. Yours won't.</h3>
           <p className="text-brand-primary/60 leading-relaxed">
             A slow site loses customers before they read a word. Yours loads fast, stays secure, and doesn't go down.
           </p>
@@ -747,7 +747,7 @@ function PerformanceDemo() {
             ))}
           </div>
         </div>
-        <h3 className="text-2xl mb-2">Fast, secure, and always online.</h3>
+        <h3 className="text-2xl mb-2">A slow site loses customers. Yours won't.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed">
           A slow site loses customers before they read a word. Yours loads fast, stays secure, and doesn't go down.
         </p>
@@ -900,7 +900,7 @@ function SupportDemo() {
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-4 px-3 py-1 bg-brand-accent/8 rounded-md">
             Ongoing support
           </span>
-          <h3 className="text-3xl lg:text-4xl mb-4">Someone in your corner.</h3>
+          <h3 className="text-3xl lg:text-4xl mb-4">Never get stuck on your own again.</h3>
           <p className="text-brand-primary/60 leading-relaxed mb-4">
             You won't be handed a login and left to figure it out. After launch, I'm still here — updates, fixes, or just someone to call.
           </p>
@@ -937,7 +937,7 @@ function SupportDemo() {
             <AnimatedChat messages={chatMessages} compact />
           </div>
         </div>
-        <h3 className="text-2xl mb-2">Someone in your corner.</h3>
+        <h3 className="text-2xl mb-2">Never get stuck on your own again.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed mb-3">
           You won't be handed a login and left to figure it out. After launch, I'm still here — updates, fixes, or just someone to call.
         </p>
