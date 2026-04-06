@@ -10,7 +10,7 @@ const posts = [
   {
     slug: 'your-website-is-a-tax-write-off',
     title: 'Your Website Is a Tax Write-Off — Here\'s What to Know',
-    excerpt: 'A business website is generally tax-deductible under Section 179. Here\'s what small business owners need to know to keep more money in their pocket.',
+    excerpt: 'In most cases, a business website is tax-deductible as a business expense. Here\'s what small business owners need to know to keep more money in their pocket.',
     date: '2026-04-04',
     readTime: '4 min read',
     tags: ['Tax Tips', 'Small Business'],

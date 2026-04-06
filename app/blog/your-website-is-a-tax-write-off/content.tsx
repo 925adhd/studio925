@@ -40,7 +40,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-10">
             <img
               src="/small-business-website-tax-write-off.webp"
-              alt="Small business website tax write-off under Section 179, laptop showing tax deduction form next to a small business storefront and piggy bank"
+              alt="Small business website tax write-off, laptop showing tax deduction form next to a small business storefront and piggy bank"
               width={1024}
               height={1024}
               className="w-full rounded-2xl"
@@ -51,7 +51,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
           <div className="prose-studio">
             {/* Intro */}
             <p className="text-base md:text-lg text-brand-primary/70 leading-relaxed mb-8">
-              If you're a small business owner, here's something you might not know: <strong>the money you spend on your business website is generally tax-deductible.</strong> That means the IRS lets you subtract it from your taxable income, putting real money back in your pocket.
+              If you're a small business owner, here's something you might not know: <strong>the money you spend on your business website may be tax-deductible as a business expense.</strong> In most cases, that means you can subtract it from your taxable income, putting real money back in your pocket.
             </p>
 
             <div className="p-5 rounded-2xl bg-amber-50 border border-amber-200/60 mb-8">
@@ -63,7 +63,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             {/* How it works */}
             <h2 className="text-2xl md:text-3xl mt-12 mb-6">How It Works</h2>
             <p className="text-brand-primary/70 leading-relaxed mb-6">
-              The IRS considers a business website a legitimate business expense. Depending on your situation, there are generally two ways to deduct it:
+              The IRS generally treats a business website as a legitimate business expense. Depending on the size and complexity of your project, there are usually two ways it can be handled:
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
@@ -72,10 +72,10 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
                   <div className="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center">
                     <Receipt size={16} className="text-brand-accent" />
                   </div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-brand-primary/40">Section 179</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-brand-primary/40">Business Expense</span>
                 </div>
                 <p className="text-sm text-brand-primary/70 leading-relaxed">
-                  Deduct the <strong>full cost</strong> of your website in the year you paid for it. Most small business websites qualify. This is the simplest route for a site under $5,000.
+                  A simple business website is often deducted as a <strong>business expense in the year you paid for it</strong>. This is the most common route for smaller informational sites.
                 </p>
               </div>
 
@@ -84,10 +84,10 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
                   <div className="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center">
                     <FileText size={16} className="text-brand-accent" />
                   </div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-brand-primary/40">Amortization</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-brand-primary/40">Software / Asset</span>
                 </div>
                 <p className="text-sm text-brand-primary/70 leading-relaxed">
-                  Spread the deduction over <strong>3 years</strong>. This can make sense for larger website projects. Your accountant can advise which method saves you the most.
+                  Larger projects with accounts, dashboards, or e-commerce may be treated more like <strong>software or a business asset</strong> and deducted over time. Your accountant can advise which method fits.
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             {/* Bottom line */}
             <h2 className="text-2xl md:text-3xl mt-12 mb-6">The Bottom Line</h2>
             <p className="text-brand-primary/70 leading-relaxed mb-6">
-              You need a website for your business. The IRS generally lets you deduct it. That makes a $900 website even more affordable than it already is. Talk to your accountant, keep your receipts, and put your website to work for your customers <em>and</em> your tax return.
+              You need a website for your business, and in most cases the cost can be deducted as a business expense. That makes a $900 website even more affordable than it already is. Talk to your accountant, keep your receipts, and put your website to work for your customers <em>and</em> your tax return.
             </p>
 
             <div className="p-5 rounded-2xl bg-amber-50 border border-amber-200/60 mb-8">

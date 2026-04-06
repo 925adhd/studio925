@@ -3,7 +3,7 @@ import ArticlePage from './content';
 
 export const metadata: Metadata = {
   title: 'Your Website Is a Tax Write-Off. Here\'s What to Know | Studio 925',
-  description: 'A business website is a tax-deductible expense under Section 179. Learn how small business owners can write off their website costs and keep more money in their pocket.',
+  description: 'In most cases, a business website is a tax-deductible business expense. Learn how small business owners can write off their website costs and keep more money in their pocket.',
   alternates: { canonical: '/blog/your-website-is-a-tax-write-off' },
   openGraph: {
     title: 'Your Website Is a Tax Write-Off. Here\'s What to Know',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     question: 'Can I write off my entire website cost in one year?',
-    answer: 'In most cases, yes. Under Section 179, small businesses can deduct the full cost of a business website in the year it was purchased rather than spreading it over several years. However, tax rules can change, so always check with your accountant or tax professional to confirm what applies to your situation.',
+    answer: 'In many cases, yes. Small business websites are often deducted as a business expense in the year they were purchased rather than spread over several years. Larger or more complex projects may be treated differently. Tax rules change and every situation is different, so always check with your accountant or tax professional to confirm what applies to you.',
   },
   {
     question: 'Is website hosting tax-deductible too?',
