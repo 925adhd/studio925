@@ -15,6 +15,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
         <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center">
           <img src={logo} alt="Studio 925 — custom websites for small businesses in Kentucky" width={162} height={56} className="h-8 md:h-[50px] w-auto" />
+          <span style={{ fontFamily: 'var(--font-inter)' }} className="ml-2 md:ml-3 text-xs md:text-sm font-medium text-brand-primary/60 border-l border-brand-primary/15 pl-2 md:pl-3">Custom Web Design</span>
         </Link>
 
         {/* Desktop Nav */}
