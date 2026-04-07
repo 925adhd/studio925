@@ -17,6 +17,15 @@ const posts = [
     image: '/small-business-website-tax-write-off.webp',
   },
   {
+    slug: 'what-to-look-for-in-a-local-web-designer',
+    title: 'What to Look for in a Local Web Designer',
+    excerpt: 'Hiring a local web designer for your small business? Here\'s what actually matters, what to ask before signing, and the red flags to walk away from.',
+    date: '2026-04-06',
+    readTime: '5 min read',
+    tags: ['Hiring Guide', 'Small Business'],
+    image: '/local-web-designer-kentucky.webp',
+  },
+  {
     slug: 'is-custom-website-worth-it',
     title: 'Is a Custom Website Worth It? Here\'s the Math.',
     excerpt: 'Your website is a business tool, not an expense. See how a $900 site can pay for itself with just one new customer.',
@@ -75,14 +84,20 @@ export default function BlogIndex() {
                   href={`/blog/${post.slug}`}
                   className="block rounded-3xl bg-white border border-brand-primary/5 hover:border-brand-accent/20 hover:shadow-lg hover:shadow-brand-accent/5 transition-all group overflow-hidden"
                 >
-                  <img
-                    src={post.image}
-                    alt=""
-                    width={896}
-                    height={300}
-                    className="w-full object-contain"
-                    loading="lazy"
-                  />
+                  {post.image ? (
+                    <img
+                      src={post.image}
+                      alt=""
+                      width={896}
+                      height={300}
+                      className="w-full object-contain"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-full aspect-[896/300] bg-gradient-to-br from-brand-accent/5 to-brand-primary/5 flex items-center justify-center border-b border-brand-primary/5">
+                      <span className="text-xs font-bold uppercase tracking-widest text-brand-primary/30">Studio 925</span>
+                    </div>
+                  )}
                   <div className="p-6 md:p-8">
                     <div className="flex flex-wrap gap-2 mb-3">
                       {post.tags.map((tag) => (

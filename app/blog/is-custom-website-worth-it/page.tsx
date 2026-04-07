@@ -3,11 +3,11 @@ import ArticlePage from './content';
 
 export const metadata: Metadata = {
   title: 'Is a Custom Website Worth It? Here\'s the Math | Studio 925',
-  description: 'See how a $900 custom website can pay for itself with just one new customer. Real ROI math for small business owners deciding between DIY and professional web design.',
+  description: 'Honest ROI math on whether a custom website actually pays for itself for a small business. Real numbers, no sales pitch.',
   alternates: { canonical: '/blog/is-custom-website-worth-it' },
   openGraph: {
     title: 'Is a Custom Website Worth It? Here\'s the Math.',
-    description: 'See how a $900 custom website pays for itself with one new customer.',
+    description: 'Honest ROI math on whether a custom website actually pays for itself for a small business.',
     url: '/blog/is-custom-website-worth-it',
     images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],
   },
@@ -19,8 +19,8 @@ const faqItems = [
     answer: 'For most service businesses, a single new customer from your website covers the entire cost. If your average job is $1,500+ and your site brings in even one client per month, the ROI is significant within the first few weeks.',
   },
   {
-    question: 'Is $900 a normal price for a small business website?',
-    answer: 'It\'s on the affordable end for custom work. Most freelancers charge $2,000–$5,000, and agencies start at $10,000+. Studio 925 keeps prices low by working solo with no agency overhead.',
+    question: 'What\'s a normal price for a small business website?',
+    answer: 'Custom small business websites typically range from $900 to $5,000 depending on scope. Freelancers usually fall in the $2,000–$5,000 range, and agencies often start at $10,000 or more because of their overhead. Anything under $500 is almost always a template with a markup.',
   },
   {
     question: 'What if my website doesn\'t bring in any new customers?',
@@ -49,7 +49,7 @@ const articleLd = {
   author: { '@type': 'Person', name: 'Kara Gibson' },
   publisher: { '@type': 'Organization', name: 'Studio 925', url: 'https://studio925.design' },
   datePublished: '2026-04-02',
-  description: 'See how a $900 custom website can pay for itself with just one new customer.',
+  description: 'Honest ROI math on whether a custom website actually pays for itself for a small business.',
 };
 
 export default function Page() {
