@@ -28,21 +28,23 @@ const featuredProjects = [
     },
   },
   {
-    title: 'Townly',
-    tag: 'Community Platform',
+    title: '925 ADHD',
+    tag: 'SaaS Platform',
     description:
-      'A clean, structured platform that replaces scattered posts with something people can actually use.',
+      'Flexible remote work platform designed around how ADHD minds actually work — with a gated resource library, blog, and Stripe-powered subscriptions.',
     purpose: [
-      'Help residents find local businesses and services faster',
-      'Organize community information in one place',
-      'Build neighborhood trust and keep communities connected',
-      'Replace scattered social media posts with real structure',
+      'Help users find the right remote work opportunities',
+      'Convert visitors into paying subscribers',
+      'Provide structured resources for ADHD professionals',
     ],
-    href: 'https://townly.us',
-    image: '/townly.webp',
+    href: 'https://925adhd.com',
+    image: '/925adhd.webp',
     images: undefined as string[] | undefined,
-    tags: ['Community Platform', 'Local Business'],
-    results: undefined as typeof featuredProjects[0]['results'] | undefined,
+    tags: ['SaaS', 'Lead Generation'],
+    results: {
+      desktop: { performance: 100, accessibility: 100, bestPractices: 100, seo: 100, fcp: '0.4s', lcp: '0.8s', cls: '0', speedIndex: '0.7s', image: '/925adhd-speed-desktop.webp' },
+      mobile: { performance: 91, accessibility: 100, bestPractices: 100, seo: 100, fcp: '1.0s', lcp: '2.8s', cls: '0', speedIndex: '2.0s', image: '/925adhd-speed-mobile.webp' },
+    },
   },
   {
     title: 'Four Chariots',
@@ -62,19 +64,20 @@ const featuredProjects = [
     results: undefined as typeof featuredProjects[0]['results'] | undefined,
   },
   {
-    title: '925 ADHD',
-    tag: 'SaaS Platform',
+    title: 'Townly',
+    tag: 'Community Platform',
     description:
-      'Flexible remote work platform designed around how ADHD minds actually work — with a gated resource library, blog, and Stripe-powered subscriptions.',
+      'A clean, structured platform that replaces scattered posts with something people can actually use.',
     purpose: [
-      'Help users find the right remote work opportunities',
-      'Convert visitors into paying subscribers',
-      'Provide structured resources for ADHD professionals',
+      'Help residents find local businesses and services faster',
+      'Organize community information in one place',
+      'Build neighborhood trust and keep communities connected',
+      'Replace scattered social media posts with real structure',
     ],
-    href: 'https://925adhd.com',
-    image: '/925adhd.webp',
+    href: 'https://townly.us',
+    image: '/townly.webp',
     images: undefined as string[] | undefined,
-    tags: ['SaaS', 'Lead Generation'],
+    tags: ['Community Platform', 'Local Business'],
     results: undefined as typeof featuredProjects[0]['results'] | undefined,
   },
 ];
@@ -100,17 +103,6 @@ function PageSpeedResults({ title, results }: { title: string; results: NonNulla
       <div className="rounded-2xl border border-brand-primary/5 bg-brand-primary/[0.02] p-4">
         <div className="grid grid-cols-2 gap-3">
           <button
-            onClick={() => setModalImage(results.desktop.image)}
-            className="rounded-xl overflow-hidden bg-white shadow-sm cursor-zoom-in hover:shadow-md transition-shadow"
-          >
-            <img
-              src={results.desktop.image}
-              alt={`${title} Google PageSpeed desktop score — ${results.desktop.performance}/100`}
-              loading="lazy"
-              className="w-full h-auto"
-            />
-          </button>
-          <button
             onClick={() => setModalImage(results.mobile.image)}
             className="rounded-xl overflow-hidden bg-white shadow-sm cursor-zoom-in hover:shadow-md transition-shadow"
           >
@@ -121,9 +113,20 @@ function PageSpeedResults({ title, results }: { title: string; results: NonNulla
               className="w-full h-auto"
             />
           </button>
+          <button
+            onClick={() => setModalImage(results.desktop.image)}
+            className="rounded-xl overflow-hidden bg-white shadow-sm cursor-zoom-in hover:shadow-md transition-shadow"
+          >
+            <img
+              src={results.desktop.image}
+              alt={`${title} Google PageSpeed desktop score — ${results.desktop.performance}/100`}
+              loading="lazy"
+              className="w-full h-auto"
+            />
+          </button>
         </div>
         <p className="text-[10px] text-brand-primary/50 mt-3 text-center">
-          Desktop: {results.desktop.performance}/100 · Mobile: {results.mobile.performance}/100 — Accessibility, Best Practices & SEO all 100
+          Mobile: {results.mobile.performance}/100 · Desktop: {results.desktop.performance}/100 — Accessibility, Best Practices & SEO all 100
         </p>
       </div>
 
@@ -168,7 +171,7 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
   /* Stacked layout for projects with results, side-by-side for others */
   if (hasResults) {
     return (
-      <section className="max-w-6xl mx-auto mb-16 md:mb-24">
+      <section className="max-w-6xl mx-auto mb-10 md:mb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -180,7 +183,7 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
             href={project.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="block relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-lg shadow-brand-primary/10 bg-brand-primary/5 mb-8 md:mb-10"
+            className="block relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-lg shadow-brand-primary/10 bg-brand-primary/5 mb-5 md:mb-10"
           >
             {hasCarousel ? (
               <div className="relative">
@@ -257,7 +260,7 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
 
   /* Default side-by-side layout */
   return (
-    <section className="max-w-6xl mx-auto mb-16 md:mb-24">
+    <section className="max-w-6xl mx-auto mb-10 md:mb-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -345,10 +348,10 @@ export default function PortfolioPage() {
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
       <Navbar />
 
-      <main className="pt-28 pb-20 px-6">
+      <main className="pt-24 md:pt-28 pb-20 px-6">
 
         {/* Intro */}
-        <section className="max-w-6xl mx-auto mb-16 md:mb-20">
+        <section className="max-w-6xl mx-auto mb-10 md:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
