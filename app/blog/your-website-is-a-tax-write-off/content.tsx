@@ -185,6 +185,9 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             <p className="text-brand-primary/70 leading-relaxed mb-6">
               You need a website for your business, and in most cases the cost can be deducted as a business expense. That makes a $900 website even more affordable than it already is. Talk to your accountant, keep your receipts, and put your website to work for your customers <em>and</em> your tax return.
             </p>
+            <p className="text-brand-primary/70 leading-relaxed mb-6">
+              If you&apos;re still in the hiring stage, <Link href="/blog/what-to-look-for-in-a-local-web-designer" className="text-brand-accent hover:underline">what to look for in a local web designer</Link> walks through the questions to ask before signing anything.
+            </p>
 
             <div className="p-5 rounded-2xl bg-amber-50 border border-amber-200/60 mb-8">
               <p className="text-sm text-amber-900/80 leading-relaxed">
@@ -211,6 +214,26 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Author Bio */}
+          <div className="py-8 px-6 bg-brand-primary/[0.03] rounded-2xl border border-brand-primary/10 mb-10">
+            <div className="flex items-start gap-4">
+              <img
+                src="/kara-gibson-small.webp"
+                alt="Kara Gibson, founder of Studio 925"
+                width={64}
+                height={64}
+                className="w-16 h-16 rounded-full object-cover shrink-0"
+                loading="lazy"
+              />
+              <div>
+                <p className="font-semibold text-brand-primary mb-1">Kara Gibson</p>
+                <p className="text-sm text-brand-primary/70 leading-relaxed">
+                  Founder of Studio 925. Custom web designer based in Leitchfield, Kentucky, building hand-coded websites for small businesses across the state.
+                </p>
+              </div>
             </div>
           </div>
 

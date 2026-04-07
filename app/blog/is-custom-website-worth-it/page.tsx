@@ -46,9 +46,11 @@ const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'Is a Custom Website Worth It? Here\'s the Math.',
-  author: { '@type': 'Person', name: 'Kara Gibson' },
+  image: 'https://studio925.design/custom-website-worth-it-roi.webp',
+  author: { '@type': 'Person', name: 'Kara Gibson', url: 'https://studio925.design' },
   publisher: { '@type': 'Organization', name: 'Studio 925', url: 'https://studio925.design' },
   datePublished: '2026-04-02',
+  dateModified: '2026-04-07',
   description: 'Honest ROI math on whether a custom website actually pays for itself for a small business.',
 };
 

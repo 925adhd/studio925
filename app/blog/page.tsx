@@ -13,6 +13,46 @@ export const metadata: Metadata = {
   },
 };
 
+const collectionLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Studio 925 Blog',
+  description: 'Web design advice for small business owners.',
+  url: 'https://studio925.design/blog',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Studio 925',
+    url: 'https://studio925.design',
+  },
+  hasPart: [
+    {
+      '@type': 'BlogPosting',
+      headline: 'What to Look for in a Local Web Designer',
+      url: 'https://studio925.design/blog/what-to-look-for-in-a-local-web-designer',
+    },
+    {
+      '@type': 'BlogPosting',
+      headline: 'Your Website Is a Tax Write-Off. Here\'s What to Know',
+      url: 'https://studio925.design/blog/your-website-is-a-tax-write-off',
+    },
+    {
+      '@type': 'BlogPosting',
+      headline: 'Is a Custom Website Worth It? Here\'s the Math.',
+      url: 'https://studio925.design/blog/is-custom-website-worth-it',
+    },
+    {
+      '@type': 'BlogPosting',
+      headline: 'Wix vs Custom Website: Which Is Right for Your Small Business?',
+      url: 'https://studio925.design/blog/wix-vs-custom-website',
+    },
+  ],
+};
+
 export default function Page() {
-  return <BlogIndex />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionLd) }} />
+      <BlogIndex />
+    </>
+  );
 }

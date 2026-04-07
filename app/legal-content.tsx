@@ -162,7 +162,13 @@ function TermsOfService() {
   return (
     <>
       <h1 className="text-3xl md:text-4xl font-serif font-bold mb-2">Terms of Service</h1>
-      <p className="text-sm text-brand-primary/40 mb-8">Last Updated: {lastUpdated}</p>
+      <p className="text-sm text-brand-primary/40 mb-6">Last Updated: {lastUpdated}</p>
+
+      <div className="mb-10 p-5 rounded-2xl bg-brand-primary/[0.03] border border-brand-primary/10">
+        <p className="text-brand-primary/70 leading-relaxed text-sm">
+          This page covers the working agreement between {company} and clients who purchase web design or development services. It explains payment terms, project scope, revisions, ownership, refunds, and cancellations. If anything here is unclear before you book, email <a href={`mailto:${email}`} className="text-brand-accent hover:underline">{email}</a>{' '}and we&apos;ll walk through it with you.
+        </p>
+      </div>
 
       <Section title="1. Agreement to Terms">
         <p>{company} is a service operated by {llc}. By accessing this website or engaging {company} for web design and development services, you agree to be bound by these Terms of Service. If you do not agree, please do not use our website or services.</p>

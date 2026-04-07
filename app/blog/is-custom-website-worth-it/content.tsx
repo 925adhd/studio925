@@ -185,6 +185,9 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             <p className="text-brand-primary/70 leading-relaxed mb-6">
               A good custom website isn't an expense, it's one of the cheapest revenue tools you'll ever buy. It shows up every day, never calls in sick, and works nights, weekends, and holidays. For most small businesses, the math isn't even close.
             </p>
+            <p className="text-brand-primary/70 leading-relaxed mb-6">
+              Still weighing your options? It&apos;s worth reading <Link href="/blog/wix-vs-custom-website" className="text-brand-accent hover:underline">Wix vs custom website</Link> for a side-by-side cost and performance comparison.
+            </p>
 
             {/* FAQ */}
             <h2 className="text-2xl md:text-3xl mt-12 mb-6">Frequently Asked Questions</h2>
@@ -205,6 +208,26 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Author Bio */}
+          <div className="py-8 px-6 bg-brand-primary/[0.03] rounded-2xl border border-brand-primary/10 mb-10">
+            <div className="flex items-start gap-4">
+              <img
+                src="/kara-gibson-small.webp"
+                alt="Kara Gibson, founder of Studio 925"
+                width={64}
+                height={64}
+                className="w-16 h-16 rounded-full object-cover shrink-0"
+                loading="lazy"
+              />
+              <div>
+                <p className="font-semibold text-brand-primary mb-1">Kara Gibson</p>
+                <p className="text-sm text-brand-primary/70 leading-relaxed">
+                  Founder of Studio 925. Custom web designer based in Leitchfield, Kentucky, building hand-coded websites for small businesses across the state.
+                </p>
+              </div>
             </div>
           </div>
 

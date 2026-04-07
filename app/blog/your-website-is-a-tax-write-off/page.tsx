@@ -46,9 +46,11 @@ const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'Your Website Is a Tax Write-Off. Here\'s What to Know',
-  author: { '@type': 'Person', name: 'Kara Gibson' },
+  image: 'https://studio925.design/small-business-website-tax-write-off.webp',
+  author: { '@type': 'Person', name: 'Kara Gibson', url: 'https://studio925.design' },
   publisher: { '@type': 'Organization', name: 'Studio 925', url: 'https://studio925.design' },
   datePublished: '2026-04-04',
+  dateModified: '2026-04-07',
   description: 'A business website is a tax-deductible expense. Here\'s what small business owners need to know.',
 };
 

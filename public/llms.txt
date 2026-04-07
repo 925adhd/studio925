@@ -1,0 +1,28 @@
+# Studio 925
+
+> Custom web design studio based in Leitchfield, Kentucky, building hand-coded websites for small businesses.
+
+Studio 925 is a one-person design studio run by Kara Gibson. Sites are built from scratch (no Wix, Squarespace, or WordPress templates) with a focus on speed, accessibility, and clean code.
+
+## Main pages
+- [Home](https://studio925.design/): Overview of services and recent work
+- [Portfolio](https://studio925.design/portfolio): Past client projects
+- [Website Cost](https://studio925.design/website-cost): Pricing information
+- [Hosting & Support](https://studio925.design/hosting-support): Ongoing hosting and maintenance details
+
+## Service areas
+- [Leitchfield, KY](https://studio925.design/website-design-leitchfield-ky): Local web design in Leitchfield
+- [Grayson County, KY](https://studio925.design/web-design-grayson-county-ky): Web design across Grayson County
+- [Small Business Web Design — Kentucky](https://studio925.design/small-business-website-design-kentucky): Statewide small business work
+
+## Blog
+- [Is a Custom Website Worth It? Here's the Math](https://studio925.design/blog/is-custom-website-worth-it): Cost and value comparison for custom sites
+- [What to Look for in a Local Web Designer](https://studio925.design/blog/what-to-look-for-in-a-local-web-designer): Hiring guide for small business owners
+- [Wix vs Custom Website](https://studio925.design/blog/wix-vs-custom-website): Comparison of Wix and custom-coded sites
+- [Your Website Is a Tax Write-Off](https://studio925.design/blog/your-website-is-a-tax-write-off): General notes on website expenses at tax time
+
+## Optional
+- [Privacy Policy](https://studio925.design/privacy-policy)
+- [Terms of Service](https://studio925.design/terms-of-service)
+- [Cookie Policy](https://studio925.design/cookie-policy)
+- [Disclaimer](https://studio925.design/disclaimer)

@@ -46,9 +46,11 @@ const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'What to Look for in a Local Web Designer',
-  author: { '@type': 'Person', name: 'Kara Gibson' },
+  image: 'https://studio925.design/local-web-designer-kentucky.webp',
+  author: { '@type': 'Person', name: 'Kara Gibson', url: 'https://studio925.design' },
   publisher: { '@type': 'Organization', name: 'Studio 925', url: 'https://studio925.design' },
   datePublished: '2026-04-06',
+  dateModified: '2026-04-07',
   description: 'Hiring a local web designer? Here\'s what actually matters and the red flags to avoid.',
 };
 

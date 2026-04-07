@@ -363,6 +363,17 @@ export default function PortfolioPage() {
             <p className="text-base md:text-lg text-brand-primary/60 max-w-xl leading-relaxed">
               These are real websites built to bring in calls, leads, customers, and growth — not just look nice.
             </p>
+            <div className="max-w-3xl mt-8 space-y-4 text-sm md:text-base text-brand-primary/65 leading-relaxed">
+              <p>
+                Every project below was built from scratch — no Wix, Squarespace, or WordPress templates. That means each site is faster, more secure, and easier to update than a drag-and-drop builder. It also means the design and structure are tailored to what the business actually needs, not whatever a template happened to offer.
+              </p>
+              <p>
+                Each project on this page started with the same question: <em>what does this business need its website to do?</em> Sometimes the answer is &quot;book more clients.&quot; Sometimes it&apos;s &quot;sell products online.&quot; Sometimes it&apos;s &quot;look credible enough that people pick up the phone.&quot; The design follows from the goal, not the other way around.
+              </p>
+              <p>
+                Where possible, you&apos;ll see real Google PageSpeed results next to the project — these aren&apos;t marketing claims, they&apos;re the same scores you&apos;d see if you ran the test yourself.
+              </p>
+            </div>
           </motion.div>
         </section>
 

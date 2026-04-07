@@ -185,6 +185,26 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             </div>
           </div>
 
+          {/* Author Bio */}
+          <div className="py-8 px-6 bg-brand-primary/[0.03] rounded-2xl border border-brand-primary/10 mb-10">
+            <div className="flex items-start gap-4">
+              <img
+                src="/kara-gibson-small.webp"
+                alt="Kara Gibson, founder of Studio 925"
+                width={64}
+                height={64}
+                className="w-16 h-16 rounded-full object-cover shrink-0"
+                loading="lazy"
+              />
+              <div>
+                <p className="font-semibold text-brand-primary mb-1">Kara Gibson</p>
+                <p className="text-sm text-brand-primary/70 leading-relaxed">
+                  Founder of Studio 925. Custom web designer based in Leitchfield, Kentucky, building hand-coded websites for small businesses across the state.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* CTA */}
           <div className="text-center py-14 px-8 bg-brand-primary text-white rounded-[2.5rem]">
             <h2 className="text-2xl md:text-3xl mb-3">Looking for a designer who answers straight?</h2>
