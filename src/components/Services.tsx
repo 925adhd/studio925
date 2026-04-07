@@ -94,7 +94,7 @@ function SearchIntentDemo() {
             <Search size={18} className="text-brand-primary/40 shrink-0" />
             <TypeWriter
               text="roof repair leitchfield ky"
-              speed={50}
+              speed={30}
               className="text-brand-primary/80 text-[15px]"
               onDone={handleDone}
             />
@@ -122,7 +122,7 @@ function SearchIntentDemo() {
         {/* Result card — slides in after typing */}
         <motion.div
           animate={typingDone ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
+          transition={{ duration: 0.3, delay: 0.05 }}
           className="bg-white rounded-2xl shadow-xl shadow-brand-primary/8 border border-brand-primary/8 p-6"
         >
           <div className="flex items-center gap-1.5 mb-4">
@@ -163,7 +163,7 @@ function SearchIntentDemo() {
         {/* Text — fades in after results */}
         <motion.div
           animate={typingDone ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-          transition={{ duration: 0.4, delay: 0.2 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
           className="pl-4"
         >
           <h3 className="text-3xl lg:text-4xl mb-4">Stop being invisible when customers search.</h3>
@@ -182,7 +182,7 @@ function SearchIntentDemo() {
           <Search size={16} className="text-brand-primary/40 shrink-0" />
           <TypeWriter
             text="roof repair leitchfield ky"
-            speed={50}
+            speed={30}
             className="text-brand-primary/80 text-sm"
             onDone={handleDone}
           />
@@ -202,7 +202,7 @@ function SearchIntentDemo() {
 
         <motion.div
           animate={typingDone ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
+          transition={{ duration: 0.35, delay: 0.1 }}
         >
           <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-5 mb-5">
             <h3 className="text-lg font-sans font-bold mb-0.5">Roof Repair in Leitchfield, KY</h3>
@@ -438,22 +438,22 @@ function ResponsiveDemo() {
               transition={{ delay: 0, duration: 0.5, ease: 'easeOut' }}
               className="relative"
             >
-              <div className="w-56 bg-white rounded-xl shadow-xl shadow-brand-primary/8 border border-brand-primary/8 p-3 pb-1">
-                <div className="bg-brand-accent/5 rounded-lg p-3 mb-2">
-                  <div className="h-2 bg-brand-accent/20 rounded w-[70%] mb-2" />
-                  <div className="h-1.5 bg-brand-primary/8 rounded w-full mb-1.5" />
-                  <div className="h-1.5 bg-brand-primary/6 rounded w-[85%]" />
+              <div className="w-56 bg-white rounded-xl shadow-xl shadow-brand-primary/10 border border-brand-primary/15 p-3 pb-1">
+                <div className="bg-brand-accent/10 rounded-lg p-3 mb-2">
+                  <div className="h-2 bg-brand-accent/35 rounded w-[70%] mb-2" />
+                  <div className="h-1.5 bg-brand-primary/15 rounded w-full mb-1.5" />
+                  <div className="h-1.5 bg-brand-primary/12 rounded w-[85%]" />
                 </div>
                 <div className="grid grid-cols-3 gap-1.5 mb-2">
-                  <div className="h-8 bg-brand-primary/5 rounded" />
-                  <div className="h-8 bg-brand-primary/5 rounded" />
-                  <div className="h-8 bg-brand-primary/5 rounded" />
+                  <div className="h-8 bg-brand-primary/10 rounded" />
+                  <div className="h-8 bg-brand-primary/10 rounded" />
+                  <div className="h-8 bg-brand-primary/10 rounded" />
                 </div>
               </div>
-              <div className="w-20 h-2 bg-brand-primary/10 rounded-b-lg mx-auto" />
+              <div className="w-20 h-2 bg-brand-primary/15 rounded-b-lg mx-auto" />
               <div className="flex items-center gap-1 justify-center mt-1.5">
-                <Monitor size={12} className="text-brand-primary/30" />
-                <span className="text-[10px] text-brand-primary/30 font-medium">Desktop</span>
+                <Monitor size={12} className="text-brand-primary/45" />
+                <span className="text-[10px] text-brand-primary/45 font-medium">Desktop</span>
               </div>
             </motion.div>
             {/* Tablet mockup */}
@@ -464,20 +464,20 @@ function ResponsiveDemo() {
               transition={{ delay: 0.3, duration: 0.5, ease: 'easeOut' }}
               className="relative"
             >
-              <div className="w-32 bg-white rounded-xl shadow-lg shadow-brand-primary/6 border border-brand-primary/8 p-2.5 pb-1">
-                <div className="bg-brand-accent/5 rounded-lg p-2 mb-1.5">
-                  <div className="h-1.5 bg-brand-accent/20 rounded w-[70%] mb-1.5" />
-                  <div className="h-1 bg-brand-primary/8 rounded w-full mb-1" />
-                  <div className="h-1 bg-brand-primary/6 rounded w-[85%]" />
+              <div className="w-32 bg-white rounded-xl shadow-lg shadow-brand-primary/10 border border-brand-primary/15 p-2.5 pb-1">
+                <div className="bg-brand-accent/10 rounded-lg p-2 mb-1.5">
+                  <div className="h-1.5 bg-brand-accent/35 rounded w-[70%] mb-1.5" />
+                  <div className="h-1 bg-brand-primary/15 rounded w-full mb-1" />
+                  <div className="h-1 bg-brand-primary/12 rounded w-[85%]" />
                 </div>
                 <div className="grid grid-cols-2 gap-1 mb-1.5">
-                  <div className="h-6 bg-brand-primary/5 rounded" />
-                  <div className="h-6 bg-brand-primary/5 rounded" />
+                  <div className="h-6 bg-brand-primary/10 rounded" />
+                  <div className="h-6 bg-brand-primary/10 rounded" />
                 </div>
               </div>
               <div className="flex items-center gap-1 justify-center mt-1.5">
-                <Tablet size={12} className="text-brand-primary/30" />
-                <span className="text-[10px] text-brand-primary/30 font-medium">Tablet</span>
+                <Tablet size={12} className="text-brand-primary/45" />
+                <span className="text-[10px] text-brand-primary/45 font-medium">Tablet</span>
               </div>
             </motion.div>
             {/* Phone mockup */}
@@ -488,21 +488,21 @@ function ResponsiveDemo() {
               transition={{ delay: 0.6, duration: 0.5, ease: 'easeOut' }}
               className="relative"
             >
-              <div className="w-20 bg-white rounded-xl shadow-lg shadow-brand-primary/6 border-2 border-brand-accent/20 p-2 pb-1">
-                <div className="w-8 h-1 bg-brand-primary/10 rounded-full mx-auto mb-1.5" />
-                <div className="bg-brand-accent/5 rounded-lg p-1.5 mb-1.5">
-                  <div className="h-1.5 bg-brand-accent/20 rounded w-[70%] mb-1" />
-                  <div className="h-1 bg-brand-primary/8 rounded w-full mb-0.5" />
-                  <div className="h-1 bg-brand-primary/6 rounded w-[85%]" />
+              <div className="w-20 bg-white rounded-xl shadow-2xl shadow-brand-accent/25 border-2 border-brand-accent/50 p-2 pb-1 ring-4 ring-brand-accent/10">
+                <div className="w-8 h-1 bg-brand-primary/20 rounded-full mx-auto mb-1.5" />
+                <div className="bg-brand-accent/15 rounded-lg p-1.5 mb-1.5">
+                  <div className="h-1.5 bg-brand-accent/60 rounded w-[70%] mb-1" />
+                  <div className="h-1 bg-brand-primary/20 rounded w-full mb-0.5" />
+                  <div className="h-1 bg-brand-primary/15 rounded w-[85%]" />
                 </div>
                 <div className="space-y-1 mb-1">
-                  <div className="h-4 bg-brand-primary/5 rounded" />
-                  <div className="h-4 bg-brand-primary/5 rounded" />
+                  <div className="h-4 bg-brand-primary/12 rounded" />
+                  <div className="h-4 bg-brand-primary/12 rounded" />
                 </div>
               </div>
               <div className="flex items-center gap-1 justify-center mt-1.5">
-                <PhoneIcon size={12} className="text-brand-accent/50" />
-                <span className="text-[10px] text-brand-accent/60 font-semibold">Mobile</span>
+                <PhoneIcon size={12} className="text-brand-accent" />
+                <span className="text-[10px] text-brand-accent font-bold">Mobile</span>
               </div>
             </motion.div>
           </div>
@@ -539,50 +539,50 @@ function ResponsiveDemo() {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0, duration: 0.4 }}
-            className="w-28 bg-white rounded-lg shadow-md border border-brand-primary/8 p-2"
+            className="w-28 bg-white rounded-lg shadow-md border border-brand-primary/15 p-2"
           >
-            <div className="bg-brand-accent/5 rounded p-1.5 mb-1">
-              <div className="h-1 bg-brand-accent/20 rounded w-[70%] mb-1" />
-              <div className="h-0.5 bg-brand-primary/8 rounded w-full" />
+            <div className="bg-brand-accent/10 rounded p-1.5 mb-1">
+              <div className="h-1 bg-brand-accent/35 rounded w-[70%] mb-1" />
+              <div className="h-0.5 bg-brand-primary/15 rounded w-full" />
             </div>
             <div className="grid grid-cols-3 gap-1">
-              <div className="h-4 bg-brand-primary/5 rounded" />
-              <div className="h-4 bg-brand-primary/5 rounded" />
-              <div className="h-4 bg-brand-primary/5 rounded" />
+              <div className="h-4 bg-brand-primary/10 rounded" />
+              <div className="h-4 bg-brand-primary/10 rounded" />
+              <div className="h-4 bg-brand-primary/10 rounded" />
             </div>
-            <p className="text-[8px] text-brand-primary/30 text-center mt-1">Desktop</p>
+            <p className="text-[8px] text-brand-primary/45 text-center mt-1 font-medium">Desktop</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 15 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15, duration: 0.4 }}
-            className="w-16 bg-white rounded-lg shadow-md border border-brand-primary/8 p-1.5"
+            className="w-16 bg-white rounded-lg shadow-md border border-brand-primary/15 p-1.5"
           >
-            <div className="bg-brand-accent/5 rounded p-1 mb-1">
-              <div className="h-1 bg-brand-accent/20 rounded w-[70%] mb-0.5" />
-              <div className="h-0.5 bg-brand-primary/8 rounded w-full" />
+            <div className="bg-brand-accent/10 rounded p-1 mb-1">
+              <div className="h-1 bg-brand-accent/35 rounded w-[70%] mb-0.5" />
+              <div className="h-0.5 bg-brand-primary/15 rounded w-full" />
             </div>
             <div className="grid grid-cols-2 gap-0.5">
-              <div className="h-3 bg-brand-primary/5 rounded" />
-              <div className="h-3 bg-brand-primary/5 rounded" />
+              <div className="h-3 bg-brand-primary/10 rounded" />
+              <div className="h-3 bg-brand-primary/10 rounded" />
             </div>
-            <p className="text-[8px] text-brand-primary/30 text-center mt-0.5">Tablet</p>
+            <p className="text-[8px] text-brand-primary/45 text-center mt-0.5 font-medium">Tablet</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 15 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.4 }}
-            className="w-11 bg-white rounded-lg shadow-md border-2 border-brand-accent/20 p-1"
+            className="w-11 bg-white rounded-lg shadow-xl shadow-brand-accent/25 border-2 border-brand-accent/50 p-1 ring-2 ring-brand-accent/10"
           >
-            <div className="w-4 h-0.5 bg-brand-primary/10 rounded-full mx-auto mb-1" />
-            <div className="bg-brand-accent/5 rounded p-1 mb-0.5">
-              <div className="h-0.5 bg-brand-accent/20 rounded w-[70%]" />
+            <div className="w-4 h-0.5 bg-brand-primary/20 rounded-full mx-auto mb-1" />
+            <div className="bg-brand-accent/15 rounded p-1 mb-0.5">
+              <div className="h-0.5 bg-brand-accent/60 rounded w-[70%]" />
             </div>
-            <div className="h-2.5 bg-brand-primary/5 rounded mb-0.5" />
-            <div className="h-2.5 bg-brand-primary/5 rounded" />
-            <p className="text-[7px] text-brand-accent/60 text-center mt-0.5 font-semibold">Mobile</p>
+            <div className="h-2.5 bg-brand-primary/12 rounded mb-0.5" />
+            <div className="h-2.5 bg-brand-primary/12 rounded" />
+            <p className="text-[7px] text-brand-accent text-center mt-0.5 font-bold">Mobile</p>
           </motion.div>
         </div>
         <h3 className="text-2xl mb-2">Win the customers who decide on their phone.</h3>
