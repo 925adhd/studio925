@@ -1,40 +1,29 @@
-'use client';
-
 import dynamic from 'next/dynamic';
-import { motion, useScroll, useSpring } from 'motion/react';
 import Navbar from '../src/components/Navbar';
 import Hero from '../src/components/Hero';
 import TrustStrip from '../src/components/TrustStrip';
 
 // Lazy load everything below the fold to unblock LCP
-const Services = dynamic(() => import('../src/components/Services'), { ssr: true });
-const Comparison = dynamic(() => import('../src/components/Comparison'), { ssr: true });
-const WhyStudio = dynamic(() => import('../src/components/WhyStudio'), { ssr: true });
-const Pricing = dynamic(() => import('../src/components/Pricing'), { ssr: true });
-const PortfolioPreview = dynamic(() => import('../src/components/PortfolioPreview'), { ssr: true });
-const WhoItsFor = dynamic(() => import('../src/components/WhoItsFor'), { ssr: true });
-const LocalSection = dynamic(() => import('../src/components/LocalSection'), { ssr: true });
-const Contact = dynamic(() => import('../src/components/Contact'), { ssr: true });
-const Footer = dynamic(() => import('../src/components/Footer'), { ssr: true });
+const Services = dynamic(() => import('../src/components/Services'));
+const Comparison = dynamic(() => import('../src/components/Comparison'));
+const WhyStudio = dynamic(() => import('../src/components/WhyStudio'));
+const Pricing = dynamic(() => import('../src/components/Pricing'));
+const PortfolioPreview = dynamic(() => import('../src/components/PortfolioPreview'));
+const WhoItsFor = dynamic(() => import('../src/components/WhoItsFor'));
+const LocalSection = dynamic(() => import('../src/components/LocalSection'));
+const Contact = dynamic(() => import('../src/components/Contact'));
+const Footer = dynamic(() => import('../src/components/Footer'));
+// Scroll progress bar is decorative — load after LCP
+const ScrollProgress = dynamic(() => import('../src/components/ScrollProgress'));
 
 export default function HomePage() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
       <a href="#main-content" className="skip-to-content">
         Skip to main content
       </a>
 
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-brand-accent z-[60] origin-left"
-        style={{ scaleX }}
-      />
+      <ScrollProgress />
 
       <Navbar />
 
@@ -153,12 +142,8 @@ export default function HomePage() {
                   </svg>
                 )}
               ].map((item, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
                   className={`relative flex items-start gap-5 md:gap-0 mb-10 md:mb-20 last:mb-0 ${
                     i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}
@@ -188,7 +173,7 @@ export default function HomePage() {
                   }`}>
                     {item.illustration}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
