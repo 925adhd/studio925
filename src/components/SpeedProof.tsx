@@ -10,7 +10,7 @@ export default function SpeedProof() {
             Don&rsquo;t take my word for it. <span className="italic text-brand-accent block md:inline">Take Google&rsquo;s.</span>
           </h2>
           <p className="text-brand-primary/65 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-            Same test, same morning, same device. One of these is a Louisville web design agency that&rsquo;s been around for over a decade and charges $1,500 for a 5-page site. The other one is mine. $900 for a 5-page site, flat. Built by the person you&rsquo;re reading this from.
+            Same test, same morning. Mine loads in 2 seconds. Theirs takes 12.
           </p>
         </div>
 

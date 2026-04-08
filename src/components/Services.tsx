@@ -738,7 +738,7 @@ function PerformanceDemo() {
             <ProgressRing value={100} label="SSL" size={56} strokeWidth={3} delay={400} icon={<Lock size={18} className="text-brand-accent" />} />
             <ProgressRing value={99.9} label="Uptime" suffix="%" size={56} strokeWidth={3} delay={800} />
           </div>
-          <div className="space-y-2">
+          <div className="grid grid-cols-2 gap-x-3 gap-y-2">
             {['Load time: < 1 second', 'CDN-delivered globally', 'Auto SSL certificates', 'Daily backups'].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <Check size={12} className="text-brand-accent shrink-0" />
