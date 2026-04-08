@@ -8,7 +8,7 @@ export default function WhyStudio() {
     <section className="py-28 md:py-40 px-6 bg-brand-primary text-white relative overflow-hidden">
       {/* Premium background motif — abstract crest */}
       <div className="absolute right-[10%] top-1/2 -translate-y-1/2 pointer-events-none select-none" aria-hidden="true">
-        <Handshake size={500} className="text-white opacity-[0.04]" strokeWidth={0.75} />
+        <Handshake className="w-[380px] h-[380px] md:w-[500px] md:h-[500px] text-white opacity-[0.04]" strokeWidth={0.75} />
       </div>
       <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
