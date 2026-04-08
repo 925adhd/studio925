@@ -9,6 +9,7 @@ import TrustStrip from '../src/components/TrustStrip';
 // Lazy load everything below the fold to unblock LCP
 const Services = dynamic(() => import('../src/components/Services'), { ssr: true });
 const Comparison = dynamic(() => import('../src/components/Comparison'), { ssr: true });
+const SpeedProof = dynamic(() => import('../src/components/SpeedProof'), { ssr: true });
 const WhyStudio = dynamic(() => import('../src/components/WhyStudio'), { ssr: true });
 const Pricing = dynamic(() => import('../src/components/Pricing'), { ssr: true });
 const PortfolioPreview = dynamic(() => import('../src/components/PortfolioPreview'), { ssr: true });
@@ -43,6 +44,7 @@ export default function HomePage() {
         <TrustStrip />
         <Services />
         <Comparison />
+        <SpeedProof />
 
         {/* Process Section — Timeline */}
         <section id="process" className="py-20 md:py-36 px-6 bg-white border-t border-brand-primary/5">
