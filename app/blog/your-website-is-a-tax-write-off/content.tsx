@@ -231,7 +231,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
               <div>
                 <p className="font-semibold text-brand-primary mb-1">Kara Gibson</p>
                 <p className="text-sm text-brand-primary/70 leading-relaxed">
-                  Founder of Studio 925. Custom web designer based in Leitchfield, Kentucky, building hand-coded websites for small businesses across the state.
+                  Founder of Studio 925. Custom web designer based in Leitchfield, Kentucky, building custom websites for small businesses across the state.
                 </p>
               </div>
             </div>

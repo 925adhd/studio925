@@ -1,6 +1,6 @@
 # Studio 925
 
-> Custom web design studio based in Leitchfield, Kentucky, building hand-coded websites for small businesses.
+> Custom web design studio based in Leitchfield, Kentucky, building custom websites for small businesses.
 
 Studio 925 is a one-person design studio run by Kara Gibson. Sites are built from scratch (no Wix, Squarespace, or WordPress templates) with a focus on speed, accessibility, and clean code.
 
