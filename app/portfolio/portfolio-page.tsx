@@ -95,6 +95,24 @@ const features = [
 function PageSpeedResults({ title, results }: { title: string; results: NonNullable<typeof featuredProjects[0]['results']> }) {
   const [modalImage, setModalImage] = useState<string | null>(null);
 
+  // When modal opens, push a history entry so the phone back button closes it
+  // instead of navigating away from the portfolio page.
+  useEffect(() => {
+    if (!modalImage) return;
+    window.history.pushState({ modal: true }, '');
+    const onPop = () => setModalImage(null);
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [modalImage]);
+
+  const closeModal = () => {
+    if (window.history.state?.modal) {
+      window.history.back();
+    } else {
+      setModalImage(null);
+    }
+  };
+
   return (
     <div className="mb-6 md:mb-8">
       <h3 className="text-xs font-bold uppercase tracking-widest text-brand-primary/40 mb-3">
@@ -134,10 +152,10 @@ function PageSpeedResults({ title, results }: { title: string; results: NonNulla
       {modalImage && (
         <div
           className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
-          onClick={() => setModalImage(null)}
+          onClick={closeModal}
         >
           <button
-            onClick={() => setModalImage(null)}
+            onClick={closeModal}
             className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors"
             aria-label="Close"
           >
