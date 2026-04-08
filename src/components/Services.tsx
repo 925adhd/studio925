@@ -70,7 +70,7 @@ function DemoRow({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-      className={`mb-20 md:mb-56 ${className}`}
+      className={`mb-32 md:mb-56 ${className}`}
     >
       {children}
     </motion.div>
