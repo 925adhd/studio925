@@ -716,7 +716,7 @@ function PerformanceDemo() {
           </div>
           <div className="border-t border-brand-primary/8 pt-4">
             <div className="grid grid-cols-2 gap-3">
-              {['Load time: < 1 second', 'CDN-delivered globally', 'Auto SSL certificates', 'Daily backups'].map((item) => (
+              {['Load time: <3s', 'CDN-delivered globally', 'Auto SSL certificates', 'Daily backups'].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <Check size={14} className="text-brand-accent shrink-0" />
                   <span className="text-xs text-brand-primary/60">{item}</span>
@@ -739,7 +739,7 @@ function PerformanceDemo() {
             <ProgressRing value={99.9} label="Uptime" suffix="%" size={56} strokeWidth={3} delay={800} />
           </div>
           <div className="grid grid-cols-2 gap-x-3 gap-y-2">
-            {['Load time: < 1 second', 'CDN-delivered globally', 'Auto SSL certificates', 'Daily backups'].map((item) => (
+            {['Load time: <3s', 'CDN-delivered globally', 'Auto SSL certificates', 'Daily backups'].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <Check size={12} className="text-brand-accent shrink-0" />
                 <span className="text-[11px] text-brand-primary/60">{item}</span>
