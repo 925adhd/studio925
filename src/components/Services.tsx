@@ -362,7 +362,11 @@ function CustomBuiltDemo() {
         <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-3 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
           Custom-built for you
         </span>
-        <div className="grid grid-cols-2 gap-3 mb-5">
+        <h3 className="text-2xl mb-2">Look like the real business you are.</h3>
+        <p className="text-sm text-brand-primary/60 leading-relaxed mb-5">
+          No templates. No drag-and-drop builders. Your site is coded from scratch to say the right things and work the way your business needs it to.
+        </p>
+        <div className="grid grid-cols-2 gap-3">
           {/* Template — messy */}
           <div className="bg-gray-50 rounded-xl shadow-sm border border-gray-200 p-3 overflow-hidden">
             <TemplateBlock delay={0.15} rotate={-0.5} className="flex gap-1 mb-2">
@@ -410,10 +414,6 @@ function CustomBuiltDemo() {
             </CustomBlock>
           </div>
         </div>
-        <h3 className="text-2xl mb-2">Look like the real business you are.</h3>
-        <p className="text-sm text-brand-primary/60 leading-relaxed">
-          No templates. No drag-and-drop builders. Your site is coded from scratch to say the right things and work the way your business needs it to.
-        </p>
       </div>
     </DemoRow>
   );
@@ -533,7 +533,11 @@ function ResponsiveDemo() {
         <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-3 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
           Responsive on every device
         </span>
-        <div className="flex items-end gap-3 justify-center mb-5">
+        <h3 className="text-2xl mb-2">Win the customers who decide on their phone.</h3>
+        <p className="text-sm text-brand-primary/60 leading-relaxed mb-5">
+          Most customers decide on their phone. Your site will load fast and look right immediately — no waiting, no pinching, no broken layouts.
+        </p>
+        <div className="flex items-end gap-3 justify-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 15 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -585,10 +589,6 @@ function ResponsiveDemo() {
             <p className="text-[7px] text-brand-accent text-center mt-0.5 font-bold">Mobile</p>
           </motion.div>
         </div>
-        <h3 className="text-2xl mb-2">Win the customers who decide on their phone.</h3>
-        <p className="text-sm text-brand-primary/60 leading-relaxed">
-          Most customers decide on their phone. Your site will load fast and look right immediately — no waiting, no pinching, no broken layouts.
-        </p>
       </div>
     </DemoRow>
   );
@@ -732,7 +732,11 @@ function PerformanceDemo() {
         <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-3 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
           Built for speed &amp; security
         </span>
-        <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-5 mb-5">
+        <h3 className="text-2xl mb-2">A slow site loses customers. Yours won't.</h3>
+        <p className="text-sm text-brand-primary/60 leading-relaxed mb-5">
+          A slow site loses customers before they read a word. Yours loads fast, stays secure, and doesn't go down.
+        </p>
+        <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-5">
           <div className="grid grid-cols-3 gap-3 mb-4">
             <ProgressRing value={94} label="Speed" size={56} strokeWidth={3} delay={0} />
             <ProgressRing value={100} label="SSL" size={56} strokeWidth={3} delay={400} icon={<Lock size={18} className="text-brand-accent" />} />
@@ -747,10 +751,6 @@ function PerformanceDemo() {
             ))}
           </div>
         </div>
-        <h3 className="text-2xl mb-2">A slow site loses customers. Yours won't.</h3>
-        <p className="text-sm text-brand-primary/60 leading-relaxed">
-          A slow site loses customers before they read a word. Yours loads fast, stays secure, and doesn't go down.
-        </p>
       </div>
     </DemoRow>
   );
@@ -920,7 +920,19 @@ function SupportDemo() {
         <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-3 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
           Ongoing support
         </span>
-        <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-4 mb-5 h-[360px] flex flex-col">
+        <h3 className="text-2xl mb-2">Never get stuck on your own again.</h3>
+        <p className="text-sm text-brand-primary/60 leading-relaxed mb-3">
+          You won't be handed a login and left to figure it out. After launch, I'm still here — updates, fixes, or just someone to call.
+        </p>
+        <div className="space-y-2 mb-5">
+          {['Direct line — call or text anytime', 'Updates & changes handled for you', 'No support tickets or chatbots'].map((item) => (
+            <div key={item} className="flex items-center gap-2">
+              <Check size={14} className="text-brand-accent shrink-0" />
+              <span className="text-xs text-brand-primary/70">{item}</span>
+            </div>
+          ))}
+        </div>
+        <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-4 h-[360px] flex flex-col">
           <div className="flex items-center gap-2.5 mb-3 pb-3 border-b border-brand-primary/8 shrink-0">
             <img src="/kara-gibson-small.webp" alt="Kara Gibson" className="w-7 h-7 rounded-full object-cover shrink-0" />
             <div>
@@ -936,18 +948,6 @@ function SupportDemo() {
           <div className="flex-1 overflow-hidden">
             <AnimatedChat messages={chatMessages} compact />
           </div>
-        </div>
-        <h3 className="text-2xl mb-2">Never get stuck on your own again.</h3>
-        <p className="text-sm text-brand-primary/60 leading-relaxed mb-3">
-          You won't be handed a login and left to figure it out. After launch, I'm still here — updates, fixes, or just someone to call.
-        </p>
-        <div className="space-y-2">
-          {['Direct line — call or text anytime', 'Updates & changes handled for you', 'No support tickets or chatbots'].map((item) => (
-            <div key={item} className="flex items-center gap-2">
-              <Check size={14} className="text-brand-accent shrink-0" />
-              <span className="text-xs text-brand-primary/70">{item}</span>
-            </div>
-          ))}
         </div>
       </div>
     </DemoRow>
