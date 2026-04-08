@@ -82,7 +82,7 @@ export default function Footer() {
             className="inline-flex flex-wrap items-center gap-2 text-base md:text-lg font-semibold text-brand-primary hover:text-brand-accent transition-colors group"
           >
             Ready to start?
-            <span className="text-brand-accent group-hover:translate-x-1 transition-transform">Get my free quote →</span>
+            <span className="text-emerald-800 group-hover:translate-x-1 transition-transform">Get my free quote →</span>
           </a>
         </div>
 
