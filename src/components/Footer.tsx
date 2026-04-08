@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="py-12 md:py-20 px-6 bg-white border-t border-brand-primary/5">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-16">
-          <div className="col-span-2">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-10 md:mb-16">
+          <div>
             <div className="mb-4 md:mb-6">
               <img src={logo} alt="Studio 925 — custom websites for small businesses in Kentucky" width={162} height={56} loading="lazy" className="h-10 w-auto" />
             </div>
@@ -25,17 +25,20 @@ export default function Footer() {
             </a>
 
             {/* Trust badges */}
-            <div className="mt-5 md:mt-7 flex flex-wrap items-center gap-4 max-w-sm">
-              <img src="/badge-stripe.svg" alt="Powered by Stripe" width={150} height={34} loading="lazy" className="h-9 w-auto" />
+            <div className="mt-5 md:mt-7 flex flex-wrap items-start gap-5 max-w-sm">
               <a
                 href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fstudio925.design"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Verify Studio 925's Google PageSpeed score yourself"
-                className="hover:opacity-80 transition-opacity"
+                aria-label="Verify Studio 925's Google PageSpeed score yourself in a new tab"
+                className="group flex flex-col items-center hover:opacity-80 transition-opacity"
               >
                 <img src="/badge-pagespeed-99.svg" alt="90+ Google PageSpeed Performance Score. Click to verify." width={120} height={140} loading="lazy" className="h-20 w-auto" />
+                <span className="text-[10px] font-medium text-emerald-800 group-hover:text-emerald-900 underline underline-offset-2 -mt-1">
+                  Test it yourself →
+                </span>
               </a>
+              <img src="/badge-stripe.svg" alt="Powered by Stripe" width={150} height={34} loading="lazy" className="h-7 w-auto mt-6" />
             </div>
           </div>
           

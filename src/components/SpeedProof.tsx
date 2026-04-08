@@ -49,7 +49,7 @@ export default function SpeedProof() {
         </div>
 
         <p className="text-center text-xs text-brand-primary/75 mt-8 max-w-2xl mx-auto leading-relaxed">
-          Tested April 8, 2026 with <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer" className="underline text-brand-primary hover:text-brand-accent">Google PageSpeed Insights</a>{' '}on mobile. Google uses these scores as a real ranking signal (especially Largest Contentful Paint). A site that loads in 12 seconds doesn&rsquo;t just feel slow. It loses customers before they ever see it.
+          Tested April 8, 2026 with Google PageSpeed Insights on mobile. <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fstudio925.design" target="_blank" rel="noopener noreferrer" className="font-semibold text-emerald-800 hover:text-emerald-900 underline underline-offset-2">Test it yourself →</a>{' '} Google uses these scores as a real ranking signal (especially Largest Contentful Paint). A site that loads in 12 seconds doesn&rsquo;t just feel slow. It loses customers before they ever see it.
         </p>
       </div>
     </section>
