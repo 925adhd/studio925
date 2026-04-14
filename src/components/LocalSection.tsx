@@ -32,6 +32,8 @@ export default function LocalSection() {
         src="/county.webp"
         alt="Map of Grayson County, Kentucky service area for Studio 925 web design"
         aria-hidden="true"
+        loading="lazy"
+        decoding="async"
         className="county-bg"
       />
 

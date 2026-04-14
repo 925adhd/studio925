@@ -3,9 +3,9 @@ const logo = '/logo.webp';
 
 export default function Footer() {
   return (
-    <footer className="py-12 md:py-20 px-6 bg-white border-t border-brand-primary/5">
+    <footer className="py-10 md:py-12 px-6 bg-white border-t border-brand-primary/5">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-10 md:mb-16">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-10">
           <div>
             <div className="mb-4 md:mb-6">
               <img src={logo} alt="Studio 925 — custom websites for small businesses in Kentucky" width={162} height={56} loading="lazy" className="h-10 w-auto" />
@@ -38,13 +38,13 @@ export default function Footer() {
                   Test it yourself →
                 </span>
               </a>
-              <img src="/badge-stripe.svg" alt="Powered by Stripe" width={150} height={34} loading="lazy" className="h-7 w-auto mt-6" />
+              <img src="/badge-stripe.svg" alt="Powered by Stripe" width={150} height={34} loading="lazy" className="h-7 w-auto mt-0 md:mt-6" />
             </div>
           </div>
           
           <div>
-            <h3 className="font-sans font-bold mb-3 md:mb-6 text-base">Quick Links</h3>
-            <ul className="space-y-2 md:space-y-4 text-brand-primary/60">
+            <h3 className="font-sans font-bold mb-3 md:mb-4 text-base">Quick Links</h3>
+            <ul className="space-y-2 md:space-y-2.5 text-brand-primary/60">
               <li><a href="/#services" className="hover:text-brand-accent transition-colors">Services</a></li>
               <li><Link href="/portfolio" className="hover:text-brand-accent transition-colors">Portfolio</Link></li>
               <li><a href="/#pricing" className="hover:text-brand-accent transition-colors">Pricing</a></li>
@@ -56,8 +56,8 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-sans font-bold mb-3 md:mb-6 text-base">Web Design Services</h3>
-            <ul className="space-y-2 md:space-y-4 text-brand-primary/60">
+            <h3 className="font-sans font-bold mb-3 md:mb-4 text-base">Web Design Services</h3>
+            <ul className="space-y-2 md:space-y-2.5 text-brand-primary/60">
               <li>
                 <Link href="/web-design-grayson-county-ky" className="hover:text-brand-accent transition-colors">
                   Web Design in Grayson County
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
         
         {/* Final CTA strip */}
-        <div className="pb-8 text-center md:text-left">
+        <div className="pb-6 text-center md:text-left">
           <a
             href="/#contact"
             className="inline-flex flex-wrap items-center gap-2 text-base md:text-lg font-semibold text-brand-primary hover:text-brand-accent transition-colors group"
@@ -89,7 +89,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="pt-8 border-t border-brand-primary/5 text-sm text-brand-primary/65">
+        <div className="pt-6 border-t border-brand-primary/5 text-sm text-brand-primary/65">
           <p className="mb-4 max-w-3xl text-xs leading-relaxed">
             Studio 925 builds websites designed to improve online visibility and help businesses attract customers. Results such as search rankings, traffic, leads, and revenue are not guaranteed.{' '}
             <Link href="/disclaimer" className="underline hover:text-brand-accent transition-colors">Read our full disclaimer</Link>.

@@ -26,12 +26,12 @@ export default function Hero() {
             Helping Local Businesses Grow Online · Leitchfield &amp; Grayson County, Kentucky
           </motion.p>
 
-          <motion.h2
+          <motion.h1
             {...fade(0.1)}
             className="text-5xl md:text-7xl mb-4 leading-[1.1]"
           >
             Your business deserves a website <span className="italic text-brand-accent">that actually works.</span>
-          </motion.h2>
+          </motion.h1>
 
           <motion.p
             {...fade(0.2)}

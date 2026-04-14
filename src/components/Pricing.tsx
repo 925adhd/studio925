@@ -155,7 +155,7 @@ export default function Pricing() {
                     window.dispatchEvent(new CustomEvent('planSelected', { detail: alt.name }));
                     window.location.href = '/#contact';
                   }}
-                  className="shrink-0 bg-brand-primary text-white px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-1.5 hover:bg-brand-primary/90 transition-all cursor-pointer"
+                  className="shrink-0 bg-brand-primary text-white px-5 py-3 rounded-xl text-sm font-bold flex items-center gap-1.5 hover:bg-brand-primary/90 transition-all cursor-pointer"
                 >
                   Let's Talk <ArrowRight size={14} />
                 </button>

@@ -10,7 +10,6 @@ import TrustStrip from '../src/components/TrustStrip';
 const Services = dynamic(() => import('../src/components/Services'), { ssr: true });
 const Comparison = dynamic(() => import('../src/components/Comparison'), { ssr: true });
 const SpeedProof = dynamic(() => import('../src/components/SpeedProof'), { ssr: true });
-const WhyStudio = dynamic(() => import('../src/components/WhyStudio'), { ssr: true });
 const Pricing = dynamic(() => import('../src/components/Pricing'), { ssr: true });
 const PortfolioPreview = dynamic(() => import('../src/components/PortfolioPreview'), { ssr: true });
 const WhoItsFor = dynamic(() => import('../src/components/WhoItsFor'), { ssr: true });
@@ -44,6 +43,7 @@ export default function HomePage() {
         <TrustStrip />
         <Services />
         <Comparison />
+        <Pricing />
         <SpeedProof />
 
         {/* Process Section — Timeline */}
@@ -178,10 +178,7 @@ export default function HomePage() {
                     <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-brand-accent mb-1.5">{item.time}</span>
                     <h3 className="text-base md:text-lg font-sans font-bold mb-1.5">{item.title}</h3>
                     <p className="text-xs md:text-sm text-brand-primary/60 leading-relaxed">{item.desc}</p>
-                    {/* Illustration — below text on mobile */}
-                    <div className="mt-4 md:hidden flex justify-center">
-                      {item.illustration}
-                    </div>
+                    {/* Illustration — desktop only; decorative, hidden on mobile for shorter scroll */}
                   </div>
 
                   {/* Illustration on opposite side — desktop only */}
@@ -200,8 +197,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <WhyStudio />
-        <Pricing />
         <PortfolioPreview />
         <WhoItsFor />
         <LocalSection />

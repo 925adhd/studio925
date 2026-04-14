@@ -31,12 +31,13 @@ export default function TrustStrip() {
   return (
     <section className="pt-8 pb-10 md:pt-12 md:pb-20 px-6 bg-brand-warm">
       <div className="max-w-7xl mx-auto">
+        <h2 className="sr-only">Why local businesses choose Studio 925</h2>
         {/* Mobile: plain text row — no animation, instant */}
         <div className="sm:hidden flex items-center justify-center gap-4">
           {items.map((item) => (
             <div key={item.mobileTitle} className="flex items-center gap-1.5">
               <item.icon size={12} className="text-brand-accent shrink-0" />
-              <span className="text-[11px] font-semibold text-brand-primary/65 whitespace-nowrap">{item.mobileTitle}</span>
+              <span className="text-xs font-semibold text-brand-primary/65 whitespace-nowrap">{item.mobileTitle}</span>
             </div>
           ))}
         </div>
