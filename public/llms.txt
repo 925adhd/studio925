@@ -1,27 +1,56 @@
 # Studio 925
 
-> Custom web design studio based in Leitchfield, Kentucky, building custom websites for small businesses.
+> Studio 925 is a one-person web design studio in Leitchfield, Kentucky, building custom websites for small businesses. Sites are coded from scratch rather than assembled from templates or page builders, with a focus on speed, SEO, and clear conversions. The studio serves Grayson County, Kentucky, and remote clients.
 
-Studio 925 is a one-person design studio run by Kara Gibson. Sites are built from scratch (no Wix, Squarespace, or WordPress templates) with a focus on speed, accessibility, and clean code.
+## About Studio 925
 
-## Main pages
-- [Home](https://studio925.design/): Overview of services and recent work
-- [Portfolio](https://studio925.design/portfolio): Past client projects
-- [Website Cost](https://studio925.design/website-cost): Pricing information
-- [Hosting & Support](https://studio925.design/hosting-support): Ongoing hosting and maintenance details
+- Owner and designer: Kara Gibson
+- Based in Leitchfield, Kentucky 42754
+- Email: kara@studio925.design
+- Phone: +1-270-551-2210
+- Hours: Monday to Friday, 9:00 AM to 5:00 PM
+- Facebook: https://www.facebook.com/studio925design
+- One-time build pricing starts at $900; ongoing care plans start at $25/month
+- Services Grayson County, KY and small businesses statewide in Kentucky
+
+## Core pages
+
+- [Home](https://studio925.design/): Overview of Studio 925, services, pricing, and contact
+- [Portfolio](https://studio925.design/portfolio): Featured client projects with PageSpeed results
+- [Website Cost](https://studio925.design/website-cost): Breakdown of what a small business website costs and why
+- [Hosting & Support](https://studio925.design/hosting-support): Ongoing hosting, backups, and maintenance plans
+- [Blog](https://studio925.design/blog): Articles on small business web design, pricing, and hiring
+
+## Services
+
+- Foundation website ($900 one-time): Up to 3 pages, mobile responsive, contact form, full file ownership
+- Growth website ($1,800 one-time): Up to 6 pages, service pages, blog or CMS, analytics, lead tracking, 30 days post-launch support
+- Online Store website ($2,600 one-time): Full site plus storefront, checkout, customer accounts, admin dashboard, 60 days guided support
+- Basic Hosting ($25/month): Hosting, secure backups, uptime management
+- Full Support ($49/month): Hosting plus content updates, text edits, layout tweaks, ongoing SEO improvements
 
 ## Service areas
+
 - [Leitchfield, KY](https://studio925.design/website-design-leitchfield-ky): Local web design in Leitchfield
 - [Grayson County, KY](https://studio925.design/web-design-grayson-county-ky): Web design across Grayson County
-- [Small Business Web Design — Kentucky](https://studio925.design/small-business-website-design-kentucky): Statewide small business work
+- [Kentucky (statewide)](https://studio925.design/small-business-website-design-kentucky): Small business web design for Kentucky
+
+## Portfolio projects
+
+- [CS Media](https://cscreatesmedia.com): Media brand site built for clear service positioning and lead generation
+- [925 ADHD](https://925adhd.com): SaaS platform for remote work with a gated resource library and Stripe subscriptions
+- [Four Chariots](https://4chariots.com): Apparel e-commerce brand with a streamlined purchasing flow
+- [Townly](https://townly.us): Community platform that organizes local businesses and neighborhood info
 
 ## Blog
-- [Is a Custom Website Worth It? Here's the Math](https://studio925.design/blog/is-custom-website-worth-it): Cost and value comparison for custom sites
-- [What to Look for in a Local Web Designer](https://studio925.design/blog/what-to-look-for-in-a-local-web-designer): Hiring guide for small business owners
-- [Wix vs Custom Website](https://studio925.design/blog/wix-vs-custom-website): Comparison of Wix and custom-coded sites
-- [Your Website Is a Tax Write-Off](https://studio925.design/blog/your-website-is-a-tax-write-off): General notes on website expenses at tax time
 
-## Optional
+- [Is a Custom Website Worth It? Here's the Math](https://studio925.design/blog/is-custom-website-worth-it): ROI math on whether a custom site pays for itself for a small business
+- [What to Look for in a Local Web Designer](https://studio925.design/blog/what-to-look-for-in-a-local-web-designer): What matters when hiring a local designer and the red flags to avoid
+- [Wix vs Custom Website](https://studio925.design/blog/wix-vs-custom-website): Cost, speed, and SEO comparison between Wix and a custom-built site
+- [Your Website Is a Tax Write-Off](https://studio925.design/blog/your-website-is-a-tax-write-off): How a business website is typically treated as a deductible expense
+
+## Legal
+
 - [Privacy Policy](https://studio925.design/privacy-policy)
 - [Terms of Service](https://studio925.design/terms-of-service)
 - [Cookie Policy](https://studio925.design/cookie-policy)
