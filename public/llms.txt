@@ -24,8 +24,8 @@
 ## Services
 
 - Foundation website ($900 one-time): Up to 5 pages, mobile-first, custom design, contact form, launch support, full ownership after final payment
-- Growth website ($1,800 one-time): Up to 8 pages, adds hands-on SEO audit, service pages, simple CMS, analytics and lead tracking, 30 days post-launch support
-- Online Store website ($2,600 one-time): Up to 12 pages, adds a full online store with payments and customer management, 60 days guided support
+- Growth website ($1,800 one-time): Up to 10 pages, adds hands-on SEO audit, service pages, simple CMS, analytics and lead tracking, 30 days post-launch support
+- Online Store website ($2,600 one-time): Up to 15 pages, adds a full online store with payments and customer management, 60 days guided support
 - Basic Hosting ($25/month): Hosting, secure backups, uptime management
 - Full Support ($49/month): Hosting plus content updates, layout tweaks, and ongoing SEO work — new service pages, blog posts, meta tags, and indexing; includes market exclusivity in your niche and area
 

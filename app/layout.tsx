@@ -131,7 +131,7 @@ const jsonLd = {
             itemOffered: {
               '@type': 'Service',
               name: 'Growth Website',
-              description: 'Up to 8 custom-designed pages with dedicated service pages, hands-on SEO audit, simple CMS, Google Analytics, lead tracking, and 30 days post-launch support.',
+              description: 'Up to 10 custom-designed pages with dedicated service pages, hands-on SEO audit, simple CMS, Google Analytics, lead tracking, and 30 days post-launch support.',
             },
             price: '1800',
             priceCurrency: 'USD',
@@ -141,7 +141,7 @@ const jsonLd = {
             itemOffered: {
               '@type': 'Service',
               name: 'Online Store Website',
-              description: 'Up to 12 custom-designed pages plus a full online store with secure checkout, customer accounts, admin dashboard, and 60 days guided support.',
+              description: 'Up to 15 custom-designed pages plus a full online store with secure checkout, customer accounts, admin dashboard, and 60 days guided support.',
             },
             price: '2600',
             priceCurrency: 'USD',
