@@ -33,6 +33,7 @@ const plans = [
       'Updates & support:',
       'Text, images, and layout changes — just message me',
       'Priority support — I respond first',
+      'Market exclusivity — no other SEO clients in your niche and market',
     ],
     featured: true,
     cta: 'Get Full Support',
@@ -207,6 +208,10 @@ export default function HostingSupportPage() {
             <div>
               <h3 className="font-semibold text-brand-primary mb-2">Can I switch between plans?</h3>
               <p>Yes. You can move from Basic Hosting to Full Support (or back) at any time. Just send me a message and I&apos;ll handle the change.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-brand-primary mb-2">Will you do SEO for my competitor too?</h3>
+              <p>No. My ongoing SEO clients get market exclusivity — I only do active SEO work for one business per niche per area. (Website builds are a different story — I&apos;m happy to design a site for anyone, but the active ranking work is reserved.)</p>
             </div>
           </div>
         </div>
