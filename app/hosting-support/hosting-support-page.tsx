@@ -211,7 +211,7 @@ export default function HostingSupportPage() {
             </div>
             <div>
               <h3 className="font-semibold text-brand-primary mb-2">Will you do SEO for my competitor too?</h3>
-              <p>No. My ongoing SEO clients get market exclusivity — I only do active SEO work for one business per niche per area. (Website builds are a different story — I&apos;m happy to design a site for anyone, but the active ranking work is reserved.)</p>
+              <p>No. My ongoing SEO clients get market exclusivity — I only do active SEO work for one business per niche per area. A competitor can still host with me or have a site built, since that&apos;s not ranking work. If a competitor ever wants updates without SEO, I&apos;d talk to my exclusive client first before taking it on.</p>
             </div>
           </div>
         </div>
