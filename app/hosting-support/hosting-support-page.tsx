@@ -26,7 +26,7 @@ const plans = [
     features: [
       'Hosting & support:',
       'Secure hosting, backups, and performance monitoring',
-      'Ongoing SEO — meta tags, indexing, and site health',
+      'Ongoing SEO — new service pages, blog posts, meta tags, and indexing',
       'Domain & setup:',
       'Free custom domain~',
       'DNS, email routing, and SSL included',
@@ -180,7 +180,7 @@ export default function HostingSupportPage() {
               <strong className="text-brand-primary">Support</strong>{' '}is the human side. When you need to update your hours, swap out a photo, fix a typo, add a new service, or change your phone number, you message me and it gets done. No logging into a builder, no learning a CMS, no &quot;I&apos;ll get to it next month.&quot; Most small edits are turned around within a business day.
             </p>
             <p>
-              On top of that, Full Support includes ongoing SEO upkeep — making sure your meta tags stay accurate, your sitemap is current, and your site stays indexed properly on Google. As your business changes, your website changes with it.
+              On top of that, Full Support includes ongoing SEO work — adding new service pages and blog posts that target the searches your customers are actually making, keeping your meta tags accurate, and making sure your sitemap stays current and indexed on Google. As your business changes, your website changes with it.
             </p>
           </div>
         </div>

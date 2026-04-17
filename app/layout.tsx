@@ -121,7 +121,7 @@ const jsonLd = {
             itemOffered: {
               '@type': 'Service',
               name: 'Foundation Website',
-              description: 'A clean, professional website with up to 3 pages, mobile responsive design, contact form, and full ownership of files.',
+              description: 'A clean, professional website with up to 5 custom-designed pages, mobile-first design, contact form, launch support, and full ownership of files.',
             },
             price: '900',
             priceCurrency: 'USD',
@@ -131,7 +131,7 @@ const jsonLd = {
             itemOffered: {
               '@type': 'Service',
               name: 'Growth Website',
-              description: 'Up to 6 pages with separate service pages, blog or CMS, Google Analytics setup, lead capture forms, and 30 days post-launch support.',
+              description: 'Up to 8 custom-designed pages with dedicated service pages, hands-on SEO audit, simple CMS, Google Analytics, lead tracking, and 30 days post-launch support.',
             },
             price: '1800',
             priceCurrency: 'USD',
@@ -141,7 +141,7 @@ const jsonLd = {
             itemOffered: {
               '@type': 'Service',
               name: 'Online Store Website',
-              description: 'Full website with online store, secure checkout, customer accounts, admin dashboard, and 60 days guided support.',
+              description: 'Up to 12 custom-designed pages plus a full online store with secure checkout, customer accounts, admin dashboard, and 60 days guided support.',
             },
             price: '2600',
             priceCurrency: 'USD',
@@ -173,7 +173,7 @@ const jsonLd = {
             itemOffered: {
               '@type': 'Service',
               name: 'Full Support',
-              description: 'Everything in hosting plus content updates, text edits, layout tweaks, and ongoing SEO improvements.',
+              description: 'Everything in Basic Hosting plus content updates, layout tweaks, and ongoing SEO work including new service pages and blog posts.',
             },
             price: '49',
             priceCurrency: 'USD',

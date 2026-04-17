@@ -36,7 +36,7 @@ const offerLd = {
     {
       '@type': 'Offer',
       name: 'Full Support',
-      description: 'Hosting plus content updates, text edits, layout tweaks, and ongoing site care.',
+      description: 'Hosting plus content updates, layout tweaks, and ongoing SEO work including new service pages and blog posts.',
       price: '49',
       priceCurrency: 'USD',
       priceSpecification: {
