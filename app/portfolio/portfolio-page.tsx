@@ -20,7 +20,7 @@ const featuredProjects = [
     ],
     href: 'https://cscreatesmedia.com',
     image: '/csmedia-listing-sold-hero.webp',
-    images: ['/csmedia-listing-sold-hero.webp', '/csmedia-virtual-staging-service.webp', '/csmedia-featured-projects-portfolio.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'],
+    images: ['/csmedia-listing-sold-hero.webp', '/csmedia-featured-projects-portfolio.webp', '/csmedia-services-grid.webp', '/csmedia-virtual-staging-service.webp', '/csmedia-how-it-works.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'],
     tags: ['Lead Generation', 'Branding'],
     results: {
       desktop: { performance: 100, accessibility: 100, bestPractices: 100, seo: 100, fcp: '0.3s', lcp: '0.7s', cls: '0', speedIndex: '0.6s', image: '/csmedia-speed-desktop.webp' },
