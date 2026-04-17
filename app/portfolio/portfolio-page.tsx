@@ -92,7 +92,7 @@ const features = [
   'SEO backlink from Studio 925 to your site',
 ];
 
-function PageSpeedResults({ title, results }: { title: string; results: NonNullable<typeof featuredProjects[0]['results']> }) {
+function PageSpeedResults({ title, results, siteUrl }: { title: string; results: NonNullable<typeof featuredProjects[0]['results']>; siteUrl: string }) {
   const [modalImage, setModalImage] = useState<string | null>(null);
 
   // When modal opens, push a history entry so the phone back button closes it
@@ -145,6 +145,16 @@ function PageSpeedResults({ title, results }: { title: string; results: NonNulla
         </div>
         <p className="text-[10px] text-brand-primary/50 mt-3 text-center">
           Mobile: {results.mobile.performance}/100 · Desktop: {results.desktop.performance}/100 — Accessibility, Best Practices & SEO all 100
+        </p>
+        <p className="text-center mt-3">
+          <a
+            href={`https://pagespeed.web.dev/analysis?url=${encodeURIComponent(siteUrl)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-semibold text-emerald-800 hover:text-emerald-900 underline underline-offset-2"
+          >
+            Test it yourself →
+          </a>
         </p>
       </div>
 
@@ -268,7 +278,7 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
 
             {/* PageSpeed results on the right */}
             <div>
-              <PageSpeedResults title={project.title} results={project.results!} />
+              <PageSpeedResults title={project.title} results={project.results!} siteUrl={project.href} />
             </div>
           </div>
         </motion.div>
