@@ -124,7 +124,7 @@ export default function PortfolioPreview() {
             className="group block rounded-3xl overflow-hidden border border-brand-primary/5 bg-white shadow-sm shadow-brand-primary/5"
           >
             <div
-              className="aspect-[16/10] overflow-hidden bg-brand-primary/5 p-5 pb-0 touch-pan-y select-none"
+              className="aspect-[16/10] overflow-hidden bg-brand-primary/5 p-5 pb-3 touch-pan-y select-none"
               {...desktopCarousel.swipeHandlers}
             >
               <div className="w-full h-full rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 flex items-center">
@@ -183,7 +183,7 @@ export default function PortfolioPreview() {
             className="group block rounded-2xl overflow-hidden border border-brand-primary/5 bg-white shadow-sm shadow-brand-primary/5 mb-6"
           >
             <div
-              className="aspect-[16/10] overflow-hidden bg-brand-primary/5 p-3 pb-0 touch-pan-y select-none"
+              className="aspect-[16/10] overflow-hidden bg-brand-primary/5 p-3 pb-2 touch-pan-y select-none"
               {...mobileCarousel.swipeHandlers}
             >
               <div className="w-full h-full rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 flex items-center">
