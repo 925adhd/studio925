@@ -1000,11 +1000,10 @@ export default function Services() {
           className="mb-8 md:mb-16 max-w-3xl"
         >
           <h2 className="text-2xl sm:text-4xl md:text-5xl mb-4">
-            <span className="hidden sm:inline">A professional online presence<br /><span className="text-brand-accent italic">that works as hard as you&nbsp;do.</span></span>
-            <span className="sm:hidden">Your website should work <span className="text-brand-accent italic">as hard as you&nbsp;do.</span></span>
+            Every Studio 925 site includes <span className="text-brand-accent italic">all&nbsp;five.</span>
           </h2>
           <p className="text-sm sm:text-lg text-brand-primary/60">
-            Here's what you get when your website is built to perform.
+            Built in by default. No upsells.
           </p>
         </motion.div>
 
