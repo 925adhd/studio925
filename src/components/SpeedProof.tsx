@@ -10,7 +10,7 @@ export default function SpeedProof() {
             Don&rsquo;t take my word for it. <span className="italic text-brand-accent md:inline">Take Google&rsquo;s.</span>
           </h2>
           <p className="text-brand-primary/65 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-            Same test, same morning. Mine loads in 2 seconds. Theirs takes 12.
+            Same test, same morning. One loads in 2 seconds. The other in 12.
           </p>
         </div>
 
