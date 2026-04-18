@@ -1,7 +1,8 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { trackEvent } from '../lib/gtag';
 
@@ -53,8 +54,9 @@ const alternatives = [
 ];
 
 export default function Pricing() {
+  const [featuresOpen, setFeaturesOpen] = useState(false);
   return (
-    <section id="pricing" className="py-24 md:py-36 px-6 bg-brand-warm">
+    <section id="pricing" className="py-14 md:py-36 px-6 bg-brand-warm">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 md:mb-4 leading-snug">Simple pricing. <span className="italic text-brand-accent">Real results.</span></h2>
@@ -108,14 +110,27 @@ export default function Pricing() {
             {/* Right — features */}
             <div className="md:w-3/5">
               <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-4">Everything included</p>
+              {/* Mobile: collapsed list (first 5), desktop: full list */}
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
-                {foundation.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2.5 text-sm">
+                {foundation.features.map((feature, i) => (
+                  <li
+                    key={feature}
+                    className={`${i >= 5 && !featuresOpen ? 'hidden md:flex' : 'flex'} items-start gap-2.5 text-sm`}
+                  >
                     <Check size={14} className="text-brand-accent mt-0.5 shrink-0" />
                     <span className="text-white/85">{feature}</span>
                   </li>
                 ))}
               </ul>
+              <button
+                type="button"
+                onClick={() => setFeaturesOpen((v) => !v)}
+                aria-expanded={featuresOpen}
+                className="md:hidden mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-brand-accent underline underline-offset-4 min-h-[44px]"
+              >
+                {featuresOpen ? 'Show less' : 'See everything included'}
+                <ChevronDown size={14} className={`transition-transform ${featuresOpen ? 'rotate-180' : ''}`} />
+              </button>
               <div className="mt-6 text-xs font-medium px-3 py-2 rounded-xl bg-white/10 text-white/55 inline-block">
                 {foundation.support}
               </div>

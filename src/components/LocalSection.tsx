@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function LocalSection() {
   return (
-    <section className="relative py-20 md:py-36 px-6 bg-brand-warm overflow-hidden" id="local">
+    <section className="relative py-14 md:py-36 px-6 bg-brand-warm overflow-hidden" id="local">
 
       {/* County outline — decorative background */}
       <style>{`

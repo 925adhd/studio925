@@ -1,13 +1,16 @@
 export default function SpeedProof() {
   return (
-    <section className="py-20 md:py-28 px-6 bg-white border-t border-brand-primary/5">
+    <section className="py-14 md:py-28 px-6 bg-white border-t border-brand-primary/5">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-10 md:mb-14">
+        <div className="text-center mb-7 md:mb-14">
           <p className="text-xs font-bold tracking-[0.15em] uppercase text-emerald-800 mb-3">
             Receipts
           </p>
-          <h2 className="text-2xl md:text-4xl mb-3">
-            Don&rsquo;t take my word for it. <span className="italic text-brand-accent block md:inline">Take Google&rsquo;s.</span>
+          <h2 className="md:hidden text-2xl mb-3 leading-tight">
+            Fast sites get found.<span className="block italic text-brand-accent">Slow ones don&rsquo;t.</span>
+          </h2>
+          <h2 className="hidden md:block md:text-4xl mb-3">
+            Don&rsquo;t take my word for it. <span className="italic text-brand-accent md:inline">Take Google&rsquo;s.</span>
           </h2>
           <p className="text-brand-primary/65 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
             Same test, same morning. Mine loads in 2 seconds. Theirs takes 12.

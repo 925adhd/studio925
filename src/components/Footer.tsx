@@ -44,7 +44,7 @@ export default function Footer() {
           
           <div>
             <h3 className="font-sans font-bold mb-3 md:mb-4 text-base">Quick Links</h3>
-            <ul className="space-y-2 md:space-y-2.5 text-brand-primary/60">
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2 md:grid-cols-1 md:gap-y-2.5 text-brand-primary/60">
               <li><a href="/#services" className="hover:text-brand-accent transition-colors">Services</a></li>
               <li><Link href="/portfolio" className="hover:text-brand-accent transition-colors">Portfolio</Link></li>
               <li><a href="/#pricing" className="hover:text-brand-accent transition-colors">Pricing</a></li>
@@ -90,9 +90,13 @@ export default function Footer() {
         </div>
 
         <div className="pt-6 border-t border-brand-primary/5 text-sm text-brand-primary/65">
-          <p className="mb-4 max-w-3xl text-xs leading-relaxed">
+          <p className="hidden md:block mb-4 max-w-3xl text-xs leading-relaxed">
             Studio 925 builds websites designed to improve online visibility and help businesses attract customers. Results such as search rankings, traffic, leads, and revenue are not guaranteed.{' '}
             <Link href="/disclaimer" className="underline hover:text-brand-accent transition-colors">Read our full disclaimer</Link>.
+          </p>
+          <p className="md:hidden mb-4 text-xs leading-relaxed">
+            Results aren&rsquo;t guaranteed.{' '}
+            <Link href="/disclaimer" className="underline hover:text-brand-accent transition-colors">Read our full disclaimer →</Link>
           </p>
           <ul className="flex flex-wrap justify-center md:justify-start gap-x-5 gap-y-2 mb-4 text-xs">
             <li><Link href="/privacy-policy" className="hover:text-brand-accent transition-colors">Privacy Policy</Link></li>

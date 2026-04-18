@@ -12,11 +12,12 @@ function CarouselImage() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const duration = activeIndex === 0 ? 4000 : 2000;
+    const timer = setTimeout(() => {
       setActiveIndex((prev) => (prev + 1) % images.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
+    }, duration);
+    return () => clearTimeout(timer);
+  }, [activeIndex]);
 
   return (
     <div className="relative">
@@ -35,9 +36,9 @@ function CarouselImage() {
 
 export default function PortfolioPreview() {
   return (
-    <section className="py-20 md:py-36 px-6 bg-white border-t border-brand-primary/5">
+    <section className="py-14 md:py-36 px-6 bg-white border-t border-brand-primary/5">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-10 md:mb-14">
+        <div className="text-center mb-7 md:mb-14">
           <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
             Real websites for <span className="italic text-brand-accent">real businesses</span>
           </h2>

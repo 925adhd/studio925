@@ -1,7 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { motion, useScroll, useSpring } from 'motion/react';
+import { ChevronDown } from 'lucide-react';
 import Navbar from '../src/components/Navbar';
 import Hero from '../src/components/Hero';
 import TrustStrip from '../src/components/TrustStrip';
@@ -24,6 +26,7 @@ export default function HomePage() {
     damping: 30,
     restDelta: 0.001,
   });
+  const [openStep, setOpenStep] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
@@ -38,21 +41,23 @@ export default function HomePage() {
 
       <Navbar />
 
-      <main id="main-content">
-        <Hero />
-        <TrustStrip />
-        <Services />
-        <Comparison />
-        <Pricing />
-        <SpeedProof />
+      <main id="main-content" className="flex flex-col">
+        <div className="order-1 md:order-1"><Hero /></div>
+        <div className="order-2 md:order-2"><TrustStrip /></div>
+        <div className="order-3 md:order-8"><PortfolioPreview /></div>
+        <div className="order-4 md:order-9"><WhoItsFor /></div>
+        <div className="order-5 md:order-3"><Services /></div>
+        <div className="order-6 md:order-4"><Comparison /></div>
+        <div className="order-7 md:order-6"><SpeedProof /></div>
+        <div className="order-8 md:order-5"><Pricing /></div>
 
-        {/* Process Section — Timeline */}
-        <section id="process" className="py-20 md:py-36 px-6 bg-white border-t border-brand-primary/5">
+        {/* Process Section — Timeline (desktop) / Accordion (mobile) — order-9 */}
+        <section id="process" className="order-9 md:order-7 py-14 md:py-36 px-6 bg-white border-t border-brand-primary/5">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10 md:mb-16">
+            <div className="text-center mb-8 md:mb-16">
               <h2 className="text-2xl md:text-4xl mb-2 md:mb-3">How it works.</h2>
-              <p className="text-brand-primary/60 text-base md:text-lg mb-1">This shouldn't feel like <span className="italic text-emerald-700">a second job.</span></p>
-              <p className="text-brand-primary/65 text-xs md:text-sm">No homework. No confusion. Just a clear process from start to finish.</p>
+              <p className="text-brand-primary/60 text-sm md:text-lg mb-1">This shouldn't feel like <span className="italic text-emerald-700">a second job.</span></p>
+              <p className="hidden md:block text-brand-primary/65 text-xs md:text-sm">No homework. No confusion. Just a clear process from start to finish.</p>
             </div>
 
             <div className="relative">
@@ -154,31 +159,53 @@ export default function HomePage() {
                     <path d="M20 90 Q40 85 60 88 Q80 91 100 86" stroke="#059669" strokeWidth="1.5" strokeLinecap="round" opacity="0.15" />
                   </svg>
                 )}
-              ].map((item, i) => (
+              ].map((item, i) => {
+                const isOpen = openStep === i;
+                return (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className={`relative flex items-start gap-5 md:gap-0 mb-10 md:mb-20 last:mb-0 ${
+                  className={`relative flex items-start gap-4 md:gap-0 mb-4 md:mb-20 last:mb-0 ${
                     i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}
                 >
                   {/* Dot on the line */}
-                  <div className="absolute left-4 md:left-1/2 top-1 md:top-3 w-2.5 h-2.5 rounded-full bg-brand-accent ring-4 ring-white -translate-x-1/2 z-10" />
+                  <div className="absolute left-4 md:left-1/2 top-4 md:top-3 w-2.5 h-2.5 rounded-full bg-brand-accent ring-4 ring-white -translate-x-1/2 z-10" />
 
                   {/* Spacer for mobile left offset */}
                   <div className="w-10 shrink-0 md:hidden" />
 
-                  {/* Content */}
-                  <div className={`flex-1 md:w-[calc(50%-2rem)] ${
+                  {/* Content — desktop (always expanded) */}
+                  <div className={`hidden md:block flex-1 md:w-[calc(50%-2rem)] ${
                     i % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'
                   }`}>
                     <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-brand-accent mb-1.5">{item.time}</span>
                     <h3 className="text-base md:text-lg font-sans font-bold mb-1.5">{item.title}</h3>
                     <p className="text-xs md:text-sm text-brand-primary/60 leading-relaxed">{item.desc}</p>
-                    {/* Illustration — desktop only; decorative, hidden on mobile for shorter scroll */}
+                  </div>
+
+                  {/* Content — mobile (tap-to-expand) */}
+                  <div className="md:hidden flex-1">
+                    <button
+                      type="button"
+                      onClick={() => setOpenStep(isOpen ? null : i)}
+                      aria-expanded={isOpen}
+                      className="w-full flex items-center justify-between gap-3 py-2 text-left min-h-[44px]"
+                    >
+                      <div className="flex items-center gap-3 flex-1">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-brand-accent shrink-0 w-14">{item.time}</span>
+                        <h3 className="text-[15px] font-sans font-bold">{item.title}</h3>
+                      </div>
+                      <ChevronDown size={18} className={`text-brand-primary/40 shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    <div className={`grid transition-all duration-300 ease-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
+                      <div className="overflow-hidden">
+                        <p className="text-xs text-brand-primary/60 leading-relaxed pb-2 pr-4">{item.desc}</p>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Illustration on opposite side — desktop only */}
@@ -188,19 +215,18 @@ export default function HomePage() {
                     {item.illustration}
                   </div>
                 </motion.div>
-              ))}
+                );
+              })}
             </div>
 
-            <p className="text-center text-xs text-brand-primary/60 mt-10 md:mt-14 max-w-md mx-auto leading-relaxed">
+            <p className="hidden md:block text-center text-xs text-brand-primary/60 mt-10 md:mt-14 max-w-md mx-auto leading-relaxed">
               Clear milestones. Regular updates. Direct communication from start to finish.
             </p>
           </div>
         </section>
 
-        <PortfolioPreview />
-        <WhoItsFor />
-        <LocalSection />
-        <Contact />
+        <div className="order-10 md:order-10"><LocalSection /></div>
+        <div className="order-11 md:order-11"><Contact /></div>
       </main>
 
       <Footer />

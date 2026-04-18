@@ -2,7 +2,28 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'motion/react';
-import { Search, Check, ArrowRight, Mic, Lock, Phone, Monitor, Tablet, Smartphone as PhoneIcon } from 'lucide-react';
+import { Search, Check, ArrowRight, Mic, Lock, Phone, Monitor, Tablet, Smartphone as PhoneIcon, ChevronDown } from 'lucide-react';
+
+/* ─── Mobile-only "Learn more" collapsible ─── */
+function MobileLearnMore({ children }: { children: React.ReactNode }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="md:hidden">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent underline underline-offset-4 min-h-[44px] mt-1"
+      >
+        {open ? 'Show less' : 'See more'}
+        <ChevronDown size={14} className={`transition-transform ${open ? 'rotate-180' : ''}`} />
+      </button>
+      <div className={`grid transition-all duration-300 ease-out ${open ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'}`}>
+        <div className="overflow-hidden">{children}</div>
+      </div>
+    </div>
+  );
+}
 
 /* ─── Typewriter effect — types out text when in view, calls onDone when finished ─── */
 function TypeWriter({
@@ -70,7 +91,7 @@ function DemoRow({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-      className={`mb-32 md:mb-56 ${className}`}
+      className={`mb-10 md:mb-56 ${className}`}
     >
       {children}
     </motion.div>
@@ -173,63 +194,55 @@ function SearchIntentDemo() {
         </motion.div>
       </div>
 
-      {/* Mobile — same sequence but stacked */}
+      {/* Mobile — condensed: headline + 1 line + Learn more */}
       <div className="md:hidden">
-        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-3 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
+        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-2 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
           Built for search intent
         </span>
-        <div className="bg-white rounded-full shadow-md border border-brand-primary/10 px-4 py-3 flex items-center gap-2.5 mb-3">
-          <Search size={16} className="text-brand-primary/40 shrink-0" />
-          <TypeWriter
-            text="roof repair leitchfield ky"
-            speed={30}
-            className="text-brand-primary/80 text-sm"
-            onDone={handleDone}
-          />
-          <Mic size={16} className="text-brand-primary/20 ml-auto shrink-0" />
-        </div>
-
-        <motion.div
-          animate={typingDone ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.4 }}
-        >
-          <div className="flex justify-center my-2">
-            <div className="w-8 h-8 rounded-full bg-brand-accent/10 flex items-center justify-center rotate-90">
-              <ArrowRight size={16} className="text-brand-accent" />
-            </div>
+        <h3 className="text-2xl mb-1.5">Stop being invisible when customers search.</h3>
+        <p className="text-sm text-brand-primary/60 leading-relaxed">
+          Your site is built so Google can actually understand what you offer.
+        </p>
+        <MobileLearnMore>
+          <div className="bg-white rounded-full shadow-md border border-brand-primary/10 px-4 py-3 flex items-center gap-2.5 mb-3">
+            <Search size={16} className="text-brand-primary/40 shrink-0" />
+            <TypeWriter
+              text="roof repair leitchfield ky"
+              speed={30}
+              className="text-brand-primary/80 text-sm"
+              onDone={handleDone}
+            />
+            <Mic size={16} className="text-brand-primary/20 ml-auto shrink-0" />
           </div>
-        </motion.div>
-
-        <motion.div
-          animate={typingDone ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-          transition={{ duration: 0.35, delay: 0.1 }}
-        >
-          <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-5 mb-5">
-            <h3 className="text-lg font-sans font-bold mb-0.5">Roof Repair in Leitchfield, KY</h3>
-            <p className="text-brand-accent font-medium text-xs mb-3">Fast, Local Roofing Services</p>
-            <div className="space-y-2 mb-3">
-              {['Service area: Grayson County', 'Emergency repairs', 'Free estimates'].map((item) => (
-                <div key={item} className="flex items-center gap-2">
-                  <Check size={14} className="text-brand-accent shrink-0" />
-                  <span className="text-xs text-brand-primary/70">{item}</span>
-                </div>
-              ))}
+          <motion.div
+            animate={typingDone ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
+            transition={{ duration: 0.35 }}
+          >
+            <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-5 mb-4">
+              <h4 className="text-lg font-sans font-bold mb-0.5">Roof Repair in Leitchfield, KY</h4>
+              <p className="text-brand-accent font-medium text-xs mb-3">Fast, Local Roofing Services</p>
+              <div className="space-y-2 mb-3">
+                {['Service area: Grayson County', 'Emergency repairs', 'Free estimates'].map((item) => (
+                  <div key={item} className="flex items-center gap-2">
+                    <Check size={14} className="text-brand-accent shrink-0" />
+                    <span className="text-xs text-brand-primary/70">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="border-t border-dashed border-brand-primary/10 pt-3">
+                <p className="text-[11px] text-brand-primary/50">
+                  Google understands:{' '}
+                  <span className="font-semibold italic text-brand-primary/70">roof repair</span>
+                  <span className="text-brand-primary/30"> | </span>
+                  <span className="italic text-brand-primary/70">leitchfield ky</span>
+                </p>
+              </div>
             </div>
-            <div className="border-t border-dashed border-brand-primary/10 pt-3">
-              <p className="text-[11px] text-brand-primary/50">
-                Google understands:{' '}
-                <span className="font-semibold italic text-brand-primary/70">roof repair</span>
-                <span className="text-brand-primary/30"> | </span>
-                <span className="italic text-brand-primary/70">leitchfield ky</span>
-              </p>
-            </div>
-          </div>
-
-          <h3 className="text-2xl mb-2">Stop being invisible when customers search.</h3>
-          <p className="text-sm text-brand-primary/60 leading-relaxed">
-            When someone searches for what you do, your business has a real chance to show up. Your site is structured so Google, ChatGPT, and other AI search tools understand what you offer and where.
-          </p>
-        </motion.div>
+            <p className="text-sm text-brand-primary/60 leading-relaxed">
+              When someone searches for what you do, your business has a real chance to show up. Your site is structured so Google, ChatGPT, and other AI search tools understand what you offer and where.
+            </p>
+          </motion.div>
+        </MobileLearnMore>
       </div>
     </DemoRow>
   );
@@ -357,12 +370,17 @@ function CustomBuiltDemo() {
         </div>
       </div>
 
-      {/* Mobile — same concept, smaller */}
+      {/* Mobile — condensed */}
       <div className="md:hidden">
-        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-3 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
+        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-2 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
           Custom-built for you
         </span>
-        <div className="grid grid-cols-2 gap-3 mb-5">
+        <h3 className="text-2xl mb-1.5">Look like the real business you are.</h3>
+        <p className="text-sm text-brand-primary/60 leading-relaxed">
+          Coded from scratch — not a drag-and-drop template.
+        </p>
+        <MobileLearnMore>
+        <div className="grid grid-cols-2 gap-3 mb-4">
           {/* Template — messy */}
           <div className="bg-gray-50 rounded-xl shadow-sm border border-gray-200 p-3 overflow-hidden">
             <TemplateBlock delay={0.15} rotate={-0.5} className="flex gap-1 mb-2">
@@ -410,10 +428,10 @@ function CustomBuiltDemo() {
             </CustomBlock>
           </div>
         </div>
-        <h3 className="text-2xl mb-2">Look like the real business you are.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed">
           No templates. No drag-and-drop builders. Your site is coded from scratch to say the right things and work the way your business needs it to.
         </p>
+        </MobileLearnMore>
       </div>
     </DemoRow>
   );
@@ -528,12 +546,17 @@ function ResponsiveDemo() {
         </div>
       </div>
 
-      {/* Mobile */}
+      {/* Mobile — condensed */}
       <div className="md:hidden">
-        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-3 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
+        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-2 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
           Responsive on every device
         </span>
-        <div className="flex items-end gap-3 justify-center mb-5">
+        <h3 className="text-2xl mb-1.5">Win the customers who decide on their phone.</h3>
+        <p className="text-sm text-brand-primary/60 leading-relaxed">
+          Fast, readable, and touch-friendly on every screen size.
+        </p>
+        <MobileLearnMore>
+        <div className="flex items-end gap-3 justify-center mb-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 15 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -585,10 +608,10 @@ function ResponsiveDemo() {
             <p className="text-[7px] text-brand-accent text-center mt-0.5 font-bold">Mobile</p>
           </motion.div>
         </div>
-        <h3 className="text-2xl mb-2">Win the customers who decide on their phone.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed">
           Most customers decide on their phone. Your site will load fast and look right immediately — no waiting, no pinching, no broken layouts.
         </p>
+        </MobileLearnMore>
       </div>
     </DemoRow>
   );
@@ -727,12 +750,17 @@ function PerformanceDemo() {
         </div>
       </div>
 
-      {/* Mobile */}
+      {/* Mobile — condensed */}
       <div className="md:hidden">
-        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-3 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
+        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-2 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
           Built for speed &amp; security
         </span>
-        <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-5 mb-5">
+        <h3 className="text-2xl mb-1.5">A slow site loses customers. Yours won't.</h3>
+        <p className="text-sm text-brand-primary/60 leading-relaxed">
+          Fast, secure, and reliable — every visitor, every time.
+        </p>
+        <MobileLearnMore>
+        <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-5 mb-4">
           <div className="grid grid-cols-3 gap-3 mb-4">
             <ProgressRing value={94} label="Speed" size={56} strokeWidth={3} delay={0} />
             <ProgressRing value={100} label="SSL" size={56} strokeWidth={3} delay={400} icon={<Lock size={18} className="text-brand-accent" />} />
@@ -747,10 +775,10 @@ function PerformanceDemo() {
             ))}
           </div>
         </div>
-        <h3 className="text-2xl mb-2">A slow site loses customers. Yours won't.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed">
           A slow site loses customers before they read a word. Yours loads fast, stays secure, and doesn't go down.
         </p>
+        </MobileLearnMore>
       </div>
     </DemoRow>
   );
@@ -875,7 +903,7 @@ function AnimatedChat({
 /* ─── 5. Someone In Your Corner Demo ─── */
 function SupportDemo() {
   return (
-    <DemoRow className="!mb-10 md:!mb-20">
+    <DemoRow className="!mb-4 md:!mb-20">
       {/* Desktop — chat left, text right */}
       <div className="hidden md:grid md:grid-cols-[1.2fr_1fr] gap-10 items-start">
         <div className="bg-white rounded-2xl shadow-xl shadow-brand-primary/8 border border-brand-primary/8 p-6 h-[420px] flex flex-col">
@@ -915,12 +943,17 @@ function SupportDemo() {
         </div>
       </div>
 
-      {/* Mobile */}
+      {/* Mobile — condensed */}
       <div className="md:hidden">
-        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-3 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
+        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-2 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
           Ongoing support
         </span>
-        <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-4 mb-5 h-[360px] flex flex-col">
+        <h3 className="text-2xl mb-1.5">Never get stuck on your own again.</h3>
+        <p className="text-sm text-brand-primary/60 leading-relaxed">
+          After launch, I'm still here — call, text, or message for changes.
+        </p>
+        <MobileLearnMore>
+        <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-4 mb-4 h-[320px] flex flex-col">
           <div className="flex items-center gap-2.5 mb-3 pb-3 border-b border-brand-primary/8 shrink-0">
             <img src="/kara-gibson-small.webp" alt="Kara Gibson" className="w-7 h-7 rounded-full object-cover shrink-0" />
             <div>
@@ -937,7 +970,6 @@ function SupportDemo() {
             <AnimatedChat messages={chatMessages} compact />
           </div>
         </div>
-        <h3 className="text-2xl mb-2">Never get stuck on your own again.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed mb-3">
           You won't be handed a login and left to figure it out. After launch, I'm still here — updates, fixes, or just someone to call.
         </p>
@@ -949,6 +981,7 @@ function SupportDemo() {
             </div>
           ))}
         </div>
+        </MobileLearnMore>
       </div>
     </DemoRow>
   );
@@ -957,14 +990,14 @@ function SupportDemo() {
 /* ─── Main Services Section ─── */
 export default function Services() {
   return (
-    <section id="services" className="py-20 md:py-36 px-6 bg-white scroll-mt-16 md:scroll-mt-20 overflow-hidden">
+    <section id="services" className="py-14 md:py-36 px-6 bg-white scroll-mt-16 md:scroll-mt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-12 md:mb-16 max-w-3xl"
+          className="mb-8 md:mb-16 max-w-3xl"
         >
           <h2 className="text-2xl sm:text-4xl md:text-5xl mb-4">
             <span className="hidden sm:inline">A professional online presence<br /><span className="text-brand-accent italic">that works as hard as you&nbsp;do.</span></span>
