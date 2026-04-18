@@ -953,7 +953,7 @@ function SupportDemo() {
           After launch, I'm still here — call, text, or message for changes.
         </p>
         <MobileLearnMore>
-        <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-4 mb-4 h-[320px] flex flex-col">
+        <div className="bg-white rounded-xl shadow-lg border border-brand-primary/8 p-4 mb-4 h-[380px] flex flex-col">
           <div className="flex items-center gap-2.5 mb-3 pb-3 border-b border-brand-primary/8 shrink-0">
             <img src="/kara-gibson-small.webp" alt="Kara Gibson" className="w-7 h-7 rounded-full object-cover shrink-0" />
             <div>

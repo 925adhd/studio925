@@ -5,14 +5,14 @@ import { X, Check } from 'lucide-react';
 import Link from 'next/link';
 
 const points = [
-  { diy: 'You handle everything yourself', studio: 'We handle everything for you', mobile: true },
-  { diy: 'Templates and drag-and-drop', studio: 'Custom built from scratch', mobile: true },
-  { diy: 'You fix mobile issues yourself', studio: 'Mobile-ready from the start', mobile: true },
-  { diy: 'You figure out updates alone', studio: 'We update it for you', mobile: false },
-  { diy: 'Something breaks? You\'re on your own', studio: 'Something breaks? We fix it', mobile: true },
-  { diy: 'SEO? Set it up yourself', studio: 'SEO setup included', mobile: true },
-  { diy: 'No backlinks to boost your ranking', studio: 'We link to your site, which helps your Google ranking', mobile: false },
-  { diy: 'Hours of your time', studio: 'Minimal time from you', mobile: false },
+  { diy: 'Weeks of your nights and weekends', studio: 'Live in about a week. No homework.', mobile: true },
+  { diy: 'Looks like every other template', studio: 'Custom-built, one of a kind', mobile: true },
+  { diy: 'Clunky on phones — customers leave', studio: 'Mobile-first. Every visitor stays.', mobile: true },
+  { diy: 'You figure out updates alone', studio: 'Updates handled for you', mobile: false },
+  { diy: 'Something breaks? You\'re on your own', studio: 'Something breaks? I fix it.', mobile: true },
+  { diy: 'Invisible when people search Google', studio: 'Built so Google can find you', mobile: true },
+  { diy: 'No backlinks to boost your ranking', studio: 'I link to your site — boosts your ranking', mobile: false },
+  { diy: 'Hours of your time, every week', studio: 'Minimal time from you', mobile: false },
 ];
 
 export default function Comparison() {
