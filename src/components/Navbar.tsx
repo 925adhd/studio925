@@ -2,13 +2,22 @@
 
 import { motion } from 'motion/react';
 import { Menu, X, ArrowRight, Phone, MessageCircle } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { trackEvent } from '../lib/gtag';
 const logo = '/logo.webp';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Close menu reactively on route change instead of on click — avoids
+  // unmount-during-pushState race that causes a null dispatchEvent crash
+  // in the GTM-wrapped history API.
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <><nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-primary/5 shadow-sm">
@@ -50,10 +59,10 @@ export default function Navbar() {
         >
           <div className="flex flex-col gap-5 items-start">
             <a href="/#services" onClick={() => setIsOpen(false)} className="text-lg font-medium">What You Get</a>
-            <Link href="/portfolio" onClick={() => setIsOpen(false)} className="text-lg font-medium">Portfolio</Link>
+            <Link href="/portfolio" className="text-lg font-medium">Portfolio</Link>
             <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-lg font-medium">Pricing</a>
-            <Link href="/hosting-support" onClick={() => setIsOpen(false)} className="text-lg font-medium">Hosting & Support</Link>
-            <Link href="/blog" onClick={() => setIsOpen(false)} className="text-lg font-medium">Blog</Link>
+            <Link href="/hosting-support" className="text-lg font-medium">Hosting & Support</Link>
+            <Link href="/blog" className="text-lg font-medium">Blog</Link>
             <div className="flex gap-3 mt-1">
               <a href="tel:+12705512210" onClick={() => { trackEvent('click_call', 'mobile_menu'); setIsOpen(false); }} className="bg-brand-accent text-white px-4 py-2.5 rounded-xl font-medium text-base flex items-center gap-2">
                 <Phone size={16} /> Call

@@ -46,9 +46,9 @@ export default function HostingSupportPage() {
     <div className="min-h-screen selection:bg-brand-accent selection:text-white">
       <Navbar />
 
-      <main className="pt-32 pb-20 px-6">
+      <main className="pt-24 pb-20 px-6 md:pt-32">
         {/* Hero */}
-        <div className="max-w-4xl mx-auto text-center mb-10 md:mb-14">
+        <div className="max-w-4xl mx-auto text-center mb-8 md:mb-14">
           <h1 className="text-3xl md:text-4xl mb-3 md:mb-4">
             Hosting <span className="italic text-brand-accent">& Support</span>
           </h1>

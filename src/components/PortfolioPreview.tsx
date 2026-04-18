@@ -8,17 +8,29 @@ import { trackEvent } from '../lib/gtag';
 
 const images = ['/csmedia-listing-sold-hero.webp', '/csmedia-featured-projects-portfolio.webp', '/csmedia-services-grid.webp', '/csmedia-virtual-staging-service.webp', '/csmedia-how-it-works.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'];
 
-function CarouselImage() {
+function useCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [pausedUntil, setPausedUntil] = useState(0);
 
   useEffect(() => {
-    const duration = activeIndex === 0 ? 4000 : 2000;
+    const now = Date.now();
+    const baseDelay = activeIndex === 0 ? 4000 : 2000;
+    const delay = Math.max(baseDelay, pausedUntil - now);
     const timer = setTimeout(() => {
       setActiveIndex((prev) => (prev + 1) % images.length);
-    }, duration);
+    }, delay);
     return () => clearTimeout(timer);
-  }, [activeIndex]);
+  }, [activeIndex, pausedUntil]);
 
+  const goTo = (i: number) => {
+    setActiveIndex(i);
+    setPausedUntil(Date.now() + 5000);
+  };
+
+  return { activeIndex, goTo };
+}
+
+function Slides({ activeIndex }: { activeIndex: number }) {
   return (
     <div className="relative">
       {images.map((img, i) => (
@@ -34,7 +46,30 @@ function CarouselImage() {
   );
 }
 
+function Dots({ activeIndex, onSelect }: { activeIndex: number; onSelect: (i: number) => void }) {
+  return (
+    <div className="flex gap-1 justify-center py-3">
+      {images.map((_, i) => (
+        <button
+          key={i}
+          type="button"
+          onClick={() => onSelect(i)}
+          aria-label={`View screenshot ${i + 1}`}
+          className="p-1.5 cursor-pointer"
+        >
+          <span className={`block w-1.5 h-1.5 rounded-full transition-colors ${
+            i === activeIndex ? 'bg-brand-primary' : 'bg-brand-primary/20'
+          }`} />
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export default function PortfolioPreview() {
+  const desktopCarousel = useCarousel();
+  const mobileCarousel = useCarousel();
+
   return (
     <section className="py-14 md:py-36 px-6 bg-white border-t border-brand-primary/5">
       <div className="max-w-6xl mx-auto">
@@ -50,30 +85,42 @@ export default function PortfolioPreview() {
         {/* Desktop: side by side */}
         <div className="hidden md:grid md:grid-cols-[1.2fr_1fr] gap-8 items-center">
           {/* Portfolio card */}
-          <motion.a
-            href="https://cscreatesmedia.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="group block rounded-3xl overflow-hidden border border-brand-primary/5 bg-white shadow-sm shadow-brand-primary/5"
-          >
-            <div className="aspect-[16/10] overflow-hidden bg-brand-primary/5 p-5">
-              <div className="w-full h-full rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 flex items-center">
-                <CarouselImage />
-              </div>
-            </div>
-            <div className="p-6 flex items-center justify-between gap-4">
-              <div>
-                <p className="font-bold text-lg">CS Media LLC</p>
-                <p className="text-sm text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
-              </div>
-              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent shrink-0">
-                Visit Site <ExternalLink size={13} />
-              </span>
-            </div>
-          </motion.a>
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="group block rounded-3xl overflow-hidden border border-brand-primary/5 bg-white shadow-sm shadow-brand-primary/5"
+            >
+              <a
+                href="https://cscreatesmedia.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="aspect-[16/10] overflow-hidden bg-brand-primary/5 p-5">
+                  <div className="w-full h-full rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 flex items-center">
+                    <Slides activeIndex={desktopCarousel.activeIndex} />
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://cscreatesmedia.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-6 flex items-center justify-between gap-4"
+              >
+                <div>
+                  <p className="font-bold text-lg">CS Media LLC</p>
+                  <p className="text-sm text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
+                </div>
+                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent shrink-0">
+                  Visit Site <ExternalLink size={13} />
+                </span>
+              </a>
+            </motion.div>
+            <Dots activeIndex={desktopCarousel.activeIndex} onSelect={desktopCarousel.goTo} />
+          </div>
 
           {/* Testimonial */}
           <motion.div
@@ -103,21 +150,30 @@ export default function PortfolioPreview() {
 
         {/* Mobile: stacked */}
         <div className="md:hidden">
-          <motion.a
-            href="https://cscreatesmedia.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group block rounded-2xl overflow-hidden border border-brand-primary/5 bg-white shadow-sm shadow-brand-primary/5 mb-6"
+            className="group block rounded-2xl overflow-hidden border border-brand-primary/5 bg-white shadow-sm shadow-brand-primary/5"
           >
-            <div className="aspect-[16/10] overflow-hidden bg-brand-primary/5 p-3">
-              <div className="w-full h-full rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 flex items-center">
-                <CarouselImage />
+            <a
+              href="https://cscreatesmedia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="aspect-[16/10] overflow-hidden bg-brand-primary/5 p-3">
+                <div className="w-full h-full rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 flex items-center">
+                  <Slides activeIndex={mobileCarousel.activeIndex} />
+                </div>
               </div>
-            </div>
-            <div className="p-4 flex items-center justify-between gap-3">
+            </a>
+            <a
+              href="https://cscreatesmedia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 flex items-center justify-between gap-3"
+            >
               <div>
                 <p className="font-bold text-base">CS Media LLC</p>
                 <p className="text-xs text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
@@ -125,8 +181,10 @@ export default function PortfolioPreview() {
               <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand-accent shrink-0">
                 Visit Site <ExternalLink size={11} />
               </span>
-            </div>
-          </motion.a>
+            </a>
+          </motion.div>
+          <Dots activeIndex={mobileCarousel.activeIndex} onSelect={mobileCarousel.goTo} />
+          <div className="mb-3" />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
