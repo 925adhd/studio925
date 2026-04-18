@@ -3,9 +3,6 @@ export default function SpeedProof() {
     <section className="py-14 md:py-28 px-6 bg-white border-t border-brand-primary/5">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-7 md:mb-14">
-          <p className="text-xs font-bold tracking-[0.15em] uppercase text-emerald-800 mb-3">
-            Receipts
-          </p>
           <h2 className="md:hidden text-2xl mb-3 leading-tight">
             Fast sites get found.<span className="block italic text-brand-accent">Slow ones don&rsquo;t.</span>
           </h2>

@@ -46,8 +46,8 @@ export default function HomePage() {
         <div className="order-2 md:order-2"><TrustStrip /></div>
         <div className="order-3 md:order-8"><PortfolioPreview /></div>
         <div className="order-4 md:order-9"><WhoItsFor /></div>
-        <div className="order-5 md:order-6"><SpeedProof /></div>
-        <div className="order-6 md:order-4"><Comparison /></div>
+        <div className="order-5 md:order-4"><Comparison /></div>
+        <div className="order-6 md:order-6"><SpeedProof /></div>
         <div className="order-7 md:order-3"><Services /></div>
         <div className="order-8 md:order-5"><Pricing /></div>
 
