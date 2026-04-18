@@ -1,18 +1,19 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { motion } from 'motion/react';
+import { motion, useInView } from 'motion/react';
 import { ArrowRight, Star, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import { trackEvent } from '../lib/gtag';
 
 const images = ['/csmedia-listing-sold-hero.webp', '/csmedia-featured-projects-portfolio.webp', '/csmedia-services-grid.webp', '/csmedia-virtual-staging-service.webp', '/csmedia-how-it-works.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'];
 
-function useCarousel() {
+function useCarousel(enabled: boolean) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [pausedUntil, setPausedUntil] = useState(0);
 
   useEffect(() => {
+    if (!enabled) return;
     const now = Date.now();
     const baseDelay = activeIndex === 0 ? 4000 : 2000;
     const delay = Math.max(baseDelay, pausedUntil - now);
@@ -20,7 +21,7 @@ function useCarousel() {
       setActiveIndex((prev) => (prev + 1) % images.length);
     }, delay);
     return () => clearTimeout(timer);
-  }, [activeIndex, pausedUntil]);
+  }, [activeIndex, pausedUntil, enabled]);
 
   const goTo = (i: number) => {
     setActiveIndex(i);
@@ -91,8 +92,15 @@ function Dots({ activeIndex, onSelect }: { activeIndex: number; onSelect: (i: nu
 }
 
 export default function PortfolioPreview() {
-  const desktopCarousel = useCarousel();
-  const mobileCarousel = useCarousel();
+  // Gate each carousel's timer until its section scrolls into view so the
+  // first slide doesn't auto-advance while the user is still above the fold.
+  const desktopRef = useRef<HTMLDivElement>(null);
+  const mobileRef = useRef<HTMLDivElement>(null);
+  const desktopInView = useInView(desktopRef, { margin: '-10% 0px' });
+  const mobileInView = useInView(mobileRef, { margin: '-10% 0px' });
+
+  const desktopCarousel = useCarousel(desktopInView);
+  const mobileCarousel = useCarousel(mobileInView);
 
   return (
     <section className="py-14 md:py-36 px-6 bg-white border-t border-brand-primary/5">
@@ -107,7 +115,7 @@ export default function PortfolioPreview() {
         </div>
 
         {/* Desktop: side by side */}
-        <div className="hidden md:grid md:grid-cols-[1.2fr_1fr] gap-8 items-center">
+        <div ref={desktopRef} className="hidden md:grid md:grid-cols-[1.2fr_1fr] gap-8 items-center">
           {/* Portfolio card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -167,7 +175,7 @@ export default function PortfolioPreview() {
         </div>
 
         {/* Mobile: stacked */}
-        <div className="md:hidden">
+        <div ref={mobileRef} className="md:hidden">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
