@@ -61,7 +61,10 @@ const featuredProjects = [
     image: '/4chariots.webp',
     images: undefined as string[] | undefined,
     tags: ['E-commerce', 'Branding'],
-    results: undefined as typeof featuredProjects[0]['results'] | undefined,
+    results: {
+      desktop: { performance: 100, accessibility: 100, bestPractices: 100, seo: 100, fcp: '', lcp: '', cls: '', speedIndex: '', image: '/4chariots-speed-desktop.webp' },
+      mobile: { performance: 99, accessibility: 100, bestPractices: 100, seo: 100, fcp: '', lcp: '', cls: '', speedIndex: '', image: '/4chariots-speed-mobile.webp' },
+    },
   },
   {
     title: 'Townly',
