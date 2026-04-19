@@ -80,10 +80,10 @@ function Dots({ activeIndex, onSelect }: { activeIndex: number; onSelect: (i: nu
           type="button"
           onClick={() => onSelect(i)}
           aria-label={`View screenshot ${i + 1}`}
-          className="p-1.5 cursor-pointer"
+          className="inline-flex items-center justify-center w-6 h-6 cursor-pointer"
         >
           <span className={`block w-1.5 h-1.5 rounded-full transition-colors ${
-            i === activeIndex ? 'bg-brand-primary' : 'bg-brand-primary/20'
+            i === activeIndex ? 'bg-brand-primary' : 'bg-brand-primary/30'
           }`} />
         </button>
       ))}
@@ -140,9 +140,9 @@ export default function PortfolioPreview() {
             >
               <div>
                 <p className="font-bold text-lg">CS Media LLC</p>
-                <p className="text-sm text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
+                <p className="text-sm text-brand-primary/70">Real Estate Media · Leitchfield, KY</p>
               </div>
-              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent shrink-0">
+              <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-800 shrink-0">
                 Visit Site <ExternalLink size={13} />
               </span>
             </a>
@@ -199,9 +199,9 @@ export default function PortfolioPreview() {
             >
               <div>
                 <p className="font-bold text-base">CS Media LLC</p>
-                <p className="text-xs text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
+                <p className="text-xs text-brand-primary/75">Real Estate Media · Leitchfield, KY</p>
               </div>
-              <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand-accent shrink-0">
+              <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-800 shrink-0">
                 Visit Site <ExternalLink size={11} />
               </span>
             </a>

@@ -11,7 +11,7 @@ export default function Footer() {
               <img src={logo} alt="Studio 925 — custom websites for small businesses in Kentucky" width={162} height={56} loading="lazy" className="h-10 w-auto" />
             </div>
             <p className="font-serif text-base md:text-lg text-brand-primary mb-2 max-w-sm">
-              Your website should work <span className="italic text-brand-accent">as hard as you&nbsp;do.</span>
+              Your website should work <span className="italic text-emerald-800">as hard as you&nbsp;do.</span>
             </p>
             <p className="text-sm text-brand-primary/60 max-w-sm mb-4">
               Custom websites built right.<br />Web designer in Leitchfield, KY.

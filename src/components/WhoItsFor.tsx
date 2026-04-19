@@ -27,7 +27,7 @@ export default function WhoItsFor() {
           <h2 className="text-2xl md:text-4xl mb-2 md:mb-3">
             Built for businesses like <span className="italic text-brand-accent">yours</span>
           </h2>
-          <p className="text-sm md:text-lg text-brand-primary/50 italic">
+          <p className="text-sm md:text-lg text-brand-primary/70 italic">
             Every day, someone searches for what you do — and doesn't find you.
           </p>
         </motion.div>
@@ -45,7 +45,7 @@ export default function WhoItsFor() {
                   {biz.name.replace(/& /g, '&\u00a0')}
                 </span>
               </div>
-              <p className="text-[10px] text-brand-primary/50 leading-snug">{biz.hook}</p>
+              <p className="text-[10px] text-brand-primary/75 leading-snug">{biz.hook}</p>
             </div>
           ))}
         </div>
@@ -64,7 +64,7 @@ export default function WhoItsFor() {
               <span className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2.5 shrink-0" />
               <div>
                 <span className="font-bold text-brand-primary text-base">{biz.name}</span>
-                <span className="text-brand-primary/45 text-base"> — {biz.hook}</span>
+                <span className="text-brand-primary/70 text-base"> — {biz.hook}</span>
               </div>
             </motion.div>
           ))}
