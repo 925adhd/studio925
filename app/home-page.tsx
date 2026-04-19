@@ -2,13 +2,14 @@
 
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { motion, useScroll, useSpring } from 'motion/react';
+import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 import Navbar from '../src/components/Navbar';
 import Hero from '../src/components/Hero';
 import TrustStrip from '../src/components/TrustStrip';
 
 // Lazy load everything below the fold to unblock LCP
+const ScrollProgress = dynamic(() => import('../src/components/ScrollProgress'), { ssr: false });
 const Services = dynamic(() => import('../src/components/Services'), { ssr: true });
 const Comparison = dynamic(() => import('../src/components/Comparison'), { ssr: true });
 const SpeedProof = dynamic(() => import('../src/components/SpeedProof'), { ssr: true });
@@ -20,12 +21,6 @@ const Contact = dynamic(() => import('../src/components/Contact'), { ssr: true }
 const Footer = dynamic(() => import('../src/components/Footer'), { ssr: true });
 
 export default function HomePage() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
   const [openStep, setOpenStep] = useState<number | null>(null);
 
   return (
@@ -34,10 +29,7 @@ export default function HomePage() {
         Skip to main content
       </a>
 
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-brand-accent z-[60] origin-left"
-        style={{ scaleX }}
-      />
+      <ScrollProgress />
 
       <Navbar />
 
