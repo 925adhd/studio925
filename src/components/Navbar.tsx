@@ -10,6 +10,7 @@ const logo = '/logo.webp';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showText, setShowText] = useState(false);
   const pathname = usePathname();
 
   // Close menu reactively on route change instead of on click — avoids
@@ -18,6 +19,17 @@ export default function Navbar() {
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+
+  // Float the sticky text button in only after the user scrolls past the hero,
+  // so it doesn't compete with the hero CTA or cover the portfolio peek.
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowText(window.scrollY > window.innerHeight * 0.6);
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <><nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-primary/5 shadow-sm">
@@ -76,11 +88,13 @@ export default function Navbar() {
       )}
     </nav>
 
-    {/* Floating mobile text button — quick SMS, lightweight */}
+    {/* Floating mobile text button — fades in after user scrolls past hero */}
     <button
       onClick={() => { trackEvent('click_text', 'sticky_mobile'); window.location.href = 'sms:+12705512210?body=Hi%2C%20I%27m%20interested%20in%20a%20website'; }}
-      className="fixed bottom-5 right-5 z-50 md:hidden bg-brand-accent text-white p-4 rounded-full shadow-lg shadow-brand-accent/30 hover:scale-105 transition-transform"
+      className={`fixed bottom-5 right-5 z-50 md:hidden bg-brand-accent text-white p-4 rounded-full shadow-lg shadow-brand-accent/30 transition-all duration-300 ease-out ${showText ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'}`}
       aria-label="Text Studio 925"
+      aria-hidden={!showText}
+      tabIndex={showText ? 0 : -1}
     >
       <MessageCircle size={22} />
     </button>
