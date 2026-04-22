@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 const businesses = [
   { name: 'Contractors & trades', short: 'Contractors', hook: 'Get found when someone searches "roofer near me."' },
   { name: 'Service providers', short: 'Service pros', hook: 'Stop relying on word of mouth alone.' },
-  { name: 'Restaurants & food', short: 'Restaurants', hook: 'Menus, hours, and directions — not a Facebook page.' },
+  { name: 'Restaurants & food', short: 'Restaurants', hook: 'Menus, hours, and directions. Not a Facebook page.' },
   { name: 'Retail & boutiques', short: 'Retail', hook: 'Show off what you sell before they walk in.' },
   { name: 'Healthcare & wellness', short: 'Healthcare', hook: 'Let patients book and find you online.' },
   { name: 'Real estate', short: 'Real estate', hook: 'Listings and credibility in one place.' },
@@ -28,11 +28,11 @@ export default function WhoItsFor() {
             Built for businesses like <span className="italic text-brand-accent">yours</span>
           </h2>
           <p className="text-sm md:text-lg text-brand-primary/70 italic">
-            Every day, someone searches for what you do — and doesn't find you.
+            Every day, someone searches for what you do, and doesn't find you.
           </p>
         </motion.div>
 
-        {/* Mobile: compact chip grid — keyword-rich, still scannable */}
+        {/* Mobile: compact chip grid, names only, keyword-rich and fast to scan */}
         <div className="md:hidden grid grid-cols-2 gap-2 auto-rows-fr">
           {businesses.map((biz) => (
             <div
@@ -45,7 +45,6 @@ export default function WhoItsFor() {
                   {biz.name.replace(/& /g, '&\u00a0')}
                 </span>
               </div>
-              <p className="text-[10px] text-brand-primary/75 leading-snug">{biz.hook}</p>
             </div>
           ))}
         </div>
@@ -63,8 +62,8 @@ export default function WhoItsFor() {
             >
               <span className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2.5 shrink-0" />
               <div>
-                <span className="font-bold text-brand-primary text-base">{biz.name}</span>
-                <span className="text-brand-primary/70 text-base"> — {biz.hook}</span>
+                <div className="font-bold text-brand-primary text-base">{biz.name}</div>
+                <div className="text-brand-primary/70 text-base">{biz.hook}</div>
               </div>
             </motion.div>
           ))}
