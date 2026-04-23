@@ -22,8 +22,16 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
-    const formData = new FormData(e.currentTarget);
-    formData.append('access_key', 'c6f8a1a3-cfa8-4688-8f3b-73e2f5a64182');
+
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+    if (!accessKey) {
+      setStatus('error');
+      return;
+    }
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append('access_key', accessKey);
     formData.append('subject', 'New Studio 925 Website Inquiry');
     formData.append('from_name', 'Studio 925 – New Lead');
     formData.append('replyto', formData.get('Email') as string);
@@ -37,7 +45,7 @@ export default function Contact() {
     if (data.success) {
       trackEvent('submit_contact_form', selectedPlan);
       setStatus('success');
-      (e.target as HTMLFormElement).reset();
+      form.reset();
       setSelectedPlan('Not Sure Yet');
     } else {
       setStatus('error');

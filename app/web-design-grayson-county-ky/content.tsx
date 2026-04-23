@@ -322,6 +322,63 @@ export default function GraysonCountyContent() {
         </div>
       </section>
 
+      {/* Free local audit callout */}
+      <section className="py-12 md:py-20 px-6 bg-brand-warm border-t border-brand-primary/5">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative overflow-hidden rounded-[2rem] border border-brand-primary/10 bg-white p-6 md:p-10 shadow-lg shadow-brand-primary/5"
+          >
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-700/5 -skew-x-12 translate-x-1/3 pointer-events-none" />
+            <div className="relative z-10 grid md:grid-cols-[1.4fr_1fr] gap-6 md:gap-10 items-center">
+              <div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-700/10 text-emerald-800 text-xs font-bold tracking-widest uppercase mb-3 md:mb-4">
+                  <MapPin size={12} className="shrink-0" /> Free for Grayson County
+                </div>
+                <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
+                  See exactly where you rank on <span className="italic text-emerald-800">Google</span> first.
+                </h2>
+                <p className="text-sm md:text-base text-brand-primary/70 leading-relaxed mb-5 md:mb-6">
+                  Before we talk about a website, get a free 49-point map of how your business shows up across Grayson County. Visibility score, top competitors, and one concrete recommendation. No subscription, no catch.
+                </p>
+                <Link
+                  href="/audit"
+                  className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20"
+                >
+                  Get my free audit <ArrowRight size={18} />
+                </Link>
+              </div>
+              <div className="hidden md:block">
+                <div className="relative rounded-2xl border border-brand-primary/10 bg-brand-warm p-5 font-serif">
+                  <div className="text-[10px] tracking-[0.22em] font-bold text-brand-primary/50 mb-2 uppercase">Local Geomap · Sample</div>
+                  <div className="grid grid-cols-7 gap-1.5">
+                    {[2, 1, 4, 7, 9, 12, 18, 1, 1, 3, 5, 8, 14, 20, 3, 2, 5, 8, 11, 16, 22, 6, 4, 7, 10, 13, 19, 25, 9, 7, 11, 14, 17, 21, 30].map((rank, i) => {
+                      const tone =
+                        rank <= 3 ? 'bg-emerald-700 text-white' :
+                        rank <= 10 ? 'bg-emerald-700/30 text-emerald-900' :
+                        rank <= 20 ? 'bg-amber-200 text-amber-900' :
+                        'bg-red-200 text-red-900';
+                      return (
+                        <div key={i} className={`aspect-square rounded-md flex items-center justify-center text-[10px] font-bold ${tone}`}>
+                          {rank}
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="mt-3 flex items-center justify-between text-[10px] text-brand-primary/60">
+                    <span>← Top 3</span>
+                    <span>11–20</span>
+                    <span>20+ →</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section className="py-16 md:py-24 px-6 bg-white border-t border-brand-primary/5">
         <div className="max-w-4xl mx-auto">
