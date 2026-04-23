@@ -165,6 +165,30 @@ export default function Contact() {
                 </select>
               </div>
               <div className="space-y-2">
+                <p className="text-xs font-bold uppercase tracking-wider opacity-50">
+                  Where can I learn about you? <span className="opacity-60 normal-case font-medium tracking-normal">(optional, fill either or both)</span>
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <input
+                    type="text"
+                    name="Current Website"
+                    id="contact-website"
+                    aria-label="Current website"
+                    className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:border-brand-accent transition-colors text-base"
+                    placeholder="Your website"
+                  />
+                  <input
+                    type="text"
+                    name="Facebook Page"
+                    id="contact-facebook"
+                    aria-label="Facebook page"
+                    className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:border-brand-accent transition-colors text-base"
+                    placeholder="Facebook page"
+                  />
+                </div>
+                <p className="text-[11px] text-brand-primary/50">Easier than typing it all out. I can pull a lot of what I need from here.</p>
+              </div>
+              <div className="space-y-2">
                 <label htmlFor="contact-details" className="text-xs font-bold uppercase tracking-wider opacity-50">Project Details</label>
                 <textarea name="Project Details" id="contact-details" rows={3} className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:border-brand-accent transition-colors text-base" placeholder="Tell me about your business or organization and what you're looking to create."></textarea>
               </div>

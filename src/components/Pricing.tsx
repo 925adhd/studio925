@@ -164,26 +164,17 @@ export default function Pricing() {
 
               <div className="flex items-center justify-between gap-3">
                 <span className="text-[10px] font-medium text-brand-primary/45">{alt.pages} · {alt.support}</span>
-                <button
-                  onClick={() => {
-                    trackEvent('click_lets_talk', alt.name);
-                    window.dispatchEvent(new CustomEvent('planSelected', { detail: alt.name }));
-                    window.location.href = '/#contact';
-                  }}
-                  className="shrink-0 bg-brand-primary text-white px-5 py-3 rounded-xl text-sm font-bold flex items-center gap-1.5 hover:bg-brand-primary/90 transition-all cursor-pointer"
+                <a
+                  href={alt.stripeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackEvent('click_lets_go', alt.name)}
+                  className="shrink-0 bg-brand-accent text-white px-5 py-3 rounded-xl text-sm font-bold flex items-center gap-1.5 hover:bg-brand-accent/90 transition-all cursor-pointer"
                 >
-                  Let's Talk <ArrowRight size={14} />
-                </button>
+                  Let's Go <ArrowRight size={14} />
+                </a>
               </div>
-              <a
-                href={alt.stripeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent('click_pay_now', alt.name)}
-                className="block text-right text-[10px] mt-2.5 text-brand-primary/40 hover:text-brand-primary/60 transition-all hover:underline cursor-pointer"
-              >
-                Already decided? Pay for {alt.name} →
-              </a>
+              <p className="text-[10px] text-brand-primary/40 mt-2.5 text-right">50% deposit · You own everything after final payment</p>
             </motion.div>
           ))}
         </div>
@@ -191,12 +182,22 @@ export default function Pricing() {
         <p className="text-center text-xs text-brand-primary/70 mt-8 md:mt-12">
           50% deposit to start. You own everything after final payment.
         </p>
-
-        <div className="mt-4 text-center">
-          <Link href="/blog/your-website-is-a-tax-write-off" className="inline-block text-xs text-emerald-700 underline underline-offset-2 hover:text-emerald-800 transition-colors">
-            Did you know? Your website may be fully tax-deductible as a business expense.
+        <div className="mt-3 text-center">
+          <Link
+            href="/how-it-works"
+            onClick={() => trackEvent('click_how_it_works', 'pricing')}
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 hover:text-emerald-800 underline underline-offset-4 transition-colors"
+          >
+            See the full process from start to launch
+            <span aria-hidden="true">→</span>
           </Link>
-          <p className="text-[10px] text-brand-primary/65 mt-1">Consult a tax professional for your specific situation.</p>
+        </div>
+
+        <div className="mt-6 text-center">
+          <Link href="/blog/your-website-is-a-tax-write-off" className="inline-block text-[11px] text-brand-primary/45 hover:text-brand-primary/70 transition-colors">
+            Did you know? Your website may be fully tax-deductible.
+          </Link>
+          <p className="text-[10px] text-brand-primary/40 mt-0.5">Consult a tax professional for your specific situation.</p>
         </div>
       </div>
 

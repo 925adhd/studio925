@@ -40,20 +40,20 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          <a href="/#services" className="text-sm font-medium hover:text-brand-accent transition-colors">What You Get</a>
-          <Link href="/portfolio" className="text-sm font-medium hover:text-brand-accent transition-colors">Portfolio</Link>
-          <a href="/#pricing" className="text-sm font-medium hover:text-brand-accent transition-colors">Pricing</a>
-          <Link href="/hosting-support" className="text-sm font-medium hover:text-brand-accent transition-colors">Hosting & Support</Link>
-          <Link href="/blog" className="text-sm font-medium hover:text-brand-accent transition-colors">Blog</Link>
-          <a href="/#contact" onClick={() => trackEvent('click_get_started', 'navbar')} className="bg-brand-primary text-white px-5 py-2 rounded-xl text-sm font-medium flex items-center gap-2 hover:bg-brand-primary/90 transition-all">
+        <div className="hidden lg:flex items-center gap-8">
+          <a href="/#services" className="text-sm font-medium hover:text-brand-accent transition-colors whitespace-nowrap">What You Get</a>
+          <Link href="/portfolio" className="text-sm font-medium hover:text-brand-accent transition-colors whitespace-nowrap">Portfolio</Link>
+          <a href="/#pricing" className="text-sm font-medium hover:text-brand-accent transition-colors whitespace-nowrap">Pricing</a>
+          <Link href="/hosting-support" className="text-sm font-medium hover:text-brand-accent transition-colors whitespace-nowrap">Hosting & Support</Link>
+          <Link href="/blog" className="text-sm font-medium hover:text-brand-accent transition-colors whitespace-nowrap">Blog</Link>
+          <a href="/#contact" onClick={() => trackEvent('click_get_started', 'navbar')} className="bg-brand-primary text-white px-5 py-2 rounded-xl text-sm font-medium flex items-center gap-2 hover:bg-brand-primary/90 transition-all whitespace-nowrap">
             Get Started <ArrowRight size={16} />
           </a>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Mobile/Tablet Toggle */}
         <button
-          className="md:hidden"
+          className="lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isOpen}
@@ -62,12 +62,12 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile/Tablet Menu */}
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 right-0 bg-brand-warm border-b border-brand-primary/5 shadow-lg p-6 md:hidden"
+          className="absolute top-full left-0 right-0 bg-brand-warm border-b border-brand-primary/5 shadow-lg p-6 lg:hidden"
         >
           <div className="flex flex-col gap-5 items-start">
             <a href="/#services" onClick={() => setIsOpen(false)} className="text-lg font-medium">What You Get</a>

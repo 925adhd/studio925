@@ -85,7 +85,7 @@ function SearchIntentDemo() {
   return (
     <DemoRow>
       {/* Desktop */}
-      <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr_1fr] gap-6 items-center">
+      <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] lg:grid-cols-[1fr_auto_1fr_1fr] gap-6 items-center">
         <div>
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-4 px-3 py-1 bg-brand-accent/8 rounded-md">
             Built for search intent
@@ -164,7 +164,7 @@ function SearchIntentDemo() {
         <motion.div
           animate={typingDone ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.3, delay: 0.1 }}
-          className="pl-4"
+          className="md:col-span-3 md:pt-6 md:px-2 lg:col-span-1 lg:pl-4 lg:pt-0 lg:px-0"
         >
           <h3 className="text-3xl lg:text-4xl mb-4">Stop being invisible when customers search.</h3>
           <p className="text-brand-primary/60 leading-relaxed">
@@ -234,7 +234,7 @@ function CustomBuiltDemo() {
   return (
     <DemoRow>
       {/* Desktop — text left, visual right */}
-      <div className="hidden md:grid md:grid-cols-[1fr_auto_1.2fr] gap-8 items-center">
+      <div className="hidden md:grid md:grid-cols-1 md:gap-6 lg:grid-cols-[1fr_auto_1.2fr] lg:gap-8 items-center">
         <div className="pr-4">
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-4 px-3 py-1 bg-brand-accent/8 rounded-md">
             Custom-built for you
@@ -245,7 +245,7 @@ function CustomBuiltDemo() {
           </p>
         </div>
 
-        <div className="flex items-center justify-center px-2">
+        <div className="hidden lg:flex items-center justify-center px-2">
           <div className="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center">
             <ArrowRight size={22} className="text-brand-accent" />
           </div>
@@ -346,7 +346,7 @@ function ResponsiveDemo() {
   return (
     <DemoRow>
       {/* Desktop — visual left, text right */}
-      <div className="hidden md:grid md:grid-cols-[1.3fr_1fr] gap-10 items-center">
+      <div className="hidden md:grid md:grid-cols-1 md:gap-6 lg:grid-cols-[1.3fr_1fr] lg:gap-10 items-center">
         <div>
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-6 px-3 py-1 bg-brand-accent/8 rounded-md">
             Responsive on every device
@@ -578,7 +578,7 @@ function PerformanceDemo() {
   return (
     <DemoRow>
       {/* Desktop — text left, visual right */}
-      <div className="hidden md:grid md:grid-cols-[1fr_1.3fr] gap-10 items-center">
+      <div className="hidden md:grid md:grid-cols-1 md:gap-6 lg:grid-cols-[1fr_1.3fr] lg:gap-10 items-center">
         <div>
           <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-4 px-3 py-1 bg-brand-accent/8 rounded-md">
             Built for speed &amp; security
@@ -774,7 +774,7 @@ function SupportDemo() {
   return (
     <DemoRow className="!mb-4 md:!mb-20">
       {/* Desktop — chat left, text right */}
-      <div className="hidden md:grid md:grid-cols-[1.2fr_1fr] gap-10 items-start">
+      <div className="hidden md:grid md:grid-cols-1 md:gap-6 lg:grid-cols-[1.2fr_1fr] lg:gap-10 items-start">
         <div className="bg-white rounded-2xl shadow-xl shadow-brand-primary/8 border border-brand-primary/8 p-6 h-[420px] flex flex-col">
           <div className="flex items-center gap-3 mb-5 pb-4 border-b border-brand-primary/8 shrink-0">
             <img src="/kara-gibson-small.webp" alt="Kara Gibson" className="w-9 h-9 rounded-full object-cover shrink-0" />

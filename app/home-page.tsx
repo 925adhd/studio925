@@ -34,8 +34,10 @@ export default function HomePage() {
       <Navbar />
 
       <main id="main-content" className="flex flex-col">
-        <div className="order-1 md:order-1"><Hero /></div>
-        <div className="order-2 md:order-2"><TrustStrip /></div>
+        <div className="order-1 md:order-1 md:min-h-screen md:flex md:flex-col md:justify-between bg-brand-warm">
+          <Hero />
+          <TrustStrip />
+        </div>
         <div className="order-3 md:order-8"><PortfolioPreview /></div>
         <div className="order-4 md:order-9"><WhoItsFor /></div>
         <div className="order-5 md:order-6"><SpeedProof /></div>
@@ -57,7 +59,7 @@ export default function HomePage() {
               <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-brand-primary/10 md:-translate-x-px" />
 
               {[
-                { step: "01", title: "Quick Conversation", desc: "Tell me about your business, or just point me to your current website or Facebook page. That's enough to get started.", time: "Day 1", illustration: (
+                { step: "01", title: "Quick Conversation", desc: "Message me through the contact form if you have questions first. Or skip ahead and book direct from pricing. After payment, a short 10-minute intake form catches anything I can't pull from your current site or Facebook. Either way, I'm in touch within a day.", time: "Day 1 · Optional", illustration: (
                   <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-28 h-auto">
                     {/* First chat bubble */}
                     <rect x="8" y="20" width="58" height="38" rx="12" fill="#059669" opacity="0.15" />
@@ -214,6 +216,16 @@ export default function HomePage() {
             <p className="hidden md:block text-center text-xs text-brand-primary/60 mt-10 md:mt-14 max-w-md mx-auto leading-relaxed">
               Clear milestones. Regular updates. Direct communication from start to finish.
             </p>
+
+            <div className="mt-6 md:mt-8 text-center">
+              <a
+                href="/how-it-works"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 hover:text-emerald-800 underline underline-offset-4 transition-colors"
+              >
+                See the full process, payment, and FAQ
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
         </section>
 
