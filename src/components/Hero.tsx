@@ -1,15 +1,8 @@
 'use client';
 
-import { motion } from 'motion/react';
 import Link from 'next/link';
 import { ArrowRight, MapPin } from 'lucide-react';
 import { trackEvent } from '../lib/gtag';
-
-const fade = (delay: number) => ({
-  initial: { opacity: 0, y: 14 } as const,
-  animate: { opacity: 1, y: 0 } as const,
-  transition: { duration: 0.5, delay },
-});
 
 export default function Hero() {
   return (
@@ -17,41 +10,26 @@ export default function Hero() {
       <div className="absolute inset-0 grid-pattern -z-10" />
 
       <div className="max-w-4xl mx-auto text-center">
-        {/* Desktop: staggered fade-in */}
+        {/* Desktop: staggered fade-in via CSS (no JS animation library) */}
         <div className="hidden md:block">
-          <motion.p
-            {...fade(0)}
-            className="text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/60 mb-5"
-          >
+          <p className="fade-in-up text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/60 mb-5">
             Helping Local Businesses Grow Online · Leitchfield &amp; Grayson County, Kentucky
-          </motion.p>
+          </p>
 
-          <motion.h1
-            {...fade(0.1)}
-            className="text-5xl md:text-7xl mb-4 leading-[1.1]"
-          >
+          <h1 className="fade-in-up text-5xl md:text-7xl mb-4 leading-[1.1]" style={{ animationDelay: '0.1s' }}>
             Your business deserves a website <span className="italic text-brand-accent">that actually works.</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            {...fade(0.2)}
-            className="flex items-center justify-center gap-1.5 text-base mb-5"
-          >
+          <p className="fade-in-up flex items-center justify-center gap-1.5 text-base mb-5" style={{ animationDelay: '0.2s' }}>
             <MapPin size={14} className="shrink-0 text-brand-primary/55" />
             <span className="font-semibold text-brand-primary/70">Leitchfield, KY</span>
-          </motion.p>
+          </p>
 
-          <motion.p
-            {...fade(0.3)}
-            className="text-xl text-brand-primary/70 mb-4 max-w-2xl leading-relaxed mx-auto"
-          >
+          <p className="fade-in-up text-xl text-brand-primary/70 mb-4 max-w-2xl leading-relaxed mx-auto" style={{ animationDelay: '0.3s' }}>
             Fast, mobile-first websites built to look professional, load fast, and make it easy for customers to find and contact&nbsp;you.
-          </motion.p>
+          </p>
 
-          <motion.div
-            {...fade(0.4)}
-            className="flex flex-row gap-4 justify-center"
-          >
+          <div className="fade-in-up flex flex-row gap-4 justify-center" style={{ animationDelay: '0.4s' }}>
             <a href="/#contact" onClick={() => trackEvent('click_get_started', 'hero_desktop')} className="bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
               Get Started <ArrowRight size={20} />
             </a>
@@ -59,7 +37,7 @@ export default function Hero() {
               <img src="/kara-gibson-small.webp" alt="Kara Gibson, owner of Studio 925" width={28} height={28} className="w-7 h-7 rounded-full object-cover shrink-0" />
               See My Work
             </Link>
-          </motion.div>
+          </div>
         </div>
 
         {/* Mobile: fully static, no animation — critical for LCP */}

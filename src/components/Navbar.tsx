@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'motion/react';
 import { Menu, X, ArrowRight, Phone, MessageCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -64,11 +63,7 @@ export default function Navbar() {
 
       {/* Mobile/Tablet Menu */}
       {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 right-0 bg-brand-warm border-b border-brand-primary/5 shadow-lg p-6 lg:hidden"
-        >
+        <div className="fade-in-up absolute top-full left-0 right-0 bg-brand-warm border-b border-brand-primary/5 shadow-lg p-6 lg:hidden">
           <div className="flex flex-col gap-5 items-start">
             <a href="/#services" onClick={() => setIsOpen(false)} className="text-lg font-medium">What You Get</a>
             <Link href="/portfolio" className="text-lg font-medium">Portfolio</Link>
@@ -84,7 +79,7 @@ export default function Navbar() {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
     </nav>
 

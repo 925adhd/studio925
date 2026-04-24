@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'motion/react';
 import { CheckCircle2, Clock, Users, Sparkles } from 'lucide-react';
 
 const items = [
@@ -45,13 +44,10 @@ export default function TrustStrip() {
         {/* Desktop */}
         <div className="hidden sm:grid sm:grid-cols-3 gap-20">
           {items.map((item, i) => (
-            <motion.div
+            <div
               key={item.title}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="flex items-start gap-3"
+              className="fade-in-up flex items-start gap-3"
+              style={{ animationDelay: `${0.5 + i * 0.1}s` }}
             >
               <CheckCircle2 size={22} className="text-brand-accent shrink-0 mt-0.5 md:w-6 md:h-6" />
               <div>
@@ -62,7 +58,7 @@ export default function TrustStrip() {
                 )}
                 <p className="text-xs md:text-sm text-brand-primary/65 leading-relaxed mb-1">{item.desc}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { motion } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 import Navbar from '../src/components/Navbar';
 import Hero from '../src/components/Hero';
@@ -156,12 +155,8 @@ export default function HomePage() {
               ].map((item, i) => {
                 const isOpen = openStep === i;
                 return (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
                   className={`relative flex items-start gap-4 md:gap-0 mb-4 md:mb-20 last:mb-0 ${
                     i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}
@@ -208,7 +203,7 @@ export default function HomePage() {
                   }`}>
                     {item.illustration}
                   </div>
-                </motion.div>
+                </div>
                 );
               })}
             </div>

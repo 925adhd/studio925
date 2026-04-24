@@ -194,10 +194,10 @@ export default function Pricing() {
         </div>
 
         <div className="mt-6 text-center">
-          <Link href="/blog/your-website-is-a-tax-write-off" className="inline-block text-[11px] text-brand-primary/45 hover:text-brand-primary/70 transition-colors">
+          <Link href="/blog/your-website-is-a-tax-write-off" className="inline-block text-[11px] text-brand-primary/75 hover:text-brand-primary transition-colors">
             Did you know? Your website may be fully tax-deductible.
           </Link>
-          <p className="text-[10px] text-brand-primary/40 mt-0.5">Consult a tax professional for your specific situation.</p>
+          <p className="text-[10px] text-brand-primary/70 mt-0.5">Consult a tax professional for your specific situation.</p>
         </div>
       </div>
 
