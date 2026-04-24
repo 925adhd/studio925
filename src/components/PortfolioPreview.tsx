@@ -184,10 +184,7 @@ export default function PortfolioPreview() {
             viewport={{ once: true }}
             className="group block rounded-2xl overflow-hidden border border-brand-primary/5 bg-white shadow-sm shadow-brand-primary/5 mb-6"
           >
-            <div
-              className="aspect-[16/10] overflow-hidden bg-brand-primary/5 p-3 pb-2 touch-pan-y select-none"
-              {...mobileCarousel.swipeHandlers}
-            >
+            <div className="aspect-[16/10] overflow-hidden bg-brand-primary/5 p-3 pb-2 select-none">
               <div className="w-full h-full rounded-xl overflow-hidden shadow-md shadow-brand-primary/10 flex items-center">
                 <Slides activeIndex={mobileCarousel.activeIndex} />
               </div>
