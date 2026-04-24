@@ -38,17 +38,19 @@ function useCarousel(enabled: boolean) {
     setPausedUntil(Date.now() + 5000);
   };
 
-  // Swipe gesture handlers — left = next, right = prev. Threshold prevents
-  // tiny finger jitters from registering as swipes.
-  const touchStart = useRef(0);
+  // Swipe gesture handlers — left = next, right = prev. Only fire when the
+  // gesture is clearly horizontal so vertical page scrolls don't trigger it.
+  const touchStart = useRef({ x: 0, y: 0 });
   const swipeHandlers = {
     onTouchStart: (e: React.TouchEvent) => {
-      touchStart.current = e.touches[0].clientX;
+      touchStart.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
     },
     onTouchEnd: (e: React.TouchEvent) => {
-      const diff = touchStart.current - e.changedTouches[0].clientX;
-      if (diff > 40) next();
-      else if (diff < -40) prev();
+      const dx = touchStart.current.x - e.changedTouches[0].clientX;
+      const dy = touchStart.current.y - e.changedTouches[0].clientY;
+      if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+      if (dx > 0) next();
+      else prev();
     },
   };
 
