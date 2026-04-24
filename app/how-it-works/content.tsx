@@ -87,7 +87,7 @@ const timelines = [
 const faqs = [
   {
     q: 'What if I change my mind after paying the deposit?',
-    a: 'The deposit is non-refundable once we start, but if you reach out before I start building (usually within 48 hours of payment), I will refund it in full, no questions asked.',
+    a: 'The deposit is non-refundable. It holds your spot on my schedule and covers the planning, setup, and time I block off for your build, so I start working on it right away.',
   },
   {
     q: 'Can I see progress as you work?',
