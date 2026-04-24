@@ -15,7 +15,7 @@ function MapMockup() {
     <figure className="fl-mockup" aria-label="Sample local rank heatmap report for a Grayson County, Kentucky car dealership">
       <div className="fl-mockup-tag">SAMPLE REPORT · GRAYSON COUNTY</div>
       <img
-        src="/audit-sample-heatmap.png"
+        src="/audit-sample-heatmap.webp"
         alt="Sample local rank heatmap showing a Leitchfield car dealership ranking #2 at its own location with surrounding points ranging from top 3 to not found, plus a top competitors breakdown"
         width={810}
         height={970}
