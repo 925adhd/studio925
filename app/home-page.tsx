@@ -171,7 +171,7 @@ export default function HomePage() {
                   <div className={`hidden md:block flex-1 md:w-[calc(50%-2rem)] ${
                     i % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'
                   }`}>
-                    <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-brand-accent mb-1.5">{item.time}</span>
+                    <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-emerald-800 mb-1.5">{item.time}</span>
                     <h3 className="text-base md:text-lg font-sans font-bold mb-1.5">{item.title}</h3>
                     <p className="text-xs md:text-sm text-brand-primary/60 leading-relaxed">{item.desc}</p>
                   </div>
@@ -185,7 +185,7 @@ export default function HomePage() {
                       className="w-full flex items-center justify-between gap-3 py-2 text-left min-h-[44px]"
                     >
                       <div className="flex items-center gap-3 flex-1">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-brand-accent shrink-0 w-14">{item.time}</span>
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-800 shrink-0 w-14">{item.time}</span>
                         <h3 className="text-[15px] font-sans font-bold">{item.title}</h3>
                       </div>
                       <ChevronDown size={18} className={`text-brand-primary/40 shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
