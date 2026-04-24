@@ -73,7 +73,7 @@ const questions: Question[] = [
     help: 'Tell me everything about your visual style in one go. I will email a Google Drive link for logo files, photos, and any other assets.',
     fields: [
       { id: 'has_logo', type: 'choice', label: 'Do you have a logo?', required: true,
-        options: ['Yes', 'I have one but it needs work', 'No, I need one'] },
+        options: ['Yes', 'I have one but it needs cleanup', 'No, I do not have one yet'] },
       { id: 'colors_detail', type: 'textarea', label: 'Brand colors', help: 'Hex codes or color names. Leave blank if you want me to pick.' },
       { id: 'fonts', type: 'textarea', label: 'Any font preferences?', help: 'Fonts you currently use or like. Leave blank if you want me to pick.' },
       { id: 'vibe', type: 'multi', label: 'Pick the words that describe the vibe you want', help: 'Up to 3.', max: 3, fullWidth: true,

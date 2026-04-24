@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Check, ArrowRight, Clock, MessageCircle, CreditCard, Pencil, Eye, Rocket } from 'lucide-react';
+import { Check, ArrowRight, Clock } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
@@ -11,7 +11,6 @@ const phases = [
   {
     num: '01',
     label: 'Day 1',
-    icon: MessageCircle,
     title: 'Quick conversation',
     blurb: (
       <>
@@ -30,7 +29,6 @@ const phases = [
   {
     num: '02',
     label: 'Day 1 to 2',
-    icon: CreditCard,
     title: 'You book your package',
     blurb:
       'Pay your 50% deposit through Stripe, takes 60 seconds. You go straight to the intake form, no waiting around. It only asks for things I cannot grab from your current site or Facebook page myself, so most people finish in 10 minutes. Within 24 hours I follow up personally, not a form letter.',
@@ -38,7 +36,6 @@ const phases = [
   {
     num: '03',
     label: 'Day 2 to 3',
-    icon: Pencil,
     title: '48-hour first draft',
     blurb:
       'On Foundation, you see the first full draft of your homepage within 48 hours of assets landing. No weeks of wondering what I am up to. On Growth and Online Store, first drafts arrive in the first week along with a full SEO audit of your market.',
@@ -46,7 +43,6 @@ const phases = [
   {
     num: '04',
     label: 'Day 3 onward',
-    icon: Eye,
     title: 'Review and refine',
     blurb:
       'You tell me what to change, I handle the rest. Send feedback in one combined list per round, it saves time on both sides. Revisions until you are happy.',
@@ -54,7 +50,6 @@ const phases = [
   {
     num: '05',
     label: 'Launch day',
-    icon: Rocket,
     title: 'Preview, approve, go live',
     blurb:
       'You get a live preview link to test everything before it touches your domain. Approve it, pay the remaining 50%, and I push it live that same day. Every package includes a post-launch fix window so anything broken gets handled. Foundation gets launch support, Growth gets 30 days, Online Store gets 60.',
@@ -64,7 +59,7 @@ const phases = [
 const youHandle = [
   'Anything you want on the site that is not already on your current site or Facebook',
   'Logo and brand colors, if you have them',
-  'Logins for your domain or existing hosting',
+  'Logging into your domain registrar when it is time to connect the site',
   'Feedback on drafts, in one combined list per round',
   'Paying the final invoice before launch',
 ];
@@ -79,9 +74,9 @@ const iHandle = [
 ];
 
 const timelines = [
-  { name: 'Foundation', range: '1 to 2 weeks', price: '$900', pages: 'Up to 5 pages' },
-  { name: 'Growth', range: '3 to 4 weeks', price: '$1,800', pages: 'Up to 10 core pages' },
-  { name: 'Online Store', range: '4 to 6 weeks', price: '$2,600', pages: 'Up to 15 core pages' },
+  { name: 'Foundation', range: '1 week', price: '$900', pages: 'Up to 5 pages' },
+  { name: 'Growth', range: '2 to 3 weeks', price: '$1,800', pages: 'Up to 10 core pages' },
+  { name: 'Online Store', range: '4 to 6+ weeks', price: '$2,600', pages: 'Up to 15 core pages' },
 ];
 
 const faqs = [
@@ -137,32 +132,27 @@ export default function HowItWorksContent() {
         {/* Phases */}
         <div className="max-w-4xl mx-auto mb-20 md:mb-28">
           <div className="space-y-4 md:space-y-5">
-            {phases.map((p, i) => {
-              const Icon = p.icon;
-              return (
-                <motion.div
-                  key={p.num}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
-                  className="relative bg-white border border-brand-primary/10 rounded-2xl p-6 md:p-7 flex gap-5 md:gap-7"
-                >
-                  <div className="shrink-0">
-                    <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-brand-accent/10 text-brand-accent flex items-center justify-center">
-                      <Icon size={20} />
-                    </div>
+            {phases.map((p, i) => (
+              <motion.div
+                key={p.num}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="relative bg-white border border-brand-primary/10 rounded-2xl p-6 md:p-7 flex gap-6 md:gap-8"
+              >
+                <div className="shrink-0 font-serif italic text-4xl md:text-5xl leading-none text-emerald-700 pt-1">
+                  {p.num}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1.5">
+                    <h2 className="text-lg md:text-xl font-serif font-bold">{p.title}</h2>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-brand-primary/45">{p.label}</span>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1.5">
-                      <h2 className="text-lg md:text-xl font-serif font-bold">{p.title}</h2>
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-brand-primary/45">{p.label}</span>
-                    </div>
-                    <p className="text-sm md:text-base text-brand-primary/70 leading-relaxed">{p.blurb}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
+                  <p className="text-sm md:text-base text-brand-primary/70 leading-relaxed">{p.blurb}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 
