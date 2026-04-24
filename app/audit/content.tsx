@@ -160,8 +160,6 @@ export default function AuditContent() {
                     </p>
                   </div>
                 </div>
-
-                <MapMockup />
               </section>
 
               <section className="fl-why-free">
@@ -294,6 +292,8 @@ export default function AuditContent() {
                   .
                 </p>
               </form>
+
+              <MapMockup />
             </>
           )}
 
