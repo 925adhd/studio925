@@ -23,7 +23,7 @@ function MapMockup() {
         className="fl-mockup-image"
       />
       <figcaption className="fl-mockup-caption">
-        Sample from a real report. Your map will use your business and the keyword you choose.
+        Sample from a real report. Your map will use your business and the keyword you choose. Map data © Google.
       </figcaption>
     </figure>
   );
