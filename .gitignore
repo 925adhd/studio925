@@ -5,8 +5,12 @@ dist/
 out/
 coverage/
 .DS_Store
+desktop.ini
 *.log
+*.tsbuildinfo
 .env*
 !.env.example
+.vercel/
 Client Onboarding/
+clientresults/
 assets/
