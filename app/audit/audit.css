@@ -163,36 +163,12 @@
   margin-bottom: 10px;
   text-align: center;
 }
-.fl-mockup-map {
+.fl-mockup-image {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 10px;
   background: transparent;
-}
-.fl-mockup-legend {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px 22px;
-  margin-top: 14px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--fl-ink);
-  letter-spacing: 0.04em;
-}
-.fl-mockup-legend span {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
-.fl-mockup-legend i {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid white;
-  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08);
 }
 .fl-mockup-caption {
   margin: 12px 0 0;
@@ -540,7 +516,6 @@ a.fl-upsell:hover {
   .au-form-inline textarea { font-size: 16px; }
   .au-row { grid-template-columns: 1fr; }
   .fl-mockup { padding: 14px 12px 12px; border-radius: 14px; }
-  .fl-mockup-legend { gap: 10px 14px; font-size: 11px; }
 }
 
 @media (max-width: 480px) {

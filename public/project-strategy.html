@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Project Strategy Document | Studio 925</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0f172a;
+    --accent: #059669;
+    --warm: #f9f7f5;
+    --muted: #64748b;
+    --border: #e2e8f0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #e5e7eb;
+    color: var(--primary);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  /* Edit banner */
+  .edit-banner {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--primary); color: white;
+    padding: 12px 24px;
+    font-size: 13px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px;
+  }
+  .edit-banner .tip { opacity: 0.85; }
+  .edit-banner kbd {
+    display: inline-block;
+    padding: 2px 6px; margin: 0 2px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 4px;
+    font-family: inherit; font-size: 11px;
+  }
+  .print-btn {
+    background: var(--accent); color: white;
+    border: none; padding: 8px 16px;
+    border-radius: 6px; font-family: inherit;
+    font-size: 13px; font-weight: 600;
+    cursor: pointer;
+  }
+  .print-btn:hover { background: #047857; }
+  .status-pill {
+    display: none; align-items: center; gap: 6px;
+    background: rgba(5,150,105,0.2);
+    border: 1px solid rgba(5,150,105,0.4);
+    padding: 4px 10px; border-radius: 12px;
+    font-size: 11px; font-weight: 600;
+    color: #6ee7b7;
+  }
+  .status-pill.show { display: inline-flex; }
+  .status-pill .pulse {
+    width: 6px; height: 6px; background: #10b981;
+    border-radius: 50%;
+  }
+
+  /* Page */
+  .page {
+    max-width: 820px;
+    margin: 32px auto;
+    background: white;
+    padding: 64px 72px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    border-radius: 4px;
+  }
+
+  .doc-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 40px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 700; font-size: 18px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+  }
+  .brand-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--accent);
+  }
+  .doc-meta {
+    text-align: right;
+    font-size: 12px; color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .title-block { margin-bottom: 56px; }
+  .eyebrow {
+    display: inline-block;
+    font-size: 11px; letter-spacing: 0.12em;
+    color: var(--accent); font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .title-block h1 {
+    font-size: 44px;
+    margin-bottom: 16px;
+  }
+  .title-block .prepared-for {
+    font-size: 15px; color: var(--muted);
+  }
+  .title-block .prepared-for strong {
+    color: var(--primary); font-weight: 600;
+  }
+
+  /* Package badge */
+  .package-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--primary); color: white;
+    padding: 6px 14px; border-radius: 20px;
+    font-size: 12px; font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
+  }
+  .package-badge .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+  }
+
+  section {
+    margin-bottom: 48px;
+    page-break-inside: avoid;
+  }
+  section h2 {
+    font-size: 26px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: baseline; gap: 12px;
+  }
+  section h2 .num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 700;
+  }
+  section h3 {
+    font-size: 17px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: var(--primary);
+  }
+  section p {
+    margin-bottom: 12px;
+    color: #334155;
+  }
+
+  /* Fill (auto or editable) */
+  .fill {
+    background: rgba(5,150,105,0.1);
+    color: var(--accent);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    border-bottom: 1px dashed var(--accent);
+  }
+  .fill.auto-filled {
+    background: rgba(5,150,105,0.08);
+    border-bottom-style: solid;
+  }
+  /* When a .fill starts a paragraph or list item, drop the left padding so
+     the highlighted background doesn't look like a leading space. */
+  p > .fill:first-child,
+  li > .fill:first-child { padding-left: 0; }
+  .fill:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    background: rgba(5,150,105,0.15);
+  }
+
+  ul { margin: 8px 0 16px 20px; }
+  li { margin-bottom: 6px; color: #334155; }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 16px;
+  }
+  .col-box {
+    background: var(--warm);
+    padding: 20px 24px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+  }
+  .col-box h3 {
+    margin-top: 0;
+    font-size: 14px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+  .col-box ul { margin-left: 18px; }
+  .col-box li { font-size: 14px; margin-bottom: 8px; }
+
+  /* Timeline */
+  .timeline { margin-top: 16px; }
+  .phase {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 24px;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+  }
+  .phase:last-child { border-bottom: 1px solid var(--border); }
+  .phase-label {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-top: 2px;
+  }
+  .phase-body h3 { margin-top: 0; margin-bottom: 6px; font-size: 16px; }
+  .phase-body ul { margin: 4px 0 0 18px; }
+  .phase-body li { font-size: 14px; margin-bottom: 2px; }
+
+  .launch-target {
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .launch-target .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+  }
+  .launch-target .date {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700; font-size: 22px;
+  }
+
+  .comm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 16px;
+  }
+  .comm-item {
+    background: var(--warm);
+    padding: 14px 18px;
+    border-radius: 8px;
+  }
+  .comm-item .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .comm-item .value { font-size: 15px; font-weight: 600; }
+
+  .payment-box {
+    margin-top: 16px;
+    padding: 20px 24px;
+    background: var(--warm);
+    border-radius: 8px;
+  }
+  .pay-row {
+    display: flex; justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .pay-row:last-child { border-bottom: none; }
+  .pay-row .label { color: var(--muted); }
+  .pay-row .value { font-weight: 600; }
+  .paid-tag {
+    background: var(--accent); color: white;
+    font-size: 11px; padding: 2px 8px;
+    border-radius: 12px; margin-left: 8px;
+    font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .final-pay-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent); color: white;
+    padding: 12px 22px; border-radius: 10px;
+    font-weight: 600; font-size: 14px;
+    text-decoration: none;
+    margin-top: 16px;
+    transition: background 0.15s;
+  }
+  .final-pay-btn:hover { background: #047857; }
+  .final-pay-note {
+    margin-top: 12px; font-size: 13px; color: var(--muted);
+    font-style: italic;
+  }
+
+  .hosting-card {
+    margin-top: 16px;
+    padding: 20px 24px;
+    background: var(--warm);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+  }
+  .hosting-card .price {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px; font-weight: 700;
+    font-style: italic;
+    color: var(--primary);
+  }
+  .hosting-card .price small {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; color: var(--muted);
+    font-weight: 500; font-style: normal;
+  }
+  .hosting-card ul { margin-top: 10px; }
+  .hosting-card li { font-size: 14px; }
+
+  .signoff {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .signoff-msg {
+    max-width: 60%;
+    font-size: 14px; color: var(--muted);
+    line-height: 1.6;
+  }
+  .signature { text-align: right; }
+  .signature .name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--primary);
+  }
+  .signature .role {
+    font-size: 12px; color: var(--muted);
+    margin-top: 4px;
+  }
+
+  @media print {
+    body { background: white; }
+    .edit-banner { display: none; }
+    .page {
+      box-shadow: none;
+      margin: 0;
+      max-width: 100%;
+      padding: 40px;
+      border-radius: 0;
+    }
+    .fill {
+      background: transparent;
+      color: var(--primary);
+      border-bottom: none;
+      padding: 0;
+    }
+    section { page-break-inside: avoid; }
+    @page { margin: 0.6in; }
+  }
+
+  @media (max-width: 768px) {
+    .page { padding: 32px 24px; margin: 16px; }
+    .doc-header { flex-direction: column; gap: 16px; }
+    .doc-meta { text-align: left; }
+    .title-block h1 { font-size: 32px; }
+    .two-col { grid-template-columns: 1fr; gap: 16px; }
+    .phase { grid-template-columns: 1fr; gap: 4px; }
+    .comm-grid { grid-template-columns: 1fr; }
+    .signoff { flex-direction: column; gap: 24px; align-items: flex-start; }
+    .signoff-msg { max-width: 100%; }
+    .signature { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<div class="edit-banner">
+  <div class="tip">
+    <span id="statusPill" class="status-pill"><span class="pulse"></span>Auto-filled from intake</span>
+    Click any <span style="background:rgba(5,150,105,0.4);padding:1px 6px;border-radius:3px;color:#fff;font-weight:600;">highlighted field</span> to edit.
+  </div>
+  <button class="print-btn" onclick="window.print()">Save as PDF</button>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="doc-header">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <span>Studio 925</span>
+    </div>
+    <div class="doc-meta">
+      <div>Project code: <span class="fill" data-fill="project_code">SG-0000</span></div>
+      <div>Date: <span class="fill" data-fill="date">Today</span></div>
+      <div>Shared folder: <a id="folderLink" class="fill" data-fill="folder_url" href="#" target="_blank" style="color:var(--accent); text-decoration:none;">paste link here</a></div>
+    </div>
+  </div>
+
+  <!-- TITLE -->
+  <div class="title-block">
+    <span class="package-badge"><span class="dot"></span><span data-fill="package_name">Foundation</span> Package</span>
+    <span class="eyebrow">Project Strategy Document</span>
+    <h1>A new site for<br /><span class="fill" data-fill="business_name">Client Business Name</span>.</h1>
+    <p class="prepared-for">Prepared for <strong><span class="fill" data-fill="first_name">Client First Name</span></strong> by Studio 925.</p>
+  </div>
+
+  <!-- 1. OVERVIEW -->
+  <section>
+    <h2><span class="num">01</span>Project overview</h2>
+    <p>You are getting a new website for <span class="fill" data-fill="business_name_2">[business name]</span>, a business based in <span class="fill" data-fill="location">[city, state]</span>. In your own words: <span class="fill" data-fill="one_line">[one-line description]</span></p>
+    <p>The goal. <span class="fill" data-fill="success_metric">[What success looks like for you, pulled from your intake answer.]</span></p>
+    <p>The site will be fast, mobile-first, and built to load in under two seconds. It will be easy for you to update once we hand it over.</p>
+  </section>
+
+  <!-- 2. DELIVERABLES -->
+  <section>
+    <h2><span class="num">02</span>What you are getting</h2>
+    <p>Your package: <strong><span data-fill="package_name_2">Foundation</span></strong> · <span data-fill="package_pages">Up to 5 pages</span></p>
+
+    <h3>Included</h3>
+    <ul id="includes-list">
+      <!-- filled by JS -->
+    </ul>
+
+    <h3>Not included (available as an upgrade later)</h3>
+    <p><span class="fill" data-fill="not_included">[Package-specific upgrade path]</span></p>
+  </section>
+
+  <!-- 3. RESPONSIBILITIES -->
+  <section>
+    <h2><span class="num">03</span>Who handles what</h2>
+    <div class="two-col">
+      <div class="col-box">
+        <h3>I handle</h3>
+        <ul>
+          <li>Design and build</li>
+          <li>Copy polish (if you send drafts, I clean them up)</li>
+          <li>SEO setup (meta tags, sitemap, Google Search Console)</li>
+          <li>Domain connection and secure hosting setup</li>
+          <li>Testing on phones, tablets, and desktops</li>
+          <li>One walk-through video at the end so you know how to update things</li>
+        </ul>
+      </div>
+      <div class="col-box">
+        <h3>You handle</h3>
+        <ul>
+          <li>Logo and brand colors you already have (or tell me if you need them)</li>
+          <li>Photos you want on the site (or say the word and I will use stock)</li>
+          <li>Text for each page, or rough drafts I can polish</li>
+          <li>Logins for your domain or existing hosting</li>
+          <li>Reviewing drafts and sending feedback in one combined list per round</li>
+          <li>Paying the final invoice before launch</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px; font-size:14px; color:var(--muted);">If anything on the "you handle" list is missing, just tell me. We can work around it or I can recommend an option.</p>
+
+    <div style="margin-top:20px; padding:16px 20px; background:var(--warm); border-radius:8px; border-left:3px solid var(--accent);">
+      <strong style="font-size:14px; display:block; margin-bottom:6px;">About your shared folder</strong>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:0;">The shared folder link is at the top of this doc. Click it to open a Google Drive folder where you can upload your logo, photos, and drafts. Uploading works best if you are signed into a free Google account. If you just want to view, no sign-in needed.</p>
+    </div>
+  </section>
+
+  <!-- 4. TIMELINE -->
+  <section>
+    <h2><span class="num">04</span>Timeline</h2>
+    <p>This is about a <strong><span data-fill="timeline">1 to 2 week</span></strong> project. Dates assume your intake and assets come in during the first phase. If those slow down, everything shifts.</p>
+
+    <div class="timeline" id="timeline-phases">
+      <!-- filled by JS -->
+    </div>
+
+    <div class="launch-target">
+      <div><div class="label">Launch target</div></div>
+      <div class="date"><span class="fill" data-fill="launch_date" style="color:white;background:rgba(255,255,255,0.15);">TBD</span></div>
+    </div>
+  </section>
+
+  <!-- 5. COMMUNICATION -->
+  <section>
+    <h2><span class="num">05</span>How we stay in touch</h2>
+    <div class="comm-grid">
+      <div class="comm-item">
+        <div class="label">Main channel</div>
+        <div class="value"><span class="fill" data-fill="main_channel">Email</span></div>
+      </div>
+      <div class="comm-item">
+        <div class="label">Response time</div>
+        <div class="value">Within one business day</div>
+      </div>
+      <div class="comm-item">
+        <div class="label">Updates</div>
+        <div class="value">End of each phase</div>
+      </div>
+      <div class="comm-item">
+        <div class="label">Reach me at</div>
+        <div class="value"><span class="fill" data-fill="reach_email">hello@studio925.design</span></div>
+      </div>
+    </div>
+    <p style="margin-top:20px;">Send all feedback in one message per round instead of bits and pieces. It saves time on both sides and keeps things clean. No weekly meetings unless you want one. Most clients prefer async updates, but I am happy either way.</p>
+  </section>
+
+  <!-- 6. PAYMENT -->
+  <section>
+    <h2><span class="num">06</span>Payment</h2>
+    <div class="payment-box">
+      <div class="pay-row">
+        <div class="label">Deposit (50%) <span class="paid-tag">Paid</span></div>
+        <div class="value">$<span data-fill="deposit">450</span></div>
+      </div>
+      <div class="pay-row">
+        <div class="label">Final payment (due once you approve the live preview)</div>
+        <div class="value">$<span data-fill="final_payment">450</span></div>
+      </div>
+      <div class="pay-row">
+        <div class="label">Total project</div>
+        <div class="value">$<span data-fill="total">900</span></div>
+      </div>
+      <div class="pay-row">
+        <div class="label">Invoice goes to</div>
+        <div class="value"><span class="fill" data-fill="billing_email">billing@client.com</span></div>
+      </div>
+    </div>
+
+    <div id="finalPayWrap">
+      <a id="finalPayBtn" class="final-pay-btn" href="#" target="_blank" rel="noopener">
+        Pay final invoice ($<span data-fill="final_payment_btn">450</span>) →
+      </a>
+      <p class="final-pay-note">You only tap this once you are happy with the live preview. Until then, you owe nothing more.</p>
+    </div>
+    <p style="margin-top:12px; font-size:13px; color:var(--muted);">You get a live preview link to click around before paying anything else. Once you approve it and the final invoice clears, I push the site live on your domain the same day. You own everything after final payment.</p>
+  </section>
+
+  <!-- 7. AFTER LAUNCH -->
+  <section>
+    <h2><span class="num">07</span>After launch</h2>
+    <p><strong>14 day fix window.</strong> Anything broken or off, I fix at no charge.</p>
+    <p><strong>Ongoing support.</strong> I only do text, image, and content updates under the Full Support plan. Here is how that works:</p>
+
+    <div class="hosting-card">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
+        <strong style="font-size:16px;">Full Support</strong>
+        <span class="price">$49<small> /month</small></span>
+      </div>
+      <ul>
+        <li>Secure hosting, daily backups, and performance monitoring</li>
+        <li>Ongoing SEO — new service pages, blog posts, meta tags, indexing</li>
+        <li>Free custom domain included as long as your plan is active</li>
+        <li>DNS, email routing, and SSL handled for you</li>
+        <li>Text, image, and layout changes, just message me</li>
+        <li>Priority support, I respond first</li>
+        <li>Market exclusivity, no other SEO clients in your niche and market</li>
+      </ul>
+      <p style="margin-top:12px; font-size:13px; color:var(--muted);">Cancel anytime. You keep your files and domain either way.</p>
+    </div>
+
+    <p style="margin-top:18px; font-size:14px;"><strong>You own 100% of the code and content.</strong> If you ever move to a new developer, I hand everything over cleanly.</p>
+  </section>
+
+  <!-- SIGN OFF -->
+  <div class="signoff">
+    <div class="signoff-msg">
+      Questions on any of this? Just reply. If it all looks good, no need to sign anything. Send a thumbs up and I will start Phase 1.
+    </div>
+    <div class="signature">
+      <div class="name">Kara</div>
+      <div class="role">Studio 925 · studio925.design</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ========================================================================
+   STUDIO 925 | PROJECT STRATEGY DOCUMENT
+   Reads answers from the intake form and auto-fills this page.
+
+   HOW IT GETS DATA:
+   The intake form (intake-form.html or intake-form-long.html) encodes
+   the client's answers as base64 JSON and puts the URL in the Web3Forms
+   email. When you click that link, this page decodes and auto-fills.
+
+   Without a URL payload, this page shows editable placeholders you can
+   click and fill in by hand.
+   ======================================================================== */
+
+/* ------------------------------------------------------------------------
+   FINAL-PAYMENT STRIPE LINKS (remaining 50% of each package)
+
+   These are SEPARATE from the deposit links on the pricing page.
+   Create 3 new Stripe payment links in your dashboard for the final 50%:
+     Foundation final: $450
+     Growth final:     $900
+     Online Store final: $1,300
+
+   Paste the new Stripe URLs in below. Until you do, the strategy doc
+   shows a "I will send the invoice link when we hit launch week" note
+   instead of a pay button.
+   ------------------------------------------------------------------------ */
+const FINAL_PAYMENT_LINKS = {
+  foundation: 'REPLACE_WITH_FOUNDATION_FINAL_STRIPE_LINK',
+  growth: 'REPLACE_WITH_GROWTH_FINAL_STRIPE_LINK',
+  online_store: 'REPLACE_WITH_ONLINE_STORE_FINAL_STRIPE_LINK'
+};
+
+const PACKAGES = {
+  foundation: {
+    name: 'Foundation',
+    pages: 'Up to 5 pages',
+    price: 900, deposit: 450, final: 450,
+    timeline: '1 to 2 week',
+    weeks: 2,
+    phases: [
+      { label: 'Phase 1', title: 'Intake and assets', items: [
+        'Fill out the intake form (done if you are reading this)',
+        'Upload logo, photos, and any existing copy to the shared folder',
+        'Quick message from me to confirm direction'
+      ]},
+      { label: 'Phase 2', title: '48-hour first draft', items: [
+        'I send the first full draft of the homepage within 48 hours of assets landing',
+        'You send feedback in one combined list'
+      ]},
+      { label: 'Phase 3', title: 'Build out and polish', items: [
+        'I apply feedback and build the remaining pages',
+        'Final review, revisions, and testing'
+      ]},
+      { label: 'Launch', title: 'Go live', items: [
+        'Domain connected, SSL active, site pushed live',
+        'Walk-through video sent',
+        'Final invoice'
+      ]}
+    ],
+    includes: [
+      'Custom design built around your business',
+      '48-hour first draft so you can see direction fast',
+      'Mobile-first design, looks great on every phone',
+      'Domain setup and secure connection (SSL)',
+      'Optimized for fast load times',
+      'SEO backlink from Studio 925 to your site',
+      'Google-ready SEO setup',
+      'Simple logo cleanup if needed',
+      'Contact form so customers can reach you',
+      'Legal pages included (Privacy, Terms, Cookies)',
+      'Revisions until you are happy before launch',
+      'Launch support included',
+      'You own everything after final payment'
+    ],
+    notIncluded: 'Blog, e-commerce, dedicated service pages, CMS, or analytics dashboards. Any of these can be added by upgrading to Growth or Online Store.'
+  },
+  growth: {
+    name: 'Growth',
+    pages: 'Up to 10 core pages',
+    price: 1800, deposit: 900, final: 900,
+    timeline: '3 to 4 week',
+    weeks: 4,
+    phases: [
+      { label: 'Week 1', title: 'Intake, SEO audit, and planning', items: [
+        'Fill out the intake form',
+        'Upload assets to the shared folder',
+        'I run a full SEO audit of your market and competitors',
+        'Page and keyword plan sent for your sign-off'
+      ]},
+      { label: 'Week 2', title: 'First draft', items: [
+        'Homepage and core service page drafts sent for review',
+        'You send feedback in one combined list'
+      ]},
+      { label: 'Week 3', title: 'Build out the rest', items: [
+        'Remaining service pages, CMS setup, and analytics',
+        'Full site preview sent'
+      ]},
+      { label: 'Week 4', title: 'Revisions and launch', items: [
+        'Second round of revisions and polish',
+        'Domain connected and site goes live',
+        'Walk-through video and 30-day support starts'
+      ]}
+    ],
+    includes: [
+      'Everything in Foundation',
+      'Hands-on SEO audit built from Google ranking guidelines',
+      'Dedicated service pages for each offering',
+      'Simple CMS so you can post updates yourself',
+      'Analytics and lead tracking',
+      '30 days of post-launch support'
+    ],
+    notIncluded: 'Online store functionality. Available by upgrading to Online Store.'
+  },
+  online_store: {
+    name: 'Online Store',
+    pages: 'Up to 15 core pages',
+    price: 2600, deposit: 1300, final: 1300,
+    timeline: '4 to 6 week',
+    weeks: 6,
+    phases: [
+      { label: 'Week 1', title: 'Intake, planning, and store setup', items: [
+        'Fill out the intake form',
+        'Upload products, photos, and brand assets',
+        'Store structure and category plan sent for sign-off'
+      ]},
+      { label: 'Week 2', title: 'Site draft + store build', items: [
+        'Homepage and core pages drafted',
+        'Product listings and checkout flow built'
+      ]},
+      { label: 'Week 3 to 4', title: 'Full build and integrations', items: [
+        'Remaining pages, CMS, and analytics',
+        'Payment processing (Stripe) and customer management wired up'
+      ]},
+      { label: 'Week 5', title: 'Testing and revisions', items: [
+        'Full test of checkout, confirmation emails, and edge cases',
+        'Second round of revisions'
+      ]},
+      { label: 'Week 6', title: 'Launch', items: [
+        'Domain connected and site goes live',
+        'Walk-through video and 60-day guided support starts'
+      ]}
+    ],
+    includes: [
+      'Everything in Growth',
+      'Full online store',
+      'Product listings, inventory, and categories',
+      'Checkout and payment processing (Stripe)',
+      'Customer management',
+      '60 days of guided post-launch support'
+    ],
+    notIncluded: 'Nothing major. Anything you think of later can be added post-launch.'
+  }
+};
+
+/* Read base64 JSON payload from URL hash */
+function loadAnswers() {
+  const hash = window.location.hash;
+  if (!hash.startsWith('#data=')) return null;
+  try {
+    const b64 = hash.slice(6);
+    const json = decodeURIComponent(escape(atob(b64)));
+    return JSON.parse(json);
+  } catch (e) {
+    console.error('Could not decode intake data:', e);
+    return null;
+  }
+}
+
+/* Helpers */
+function setFill(key, value) {
+  document.querySelectorAll(`[data-fill="${key}"]`).forEach(el => {
+    el.textContent = value;
+    el.classList.add('auto-filled');
+  });
+}
+
+function formatDate(d) {
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function firstName(full) {
+  if (!full) return '';
+  return full.trim().split(/\s+/)[0];
+}
+
+function projectCode(businessName) {
+  const now = new Date();
+  const yr = String(now.getFullYear()).slice(-2);
+  const mo = String(now.getMonth() + 1).padStart(2, '0');
+  const slug = (businessName || 'CLIENT').replace(/[^A-Za-z]/g,'').slice(0,3).toUpperCase() || 'CLT';
+  return `${slug}-${yr}${mo}`;
+}
+
+function renderPhases(pkg) {
+  const wrap = document.getElementById('timeline-phases');
+  wrap.innerHTML = pkg.phases.map(p => `
+    <div class="phase">
+      <div class="phase-label">${p.label}</div>
+      <div class="phase-body">
+        <h3>${p.title}</h3>
+        <ul>${p.items.map(i => `<li>${i}</li>`).join('')}</ul>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderIncludes(pkg) {
+  document.getElementById('includes-list').innerHTML =
+    pkg.includes.map(i => `<li>${i}</li>`).join('');
+}
+
+/* Show the Stripe final-payment button if a real URL is set, else show a note */
+function applyFinalPayment(pkgKey, pkg) {
+  const url = FINAL_PAYMENT_LINKS[pkgKey];
+  const btn = document.getElementById('finalPayBtn');
+  const wrap = document.getElementById('finalPayWrap');
+  if (!btn || !wrap) return;
+  if (url && !url.startsWith('REPLACE_')) {
+    btn.href = url;
+    btn.style.display = 'inline-flex';
+  } else {
+    wrap.innerHTML = '<p class="final-pay-note" style="margin-top:16px;">I will send you a secure Stripe invoice link for the remaining <strong>$' + pkg.final.toLocaleString() + '</strong> once you approve the live preview.</p>';
+  }
+}
+
+/* Normalize package value: accepts short key ('foundation') or full display
+   string ('Foundation | $900 | Up to 5 pages'). Returns short key. */
+function normalizePackage(raw) {
+  if (!raw) return 'foundation';
+  const s = String(raw).toLowerCase();
+  if (s.startsWith('foundation')) return 'foundation';
+  if (s.startsWith('growth')) return 'growth';
+  if (s.startsWith('online store') || s.startsWith('store')) return 'store';
+  return 'foundation';
+}
+
+/* Main: apply answers to doc */
+function applyAnswers(a) {
+  const pkgKey = normalizePackage(a.package);
+  const pkg = PACKAGES[pkgKey] || PACKAGES.foundation;
+
+  // Package-driven
+  setFill('package_name', pkg.name);
+  setFill('package_name_2', pkg.name);
+  setFill('package_pages', pkg.pages);
+  setFill('timeline', pkg.timeline);
+  setFill('deposit', pkg.deposit.toLocaleString());
+  setFill('final_payment', pkg.final.toLocaleString());
+  setFill('final_payment_btn', pkg.final.toLocaleString());
+  setFill('total', pkg.price.toLocaleString());
+  setFill('not_included', pkg.notIncluded);
+  renderIncludes(pkg);
+  renderPhases(pkg);
+  applyFinalPayment(pkgKey, pkg);
+
+  // Client info
+  if (a.business_name) {
+    setFill('business_name', a.business_name);
+    setFill('business_name_2', a.business_name);
+  }
+  if (a.full_name) setFill('first_name', firstName(a.full_name));
+  if (a.location) setFill('location', a.location);
+  if (a.one_line) setFill('one_line', a.one_line);
+  if (a.success_metric) setFill('success_metric', a.success_metric);
+  else if (a.main_goal) setFill('success_metric', a.main_goal);
+  if (a.billing_email) setFill('billing_email', a.billing_email);
+  else if (a.email) setFill('billing_email', a.email);
+  if (a.email) setFill('reach_email', a.email);
+
+  // Dates
+  const today = new Date();
+  setFill('date', formatDate(today));
+  const launch = new Date(today);
+  launch.setDate(launch.getDate() + pkg.weeks * 7);
+  setFill('launch_date', formatDate(launch));
+  setFill('project_code', projectCode(a.business_name));
+
+  // Banner
+  document.getElementById('statusPill').classList.add('show');
+}
+
+/* Even without answers, render the default Foundation phases/includes */
+(function init() {
+  const answers = loadAnswers();
+  if (answers) {
+    applyAnswers(answers);
+  } else {
+    const pkg = PACKAGES.foundation;
+    renderPhases(pkg);
+    renderIncludes(pkg);
+    applyFinalPayment('foundation', pkg);
+  }
+
+  // Make every .fill editable for manual tweaks after auto-fill
+  document.querySelectorAll('.fill').forEach(el => {
+    el.setAttribute('contenteditable', 'true');
+    el.setAttribute('spellcheck', 'false');
+  });
+
+  // Shared folder link: keep href in sync with the editable text
+  const folderLink = document.getElementById('folderLink');
+  if (folderLink) {
+    const syncFolderHref = () => {
+      const txt = folderLink.textContent.trim();
+      if (txt && txt !== 'paste link here' && /^https?:\/\//i.test(txt)) {
+        folderLink.href = txt;
+      } else {
+        folderLink.removeAttribute('href');
+      }
+    };
+    folderLink.addEventListener('input', syncFolderHref);
+    folderLink.addEventListener('blur', syncFolderHref);
+    syncFolderHref();
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -6,112 +6,24 @@ import { CheckCircle2 } from 'lucide-react';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
 import { trackEvent } from '../../src/lib/gtag';
-import { GRAYSON_MAP } from './grayson-map-data';
 import './audit.css';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
-function rankColor(rank: number | null): string {
-  if (rank === null) return '#9a0f0f';
-  if (rank <= 3) return '#1a5d2f';
-  if (rank <= 10) return '#d4a017';
-  return '#c96a12';
-}
-
 function MapMockup() {
-  // Mirrors the real report's SVG layout (geomap/app/report/[timestamp]/page.tsx)
-  // exactly: 800x440 viewBox, PAD=36, r=15 circles, r=23 crosshair, same colors
-  // and render order. Scan points are pre-projected from a real 49-point lat/lng
-  // grid centered on Leitchfield, KY so they sit on the county the way a real
-  // scan would, with hand-tuned ranks for a "decent business with edge gaps" story.
-  const { width: W, height: H } = GRAYSON_MAP.viewBox;
-  const { x: bx, y: by } = GRAYSON_MAP.business;
-
   return (
-    <figure className="fl-mockup" aria-label="Sample preview of the local rank heatmap for Grayson County, Kentucky">
-      <div className="fl-mockup-tag">SAMPLE PREVIEW · GRAYSON COUNTY</div>
-      <svg className="fl-mockup-map" viewBox={`0 0 ${W} ${H}`} role="img">
-        <rect x="0" y="0" width={W} height={H} fill="#f0ece0" />
-        <rect x="1" y="1" width={W - 2} height={H - 2} fill="none" stroke="#cdc6b4" />
-        {GRAYSON_MAP.neighbors.map((d, i) => (
-          <path
-            key={`n-${i}`}
-            d={d}
-            fill="#ede7d6"
-            stroke="#b3a788"
-            strokeWidth={0.8}
-            strokeLinejoin="round"
-            opacity={0.7}
-          />
-        ))}
-        {GRAYSON_MAP.trunk.map((d, i) => (
-          <path
-            key={`t-${i}`}
-            d={d}
-            fill="none"
-            stroke="#b38b54"
-            strokeWidth={0.8}
-            strokeLinecap="round"
-            opacity={0.7}
-          />
-        ))}
-        {GRAYSON_MAP.motorway.map((d, i) => (
-          <path
-            key={`m-${i}`}
-            d={d}
-            fill="none"
-            stroke="#9a4414"
-            strokeWidth={1.6}
-            strokeLinecap="round"
-            opacity={0.85}
-          />
-        ))}
-        <path
-          d={GRAYSON_MAP.county}
-          fill="#e4dfd0"
-          stroke="#8a7f63"
-          strokeWidth={1.5}
-          strokeLinejoin="round"
-          fillOpacity={0.75}
-        />
-        {GRAYSON_MAP.points.map((p, i) => {
-          const color = rankColor(p.rank);
-          const label = p.rank === null ? '20+' : String(p.rank);
-          return (
-            <g key={i}>
-              <circle cx={p.x} cy={p.y} r={15} fill={color} stroke="white" strokeWidth={2} />
-              <text
-                x={p.x}
-                y={p.y + 4}
-                textAnchor="middle"
-                fontSize={p.rank === null ? 9 : 11}
-                fontWeight={700}
-                fill="white"
-                fontFamily="var(--fl-body), sans-serif"
-              >
-                {label}
-              </text>
-            </g>
-          );
-        })}
-        <g>
-          <circle cx={bx} cy={by} r={23} fill="none" stroke="white" strokeWidth={5} />
-          <circle cx={bx} cy={by} r={23} fill="none" stroke="#1e3a5f" strokeWidth={2.5} />
-          <line x1={bx - 29} y1={by} x2={bx - 19} y2={by} stroke="#1e3a5f" strokeWidth={2.5} strokeLinecap="round" />
-          <line x1={bx + 19} y1={by} x2={bx + 29} y2={by} stroke="#1e3a5f" strokeWidth={2.5} strokeLinecap="round" />
-          <line x1={bx} y1={by - 29} x2={bx} y2={by - 19} stroke="#1e3a5f" strokeWidth={2.5} strokeLinecap="round" />
-          <line x1={bx} y1={by + 19} x2={bx} y2={by + 29} stroke="#1e3a5f" strokeWidth={2.5} strokeLinecap="round" />
-        </g>
-      </svg>
-      <div className="fl-mockup-legend">
-        <span><i style={{ background: '#1a5d2f' }} /> Top 3</span>
-        <span><i style={{ background: '#d4a017' }} /> 4&ndash;10</span>
-        <span><i style={{ background: '#c96a12' }} /> 11&ndash;20</span>
-        <span><i style={{ background: '#9a0f0f' }} /> Not found</span>
-      </div>
+    <figure className="fl-mockup" aria-label="Sample local rank heatmap report for a Grayson County, Kentucky car dealership">
+      <div className="fl-mockup-tag">SAMPLE REPORT · GRAYSON COUNTY</div>
+      <img
+        src="/audit-sample-heatmap.png"
+        alt="Sample local rank heatmap showing a Leitchfield car dealership ranking #2 at its own location with surrounding points ranging from top 3 to not found, plus a top competitors breakdown"
+        width={810}
+        height={970}
+        loading="lazy"
+        className="fl-mockup-image"
+      />
       <figcaption className="fl-mockup-caption">
-        Sample preview. Your map will use your business and the keyword you
-        choose.
+        Sample from a real report. Your map will use your business and the keyword you choose.
       </figcaption>
     </figure>
   );
