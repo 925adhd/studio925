@@ -87,7 +87,7 @@ function SearchIntentDemo() {
       {/* Desktop */}
       <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] lg:grid-cols-[1fr_auto_1fr_1fr] gap-6 items-center">
         <div>
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-4 px-3 py-1 bg-brand-accent/8 rounded-md">
+          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-primary/60 mb-4">
             Built for search intent
           </span>
           <div className="bg-white rounded-full shadow-lg shadow-brand-primary/8 border border-brand-primary/10 px-5 py-3.5 flex items-center gap-3">
@@ -114,8 +114,8 @@ function SearchIntentDemo() {
           transition={{ duration: 0.3 }}
           className="flex items-center justify-center px-2"
         >
-          <div className="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center">
-            <ArrowRight size={22} className="text-brand-accent" />
+          <div className="w-12 h-12 rounded-full bg-brand-primary/5 flex items-center justify-center">
+            <ArrowRight size={22} className="text-brand-primary/60" />
           </div>
         </motion.div>
 
@@ -180,7 +180,7 @@ function SearchIntentDemo() {
           <span className="text-xs text-brand-primary/70">roof repair leitchfield ky</span>
           <Mic size={12} className="text-brand-primary/20 ml-auto shrink-0" />
         </div>
-        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-2 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
+        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-primary/60 mb-2">
           Built for search intent
         </span>
         <h3 className="text-2xl mb-1.5">Stop being invisible when customers search.</h3>
@@ -236,7 +236,7 @@ function CustomBuiltDemo() {
       {/* Desktop — text left, visual right */}
       <div className="hidden md:grid md:grid-cols-1 md:gap-6 lg:grid-cols-[1fr_auto_1.2fr] lg:gap-8 items-center">
         <div className="pr-4">
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-4 px-3 py-1 bg-brand-accent/8 rounded-md">
+          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-primary/60 mb-4">
             Custom-built for you
           </span>
           <h3 className="text-3xl lg:text-4xl mb-4">Look like the real business you are.</h3>
@@ -246,8 +246,8 @@ function CustomBuiltDemo() {
         </div>
 
         <div className="hidden lg:flex items-center justify-center px-2">
-          <div className="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center">
-            <ArrowRight size={22} className="text-brand-accent" />
+          <div className="w-12 h-12 rounded-full bg-brand-primary/5 flex items-center justify-center">
+            <ArrowRight size={22} className="text-brand-primary/60" />
           </div>
         </div>
 
@@ -329,7 +329,7 @@ function CustomBuiltDemo() {
             <div className="h-1 bg-brand-accent/15 rounded w-[45%]" />
           </div>
         </div>
-        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-2 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
+        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-primary/60 mb-2">
           Custom-built for you
         </span>
         <h3 className="text-2xl mb-1.5">Look like the real business you are.</h3>
@@ -348,7 +348,7 @@ function ResponsiveDemo() {
       {/* Desktop — visual left, text right */}
       <div className="hidden md:grid md:grid-cols-1 md:gap-6 lg:grid-cols-[1.3fr_1fr] lg:gap-10 items-center">
         <div>
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-6 px-3 py-1 bg-brand-accent/8 rounded-md">
+          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-primary/60 mb-6">
             Responsive on every device
           </span>
           <div className="flex items-end gap-5 justify-center">
@@ -467,7 +467,7 @@ function ResponsiveDemo() {
             <div className="h-0.5 bg-brand-primary/15 rounded w-full" />
           </div>
         </div>
-        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-2 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
+        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-primary/60 mb-2">
           Responsive on every device
         </span>
         <h3 className="text-2xl mb-1.5">Win the customers who decide on their phone.</h3>
@@ -580,7 +580,7 @@ function PerformanceDemo() {
       {/* Desktop — text left, visual right */}
       <div className="hidden md:grid md:grid-cols-1 md:gap-6 lg:grid-cols-[1fr_1.3fr] lg:gap-10 items-center">
         <div>
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-4 px-3 py-1 bg-brand-accent/8 rounded-md">
+          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-primary/60 mb-4">
             Built for speed &amp; security
           </span>
           <h3 className="text-3xl lg:text-4xl mb-4">A slow site loses customers. Yours won't.</h3>
@@ -633,7 +633,7 @@ function PerformanceDemo() {
             <span className="absolute inset-0 flex items-center justify-center text-[9px] font-bold text-brand-accent">99%</span>
           </div>
         </div>
-        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-2 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
+        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-primary/60 mb-2">
           Built for speed &amp; security
         </span>
         <h3 className="text-2xl mb-1.5">A slow site loses customers. Yours won't.</h3>
@@ -794,7 +794,7 @@ function SupportDemo() {
         </div>
 
         <div>
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-accent mb-4 px-3 py-1 bg-brand-accent/8 rounded-md">
+          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-primary/60 mb-4">
             Ongoing support
           </span>
           <h3 className="text-3xl lg:text-4xl mb-4">Never get stuck on your own again.</h3>
@@ -820,7 +820,7 @@ function SupportDemo() {
             <p className="text-xs text-brand-primary/70">Done! Already updated it across all pages.</p>
           </div>
         </div>
-        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-accent mb-2 px-2.5 py-0.5 bg-brand-accent/8 rounded-md">
+        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-primary/60 mb-2">
           Ongoing support
         </span>
         <h3 className="text-2xl mb-1.5">Never get stuck on your own again.</h3>
