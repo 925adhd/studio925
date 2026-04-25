@@ -53,7 +53,7 @@ export default function Footer() {
               <li><a href="/#pricing" className="hover:text-brand-accent transition-colors">Pricing</a></li>
               <li><Link href="/how-it-works" className="hover:text-brand-accent transition-colors">How It Works</Link></li>
               <li><Link href="/website-cost" className="hover:text-brand-accent transition-colors">Website Cost Guide</Link></li>
-              <li><Link href="/audit" className="hover:text-brand-accent transition-colors">Free Local Audit</Link></li>
+              <li><a href="https://audit.studio925.design" className="hover:text-brand-accent transition-colors">Free Local Audit</a></li>
               <li><Link href="/blog" className="hover:text-brand-accent transition-colors">Blog</Link></li>
               <li><a href="/#process" className="hover:text-brand-accent transition-colors">Process</a></li>
               <li><a href="/#contact" className="hover:text-brand-accent transition-colors">Contact</a></li>

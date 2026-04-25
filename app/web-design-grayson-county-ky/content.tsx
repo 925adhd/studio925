@@ -343,12 +343,12 @@ export default function GraysonCountyContent() {
                 <p className="text-sm md:text-base text-brand-primary/70 leading-relaxed mb-5 md:mb-6">
                   Before we talk about a website, get a free 49-point map of how your business shows up across Grayson County. Visibility score, top competitors, and one concrete recommendation. No subscription, no catch.
                 </p>
-                <Link
-                  href="/audit"
+                <a
+                  href="https://audit.studio925.design"
                   className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20"
                 >
                   Get my free audit <ArrowRight size={18} />
-                </Link>
+                </a>
               </div>
               <div className="hidden md:block">
                 <div className="relative rounded-2xl border border-brand-primary/10 bg-brand-warm p-5 font-serif">

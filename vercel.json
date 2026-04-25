@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/audit",
+      "destination": "https://audit.studio925.design",
+      "permanent": true
+    },
+    {
+      "source": "/audit/:path*",
+      "destination": "https://audit.studio925.design/:path*",
+      "permanent": true
+    }
+  ]
+}
