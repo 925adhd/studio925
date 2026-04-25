@@ -179,7 +179,7 @@ export default function Contact() {
                     id="contact-website"
                     aria-label="Current website"
                     className="w-full px-3 py-2.5 rounded-xl border border-brand-primary/10 focus:border-brand-accent transition-colors text-base"
-                    placeholder="Your website"
+                    placeholder="Current website"
                   />
                   <input
                     type="text"
@@ -190,7 +190,6 @@ export default function Contact() {
                     placeholder="Facebook page"
                   />
                 </div>
-                <p className="text-[11px] text-brand-primary/50">Easier than typing it all out. I can pull a lot of what I need from here.</p>
               </div>
               <div className="space-y-2">
                 <label htmlFor="contact-details" className="text-xs font-bold uppercase tracking-wider opacity-50">Project Details</label>
