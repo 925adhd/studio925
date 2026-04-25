@@ -10,7 +10,7 @@ const foundation = {
   name: "Foundation",
   standardPrice: "1,200",
   price: "900",
-  description: "A full custom website with every page your business needs. Built specifically for you. Live in about a week.",
+  description: "A professional site customers can find when they search your name. Right for businesses that get most calls from word-of-mouth, referrals, or repeat customers. Live in about a week.",
   pages: "Up to 5 pages",
   features: [
     "Custom design built around your business",
@@ -36,9 +36,9 @@ const alternatives = [
     standardPrice: "2,400",
     price: "1,800",
     pages: "Up to 10 core pages",
-    desc: "First draft in week one. Everything in Foundation, plus a hands-on SEO audit built from Google's own ranking guidelines, dedicated service pages, a simple CMS so you can post updates yourself, analytics, and lead tracking. Turn visitors into calls.",
+    desc: "First draft in week one. For businesses competing on Google when locals search \"near me.\" We start with a hands-on SEO audit, then build the site around the actual keyword gaps. Dedicated service pages, analytics, and lead tracking so you can see which words are bringing calls.",
     support: "30 days post-launch support",
-    bestFor: "Ready to get more leads",
+    bestFor: "Built to compete on Google",
     stripeLink: "https://buy.stripe.com/cNi3cx9kngCc9kw6qkcIE03",
   },
   {
