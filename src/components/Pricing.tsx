@@ -36,7 +36,7 @@ const alternatives = [
     standardPrice: "2,400",
     price: "1,800",
     pages: "Up to 10 core pages",
-    desc: "For businesses competing on Google when locals search \"near me.\" We start with a hands-on SEO audit, then build the site around the actual keyword gaps. Dedicated service pages, analytics, and lead tracking so you can see which words are bringing calls.",
+    desc: "Show up when people are ready to call. We start with a hands-on SEO audit, then build the site around the actual keyword gaps. Dedicated service pages, analytics, and lead tracking so you can see which words are bringing calls.",
     support: "30 days post-launch support",
     bestFor: "Built to compete on Google",
     stripeLink: "https://buy.stripe.com/cNi3cx9kngCc9kw6qkcIE03",

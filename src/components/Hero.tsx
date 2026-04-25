@@ -66,7 +66,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col gap-2.5 justify-center">
-            <Link href="https://audit.studio925.design" onClick={() => trackEvent('click_free_audit', 'hero_mobile')} className="w-full bg-brand-primary text-white h-14 rounded-2xl text-lg font-bold flex items-center justify-center gap-2 shadow-xl shadow-brand-primary/25">
+            <Link href="https://audit.studio925.design" onClick={() => trackEvent('click_free_audit', 'hero_mobile')} className="w-full max-w-xs mx-auto bg-brand-primary text-white h-14 rounded-2xl text-lg font-bold flex items-center justify-center gap-2 shadow-xl shadow-brand-primary/25">
               Free local SEO audit <ArrowRight size={20} />
             </Link>
             <p className="-mt-1 text-xs font-medium text-brand-primary/55 text-center">

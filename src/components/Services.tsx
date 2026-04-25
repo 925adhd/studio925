@@ -437,7 +437,7 @@ function ResponsiveDemo() {
         <div>
           <h3 className="text-3xl lg:text-4xl mb-4">Win the customers who decide on their phone.</h3>
           <p className="text-brand-primary/60 leading-relaxed mb-4">
-            Most customers decide on their phone. Your site will load fast and look right immediately. No waiting, no pinching, no broken layouts.
+            Your site will load fast and look right the moment they tap. No waiting, no pinching, no broken layouts.
           </p>
           <div className="space-y-2.5">
             {['Mobile-first design approach', 'Touch-friendly buttons & navigation', 'Images optimized per device'].map((item) => (
@@ -472,7 +472,7 @@ function ResponsiveDemo() {
         </span>
         <h3 className="text-2xl mb-1.5">Win the customers who decide on their phone.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed">
-          Most customers decide on their phone. Your site will load fast and look right immediately. No waiting, no pinching, no broken layouts.
+          Your site will load fast and look right the moment they tap. No waiting, no pinching, no broken layouts.
         </p>
       </div>
     </DemoRow>
@@ -585,7 +585,7 @@ function PerformanceDemo() {
           </span>
           <h3 className="text-3xl lg:text-4xl mb-4">A slow site loses customers. Yours won't.</h3>
           <p className="text-brand-primary/60 leading-relaxed">
-            A slow site loses customers before they read a word. Yours loads fast, stays secure, and doesn't go down.
+            Yours loads fast, stays secure, and doesn't go down.
           </p>
         </div>
 
@@ -638,7 +638,7 @@ function PerformanceDemo() {
         </span>
         <h3 className="text-2xl mb-1.5">A slow site loses customers. Yours won't.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed mb-3">
-          A slow site loses customers before they read a word. Yours loads fast, stays secure, and doesn't go down.
+          Yours loads fast, stays secure, and doesn't go down.
         </p>
         <div className="grid grid-cols-2 gap-x-3 gap-y-2">
           {['Load time: <3s', 'CDN-delivered globally', 'Auto SSL certificates', 'Daily backups'].map((item) => (

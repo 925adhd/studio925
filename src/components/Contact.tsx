@@ -75,19 +75,23 @@ export default function Contact() {
               Tell me about your business. No pressure, no pitch. Just an honest conversation about what would actually help you.
             </p>
 
-            <div className="flex items-center gap-4 mb-8">
+            <a
+              href="#local"
+              onClick={() => trackEvent('click_meet_kara', 'contact')}
+              className="flex items-center gap-4 mb-8 group"
+            >
               <img
                 src="/kara-gibson-small.webp"
                 alt="Kara Gibson, owner of Studio 925"
                 width={48}
                 height={48}
-                className="rounded-full ring-2 ring-white/20"
+                className="rounded-full ring-2 ring-white/20 group-hover:ring-brand-accent transition-colors"
               />
               <div>
-                <p className="font-semibold">Kara Gibson</p>
+                <p className="font-semibold group-hover:text-brand-accent transition-colors">Kara Gibson</p>
                 <p className="text-white/50 text-sm">Owner, Studio 925</p>
               </div>
-            </div>
+            </a>
 
             <div className="space-y-6">
               <a href="mailto:kara@studio925.design" onClick={() => trackEvent('click_email', 'contact')} className="flex items-center gap-4 group">
@@ -96,7 +100,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/50 mb-1">Email Me</p>
-                  <p className="text-lg font-medium">kara@studio925.design</p>
+                  <p className="text-lg font-medium group-hover:text-brand-accent transition-colors">kara@studio925.design</p>
                 </div>
               </a>
             </div>
