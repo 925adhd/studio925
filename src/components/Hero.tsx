@@ -41,6 +41,9 @@ export default function Hero() {
           <p className="fade-in-up text-xs font-medium text-brand-primary/55 mt-4" style={{ animationDelay: '0.5s' }}>
             Real Google data · No commitment
           </p>
+          <a href="/#pricing" onClick={() => trackEvent('click_view_pricing', 'hero_desktop')} className="fade-in-up inline-block mt-3 text-sm font-semibold text-brand-primary/70 underline underline-offset-4 hover:text-brand-primary transition-colors" style={{ animationDelay: '0.6s' }}>
+            View Pricing
+          </a>
         </div>
 
         {/* Mobile: fully static, no animation — critical for LCP */}
