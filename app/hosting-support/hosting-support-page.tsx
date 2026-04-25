@@ -26,7 +26,8 @@ const plans = [
     features: [
       'Hosting & support:',
       'Secure hosting, backups, and performance monitoring',
-      'Ongoing SEO — new service pages, blog posts, meta tags, and indexing',
+      'Ongoing SEO — one new service page or two blog posts per month, plus meta tag and indexing upkeep',
+      '63-point local rank rescan every month',
       'Domain & setup:',
       'Free custom domain~',
       'DNS, email routing, and SSL included',
@@ -180,7 +181,7 @@ export default function HostingSupportPage() {
               <strong className="text-brand-primary">Support</strong>{' '}is the human side. When you need to update your hours, swap out a photo, fix a typo, add a new service, or change your phone number, you message me and it gets done. No logging into a builder, no learning a CMS, no &quot;I&apos;ll get to it next month.&quot; Most small edits are turned around within a business day.
             </p>
             <p>
-              On top of that, Full Support includes ongoing SEO work — adding new service pages and blog posts that target the searches your customers are actually making, keeping your meta tags accurate, and making sure your sitemap stays current and indexed on Google. As your business changes, your website changes with it.
+              On top of that, Full Support includes ongoing SEO work — adding new service pages and blog posts that target the searches your customers are actually making, keeping your meta tags accurate, and making sure your sitemap stays current and indexed on Google. You also get a 63-point local rank rescan every month, so you can see how your visibility on Google is changing block by block. As your business changes, your website changes with it.
             </p>
           </div>
         </div>
