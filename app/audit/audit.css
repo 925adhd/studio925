@@ -33,25 +33,20 @@
   background: var(--fl-paper);
   padding: 48px 64px 40px;
   border: 1px solid rgba(15, 23, 42, 0.06);
-  border-radius: 28px;
+  border-radius: 24px;
   box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08), 0 1px 2px rgba(15, 23, 42, 0.04);
   position: relative;
 }
 
 /* --- Hero --- */
 .fl-hero { margin: 8px 0 28px; }
-.fl-hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--fl-ink);
-  color: white;
-  padding: 5px 12px;
-  border-radius: 999px;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  font-weight: 600;
-  margin-bottom: 18px;
+.fl-eyebrow {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(15, 23, 42, 0.6);
+  margin: 0 0 18px;
 }
 .fl-hero-title {
   font-family: var(--fl-display);
@@ -153,7 +148,7 @@
   padding: 18px 18px 16px;
   background: #f0ece0;
   border: 1px solid #cdc6b4;
-  border-radius: 18px;
+  border-radius: 16px;
 }
 .fl-mockup-tag {
   font-size: 10px;
@@ -219,7 +214,7 @@ a.fl-upsell:hover {
   background: var(--fl-ink);
   color: var(--fl-paper);
   border-left: 4px solid var(--fl-gold);
-  border-radius: 0 18px 18px 0;
+  border-radius: 0 16px 16px 0;
 }
 .fl-why-free-tag {
   font-size: 10px;
@@ -239,6 +234,38 @@ a.fl-upsell:hover {
   font-style: italic;
   color: var(--fl-gold);
 }
+.fl-why-free-lead {
+  margin: 4px 0 10px !important;
+  font-weight: 600;
+}
+.fl-why-free-list {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fl-why-free-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+.fl-why-free-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--fl-gold);
+  font-weight: 700;
+  font-size: 15px;
+}
+.fl-why-free-list strong {
+  color: var(--fl-paper);
+  font-weight: 700;
+}
 .fl-why-free-cta {
   font-family: var(--fl-display);
   font-style: italic;
@@ -251,7 +278,7 @@ a.fl-upsell:hover {
 .au-form-inline {
   background: var(--fl-paper-tint);
   border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 24px;
+  border-radius: 20px;
   padding: 28px 30px 26px;
   margin-top: 28px;
 }
@@ -329,7 +356,7 @@ a.fl-upsell:hover {
   background: var(--fl-ink);
   color: var(--fl-paper);
   border: none;
-  border-radius: 14px;
+  border-radius: 16px;
   font-family: var(--fl-body);
   font-size: 15px;
   font-weight: 700;
@@ -409,7 +436,7 @@ a.fl-upsell:hover {
   padding: 24px 26px;
   background: var(--fl-paper-tint);
   border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 18px;
+  border-radius: 16px;
   text-align: left;
 }
 .au-next-tag {
@@ -471,7 +498,7 @@ a.fl-upsell:hover {
   background: var(--fl-ink);
   color: var(--fl-paper);
   border-left: 4px solid var(--fl-gold);
-  border-radius: 0 18px 18px 0;
+  border-radius: 0 16px 16px 0;
   text-align: left;
 }
 .au-upsell-badge {
@@ -511,18 +538,19 @@ a.fl-upsell:hover {
   .fl-why-free { padding: 18px 20px; border-radius: 0 14px 14px 0; }
   .fl-why-free p { font-size: 14px; }
   .fl-why-free-cta { font-size: 16px; }
-  .au-form-inline { padding: 22px 18px 20px; border-radius: 18px; }
+  .au-form-inline { padding: 22px 18px 20px; border-radius: 16px; }
   .au-form-inline input,
   .au-form-inline textarea { font-size: 16px; }
   .au-row { grid-template-columns: 1fr; }
   .fl-mockup { padding: 14px 12px 12px; border-radius: 14px; }
+  .fl-eyebrow { font-size: 11px; }
 }
 
 @media (max-width: 480px) {
   .fl { padding: 80px 8px 36px; }
   .fl-doc { padding: 24px 18px 22px; border-radius: 18px; }
   .fl-hero { margin: 18px 0 22px; }
-  .fl-hero-tag { padding: 4px 10px; font-size: 10px; }
+  .fl-eyebrow { font-size: 10px; margin-bottom: 14px; }
   .fl-hero-title { font-size: 30px; }
   .fl-hero-sub { font-size: 14px; line-height: 1.5; }
   .fl-doc h2 { font-size: 20px; }
@@ -534,4 +562,28 @@ a.fl-upsell:hover {
   .au-form-inline { padding: 18px 14px 16px; }
   .au-submit { padding: 12px; font-size: 14px; }
   .au-fine { font-size: 11px; }
+}
+
+/* --- Page-load reveal: reuses the global `fade-in-up` keyframe from src/index.css --- */
+.fl-eyebrow,
+.fl-hero-title,
+.fl-hero-sub,
+.fl-problem {
+  opacity: 0;
+  animation: fade-in-up 0.5s ease-out both;
+}
+.fl-eyebrow     { animation-delay: 0s; }
+.fl-hero-title  { animation-delay: 0.1s; }
+.fl-hero-sub    { animation-delay: 0.2s; }
+.fl-problem     { animation-delay: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fl-eyebrow,
+  .fl-hero-title,
+  .fl-hero-sub,
+  .fl-problem {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }

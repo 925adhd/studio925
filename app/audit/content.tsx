@@ -13,17 +13,18 @@ type Status = 'idle' | 'submitting' | 'success' | 'error';
 function MapMockup() {
   return (
     <figure className="fl-mockup" aria-label="Sample local rank heatmap report for a Grayson County, Kentucky car dealership">
-      <div className="fl-mockup-tag">SAMPLE REPORT · GRAYSON COUNTY</div>
+      <div className="fl-mockup-tag">ACTUAL REPORT · LEITCHFIELD, KY</div>
       <img
         src="/audit-sample-heatmap.webp"
         alt="Sample local rank heatmap showing a Leitchfield car dealership ranking #2 at its own location with surrounding points ranging from top 3 to not found, plus a top competitors breakdown"
         width={810}
         height={970}
-        loading="lazy"
+        loading="eager"
+        fetchPriority="high"
         className="fl-mockup-image"
       />
       <figcaption className="fl-mockup-caption">
-        Sample from a real report. Your map will use your business and the keyword you choose. Map © OpenStreetMap contributors. Ranking data powered by Google.
+        Real heatmap from a car dealership right here in Leitchfield, KY. Your map will use your business and the keyword you choose. Map © OpenStreetMap contributors. Ranking data powered by Google.
       </figcaption>
     </figure>
   );
@@ -107,7 +108,7 @@ export default function AuditContent() {
           {status !== 'success' && (
             <>
               <section className="fl-hero">
-                <div className="fl-hero-tag">LOCAL GEOMAP · FREE FOR GRAYSON COUNTY</div>
+                <p className="fl-eyebrow">Free for Grayson County, KY · Local Geomap Audit</p>
                 <h1 className="fl-hero-title">
                   Find out <em>exactly</em> where you rank on Google.
                 </h1>
@@ -116,6 +117,8 @@ export default function AuditContent() {
                   nearby customers search. No subscription, no catch.
                 </p>
               </section>
+
+              <MapMockup />
 
               <section className="fl-problem">
                 <div className="fl-problem-ink">THE PROBLEM</div>
@@ -165,21 +168,30 @@ export default function AuditContent() {
               <section className="fl-why-free">
                 <div className="fl-why-free-tag">WHY IT&rsquo;S FREE</div>
                 <p>
-                  The map shows you where you&rsquo;re losing calls. Studio 925
-                  builds your site fast. Works on every device,{' '}
-                  <em>built to rank</em>. Flat $900 starting price, live in
-                  about a week.
+                  If you like the map, fixing it is what I do. Either way,
+                  the report is yours to keep.
                 </p>
+                <p>
+                  Most gray spots aren&rsquo;t a sign your business is bad.
+                  They mean your website isn&rsquo;t doing its job, so calls
+                  go to people who aren&rsquo;t even better than you.
+                </p>
+                <p className="fl-why-free-lead">Studio 925 fixes that:</p>
+                <ul className="fl-why-free-list">
+                  <li>Foundation site, <strong>$900</strong>, fast and Google-ready</li>
+                  <li>Growth, <strong>$1,800</strong>, adds dedicated service pages, hands-on SEO audit, and lead tracking</li>
+                  <li><em>You own everything the day it launches</em></li>
+                  <li>No retainers, no monthly packages, no learning curve</li>
+                </ul>
                 <p>
                   Stay on{' '}
                   <Link href="/hosting-support" className="fl-upsell">
                     Full Support hosting
                   </Link>{' '}
-                  and you have me on your team as an ongoing SEO partner. New
-                  service pages, blog posts, meta tags, and Google indexing
-                  handled every month. Plus denser 63-point rescans with a
-                  detailed competitor breakdown at every single point of your
-                  map.
+                  after launch and I keep showing up. A new service page
+                  or two blog posts each month on the keywords you&rsquo;re
+                  losing, plus a 63-point rescan to track progress. You run
+                  the business. I keep the phone <em>ringing</em>.
                 </p>
                 <p className="fl-why-free-cta">
                   Get the audit first. Decide after.
@@ -292,8 +304,6 @@ export default function AuditContent() {
                   .
                 </p>
               </form>
-
-              <MapMockup />
             </>
           )}
 
