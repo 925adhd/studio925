@@ -51,7 +51,6 @@ export default function HomePage() {
             <div className="text-center mb-8 md:mb-16">
               <h2 className="text-2xl md:text-4xl mb-2 md:mb-3">How it works.</h2>
               <p className="text-brand-primary/60 text-sm md:text-lg mb-1">This shouldn't feel like <span className="italic text-emerald-700">a second job.</span></p>
-              <p className="hidden md:block text-brand-primary/65 text-xs md:text-sm">No homework. No confusion. Just a clear process from start to finish.</p>
             </div>
 
             <div className="relative">
@@ -59,7 +58,7 @@ export default function HomePage() {
               <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-brand-primary/10 md:-translate-x-px" />
 
               {[
-                { step: "01", title: "Quick Conversation", desc: "Message me through the contact form if you have questions first. Or skip ahead and book direct from pricing. After payment, a short 10-minute intake form catches anything I can't pull from your current site or Facebook. Either way, I'm in touch within a day.", time: "Day 1 · Optional", illustration: (
+                { step: "01", title: "Quick Conversation", desc: "Message me with questions or book direct from pricing. After payment, a 10-minute intake catches what I can't pull from your site, and I'm in touch within a day.", time: "Day 1 · Optional", illustration: (
                   <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-28 h-auto">
                     {/* First chat bubble */}
                     <rect x="8" y="20" width="58" height="38" rx="12" fill="#059669" opacity="0.15" />

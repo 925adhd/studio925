@@ -51,8 +51,6 @@ export default function LocalSection() {
             <MapPin size={12} className="shrink-0" /> <Link href="/web-design-grayson-county-ky" className="hover:text-brand-accent transition-colors">Grayson County, KY</Link>
           </div>
 
-          <p className="text-xs font-medium tracking-widest uppercase text-brand-primary/40 mb-3">Behind the work</p>
-
           <h2 className="text-4xl md:text-5xl mb-3">
             Local designer. <span className="italic text-brand-accent">Websites that work.</span>
           </h2>
@@ -62,25 +60,16 @@ export default function LocalSection() {
 
           <div className="space-y-3.5 text-brand-primary/70 text-base leading-relaxed">
             <p>
-              <span className="text-brand-primary font-semibold">You're not hiring an agency.</span> You're working directly with the person building your site.
+              <span className="text-brand-primary font-semibold">You're not hiring an agency.</span> You're working directly with the person building your site. I'm based in <Link href="/website-design-leitchfield-ky" className="text-brand-accent hover:underline">Leitchfield, Kentucky</Link>, right here in Grayson County. Not a middleman. Not someone three states away.
             </p>
             <p>
-              I'm a web designer based in <Link href="/website-design-leitchfield-ky" className="text-brand-accent hover:underline">Leitchfield, Kentucky</Link> — right here in Grayson County. You're working with me. Not a middleman. Not someone three states away.
-            </p>
-            <p>
-              When you have a question, you call me. When something needs to change, I handle it. If you want to sit down and talk through your goals in person, we can do that too.
+              When you have a question, you call me. When something needs to change, I handle it.
             </p>
             <p className="text-brand-primary font-semibold mt-2 mb-2">
-              That kind of access is rare — and it's the whole point.
-            </p>
-            <p>
-              Local businesses don't need flashy tech. They need a site that's easy to find, easy to trust, and makes it simple for someone to reach out.
+              That kind of access is rare, and it's the whole point.
             </p>
           </div>
 
-          <p className="text-brand-primary/90 text-base mt-5 leading-relaxed">
-            I know what it's like to want to show off your business and have no idea where to start or who to call.
-          </p>
           <p className="text-brand-primary/55 text-[15px] mt-4">
             So when you hire me, you're not just paying for a website.
           </p>

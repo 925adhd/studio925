@@ -24,7 +24,7 @@ const plans = [
       "Free custom domain",
       "DNS setup + email routing",
       "SSL included",
-      "Need something changed? Just message me — I handle it",
+      "Need something changed? Just message me. I handle it",
       "Text edits, new photos, layout tweaks",
       "You don't have to deal with the technical side",
       "Ongoing SEO improvements",
@@ -43,8 +43,8 @@ export default function WebsiteCare() {
 
         <div className="text-center mb-10 md:mb-14">
           <h2 className="text-2xl md:text-4xl mb-3">Website Care & Support</h2>
-          <p className="text-brand-primary/50 text-sm md:text-lg">Keep your site running smoothly after launch — without dealing with the technical side.</p>
-          <p className="text-brand-primary/60 text-xs md:text-sm mt-3">Full Support includes a free custom domain for as long as your plan is active. Basic Hosting clients purchase their own domain — I'll help you connect it either way.</p>
+          <p className="text-brand-primary/50 text-sm md:text-lg">Keep your site running smoothly after launch, without dealing with the technical side.</p>
+          <p className="text-brand-primary/60 text-xs md:text-sm mt-3">Full Support includes a free custom domain for as long as your plan is active. Basic Hosting clients purchase their own domain. I'll help you connect it either way.</p>
         </div>
 
         {/* Plans */}

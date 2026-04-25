@@ -7,11 +7,11 @@ import Link from 'next/link';
 const points = [
   { diy: 'Weeks of your nights and weekends', studio: 'Live in about a week. No homework.', mobile: true },
   { diy: 'Looks like every other template', studio: 'Custom-built, one of a kind', mobile: true },
-  { diy: 'Clunky on phones — customers leave', studio: 'Mobile-first. Every visitor stays.', mobile: true },
+  { diy: 'Clunky on phones. Customers leave.', studio: 'Mobile-first. Every visitor stays.', mobile: true },
   { diy: 'You figure out updates alone', studio: 'Updates handled for you', mobile: false },
   { diy: 'Something breaks? You\'re on your own', studio: 'Something breaks? I fix it.', mobile: true },
   { diy: 'Invisible when people search Google', studio: 'Built so Google can find you', mobile: true },
-  { diy: 'No backlinks to boost your ranking', studio: 'I link to your site — boosts your ranking', mobile: false },
+  { diy: 'No backlinks to boost your ranking', studio: 'I link to your site to boost your ranking', mobile: false },
   { diy: 'Hours of your time, every week', studio: 'Minimal time from you', mobile: false },
 ];
 
@@ -30,7 +30,7 @@ export default function Comparison() {
             Do It Yourself <span className="italic text-brand-accent">or Have It Handled</span>
           </h2>
           <p className="text-sm md:text-base text-brand-primary/60 max-w-lg mx-auto">
-            You could spend hours building it yourself. Or tell us about your business and we'll take it from here.
+            You could spend hours building it yourself. Or tell me about your business and I'll take it from here.
           </p>
         </motion.div>
 
@@ -81,8 +81,7 @@ export default function Comparison() {
         </div>
 
         <p className="text-center text-xs text-brand-primary/60 mt-8 md:mt-10">
-          Ongoing updates, support, and maintenance are included with optional <Link href="/hosting-support" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">hosting plans</Link>.
-          {' '}Wondering about pricing? See our <Link href="/website-cost" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">website cost guide</Link>.
+          Ongoing updates, support, and maintenance available through optional <Link href="/hosting-support" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">hosting plans</Link>.
         </p>
       </div>
     </section>
