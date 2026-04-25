@@ -15,7 +15,7 @@ function useCarousel(enabled: boolean) {
   useEffect(() => {
     if (!enabled) return;
     const now = Date.now();
-    const baseDelay = activeIndex === 0 ? 4000 : 2000;
+    const baseDelay = 2000;
     const delay = Math.max(baseDelay, pausedUntil - now);
     const timer = setTimeout(() => {
       setActiveIndex((prev) => (prev + 1) % images.length);
