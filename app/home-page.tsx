@@ -35,9 +35,10 @@ export default function HomePage() {
       <main id="main-content" className="flex flex-col">
         <div className="order-1 md:order-1 md:min-h-screen md:flex md:flex-col md:justify-between bg-brand-warm">
           <Hero />
-          <TrustStrip />
+          <div className="hidden md:block"><TrustStrip /></div>
         </div>
         <div className="order-3 md:order-8"><PortfolioPreview /></div>
+        <div className="order-3 md:hidden bg-white border-t border-brand-primary/5"><TrustStrip /></div>
         <div className="order-4 md:order-9"><WhoItsFor /></div>
         <div className="order-5 md:order-6"><SpeedProof /></div>
         <div className="order-6 md:order-3"><Services /></div>

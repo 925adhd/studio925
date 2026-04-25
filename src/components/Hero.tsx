@@ -30,14 +30,17 @@ export default function Hero() {
           </p>
 
           <div className="fade-in-up flex flex-row gap-4 justify-center" style={{ animationDelay: '0.4s' }}>
-            <a href="/#contact" onClick={() => trackEvent('click_get_started', 'hero_desktop')} className="bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
-              Get Started <ArrowRight size={20} />
-            </a>
+            <Link href="/audit" onClick={() => trackEvent('click_free_audit', 'hero_desktop')} className="bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
+              Get my free local SEO audit <ArrowRight size={20} />
+            </Link>
             <Link href="/portfolio" onClick={() => trackEvent('click_see_my_work', 'hero_desktop')} className="bg-white border border-brand-primary/10 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-primary/5 transition-colors text-brand-primary flex items-center justify-center gap-2">
               <img src="/kara-gibson-small.webp" alt="Kara Gibson, owner of Studio 925" width={28} height={28} className="w-7 h-7 rounded-full object-cover shrink-0" />
               See My Work
             </Link>
           </div>
+          <p className="fade-in-up text-xs font-medium text-brand-primary/55 mt-4" style={{ animationDelay: '0.5s' }}>
+            Real Google data · No commitment
+          </p>
         </div>
 
         {/* Mobile: fully static, no animation — critical for LCP */}
@@ -60,9 +63,12 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col gap-2.5 justify-center">
-            <a href="/#contact" onClick={() => trackEvent('click_get_started', 'hero_mobile')} className="w-full bg-brand-primary text-white h-14 rounded-2xl text-lg font-bold flex items-center justify-center gap-2 shadow-xl shadow-brand-primary/25">
-              Start My Website <ArrowRight size={20} />
-            </a>
+            <Link href="/audit" onClick={() => trackEvent('click_free_audit', 'hero_mobile')} className="w-full bg-brand-primary text-white h-14 rounded-2xl text-lg font-bold flex items-center justify-center gap-2 shadow-xl shadow-brand-primary/25">
+              Free local SEO audit <ArrowRight size={20} />
+            </Link>
+            <p className="-mt-1 text-xs font-medium text-brand-primary/55 text-center">
+              Real Google data · No commitment
+            </p>
             <a href="/#pricing" onClick={() => trackEvent('click_view_pricing', 'hero_mobile')} className="text-sm font-semibold text-brand-primary/70 underline underline-offset-4 flex items-center justify-center gap-1 min-h-[44px]">
               View Pricing
             </a>

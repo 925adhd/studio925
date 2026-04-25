@@ -28,7 +28,7 @@ const items = [
 
 export default function TrustStrip() {
   return (
-    <section className="pt-8 pb-10 md:pt-12 md:pb-20 px-6 bg-brand-warm">
+    <section className="pt-8 pb-10 md:pt-12 md:pb-20 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="sr-only">Why local businesses choose Studio 925</h2>
         {/* Mobile: plain text row — no animation, instant */}
