@@ -210,7 +210,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             <h2 className="text-2xl md:text-3xl mb-3">Looking for a designer who answers straight?</h2>
             <p className="text-white/70 mb-8 max-w-md mx-auto">Custom websites starting at $900. Fixed pricing, full ownership, no monthly lock-in.</p>
             <a href="/#contact" className="inline-flex items-center gap-2 bg-brand-accent text-white px-8 py-3.5 rounded-2xl font-semibold hover:brightness-115 transition-all shadow-xl shadow-brand-accent/40">
-              Get Started <ArrowRight size={18} />
+              Contact Kara <ArrowRight size={18} />
             </a>
           </div>
         </article>

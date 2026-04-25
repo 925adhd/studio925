@@ -83,6 +83,9 @@ export default function Comparison() {
         <p className="text-center text-xs text-brand-primary/60 mt-8 md:mt-10">
           Ongoing updates, support, and maintenance available through optional <Link href="/hosting-support" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">hosting plans</Link>.
         </p>
+        <p className="text-center text-xs text-brand-primary/50 mt-2">
+          Curious about pricing? See the <Link href="/website-cost" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">website cost guide</Link>.
+        </p>
       </div>
     </section>
   );

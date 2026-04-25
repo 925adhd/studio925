@@ -89,7 +89,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
                 </div>
                 <p className="text-sm text-brand-primary/60 mb-3">Average visit: $50</p>
                 <p className="text-2xl font-bold text-brand-primary mb-1">30 new clients</p>
-                <p className="text-xs text-brand-primary/50">pays for the website — <span className="text-emerald-600 font-semibold">and they come back</span></p>
+                <p className="text-xs text-brand-primary/50">pays for the website, <span className="text-emerald-600 font-semibold">and they come back</span></p>
               </div>
 
               <div className="p-6 rounded-2xl border border-brand-primary/10 bg-brand-primary/[0.02]">
@@ -113,7 +113,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
                 </div>
                 <p className="text-sm text-brand-primary/60 mb-3">Average repair: $600</p>
                 <p className="text-2xl font-bold text-brand-primary mb-1">3 customers</p>
-                <p className="text-xs text-brand-primary/50">pays for the website — <span className="text-emerald-600 font-semibold">plus profit</span></p>
+                <p className="text-xs text-brand-primary/50">pays for the website, <span className="text-emerald-600 font-semibold">plus profit</span></p>
               </div>
             </div>
 
@@ -132,18 +132,18 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
                 <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">1.</span><span><strong>Show up on Google</strong> when someone searches for what you do in your area</span></li>
                 <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">2.</span><span><strong>Load fast enough</strong> that they don't bounce before seeing your services</span></li>
                 <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">3.</span><span><strong>Look professional enough</strong> that they trust you over the next result</span></li>
-                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">4.</span><span><strong>Make it easy</strong> to call, email, or fill out a form — right now, on their phone</span></li>
+                <li className="flex items-start gap-3"><span className="text-brand-accent font-bold text-lg leading-none">4.</span><span><strong>Make it easy</strong> to call, email, or fill out a form, right now, on their phone</span></li>
               </ul>
             </div>
 
             <p className="text-brand-primary/70 leading-relaxed mb-8">
-              That's not a line item on a budget sheet. That's a revenue channel. And every month it's live, it's working for you.
+              That's not a line item on a budget sheet. That's a way to bring in customers. And every month it's live, it's working for you.
             </p>
 
             {/* The cost of NOT having a website */}
             <h2 className="text-2xl md:text-3xl mt-12 mb-6">The Cost of <em>Not</em> Having a Good Website</h2>
             <p className="text-brand-primary/70 leading-relaxed mb-6">
-              This is the part most people don't calculate. When someone Googles your type of business and finds your competitor instead of you, that's a lost customer. When someone finds your site but it's slow, outdated, or hard to navigate on their phone — they leave.
+              This is the part most people don't calculate. When someone Googles your type of business and finds your competitor instead of you, that's a lost customer. When someone finds your site but it's slow, outdated, or hard to navigate on their phone, they leave.
             </p>
             <p className="text-brand-primary/70 leading-relaxed mb-6">
               You'll never see those lost leads in your analytics because they never made it to your site. But your competitors will.
@@ -236,7 +236,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             <h2 className="text-2xl md:text-3xl mb-3">The math works. Let's build it.</h2>
             <p className="text-white/70 mb-8 max-w-md mx-auto">Custom websites starting at $900. No templates, no hourly billing. You own everything.</p>
             <a href="/#contact" className="inline-flex items-center gap-2 bg-brand-accent text-white px-8 py-3.5 rounded-2xl font-semibold hover:brightness-115 transition-all shadow-xl shadow-brand-accent/40">
-              Get Started <ArrowRight size={18} />
+              Contact Kara <ArrowRight size={18} />
             </a>
           </div>
         </article>

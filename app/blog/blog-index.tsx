@@ -9,7 +9,7 @@ import Footer from '../../src/components/Footer';
 const posts = [
   {
     slug: 'your-website-is-a-tax-write-off',
-    title: 'Your Website Is a Tax Write-Off — Here\'s What to Know',
+    title: 'Your Website Is a Tax Write-Off. Here\'s What to Know',
     excerpt: 'In most cases, a business website is tax-deductible as a business expense. Here\'s what small business owners need to know to keep more money in their pocket.',
     date: '2026-04-04',
     readTime: '4 min read',
@@ -37,7 +37,7 @@ const posts = [
   {
     slug: 'wix-vs-custom-website',
     title: 'Wix vs Custom Website: Which Is Right for Your Small Business?',
-    excerpt: 'An honest comparison of costs, speed, SEO, and long-term value — so you can decide what actually makes sense for your business.',
+    excerpt: 'An honest comparison of costs, speed, SEO, and long-term value, so you can decide what actually makes sense for your business.',
     date: '2026-04-02',
     readTime: '6 min read',
     tags: ['Comparison', 'Small Business'],
@@ -140,7 +140,7 @@ export default function BlogIndex() {
             href="/#contact"
             className="inline-flex items-center gap-2 bg-brand-accent text-white px-8 py-3.5 rounded-2xl font-semibold hover:brightness-115 transition-all shadow-xl shadow-brand-accent/40"
           >
-            Get Started <ArrowRight size={18} />
+            Contact Kara <ArrowRight size={18} />
           </a>
         </section>
       </main>

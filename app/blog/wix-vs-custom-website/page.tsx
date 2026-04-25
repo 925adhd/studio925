@@ -20,11 +20,11 @@ const faqItems = [
   },
   {
     question: 'How much does a custom website cost compared to Wix?',
-    answer: 'Wix plans run $17–$159/month (plus your time building it). A custom website from Studio 925 starts at $900 one-time, with optional hosting at $25–$49/month. Over two years, the total cost is often comparable — but the custom site performs significantly better.',
+    answer: 'Wix plans run $17–$159/month (plus your time building it). A custom website from Studio 925 starts at $900 one-time, with optional hosting at $25–$49/month. Over two years, the total cost is often comparable, but the custom site performs significantly better.',
   },
   {
     question: 'Can I switch from Wix to a custom website?',
-    answer: 'Yes. Your content (text, images, branding) carries over. The site itself gets rebuilt from scratch for better speed, SEO, and design. Studio 925 handles the full migration — you don\'t lose anything.',
+    answer: 'Yes. Your content (text, images, branding) carries over. The site itself gets rebuilt from scratch for better speed, SEO, and design. Studio 925 handles the full migration, so you don\'t lose anything.',
   },
   {
     question: 'Do custom websites rank better on Google than Wix?',

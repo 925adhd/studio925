@@ -28,7 +28,7 @@ const faqItems = [
   },
   {
     question: 'Do I need a website if I already get customers from word of mouth?',
-    answer: 'Word of mouth is powerful — but even referrals will Google your business before calling. A professional website confirms you\'re legitimate and makes it easy to take that next step. It also opens a second channel of customers who find you through search.',
+    answer: 'Word of mouth is powerful, but even referrals will Google your business before calling. A professional website confirms you\'re legitimate and makes it easy to take that next step. It also opens a second channel of customers who find you through search.',
   },
 ];
 
