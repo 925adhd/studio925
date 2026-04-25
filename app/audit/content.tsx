@@ -166,7 +166,7 @@ export default function AuditContent() {
                 <div className="fl-why-free-tag">WHY IT&rsquo;S FREE</div>
                 <p>
                   The map shows you where you&rsquo;re losing calls. Studio 925
-                  builds or rebuilds your site fast, mobile-first, and{' '}
+                  builds your site fast. Works on every device,{' '}
                   <em>built to rank</em>. Flat $900 starting price, live in
                   about a week.
                 </p>
