@@ -12,7 +12,7 @@ const points = [
   { diy: 'Something breaks? You\'re on your own', studio: 'Something breaks? I fix it.', mobile: true },
   { diy: 'Invisible when people search Google', studio: 'Built so Google can find you', mobile: true },
   { diy: 'No backlinks to boost your ranking', studio: 'I link to your site to boost your ranking', mobile: false },
-  { diy: 'Hours of your time, every week', studio: 'Minimal time from you', mobile: false },
+  { diy: 'Hope it brings in customers', studio: 'Built to turn visitors into customers', mobile: false },
 ];
 
 export default function Comparison() {

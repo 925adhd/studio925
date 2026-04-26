@@ -6,7 +6,7 @@ import { trackEvent } from '../lib/gtag';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100dvh] md:min-h-0 pt-24 md:pt-36 pb-10 md:pb-28 px-4 md:px-6 overflow-hidden">
+    <section className="relative min-h-[100svh] md:min-h-0 pt-32 md:pt-36 pb-10 md:pb-28 px-4 md:px-6 overflow-hidden">
       <div className="absolute inset-0 grid-pattern -z-10" />
 
       <div className="max-w-4xl mx-auto text-center">
