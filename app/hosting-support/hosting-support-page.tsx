@@ -24,17 +24,17 @@ const plans = [
     name: 'Full Support',
     price: '49',
     features: [
-      'Hosting & support:',
-      'Secure hosting, backups, and performance monitoring',
-      'Ongoing SEO — one new service page or two blog posts per month, plus meta tag and indexing upkeep',
+      'SEO & growth:',
+      'Ongoing SEO: one new service page or two blog posts per month, plus meta tag and indexing upkeep',
       '63-point local rank rescan every month',
-      'Domain & setup:',
+      'Market exclusivity, no other SEO clients in your niche and market',
+      'Hosting & domain:',
+      'Secure hosting, backups, and performance monitoring',
       'Free custom domain~',
       'DNS, email routing, and SSL included',
       'Updates & support:',
-      'Text, images, and layout changes — just message me',
-      'Priority support — I respond first',
-      'Market exclusivity — no other SEO clients in your niche and market',
+      'Text, images, and layout changes, just message me',
+      'Priority support, I respond first',
     ],
     featured: true,
     cta: 'Get Full Support',
@@ -138,10 +138,10 @@ export default function HostingSupportPage() {
           </div>
 
           <p className="text-center text-xs md:text-sm text-brand-primary/40 mt-8">
-            Full Support includes a free custom domain for as long as your plan is active. Basic Hosting clients purchase their own domain — I'll help you connect it either way.
+            Full Support includes a free custom domain for as long as your plan is active. Basic Hosting clients purchase their own domain. I'll help you connect it either way.
           </p>
           <p className="text-center text-xs text-brand-primary/30 mt-3">
-            Cancel anytime. You own your website files and domain — full details in our <a href="/terms-of-service#hosting" className="text-brand-accent hover:underline">terms</a>.
+            Cancel anytime. You own your website files and domain. Full details in our <a href="/terms-of-service#hosting" className="text-brand-accent hover:underline">terms</a>.
           </p>
         </div>
 
@@ -181,7 +181,7 @@ export default function HostingSupportPage() {
               <strong className="text-brand-primary">Support</strong>{' '}is the human side. When you need to update your hours, swap out a photo, fix a typo, add a new service, or change your phone number, you message me and it gets done. No logging into a builder, no learning a CMS, no &quot;I&apos;ll get to it next month.&quot; Most small edits are turned around within a business day.
             </p>
             <p>
-              On top of that, Full Support includes ongoing SEO work — adding new service pages and blog posts that target the searches your customers are actually making, keeping your meta tags accurate, and making sure your sitemap stays current and indexed on Google. You also get a 63-point local rank rescan every month, so you can see how your visibility on Google is changing block by block. As your business changes, your website changes with it.
+              On top of that, Full Support includes ongoing SEO work: adding new service pages and blog posts that target the searches your customers are actually making, keeping your meta tags accurate, and making sure your sitemap stays current and indexed on Google. You also get a 63-point local rank rescan every month, so you can see how your visibility on Google is changing block by block. As your business changes, your website changes with it.
             </p>
           </div>
         </div>
@@ -196,7 +196,7 @@ export default function HostingSupportPage() {
             </div>
             <div>
               <h3 className="font-semibold text-brand-primary mb-2">What happens if I cancel?</h3>
-              <p>You keep your website files and your domain. I&apos;ll help you move to another host if you ever decide to go that route — no hostage situations.</p>
+              <p>You keep your website files and your domain. I&apos;ll help you move to another host if you ever decide to go that route. No hostage situations.</p>
             </div>
             <div>
               <h3 className="font-semibold text-brand-primary mb-2">How fast are content updates?</h3>
@@ -204,7 +204,7 @@ export default function HostingSupportPage() {
             </div>
             <div>
               <h3 className="font-semibold text-brand-primary mb-2">What if my website goes down?</h3>
-              <p>I monitor uptime and get notified automatically if anything goes wrong. In the rare event of an issue, I work to get your site back online as quickly as possible — usually before you even notice.</p>
+              <p>I monitor uptime and get notified automatically if anything goes wrong. In the rare event of an issue, I work to get your site back online as quickly as possible, usually before you even notice.</p>
             </div>
             <div>
               <h3 className="font-semibold text-brand-primary mb-2">Can I switch between plans?</h3>
@@ -212,7 +212,7 @@ export default function HostingSupportPage() {
             </div>
             <div>
               <h3 className="font-semibold text-brand-primary mb-2">Will you do SEO for my competitor too?</h3>
-              <p>No. My ongoing SEO clients get market exclusivity — I only do active SEO work for one business per niche per area. A competitor can still host with me or have a site built, since that&apos;s not ranking work. If a competitor ever wants updates without SEO, I&apos;d talk to my exclusive client first before taking it on.</p>
+              <p>No. My ongoing SEO clients get market exclusivity. I only do active SEO work for one business per niche per area. A competitor can still host with me or have a site built, since that&apos;s not ranking work. If a competitor ever wants updates without SEO, I&apos;d talk to my exclusive client first before taking it on.</p>
             </div>
           </div>
         </div>
