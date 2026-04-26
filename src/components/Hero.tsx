@@ -6,7 +6,7 @@ import { trackEvent } from '../lib/gtag';
 
 export default function Hero() {
   return (
-    <section className="relative pt-20 md:pt-36 pb-10 md:pb-28 px-6 overflow-hidden">
+    <section className="relative min-h-[100dvh] md:min-h-0 pt-24 md:pt-36 pb-10 md:pb-28 px-4 md:px-6 overflow-hidden">
       <div className="absolute inset-0 grid-pattern -z-10" />
 
       <div className="max-w-4xl mx-auto text-center">
@@ -43,32 +43,32 @@ export default function Hero() {
         </div>
 
         {/* Mobile: fully static, no animation — critical for LCP */}
-        <div className="md:hidden">
-          <p className="text-[9px] sm:text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/60 mb-4">
+        <div className="md:hidden text-left">
+          <p className="text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-brand-primary/55 mb-6">
             Helping Local Businesses Grow Online
           </p>
 
-          <h1 className="text-[2rem] sm:text-5xl mb-3 leading-[1.05] text-balance">
-            Your business deserves a website <span className="italic text-brand-accent">that actually&nbsp;works.</span>
+          <h1 className="text-[clamp(2.25rem,9vw,3.5rem)] mb-5 leading-[1.12]">
+            Your business<br />deserves a website<span className="block italic text-brand-accent">that actually&nbsp;works.</span>
           </h1>
 
-          <p className="flex items-center justify-center gap-1.5 text-sm mb-3">
-            <MapPin size={14} className="shrink-0 text-brand-primary/55" />
-            <span className="font-semibold text-brand-primary/70">Leitchfield, KY</span>
+          <p className="flex items-center gap-1.5 text-lg mb-7">
+            <MapPin size={18} className="shrink-0 text-brand-primary/55" />
+            <span className="font-bold text-brand-primary/85">Leitchfield, KY</span>
           </p>
 
-          <p className="text-[15px] text-brand-primary/70 mb-5 max-w-2xl leading-[1.5] mx-auto text-balance">
+          <p className="text-lg text-brand-primary/70 mb-12 leading-[1.4]">
             Fast, mobile-first websites built to look professional and get&nbsp;found.
           </p>
 
-          <div className="flex flex-col gap-2.5 justify-center">
-            <Link href="https://audit.studio925.design" onClick={() => trackEvent('click_free_audit', 'hero_mobile')} className="w-full max-w-xs mx-auto bg-brand-primary text-white h-14 rounded-2xl text-lg font-bold flex items-center justify-center gap-2 shadow-xl shadow-brand-primary/25">
-              Free local SEO audit <ArrowRight size={20} />
+          <div className="flex flex-col">
+            <Link href="https://audit.studio925.design" onClick={() => trackEvent('click_free_audit', 'hero_mobile')} className="w-full bg-brand-primary text-white py-5 rounded-2xl text-xl font-bold flex items-center justify-center gap-2 shadow-xl shadow-brand-primary/25">
+              Free local SEO audit <ArrowRight size={22} />
             </Link>
-            <p className="-mt-1 text-xs font-medium text-brand-primary/55 text-center">
+            <p className="mt-4 text-sm font-medium text-brand-primary/55 text-center">
               Real Google data · No commitment
             </p>
-            <a href="/#pricing" onClick={() => trackEvent('click_view_pricing', 'hero_mobile')} className="text-sm font-semibold text-brand-primary/70 underline underline-offset-4 flex items-center justify-center gap-1 min-h-[44px]">
+            <a href="/#pricing" onClick={() => trackEvent('click_view_pricing', 'hero_mobile')} className="mt-6 text-lg font-bold text-brand-primary underline underline-offset-4 flex items-center justify-center gap-1 min-h-[44px]">
               View Pricing
             </a>
           </div>
