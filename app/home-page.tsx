@@ -36,8 +36,8 @@ export default function HomePage() {
         <div className="order-1 md:order-1 bg-brand-warm">
           <Hero />
         </div>
+        <div className="order-2 md:hidden bg-white border-t border-brand-primary/5"><TrustStrip /></div>
         <div className="order-3 md:order-2"><PortfolioPreview /></div>
-        <div className="order-3 md:hidden bg-white border-t border-brand-primary/5"><TrustStrip /></div>
         <div className="order-4 md:order-9"><WhoItsFor /></div>
         <div className="order-5 md:order-6"><SpeedProof /></div>
         <div className="order-6 md:order-3"><Services /></div>
@@ -45,7 +45,7 @@ export default function HomePage() {
         <div className="order-8 md:order-5"><Pricing /></div>
 
         {/* Process Section — Timeline (desktop) / Accordion (mobile) — order-9 */}
-        <section id="process" className="order-9 md:order-7 py-14 md:py-36 px-6 bg-white border-t border-brand-primary/5">
+        <section id="process" className="order-9 md:order-7 py-14 md:pt-20 md:pb-36 px-6 bg-white border-t border-brand-primary/5">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-8 md:mb-16">
               <h2 className="text-2xl md:text-4xl mb-2 md:mb-3">How it works.</h2>

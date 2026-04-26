@@ -15,9 +15,9 @@ type Project = {
 
 const projects: Project[] = [
   { src: '/csmedia-listing-sold-hero.webp', alt: 'CS Media — Real estate photography in Leitchfield, KY', href: 'https://cscreatesmedia.com', name: 'CS Media' },
-  { src: '/4chariots.webp', alt: 'Four Chariots — minimal faithwear e-commerce site', href: 'https://4chariots.com', name: 'Four Chariots' },
-  { src: '/townly.webp', alt: 'Townly — Grayson County community board', href: 'https://townly.us', name: 'Townly' },
   { src: '/925adhd.webp', alt: '925 ADHD — flexible work guide', href: 'https://925adhd.com', name: '925 ADHD' },
+  { src: '/townly.webp', alt: 'Townly — Grayson County community board', href: 'https://townly.us', name: 'Townly' },
+  { src: '/4chariots.webp', alt: 'Four Chariots — minimal faithwear e-commerce site', href: 'https://4chariots.com', name: 'Four Chariots' },
 ];
 
 /* CS Media carousel images for mobile — depth over breadth */
@@ -121,15 +121,16 @@ export default function PortfolioPreview() {
   const mobileCarousel = useCarousel(mobileInView);
 
   return (
-    <section className="py-14 md:pt-12 md:pb-32 px-6 bg-white border-t border-brand-primary/5">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="md:hidden text-center text-2xl mb-10">
+    <section className="relative pt-2 pb-14 md:pt-12 md:pb-12 px-6 bg-white">
+      {/* Extends the hero's warm background down through the middle of the cards (desktop only) */}
+      <div className="absolute inset-x-0 top-0 h-[90px] bg-brand-warm hidden md:block pointer-events-none" />
+      <div className="relative max-w-6xl mx-auto">
+        <h2 className="text-center text-lg mb-4 md:sr-only">
           Most recent <span className="italic text-brand-accent">build</span>
         </h2>
-        <h2 className="hidden md:block sr-only">Recent work</h2>
 
         {/* Desktop: angled 3D overlapping row */}
-        <div className="hidden md:block relative h-[400px] md:mt-12 -mb-[160px]">
+        <div className="hidden md:block relative h-[300px] md:-mt-4 -mb-[160px]">
           <div className="flex -space-x-48 lg:-space-x-56 pb-8 pt-8 items-end justify-center">
             {projects.map((project, index) => {
               const totalImages = projects.length;
@@ -137,11 +138,10 @@ export default function PortfolioPreview() {
 
               const isHovered = hoveredIndex === index;
               const isOtherHovered = hoveredIndex !== null && hoveredIndex !== index;
-              const yOffset = isHovered
-                ? -baseOffset - 30
-                : isOtherHovered
-                  ? -baseOffset + 18
-                  : -baseOffset;
+              const xOffset = isOtherHovered
+                ? (index < hoveredIndex! ? -55 : 55)
+                : 0;
+              const zOffset = isHovered ? 90 : 0;
               const zIndex = isHovered ? 50 : totalImages - index;
 
               return (
@@ -155,7 +155,7 @@ export default function PortfolioPreview() {
                   style={{ zIndex }}
                   initial={false}
                   animate={{
-                    transform: `perspective(2200px) rotateY(-28deg) translateY(${yOffset}px)`,
+                    transform: `perspective(2200px) translateX(${xOffset}px) translateZ(${zOffset}px) rotateY(-28deg) translateY(${-baseOffset}px)`,
                   }}
                   transition={{
                     duration: 0.35,
@@ -166,10 +166,13 @@ export default function PortfolioPreview() {
                   aria-label={`Visit ${project.name}`}
                 >
                   <div
-                    className="relative aspect-video w-80 lg:w-96 rounded-xl overflow-hidden ring-1 ring-brand-primary/5 transition-transform duration-300 group-hover:scale-[1.03]"
+                    className={`relative aspect-video w-80 lg:w-96 rounded-xl overflow-hidden ring-1 transition duration-300 group-hover:scale-[1.03] ${
+                      isHovered ? 'ring-brand-primary/25' : 'ring-brand-primary/5'
+                    }`}
                     style={{
-                      boxShadow:
-                        '0.8px 0px 0.8px 0px rgba(15,23,42,0.02), 2.4px 0px 2.4px 0px rgba(15,23,42,0.04), 6.4px 0px 6.4px 0px rgba(15,23,42,0.08), 20px 0px 20px 0px rgba(15,23,42,0.22)',
+                      boxShadow: isHovered
+                        ? '0 28px 50px -12px rgba(15,23,42,0.45), 0 12px 24px -8px rgba(15,23,42,0.25), 20px 0px 20px 0px rgba(15,23,42,0.22)'
+                        : '0.8px 0px 0.8px 0px rgba(15,23,42,0.02), 2.4px 0px 2.4px 0px rgba(15,23,42,0.04), 6.4px 0px 6.4px 0px rgba(15,23,42,0.08), 20px 0px 20px 0px rgba(15,23,42,0.22)',
                     }}
                   >
                     <img
@@ -226,7 +229,7 @@ export default function PortfolioPreview() {
         </div>
 
         {/* Testimonial + CTA */}
-        <div className="mt-8 md:mt-32 grid md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center max-w-4xl mx-auto">
+        <div className="mt-8 md:mt-16 grid md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center max-w-4xl mx-auto">
           <div>
             <div className="flex gap-0.5 mb-3 md:mb-4">
               {[...Array(5)].map((_, j) => (

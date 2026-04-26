@@ -1,6 +1,6 @@
 export default function SpeedProof() {
   return (
-    <section className="py-14 md:py-28 px-6 bg-white border-t border-brand-primary/5">
+    <section className="py-14 md:pt-12 md:pb-28 px-6 bg-white border-t border-brand-primary/5">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-7 md:mb-14">
           <h2 className="md:hidden text-2xl mb-3 leading-tight">

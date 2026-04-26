@@ -15,7 +15,7 @@ const businesses = [
 
 export default function WhoItsFor() {
   return (
-    <section className="py-12 md:py-36 px-6 bg-white border-t border-brand-primary/5">
+    <section className="py-12 md:pt-12 md:pb-36 px-6 bg-white border-t border-brand-primary/5">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
