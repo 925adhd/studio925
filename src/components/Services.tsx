@@ -77,11 +77,8 @@ function DemoRow({
   );
 }
 
-/* ─── 1. Search Intent Demo — type query, then reveal results ─── */
+/* ─── 1. Search Intent Demo — typewriter on left, right side fades independently ─── */
 function SearchIntentDemo() {
-  const [typingDone, setTypingDone] = useState(false);
-  const handleDone = useRef(() => setTypingDone(true)).current;
-
   return (
     <DemoRow>
       {/* Desktop */}
@@ -94,9 +91,8 @@ function SearchIntentDemo() {
             <Search size={18} className="text-brand-primary/40 shrink-0" />
             <TypeWriter
               text="roof repair leitchfield ky"
-              speed={30}
+              speed={18}
               className="text-brand-primary/80 text-[15px]"
-              onDone={handleDone}
             />
             <Mic size={18} className="text-brand-primary/20 ml-auto shrink-0" />
           </div>
@@ -108,10 +104,12 @@ function SearchIntentDemo() {
           </div>
         </div>
 
-        {/* Arrow — fades in after typing */}
+        {/* Arrow — fades in on scroll */}
         <motion.div
-          animate={typingDone ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.4, delay: 0.15, ease: 'easeOut' }}
           className="flex items-center justify-center px-2"
         >
           <div className="w-12 h-12 rounded-full bg-brand-primary/5 flex items-center justify-center">
@@ -119,10 +117,12 @@ function SearchIntentDemo() {
           </div>
         </motion.div>
 
-        {/* Result card — slides in after typing */}
+        {/* Result card — fades in on scroll */}
         <motion.div
-          animate={typingDone ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-          transition={{ duration: 0.3, delay: 0.05 }}
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.5, delay: 0.25, ease: 'easeOut' }}
           className="bg-white rounded-2xl shadow-xl shadow-brand-primary/8 border border-brand-primary/8 p-6"
         >
           <div className="flex items-center gap-1.5 mb-4">
@@ -160,10 +160,12 @@ function SearchIntentDemo() {
           </div>
         </motion.div>
 
-        {/* Text — fades in after results */}
+        {/* Text — fades in on scroll */}
         <motion.div
-          animate={typingDone ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-          transition={{ duration: 0.3, delay: 0.1 }}
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.5, delay: 0.35, ease: 'easeOut' }}
           className="md:col-span-3 md:pt-6 md:px-2 lg:col-span-1 lg:pl-4 lg:pt-0 lg:px-0"
         >
           <h3 className="text-3xl lg:text-4xl mb-4">Stop being invisible when customers search.</h3>

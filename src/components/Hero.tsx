@@ -29,13 +29,9 @@ export default function Hero() {
             Fast, mobile-first websites built to look professional, load fast, and make it easy for customers to find and contact&nbsp;you.
           </p>
 
-          <div className="fade-in-up flex flex-row gap-4 justify-center" style={{ animationDelay: '0.4s' }}>
+          <div className="fade-in-up flex justify-center" style={{ animationDelay: '0.4s' }}>
             <Link href="https://audit.studio925.design" onClick={() => trackEvent('click_free_audit', 'hero_desktop')} className="bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
               Get my free local SEO audit <ArrowRight size={20} />
-            </Link>
-            <Link href="/portfolio" onClick={() => trackEvent('click_see_my_work', 'hero_desktop')} className="bg-white border border-brand-primary/10 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-primary/5 transition-colors text-brand-primary flex items-center justify-center gap-2">
-              <img src="/kara-gibson-small.webp" alt="Kara Gibson, owner of Studio 925" width={28} height={28} className="w-7 h-7 rounded-full object-cover shrink-0" />
-              See My Work
             </Link>
           </div>
           <p className="fade-in-up text-xs font-medium text-brand-primary/55 mt-4" style={{ animationDelay: '0.5s' }}>
