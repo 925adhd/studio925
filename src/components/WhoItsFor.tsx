@@ -37,7 +37,7 @@ export default function WhoItsFor() {
           {businesses.map((biz) => (
             <div
               key={biz.name}
-              className="h-full px-3 py-2.5 rounded-xl bg-brand-primary/[0.03] border border-brand-primary/5"
+              className="h-full px-1 py-2"
             >
               <div className="flex items-start gap-2 mb-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-accent shrink-0 mt-1.5" />
