@@ -120,10 +120,10 @@ export default function KentuckyContent() {
               <MapPin size={12} className="shrink-0" /> Based in Kentucky
             </div>
             <h1 className="text-3xl md:text-6xl mb-4 md:mb-6 leading-[1.1]">
-              Custom Websites for Small Businesses in <span className="italic text-brand-accent">Kentucky</span>
+              Custom Website Design for Small Businesses in <span className="italic text-brand-accent">Kentucky</span>
             </h1>
             <p className="text-base md:text-xl text-brand-primary/70 max-w-xl leading-relaxed">
-              Custom websites for Kentucky small businesses — built from scratch by a solo developer, not a template factory. Designed to get you found on Google and turn visitors into paying customers.
+              Studio 925 is a Kentucky website designer building custom websites for small businesses statewide. Custom-coded from scratch by a solo developer, not a template factory. Designed to get you found on Google and turn visitors into paying customers.
             </p>
             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
               <a

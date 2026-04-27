@@ -127,7 +127,7 @@ export default function GraysonCountyContent() {
               Web Design for Businesses in <span className="italic text-brand-accent">Grayson County, Kentucky</span>
             </h1>
             <p className="text-base md:text-xl text-brand-primary/70 max-w-xl leading-relaxed">
-              Custom websites for local businesses in Leitchfield, Clarkson, Caneyville, and across Grayson County. Built by a developer who actually lives here — not a remote agency using your zip code to rank.
+              Studio 925 is a Grayson County web designer building custom websites for local businesses across Leitchfield, Clarkson, Caneyville, and the surrounding area. One developer who actually lives here, not a remote agency using your zip code to rank.
             </p>
             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
               <a
