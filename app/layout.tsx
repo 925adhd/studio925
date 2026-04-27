@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: 'Studio 925 | Custom Website Designer in Kentucky',
-  description: 'Custom website designer in Kentucky for small businesses. Custom-coded web design with no templates or page builders. Fast sites that bring in real customers.',
+  description: 'Custom website designer in Kentucky. Custom-coded web design for small businesses, no templates or page builders. Built to bring in real customers.',
   metadataBase: new URL('https://studio925.design'),
   alternates: {
     canonical: '/',
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     type: 'website',
     url: '/',
     title: 'Studio 925 | Custom Website Designer in Kentucky',
-    description: 'Custom website designer in Kentucky for small businesses. Custom-coded web design with no templates or page builders. Fast sites that bring in real customers.',
+    description: 'Custom website designer in Kentucky. Custom-coded web design for small businesses, no templates or page builders. Built to bring in real customers.',
     images: [{ url: '/studio925.png', alt: 'Studio 925, custom website designer for small businesses in Kentucky' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Studio 925 | Custom Website Designer in Kentucky',
-    description: 'Custom website designer in Kentucky for small businesses. Custom-coded web design with no templates or page builders. Fast sites that bring in real customers.',
+    description: 'Custom website designer in Kentucky. Custom-coded web design for small businesses, no templates or page builders. Built to bring in real customers.',
     images: [{ url: '/studio925.png', alt: 'Studio 925, custom website designer for small businesses in Kentucky' }],
   },
   icons: {
