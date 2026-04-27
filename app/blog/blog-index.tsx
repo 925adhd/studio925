@@ -17,15 +17,6 @@ const posts = [
     image: '/wix-vs-custom-website-comparison.webp',
   },
   {
-    slug: 'what-to-look-for-in-a-local-web-designer',
-    title: 'What to Look for in a Local Web Designer',
-    excerpt: 'Hiring a local web designer for your small business? Here\'s what actually matters, what to ask before signing, and the red flags to walk away from.',
-    date: '2026-04-06',
-    readTime: '5 min read',
-    tags: ['Hiring Guide', 'Small Business'],
-    image: '/local-web-designer-kentucky.webp',
-  },
-  {
     slug: 'is-custom-website-worth-it',
     title: 'Is a Custom Website Worth It? Here\'s the Math.',
     excerpt: 'Your website is a business tool, not an expense. See how a $900 site can pay for itself with just one new customer.',
@@ -33,6 +24,15 @@ const posts = [
     readTime: '5 min read',
     tags: ['ROI', 'Small Business'],
     image: '/custom-website-worth-it-roi.webp',
+  },
+  {
+    slug: 'what-to-look-for-in-a-local-web-designer',
+    title: 'What to Look for in a Local Web Designer',
+    excerpt: 'Hiring a local web designer for your small business? Here\'s what actually matters, what to ask before signing, and the red flags to walk away from.',
+    date: '2026-04-06',
+    readTime: '5 min read',
+    tags: ['Hiring Guide', 'Small Business'],
+    image: '/local-web-designer-kentucky.webp',
   },
   {
     slug: 'your-website-is-a-tax-write-off',
