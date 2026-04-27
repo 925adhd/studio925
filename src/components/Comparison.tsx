@@ -27,7 +27,7 @@ export default function Comparison() {
           className="text-center mb-8 md:mb-10"
         >
           <h2 className="text-xl md:text-4xl mb-3 md:mb-4">
-            Do It Yourself <span className="italic text-brand-accent">or Have It Handled</span>
+            Do It Yourself <span className="italic text-emerald-800">or Have It Handled</span>
           </h2>
           <p className="text-sm md:text-base text-brand-primary/60 max-w-lg mx-auto">
             You could spend hours building it yourself. Or tell me about your business and I'll take it from here.
@@ -83,7 +83,7 @@ export default function Comparison() {
         <p className="text-center text-xs text-brand-primary/60 mt-8 md:mt-10">
           Ongoing updates, support, and maintenance available through optional <Link href="/hosting-support" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">hosting plans</Link>.
         </p>
-        <p className="text-center text-xs text-brand-primary/50 mt-2">
+        <p className="text-center text-xs text-brand-primary/70 mt-2">
           Curious about pricing? See the <Link href="/website-cost" className="text-emerald-700 underline underline-offset-2 hover:text-emerald-800">website cost guide</Link>.
         </p>
       </div>

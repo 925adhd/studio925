@@ -126,7 +126,7 @@ export default function PortfolioPreview() {
       <div className="absolute inset-x-0 top-0 h-[90px] bg-brand-warm hidden md:block pointer-events-none" />
       <div className="relative max-w-6xl mx-auto">
         <h2 className="text-center text-lg mb-4 md:sr-only">
-          Most recent <span className="italic text-brand-accent">build</span>
+          Most recent <span className="italic text-emerald-800">build</span>
         </h2>
 
         {/* Desktop: angled 3D overlapping row */}

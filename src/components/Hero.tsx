@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="max-w-4xl mx-auto text-center">
         {/* Desktop: staggered fade-in via CSS (no JS animation library) */}
         <div className="hidden md:block">
-          <p className="fade-in-up text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/60 mb-5">
+          <p className="fade-in-up text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/70 mb-5">
             Helping Local Businesses Grow Online · Leitchfield &amp; Grayson County, Kentucky
           </p>
 
@@ -34,7 +34,7 @@ export default function Hero() {
               Get my free local SEO audit <ArrowRight size={20} />
             </Link>
           </div>
-          <p className="fade-in-up text-xs font-medium text-brand-primary/55 mt-4" style={{ animationDelay: '0.5s' }}>
+          <p className="fade-in-up text-xs font-medium text-brand-primary/70 mt-4" style={{ animationDelay: '0.5s' }}>
             Real Google data · No commitment
           </p>
           <a href="/#pricing" onClick={() => trackEvent('click_view_pricing', 'hero_desktop')} className="fade-in-up inline-block mt-3 text-sm font-semibold text-brand-primary/70 underline underline-offset-4 hover:text-brand-primary transition-colors" style={{ animationDelay: '0.6s' }}>
@@ -44,7 +44,7 @@ export default function Hero() {
 
         {/* Mobile: fully static, no animation — critical for LCP */}
         <div className="md:hidden text-left">
-          <p className="text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-brand-primary/55 mb-6">
+          <p className="text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-brand-primary/70 mb-6">
             Helping Local Businesses Grow Online
           </p>
 
@@ -65,7 +65,7 @@ export default function Hero() {
             <Link href="https://audit.studio925.design" onClick={() => trackEvent('click_free_audit', 'hero_mobile')} className="w-full bg-brand-primary text-white py-5 rounded-2xl text-xl font-bold flex items-center justify-center gap-2 shadow-xl shadow-brand-primary/25">
               Free local SEO audit <ArrowRight size={22} />
             </Link>
-            <p className="mt-4 text-sm font-medium text-brand-primary/55 text-center">
+            <p className="mt-4 text-sm font-medium text-brand-primary/70 text-center">
               Real Google data · No commitment
             </p>
             <a href="/#pricing" onClick={() => trackEvent('click_view_pricing', 'hero_mobile')} className="mt-6 text-lg font-bold text-brand-primary underline underline-offset-4 flex items-center justify-center gap-1 min-h-[44px]">
