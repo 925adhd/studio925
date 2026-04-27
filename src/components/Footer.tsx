@@ -14,7 +14,7 @@ export default function Footer() {
               Your website should work <span className="italic text-emerald-800">as hard as you&nbsp;do.</span>
             </p>
             <p className="text-sm text-brand-primary/60 max-w-sm mb-4">
-              Custom websites built right.<br />Web designer in Leitchfield, KY.
+              Custom websites built right.<br />Website designer in Leitchfield, KY.
             </p>
             <a
               href="https://www.facebook.com/studio925design"

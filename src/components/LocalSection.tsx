@@ -52,7 +52,7 @@ export default function LocalSection() {
           </div>
 
           <h2 className="text-4xl md:text-5xl mb-3">
-            Local designer. <span className="italic text-brand-accent">Websites that work.</span>
+            Local website designer. <span className="italic text-brand-accent">Websites that work.</span>
           </h2>
           <p className="text-sm text-brand-primary/50 mb-6">
             Based in Kentucky. Built for local businesses.

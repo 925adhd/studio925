@@ -20,8 +20,8 @@ const playfair = Playfair_Display({
 
 
 export const metadata: Metadata = {
-  title: 'Studio 925 | Custom Web Design in Kentucky',
-  description: 'Studio 925 builds custom websites for small businesses. No templates, no page builders — just fast, professional sites designed to bring in real customers.',
+  title: 'Studio 925 | Custom Website Designer in Kentucky',
+  description: 'Custom website designer in Kentucky for small businesses. Custom-coded web design with no templates or page builders. Fast sites that bring in real customers.',
   metadataBase: new URL('https://studio925.design'),
   alternates: {
     canonical: '/',
@@ -29,15 +29,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: '/',
-    title: 'Studio 925 | Custom Web Design in Kentucky',
-    description: 'Studio 925 builds custom websites for small businesses. No templates, no page builders — just fast, professional sites designed to bring in real customers.',
-    images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],
+    title: 'Studio 925 | Custom Website Designer in Kentucky',
+    description: 'Custom website designer in Kentucky for small businesses. Custom-coded web design with no templates or page builders. Fast sites that bring in real customers.',
+    images: [{ url: '/studio925.png', alt: 'Studio 925, custom website designer for small businesses in Kentucky' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Studio 925 | Custom Web Design in Kentucky',
-    description: 'Studio 925 builds custom websites for small businesses. No templates, no page builders — just fast, professional sites designed to bring in real customers.',
-    images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],
+    title: 'Studio 925 | Custom Website Designer in Kentucky',
+    description: 'Custom website designer in Kentucky for small businesses. Custom-coded web design with no templates or page builders. Fast sites that bring in real customers.',
+    images: [{ url: '/studio925.png', alt: 'Studio 925, custom website designer for small businesses in Kentucky' }],
   },
   icons: {
     icon: '/fav.png',
@@ -107,7 +107,7 @@ const jsonLd = {
     },
   ],
   priceRange: '$$',
-  knowsAbout: ['Web Design', 'Website Design Leitchfield KY', 'Small Business Websites', 'Local Web Development', 'Website Design Kentucky'],
+  knowsAbout: ['Web Design', 'Website Designer', 'Local Website Designer Kentucky', 'Website Design Leitchfield KY', 'Small Business Websites', 'Local Web Development', 'Website Design Kentucky'],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Web Design Services',
