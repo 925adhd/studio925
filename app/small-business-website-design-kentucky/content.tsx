@@ -46,7 +46,7 @@ const faqItems = [
   },
   {
     question: 'What\'s the difference between your plans?',
-    answer: 'Foundation ($900) is a clean 3–5 page site for businesses that need to get online. Growth ($1,800) adds service pages, analytics, and lead tracking for businesses ready to scale. Online Store ($2,600) adds an online store, customer accounts, and secure checkout.',
+    answer: 'Foundation ($900) is up to 5 pages, built to make sure customers can find your business when they search your name. Growth ($1,800) is up to 10 pages and starts with a hands-on SEO audit, then builds dedicated service pages, analytics, and lead tracking around real local search behavior. Online Store ($2,600) is up to 15 pages and includes everything in Growth plus a full online store with payments and customer management.',
   },
   {
     question: 'Can you redesign my existing website?',
@@ -379,9 +379,9 @@ export default function KentuckyContent() {
 
           <div className="grid sm:grid-cols-3 gap-4 mb-6 md:mb-8">
             {[
-              { name: 'Foundation', price: '$900', desc: '3–5 pages, contact form, mobile responsive, SEO setup' },
-              { name: 'Growth', price: '$1,800', desc: '6+ pages, service pages, analytics, lead tracking' },
-              { name: 'Online Store', price: '$2,600', desc: 'Online store, customer accounts, secure checkout' },
+              { name: 'Foundation', price: '$900', desc: 'Up to 5 pages, contact form, mobile responsive, SEO setup' },
+              { name: 'Growth', price: '$1,800', desc: 'Up to 10 pages, hands-on SEO audit, service pages, analytics' },
+              { name: 'Online Store', price: '$2,600', desc: 'Up to 15 pages, online store, customer accounts, checkout' },
             ].map((plan) => (
               <div key={plan.name} className="p-5 md:p-6 rounded-2xl border border-brand-primary/10 text-center">
                 <p className="text-xs text-brand-primary/40 font-medium mb-1">{plan.name}</p>

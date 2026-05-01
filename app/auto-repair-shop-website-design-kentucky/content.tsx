@@ -10,7 +10,7 @@ import FreeAuditBand from '../../src/components/FreeAuditBand';
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["ProfessionalService", "Service"],
-  "name": "Studio 925 — Auto Repair Shop Website Design in Kentucky",
+  "name": "Studio 925: Auto Repair Shop Website Design in Kentucky",
   "url": "https://studio925.design/auto-repair-shop-website-design-kentucky",
   "email": "kara@studio925.design",
   "telephone": "+1-270-551-2210",
@@ -67,7 +67,7 @@ const shopPages = [
 const faqs = [
   {
     question: 'How much does a website cost for an auto repair shop in Kentucky?',
-    answer: 'Most shops do well on the Foundation plan ($900) for a clean homepage, services overview, hours, and contact form. If you want individual service pages for oil changes, brakes, tires, diagnostics, etc., the Growth plan ($1,800) is the right fit. Service pages are how shops rank for "brake repair near me" and similar searches. Every project includes full ownership of your files.',
+    answer: 'Most shops do well on the Foundation plan ($900, up to 5 pages) for a clean homepage, services overview, hours, and contact form. If you want individual service pages for oil changes, brakes, tires, diagnostics, etc., the Growth plan ($1,800, up to 10 pages) is the right fit. Growth starts with a hands-on SEO audit so the site is built around real local search behavior. Service pages are how shops rank for "brake repair near me" and similar searches. Every project includes full ownership of your files.',
   },
   {
     question: 'Do I really need a website if I already have a Facebook page?',
@@ -445,7 +445,7 @@ export default function AutoRepairShopContent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-4 md:mb-6">Auto repair shop website pricing</h2>
           <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed mb-6 md:mb-8">
-            Foundation sites start at <strong>$900</strong> for shops that need a clean homepage, services overview, hours, and a contact form. Growth sites start at <strong>$1,800</strong> and add individual service pages for oil changes, brakes, tires, diagnostics, and more, which is what helps your shop rank in local search. Want a closer look at what goes into the price? Read the <Link href="/website-cost" className="text-emerald-800 hover:underline">website cost guide</Link>.
+            Foundation sites start at <strong>$900</strong> (up to 5 pages) for shops that need a clean homepage, services overview, hours, and a contact form. Growth sites start at <strong>$1,800</strong> (up to 10 pages) and begin with a hands-on SEO audit, then add individual service pages for oil changes, brakes, tires, diagnostics, and more, which is what helps your shop rank in local search. Want a closer look at what goes into the price? Read the <Link href="/website-cost" className="text-emerald-800 hover:underline">website cost guide</Link>.
           </p>
           <a
             href="/#pricing"

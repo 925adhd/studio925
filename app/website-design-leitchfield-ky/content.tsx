@@ -10,7 +10,7 @@ import FreeAuditBand from '../../src/components/FreeAuditBand';
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["ProfessionalService", "Service"],
-  "name": "Studio 925 — Website Design in Leitchfield, KY",
+  "name": "Studio 925: Website Design in Leitchfield, KY",
   "url": "https://studio925.design/website-design-leitchfield-ky",
   "email": "kara@studio925.design",
   "description": "Professional website design for small businesses in Leitchfield, Kentucky. Custom websites built from scratch to help local businesses get found online.",
@@ -48,7 +48,7 @@ const includedMore = [
 const faqs = [
   {
     question: 'How much does a website cost for a small business in Leitchfield?',
-    answer: 'Website projects start at $900 for a Foundation site with up to 5 pages. Growth sites with dedicated service pages start at $1,800, and online stores with checkout start at $2,600. Every project includes full ownership of your files — no monthly platform fees or locked-in contracts.',
+    answer: 'Website projects start at $900 for a Foundation site (up to 5 pages). Growth sites are $1,800 for up to 10 pages and start with a hands-on SEO audit, then add dedicated service pages, analytics, and lead tracking. Online Store sites are $2,600 for up to 15 pages and include everything in Growth plus a full online store with payments and customer accounts. Every project includes full ownership of your files. No monthly platform fees or locked-in contracts.',
   },
   {
     question: 'How long does it take to build a website?',
@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     question: 'Do I really need a custom website? Can\'t I just use Wix or Squarespace?',
-    answer: 'You can, but template sites all look and perform similarly. They load slower, rank lower, and limit what you can do. A custom-built site is faster, ranks better on Google, and is designed specifically around your business — not a generic template with your name on it.',
+    answer: 'You can, but template sites all look and perform similarly. They load slower, rank lower, and limit what you can do. A custom-built site is faster, ranks better on Google, and is designed specifically around your business, not a generic template with your name on it.',
   },
   {
     question: 'What if I already have a website but it\'s not bringing in customers?',
@@ -159,7 +159,7 @@ export default function LeitchfieldContent() {
               <div className="absolute -inset-4 bg-brand-accent/10 rounded-[2.5rem] -rotate-3" />
               <img
                 src="/kara-gibson.webp"
-                alt="Kara Gibson — web designer in Leitchfield, KY"
+                alt="Kara Gibson, web designer in Leitchfield, KY"
                 width={384} height={384}
                 loading="lazy"
                 className="relative w-full max-w-sm mx-auto rounded-[2rem] shadow-xl shadow-brand-primary/10"
@@ -176,7 +176,7 @@ export default function LeitchfieldContent() {
           >
             <img
               src="/kara-gibson.webp"
-              alt="Kara Gibson — web designer in Leitchfield, KY"
+              alt="Kara Gibson, web designer in Leitchfield, KY"
               width={56} height={56}
               loading="lazy"
               className="w-14 h-14 rounded-full object-cover shadow-md shadow-brand-primary/10 border-2 border-white"
@@ -303,7 +303,7 @@ export default function LeitchfieldContent() {
           </h2>
           <div className="space-y-4 md:space-y-6 text-brand-primary/70 text-sm md:text-lg leading-relaxed">
             <p>
-              Most web designers use templates and page builders like Wix, Squarespace, or WordPress themes. I don't. Every Studio 925 website is custom-built from scratch, which means faster load times, better Google rankings, and a site that actually looks like your business — not everyone else's.
+              Most web designers use templates and page builders like Wix, Squarespace, or WordPress themes. I don't. Every Studio 925 website is custom-built from scratch, which means faster load times, better Google rankings, and a site that actually looks like your business, not everyone else's.
             </p>
             <p>
               I'm based in Grayson County, not a remote agency three states away. When you work with me, you're talking directly to the person building your site. No account managers. No outsourcing. No runaround.

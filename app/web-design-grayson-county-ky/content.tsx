@@ -10,7 +10,7 @@ import FreeAuditBand from '../../src/components/FreeAuditBand';
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["ProfessionalService", "Service"],
-  "name": "Studio 925 — Web Design in Grayson County, KY",
+  "name": "Studio 925: Web Design in Grayson County, KY",
   "url": "https://studio925.design/web-design-grayson-county-ky",
   "email": "kara@studio925.design",
   "telephone": "+1-270-551-2210",
@@ -37,7 +37,7 @@ const jsonLd = {
 const faqItems = [
   {
     question: 'How much does a website cost for a Grayson County business?',
-    answer: 'Studio 925 websites start at $900 for a Foundation site (up to 5 pages). Growth sites with service pages and analytics start at $1,800, and e-commerce sites with online payments start at $2,600. Every project includes full ownership of your files — no monthly platform fees or lock-in.',
+    answer: 'Studio 925 websites start at $900 for a Foundation site (up to 5 pages). Growth sites are $1,800 for up to 10 pages and start with a hands-on SEO audit, then add service pages, analytics, and lead tracking. Online Store sites are $2,600 for up to 15 pages and include everything in Growth plus a full online store with payments and customer accounts. Every project includes full ownership of your files. No monthly platform fees or lock-in.',
   },
   {
     question: 'How long does it take to get a website built?',
@@ -49,7 +49,7 @@ const faqItems = [
   },
   {
     question: 'Will my website show up on Google?',
-    answer: 'Every site includes on-page SEO structure, Google Search Console submission, and proper meta tags. Your site will be built to be found — but ranking takes time and depends on competition, content, and ongoing effort.',
+    answer: 'Every site includes on-page SEO structure, Google Search Console submission, and proper meta tags. Your site will be built to be found, but ranking takes time and depends on competition, content, and ongoing effort.',
   },
   {
     question: 'What if I already have a website that isn\'t working?',
@@ -84,7 +84,7 @@ const faqJsonLd = {
 };
 
 const included = [
-  { text: 'Custom design — no templates or page builders', icon: Code },
+  { text: 'Custom design. No templates or page builders.', icon: Code },
   { text: 'Mobile responsive on every screen size', icon: Smartphone },
   { text: 'Fast load times built for the 3-second rule', icon: Zap },
   { text: 'SEO structure so Google can find you', icon: Search },
@@ -156,7 +156,7 @@ export default function GraysonCountyContent() {
               <div className="absolute -inset-4 bg-brand-accent/10 rounded-[2.5rem] -rotate-3" />
               <img
                 src="/kara-gibson.webp"
-                alt="Kara Gibson — web designer in Grayson County, KY"
+                alt="Kara Gibson, web designer in Grayson County, KY"
                 width={384} height={384}
                 loading="lazy"
                 className="relative w-full max-w-sm mx-auto rounded-[2rem] shadow-xl shadow-brand-primary/10"
@@ -173,7 +173,7 @@ export default function GraysonCountyContent() {
           >
             <img
               src="/kara-gibson.webp"
-              alt="Kara Gibson — web designer in Grayson County, KY"
+              alt="Kara Gibson, web designer in Grayson County, KY"
               width={56} height={56}
               loading="lazy"
               className="w-14 h-14 rounded-full object-cover shadow-md shadow-brand-primary/10 border-2 border-white"
@@ -206,7 +206,7 @@ export default function GraysonCountyContent() {
               },
               {
                 title: 'I know this market',
-                text: 'I live in Grayson County. I know what local customers expect when they search for a contractor, a restaurant, or a service provider here. Your website is built for this audience — not a generic national template.',
+                text: 'I live in Grayson County. I know what local customers expect when they search for a contractor, a restaurant, or a service provider here. Your website is built for this audience, not a generic national template.',
               },
               {
                 title: 'Your reputation backs it up',
@@ -240,13 +240,13 @@ export default function GraysonCountyContent() {
           </p>
           <div className="space-y-4 md:space-y-6 text-brand-primary/70 text-sm md:text-lg leading-relaxed">
             <p>
-              When someone in Grayson County needs a plumber, an electrician, or a place to eat, they pull out their phone and search. If your business doesn't show up — or shows up with a site that looks like it was built in 2012 — they're calling whoever does show up.
+              When someone in Grayson County needs a plumber, an electrician, or a place to eat, they pull out their phone and search. If your business doesn't show up, or shows up with a site that looks like it was built in 2012, they're calling whoever does show up.
             </p>
             <p>
               A professionally built website puts you in front of those searches. It loads fast, makes your phone number easy to tap, and tells customers exactly what you do and how to reach you. No guessing, no digging through menus.
             </p>
             <p>
-              That's the difference between a website that's a digital business card collecting dust and one that's actively bringing in calls every week. The businesses that invest in this see it in their phone — more calls, more messages, more booked jobs.
+              That's the difference between a website that's a digital business card collecting dust and one that's actively bringing in calls every week. The businesses that invest in this see it in their phone. More calls, more messages, more booked jobs.
             </p>
           </div>
         </div>
@@ -303,10 +303,10 @@ export default function GraysonCountyContent() {
           </h2>
           <div className="space-y-4 md:space-y-6 text-brand-primary/70 text-sm md:text-lg leading-relaxed">
             <p>
-              Some web designers create dozens of "city pages" just to show up in search results. They've never set foot in Grayson County. Studio 925 is different — I live here, I work here, and the projects I've built prove it.
+              Some web designers create dozens of "city pages" just to show up in search results. They've never set foot in Grayson County. Studio 925 is different. I live here, I work here, and the projects I've built prove it.
             </p>
             <p>
-              <a href="https://cscreatesmedia.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">CS Media</a> is a Leitchfield-based media brand that needed a site to generate leads and establish credibility. <a href="https://townly.us" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">Townly</a> was built specifically for the Grayson County community — connecting local businesses with local people. Both were built right here, for businesses that operate right here.
+              <a href="https://cscreatesmedia.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">CS Media</a> is a Leitchfield-based media brand that needed a site to generate leads and establish credibility. <a href="https://townly.us" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">Townly</a> was built specifically for the Grayson County community, connecting local businesses with local people. Both were built right here, for businesses that operate right here.
             </p>
             <p>
               That's the difference between a designer who knows your area and one who Googled your zip code.
@@ -397,8 +397,8 @@ export default function GraysonCountyContent() {
           <div className="grid sm:grid-cols-3 gap-4 mb-6 md:mb-8">
             {[
               { name: 'Foundation', price: '$900', desc: 'Up to 5 pages, contact form, SEO setup' },
-              { name: 'Growth', price: '$1,800', desc: 'Service pages, analytics, lead capture' },
-              { name: 'Online Store', price: '$2,600', desc: 'Online store, customer accounts, checkout' },
+              { name: 'Growth', price: '$1,800', desc: 'Up to 10 pages, hands-on SEO audit, service pages, analytics' },
+              { name: 'Online Store', price: '$2,600', desc: 'Up to 15 pages, online store, customer accounts, checkout' },
             ].map((plan) => (
               <div key={plan.name} className="p-5 md:p-6 rounded-2xl border border-brand-primary/10 text-center">
                 <p className="text-xs text-brand-primary/40 font-medium mb-1">{plan.name}</p>
