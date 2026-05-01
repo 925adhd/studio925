@@ -10,7 +10,7 @@ const foundation = {
   name: "Foundation",
   standardPrice: "1,200",
   price: "900",
-  description: "A professional site customers can find when they search your name. A Facebook page isn't enough; word-of-mouth and referrals still Google you before they call, and a missing or messy site costs you the close. Live in about a week.",
+  description: "A professional site customers can find when they search your name. A Facebook page isn't enough; word-of-mouth and referrals still Google you before they call, and a missing or messy site costs you the close.",
   pages: "Up to 5 pages",
   features: [
     "Custom design built around your business",
