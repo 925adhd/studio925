@@ -95,12 +95,12 @@ export default function Contact() {
 
             <div className="space-y-6">
               <a href="mailto:kara@studio925.design" onClick={() => trackEvent('click_email', 'contact')} className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-brand-accent transition-colors">
+                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-brand-accent transition-colors shrink-0">
                   <Mail size={20} />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-xs uppercase tracking-widest text-white/50 mb-1">Email Me</p>
-                  <p className="text-lg font-medium group-hover:text-brand-accent transition-colors">kara@studio925.design</p>
+                  <p className="text-base md:text-lg font-medium group-hover:text-brand-accent transition-colors break-all">kara@studio925.design</p>
                 </div>
               </a>
             </div>

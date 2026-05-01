@@ -78,7 +78,7 @@ export default function Pricing() {
           <div className="md:flex md:gap-12 md:items-start">
             {/* Left — name, price, CTA */}
             <div className="md:w-2/5 mb-8 md:mb-0">
-              <h3 className="text-3xl md:text-4xl mb-1 whitespace-nowrap">Get online <span className="italic text-brand-accent">this&nbsp;week.</span></h3>
+              <h3 className="text-3xl md:text-4xl mb-1">Get online <span className="italic text-brand-accent">this&nbsp;week.</span></h3>
               <div className="mb-4 mt-4">
                 <div className="flex items-baseline gap-3">
                   <span className="text-5xl md:text-6xl font-serif font-bold italic">

@@ -78,6 +78,11 @@ export default function Footer() {
                   Small Business Websites in Kentucky
                 </Link>
               </li>
+              <li>
+                <Link href="/web-design-by-industry" className="hover:text-brand-accent transition-colors font-semibold text-emerald-800">
+                  Web Design by Industry →
+                </Link>
+              </li>
             </ul>
           </div>
           

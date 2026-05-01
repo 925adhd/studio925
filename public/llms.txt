@@ -35,6 +35,11 @@
 - [Grayson County, KY](https://studio925.design/web-design-grayson-county-ky): Web design across Grayson County
 - [Kentucky (statewide)](https://studio925.design/small-business-website-design-kentucky): Small business web design for Kentucky
 
+## Industry pages
+
+- [Web Design by Industry in Kentucky](https://studio925.design/web-design-by-industry): Hub page covering all eight industries Studio 925 builds for, with industry-specific search-behavior insights
+- [Auto Repair Shops in Kentucky](https://studio925.design/auto-repair-shop-website-design-kentucky): Custom websites for auto repair shops, with service pages and local SEO built in
+
 ## Portfolio projects
 
 - [CS Media](https://cscreatesmedia.com): Media brand site built for clear service positioning and lead generation

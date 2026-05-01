@@ -5,6 +5,7 @@ import { ArrowRight, Check, MapPin, Code, Users, TrendingUp, Smartphone, Search,
 import Link from 'next/link';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
+import FreeAuditBand from '../../src/components/FreeAuditBand';
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -362,6 +363,12 @@ export default function KentuckyContent() {
         </div>
       </section>
 
+      {/* Free audit band */}
+      <FreeAuditBand
+        headline="See how your business ranks across Kentucky"
+        subhead="The free local audit maps your real search rankings for the queries your customers actually run. No login, no sales call, just the data."
+      />
+
       {/* Pricing */}
       <section className="py-16 md:py-24 px-6">
         <div className="max-w-4xl mx-auto">
@@ -454,9 +461,12 @@ export default function KentuckyContent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-4 md:mb-6">Serving businesses across Kentucky</h2>
           <p className="text-brand-primary/70 text-sm md:text-lg leading-relaxed mb-4 md:mb-6">
-            Based in Grayson County, working with small businesses statewide. No agency overhead — just focused work on your website.
+            Based in Grayson County, working with small businesses statewide and across a range of local industries. No agency overhead, just focused work on your website.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap">
+            <Link href="/web-design-by-industry" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-brand-accent/5 border border-brand-accent/30 hover:bg-brand-accent/10 transition-colors text-sm md:text-base font-semibold text-emerald-800">
+              Web Design by Industry in Kentucky <ArrowRight size={16} className="inline ml-2" />
+            </Link>
             <Link href="/web-design-grayson-county-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
               Web Design in Grayson County <ArrowRight size={16} className="inline ml-2" />
             </Link>
