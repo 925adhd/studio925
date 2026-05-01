@@ -10,11 +10,11 @@ import FreeAuditBand from '../../src/components/FreeAuditBand';
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["ProfessionalService", "Service"],
-  "name": "Studio 925 Web Design — Custom Websites for Small Businesses in Kentucky",
+  "name": "Studio 925: Custom Websites for Small Businesses in Kentucky",
   "url": "https://studio925.design/small-business-website-design-kentucky",
   "email": "kara@studio925.design",
   "telephone": "+1-270-551-2210",
-  "description": "Custom website design for small businesses across Kentucky. Custom-built websites designed to help local businesses get found online, build trust, and convert visitors into customers.",
+  "description": "Custom website design for small businesses across Kentucky. Custom-built websites designed to help local businesses get found online, build trust, and turn visits into calls and customers.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Leitchfield",
@@ -34,7 +34,7 @@ const jsonLd = {
 const faqItems = [
   {
     question: 'Do I need to be in Grayson County to work with Studio 925?',
-    answer: 'No. I\'m based in Grayson County but work with small businesses across all of Kentucky. Everything is handled remotely — a quick call, email, or text is all we need to get started. You don\'t need to be local to get a great website.',
+    answer: 'No. I\'m based in Grayson County but work with small businesses across all of Kentucky. Everything is handled remotely. A quick call, email, or text is all we need to get started. You don\'t need to be local to get a great website.',
   },
   {
     question: 'What kind of businesses do you build websites for?',
@@ -42,7 +42,7 @@ const faqItems = [
   },
   {
     question: 'Why hire a solo developer instead of an agency?',
-    answer: 'With an agency, you pay for office space, project managers, and account executives — none of which improve your website. With a solo developer, every dollar goes toward design and code. You also talk directly to the person building your site, which means faster communication and fewer misunderstandings.',
+    answer: 'With an agency, you pay for office space, project managers, and salespeople. None of those improve your website. With one person doing the work, every dollar goes into the design and the build. You also talk directly to the person building your site, which means faster communication and fewer misunderstandings.',
   },
   {
     question: 'What\'s the difference between your plans?',
@@ -50,19 +50,19 @@ const faqItems = [
   },
   {
     question: 'Can you redesign my existing website?',
-    answer: 'Yes. Many clients come to me with an outdated Wix, Squarespace, or WordPress site that isn\'t performing. I rebuild from scratch with custom code — faster, better structured for SEO, and designed to actually convert visitors.',
+    answer: 'Yes. Many clients come to me with an outdated Wix, Squarespace, or WordPress site that isn\'t bringing them business. I rebuild it from scratch. Faster, better set up for Google, and designed to actually get people to reach out.',
   },
   {
     question: 'What happens after my website launches?',
-    answer: 'You can manage it on your own (you own all the files), or choose a hosting plan. Basic hosting is $25/month. Full support — which includes content updates, text edits, and SEO improvements — is $49/month.',
+    answer: 'You can manage it on your own (you own all the files), or choose a hosting plan. Basic hosting is $25/month. Full support is $49/month, which covers content updates, text edits, and ongoing SEO work.',
   },
   {
     question: 'Can I just use Wix or Squarespace for my small business?',
-    answer: 'You can — and for some businesses, a DIY builder is fine. But free plans come with platform branding, limited SEO, slower speeds, and a generic look. If your website needs to compete in local search and convert visitors into paying customers, a custom-built site will outperform a template every time.',
+    answer: 'You can, and for some businesses, a DIY builder is fine. But free plans come with platform branding, limited SEO, slower speeds, and a generic look. If your website needs to compete in local search and turn visits into actual customers, a custom-built site will outperform a template every time.',
   },
   {
     question: 'How do I create a website for my small business?',
-    answer: 'You have two paths: build it yourself with a platform like Wix or Squarespace (takes 10–20+ hours of your time), or hire a developer to handle everything. Studio 925 builds custom websites starting at $900 — you get a working draft in 48 hours and launch within 1–2 weeks, with zero homework on your end.',
+    answer: 'You have two paths: build it yourself with a platform like Wix or Squarespace (takes 10–20+ hours of your time), or hire someone to handle everything. Studio 925 builds custom websites starting at $900. You get a working draft in 48 hours and launch within 1–2 weeks, with zero homework on your end.',
   },
 ];
 
@@ -124,7 +124,7 @@ export default function KentuckyContent() {
               Custom Website Design for Small Businesses in <span className="italic text-brand-accent">Kentucky</span>
             </h1>
             <p className="text-base md:text-xl text-brand-primary/70 max-w-xl leading-relaxed">
-              Studio 925 is a Kentucky website designer building custom websites for small businesses statewide. Custom-coded from scratch by a solo developer, not a template factory. Designed to get you found on Google and turn visitors into paying customers.
+              Studio 925 is a Kentucky website designer building custom websites for small businesses across the state. Built from scratch by one person, not pieced together from a template. Made to help your business get found on Google and get the phone ringing.
             </p>
             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
               <a
@@ -152,7 +152,7 @@ export default function KentuckyContent() {
               <div className="absolute -inset-4 bg-brand-accent/10 rounded-[2.5rem] -rotate-3" />
               <img
                 src="/kara-gibson.webp"
-                alt="Kara Gibson — Kentucky web designer"
+                alt="Kara Gibson, Kentucky web designer"
                 width={384} height={384}
                 loading="lazy"
                 className="relative w-full max-w-sm mx-auto rounded-[2rem] shadow-xl shadow-brand-primary/10"
@@ -169,7 +169,7 @@ export default function KentuckyContent() {
           >
             <img
               src="/kara-gibson.webp"
-              alt="Kara Gibson — Kentucky web designer"
+              alt="Kara Gibson, Kentucky web designer"
               width={56} height={56}
               loading="lazy"
               className="w-14 h-14 rounded-full object-cover shadow-md shadow-brand-primary/10 border-2 border-white"
@@ -199,10 +199,10 @@ export default function KentuckyContent() {
               You either built something yourself on Wix or Squarespace and it never really took off, or you paid someone who gave you a template site that looks like every other business in your industry. Either way, your phone isn't ringing because of your website.
             </p>
             <p>
-              The problem usually isn't that you don't have a website — it's that the one you have is slow, hard to navigate on mobile, invisible to Google, or doesn't tell visitors what to do next. A website like that isn't an asset. It's a liability.
+              The problem usually isn't that you don't have a website. It's that the one you have is slow, hard to use on a phone, invisible to Google, or doesn't tell visitors what to do next. A website like that isn't helping you. It's costing you customers.
             </p>
             <p>
-              Kentucky has over 400,000 small businesses. The ones getting found online have websites built to perform — fast load times, clear calls to action, and SEO structure that actually helps Google understand what they do. That's what Studio 925 builds.
+              Kentucky has over 400,000 small businesses. The ones getting found online have websites that load fast, give visitors a clear next step, and are set up so Google can actually understand what they do. That's what Studio 925 builds.
             </p>
           </div>
         </div>
@@ -227,18 +227,18 @@ export default function KentuckyContent() {
               },
               {
                 icon: Smartphone,
-                title: 'Mobile-first design',
-                text: 'Over 60% of searches happen on phones. Your site is built for mobile first, then scaled up for desktop — not the other way around.',
+                title: 'Built for phones first',
+                text: 'Over 60% of searches happen on phones. Your site is built for phones first, then made to look right on a computer. Not the other way around.',
               },
               {
                 icon: Search,
                 title: 'SEO built in from day one',
-                text: 'Proper heading structure, meta tags, schema markup, fast load times, and Google Search Console setup. Your site is built to be found.',
+                text: 'The technical setup Google needs to find your business is handled. You don\'t need to know what any of it means. Your site is just built to be found.',
               },
               {
                 icon: Zap,
                 title: 'Speed that keeps visitors',
-                text: 'Research shows 53% of visitors leave if a site takes more than 3 seconds to load. Studio 925 sites are built lean — no bloated plugins or heavy themes.',
+                text: 'Research shows 53% of visitors leave if a site takes more than 3 seconds to load. Studio 925 sites are built lean. No slow add-ons or heavy templates dragging them down.',
               },
               {
                 icon: Users,
@@ -247,8 +247,8 @@ export default function KentuckyContent() {
               },
               {
                 icon: TrendingUp,
-                title: 'Built to convert',
-                text: 'Clear calls to action, easy-to-find contact info, and a layout that guides visitors toward calling you or filling out a form.',
+                title: 'Built to bring in calls',
+                text: 'A clear next step on every page. Easy-to-find contact info. A layout that guides visitors toward calling you or filling out a form.',
               },
             ].map((item, i) => (
               <motion.div
@@ -314,10 +314,10 @@ export default function KentuckyContent() {
           </h2>
           <div className="space-y-4 md:space-y-6 text-brand-primary/70 text-sm md:text-lg leading-relaxed">
             <p>
-              Every project in my portfolio was built for a real business with real goals. <a href="https://cscreatesmedia.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">CS Media</a> needed a site to generate leads for their media brand. <a href="https://4chariots.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">Four Chariots</a> needed an e-commerce store that reflected their brand. <a href="https://townly.us" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">Townly</a> was built to connect a local community with local businesses.
+              Every project in my portfolio was built for a real business with real goals. <a href="https://cscreatesmedia.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">CS Media</a> needed a site to bring in new business for their media brand. <a href="https://4chariots.com" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">Four Chariots</a> needed an online store that reflected their brand. <a href="https://townly.us" target="_blank" rel="noopener noreferrer" className="text-brand-accent underline underline-offset-2 hover:text-brand-accent/80 transition-colors">Townly</a> was built to connect a local community with local businesses.
             </p>
             <p>
-              None of these are template sites. None of them use page builders. They're all custom-built, fast, and designed around each business's specific audience and goals.
+              None of these are template sites. None of them use page builders. They're all custom-built, fast, and designed around each business's specific customers and goals.
             </p>
           </div>
           <div className="mt-6 md:mt-8">
@@ -344,7 +344,7 @@ export default function KentuckyContent() {
               { step: '01', title: 'Quick Conversation', desc: 'Tell me about your business. A call, a text, or just point me to your Facebook page.' },
               { step: '02', title: '48-Hour Draft', desc: 'You\'ll see a working draft of your website within 48 hours. No weeks of waiting.' },
               { step: '03', title: 'Review & Refine', desc: 'You tell me what to change. I handle the revisions until you\'re completely happy.' },
-              { step: '04', title: 'Launch', desc: 'Your site goes live. Domain connected, SSL set up, Google notified. You\'re online.' },
+              { step: '04', title: 'Launch', desc: 'Your site goes live. Domain connected, security set up, Google notified. You\'re online.' },
             ].map((item, i) => (
               <motion.div
                 key={i}
