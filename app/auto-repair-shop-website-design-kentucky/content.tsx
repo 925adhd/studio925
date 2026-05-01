@@ -165,12 +165,14 @@ export default function AutoRepairShopContent() {
               Custom website design for auto repair shops in Kentucky. Built to help your shop get found on Google, take calls and service requests, and turn local searches into booked work.
             </p>
             <div className="mt-7 md:mt-9 flex flex-col sm:flex-row gap-3 md:gap-4">
-              <Link
-                href="/portfolio"
+              <a
+                href="https://audit.studio925.design"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-brand-accent text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-black/20"
               >
-                See My Work <ArrowRight size={20} />
-              </Link>
+                Get My Free Audit <ArrowRight size={20} />
+              </a>
               <a
                 href="/#pricing"
                 className="bg-white/10 backdrop-blur-sm border border-white/25 text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold hover:bg-white/20 transition-colors text-center"
