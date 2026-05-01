@@ -43,18 +43,18 @@ export default function FreeAuditBand({ headline, subhead, ctaText = "Get my fre
                 Takes about 30 seconds. No signup, no sales call.
               </p>
             </div>
-            <div className="md:w-72 shrink-0">
+            <div className="hidden md:block md:w-72 shrink-0">
               <div className="rounded-2xl overflow-hidden border border-brand-primary/10 shadow-md bg-white">
                 <img
                   src="/audit-sample-heatmap.webp"
                   alt="Sample free local SEO audit showing a Google rankings heatmap across a Kentucky service area"
                   width={600}
                   height={400}
-                  className="w-full h-44 md:h-56 object-cover object-top"
+                  className="w-full h-56 object-cover object-top"
                   loading="lazy"
                 />
               </div>
-              <p className="text-xs text-brand-primary/65 mt-2 text-center md:text-left italic">
+              <p className="text-xs text-brand-primary/65 mt-2 text-left italic">
                 Sample audit. Yours will look like this.
               </p>
             </div>
