@@ -18,6 +18,7 @@ const WhoItsFor = dynamic(() => import('../src/components/WhoItsFor'), { ssr: tr
 const LocalSection = dynamic(() => import('../src/components/LocalSection'), { ssr: true });
 const Contact = dynamic(() => import('../src/components/Contact'), { ssr: true });
 const Footer = dynamic(() => import('../src/components/Footer'), { ssr: true });
+const FreeAuditBand = dynamic(() => import('../src/components/FreeAuditBand'), { ssr: true });
 
 export default function HomePage() {
   const [openStep, setOpenStep] = useState<number | null>(null);
@@ -223,8 +224,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        <div className="order-10 md:order-10"><LocalSection /></div>
-        <div className="order-11 md:order-11"><Contact /></div>
+        <div className="order-10 md:order-8">
+          <FreeAuditBand
+            headline="See where your business actually ranks on Google"
+            subhead="The free local audit maps your real search rankings for the queries your customers actually run. No login, no sales call, just the data."
+          />
+        </div>
+        <div className="order-11 md:order-10"><LocalSection /></div>
+        <div className="order-12 md:order-11"><Contact /></div>
       </main>
 
       <Footer />
