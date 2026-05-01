@@ -845,7 +845,7 @@ function SupportDemo() {
 /* ─── Main Services Section ─── */
 export default function Services() {
   return (
-    <section id="services" className="py-14 md:py-36 px-6 bg-white scroll-mt-16 md:scroll-mt-20 overflow-hidden">
+    <section id="services" className="py-10 md:py-36 px-6 bg-white scroll-mt-16 md:scroll-mt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -46,7 +46,7 @@ export default function HomePage() {
         <div className="order-8 md:order-5"><Pricing /></div>
 
         {/* Process Section — Timeline (desktop) / Accordion (mobile) — order-9 */}
-        <section id="process" className="order-9 md:order-7 py-14 md:pt-20 md:pb-36 px-6 bg-white border-t border-brand-primary/5">
+        <section id="process" className="order-9 md:order-7 py-10 md:pt-20 md:pb-36 px-6 bg-white border-t border-brand-primary/5">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-8 md:mb-16">
               <h2 className="text-2xl md:text-4xl mb-2 md:mb-3">How it works.</h2>

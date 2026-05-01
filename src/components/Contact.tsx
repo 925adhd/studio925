@@ -53,7 +53,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="scroll-mt-16 pt-10 pb-24 md:pt-12 md:pb-36 px-6 bg-brand-primary text-white overflow-hidden relative">
+    <section id="contact" className="scroll-mt-16 pt-8 pb-14 md:pt-12 md:pb-36 px-6 bg-brand-primary text-white overflow-hidden relative">
       <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none select-none hidden md:block" aria-hidden="true">
         <img
           src="/custom-website-code-development.webp"

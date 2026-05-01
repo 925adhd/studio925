@@ -11,7 +11,7 @@ type Props = {
 
 export default function FreeAuditBand({ headline, subhead, ctaText = "Get my free local audit" }: Props) {
   return (
-    <section className="px-6 py-12 md:py-16">
+    <section className="px-6 py-8 md:py-16">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 12 }}

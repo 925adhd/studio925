@@ -56,7 +56,7 @@ const alternatives = [
 export default function Pricing() {
   const [featuresOpen, setFeaturesOpen] = useState(false);
   return (
-    <section id="pricing" className="py-14 md:pt-20 md:pb-36 px-6 bg-brand-warm">
+    <section id="pricing" className="py-10 md:pt-20 md:pb-36 px-6 bg-brand-warm">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 md:mb-4 leading-snug">Simple pricing. <span className="italic text-brand-accent">Real results.</span></h2>
