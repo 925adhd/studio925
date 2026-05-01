@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Navbar from '../../../src/components/Navbar';
 import Footer from '../../../src/components/Footer';
+import BlogAuditCTA from '../../../src/components/BlogAuditCTA';
 
 interface FaqItem {
   question: string;
@@ -230,6 +231,8 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
               </div>
             </div>
           </div>
+
+          <BlogAuditCTA />
 
           {/* CTA */}
           <div className="text-center py-14 px-8 bg-brand-primary text-white rounded-[2.5rem]">

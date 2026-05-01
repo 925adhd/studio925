@@ -14,3 +14,7 @@ desktop.ini
 Client Onboarding/
 clientresults/
 assets/
+
+# Audit subdomain (audit.studio925.design) — separate repo at github.com/925adhd/geomap
+# Lives here for convenience but is not part of studio925.
+geomap/
