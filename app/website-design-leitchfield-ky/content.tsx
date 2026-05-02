@@ -204,7 +204,7 @@ export default function LeitchfieldContent() {
           <div className="grid md:grid-cols-3 gap-4 md:gap-8">
             {[
               { title: 'Get found first', text: 'When someone in Leitchfield searches for a contractor, a restaurant, or a local service, they go to Google first. If your business doesn\'t show up, they\'re calling someone else.' },
-              { title: 'Build instant trust', text: 'A professional website tells potential customers that you\'re serious. In a town like Leitchfield where reputation matters, your website should reflect the quality of your work.' },
+              { title: 'Build instant trust', text: 'A professional website tells potential customers that you\'re serious. In a small town where reputation matters, your website should reflect the quality of your work.' },
               { title: 'Work with a local', text: 'Most designers serving Leitchfield are based hours away or use cookie-cutter templates. Studio 925 is right here in Grayson County. Every site is custom-built from scratch.' },
             ].map((item, i) => (
               <motion.div
@@ -332,7 +332,7 @@ export default function LeitchfieldContent() {
               ))}
             </div>
             <blockquote className="text-base md:text-lg text-brand-primary/80 leading-relaxed mb-4">
-              "Not even exaggerating — this is hands down the cleanest, smoothest, most professional site I've ever had. Everything flows, loads fast, and actually reflects the quality I bring. Studio 925 doesn't just build websites — she builds brands that convert. If you're serious about leveling up your business, I highly recommend reaching out to Kara."
+              "Not even exaggerating. This is hands down the cleanest, smoothest, most professional site I've ever had. Everything flows, loads fast, and actually reflects the quality I bring. Studio 925 doesn't just build websites. She builds brands that convert. If you're serious about leveling up your business, I highly recommend reaching out to Kara."
             </blockquote>
             <div className="flex items-center gap-3">
               <div>
