@@ -187,7 +187,7 @@ function SearchIntentDemo() {
         </span>
         <h3 className="text-2xl mb-1.5">Stop being invisible when customers search.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed">
-          When someone searches for what you do, your business has a real chance to show up. Your site is structured so Google, ChatGPT, and other AI search tools understand what you offer and where.
+          Your site is structured so Google, ChatGPT, and other AI search tools understand what you offer and where.
         </p>
       </div>
     </DemoRow>
@@ -336,7 +336,7 @@ function CustomBuiltDemo() {
         </span>
         <h3 className="text-2xl mb-1.5">Look like the real business you are.</h3>
         <p className="text-sm text-brand-primary/60 leading-relaxed">
-          No templates. No drag-and-drop builders. Your site is coded from scratch to say the right things and work the way your business needs it to.
+          No templates. No page builders. Coded from scratch around your business.
         </p>
       </div>
     </DemoRow>
@@ -638,10 +638,7 @@ function PerformanceDemo() {
         <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-primary/60 mb-2">
           Built for speed &amp; security
         </span>
-        <h3 className="text-2xl mb-1.5">A slow site loses customers. Yours won't.</h3>
-        <p className="text-sm text-brand-primary/60 leading-relaxed mb-3">
-          Yours loads fast, stays secure, and doesn't go down.
-        </p>
+        <h3 className="text-2xl mb-3">A slow site loses customers. Yours won't.</h3>
         <div className="grid grid-cols-2 gap-x-3 gap-y-2">
           {['Load time: <3s', 'CDN-delivered globally', 'Auto SSL certificates', 'Daily backups'].map((item) => (
             <div key={item} className="flex items-center gap-2">
@@ -825,10 +822,7 @@ function SupportDemo() {
         <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-primary/60 mb-2">
           Ongoing support
         </span>
-        <h3 className="text-2xl mb-1.5">Never get stuck on your own again.</h3>
-        <p className="text-sm text-brand-primary/60 leading-relaxed mb-3">
-          You won't be handed a login and left to figure it out. After launch, I'm still here. Updates, fixes, or just someone to call.
-        </p>
+        <h3 className="text-2xl mb-3">Never get stuck on your own again.</h3>
         <div className="space-y-2">
           {['Direct line for calls or texts anytime', 'Updates & changes handled for you', 'No support tickets or chatbots'].map((item) => (
             <div key={item} className="flex items-center gap-2">
