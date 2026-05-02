@@ -8,6 +8,15 @@ import Footer from '../../src/components/Footer';
 
 const posts = [
   {
+    slug: 'why-i-stopped-using-godaddy',
+    title: 'Why I Stopped Using GoDaddy and Learned to Code Instead',
+    excerpt: 'GoDaddy\'s builder still locks custom HTML inside iframes and won\'t let you edit the head tag. Here\'s how those limits pushed me to write code, and what changed.',
+    date: '2026-05-02',
+    readTime: '5 min read',
+    tags: ['Story', 'Small Business'],
+    image: '/why-i-stopped-using-godaddy.webp',
+  },
+  {
     slug: 'wix-vs-custom-website',
     title: 'Wix vs Custom Website: Which Is Right for Your Small Business?',
     excerpt: 'An honest comparison of costs, speed, SEO, and long-term value, so you can decide what actually makes sense for your business.',
