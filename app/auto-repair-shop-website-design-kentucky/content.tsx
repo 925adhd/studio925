@@ -169,7 +169,7 @@ export default function AutoRepairShopContent() {
                 href="https://audit.studio925.design"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-brand-accent text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-black/20"
+                className="bg-brand-accent text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-accent/90 transition-colors shadow-lg shadow-black/20"
               >
                 Get My Free Audit <ArrowRight size={20} />
               </a>
@@ -451,7 +451,7 @@ export default function AutoRepairShopContent() {
           </p>
           <a
             href="/#pricing"
-            className="inline-flex items-center gap-2 bg-brand-primary text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:scale-[1.02] transition-transform"
+            className="inline-flex items-center gap-2 bg-brand-primary text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
           >
             See Full Pricing <ArrowRight size={18} />
           </a>

@@ -133,7 +133,7 @@ export default function GraysonCountyContent() {
             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
               <a
                 href="/#contact"
-                className="bg-brand-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20"
+                className="bg-brand-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-primary/90 transition-colors shadow-lg shadow-brand-primary/20"
               >
                 Get Started <ArrowRight size={20} />
               </a>
@@ -346,7 +346,7 @@ export default function GraysonCountyContent() {
                 </p>
                 <a
                   href="https://audit.studio925.design"
-                  className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20"
+                  className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors shadow-lg shadow-brand-primary/20"
                 >
                   Get my free audit <ArrowRight size={18} />
                 </a>
@@ -415,7 +415,7 @@ export default function GraysonCountyContent() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
             <a
               href="/#pricing"
-              className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:scale-[1.02] transition-transform"
+              className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
             >
               See Full Pricing Details <ArrowRight size={18} />
             </a>

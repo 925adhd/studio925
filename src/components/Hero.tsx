@@ -30,7 +30,7 @@ export default function Hero() {
           </p>
 
           <div className="fade-in-up flex justify-center" style={{ animationDelay: '0.4s' }}>
-            <Link href="https://audit.studio925.design" onClick={() => trackEvent('click_free_audit', 'hero_desktop')} className="bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20">
+            <Link href="https://audit.studio925.design" onClick={() => trackEvent('click_free_audit', 'hero_desktop')} className="bg-brand-primary text-white px-9 py-3.5 rounded-2xl text-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-primary/90 transition-colors shadow-lg shadow-brand-primary/20">
               Get my free local SEO audit <ArrowRight size={20} />
             </Link>
           </div>

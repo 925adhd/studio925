@@ -5,14 +5,14 @@ import { X, Check } from 'lucide-react';
 import Link from 'next/link';
 
 const points = [
-  { diy: 'Weeks of your nights and weekends', studio: 'Live in about a week. No homework.', mobile: true },
-  { diy: 'Looks like every other template', studio: 'Custom-built, one of a kind', mobile: true },
-  { diy: 'Clunky on phones. Customers leave.', studio: 'Mobile-first. Every visitor stays.', mobile: true },
-  { diy: 'You figure out updates alone', studio: 'Updates handled for you', mobile: false },
-  { diy: 'Something breaks? You\'re on your own', studio: 'Something breaks? I fix it.', mobile: true },
-  { diy: 'Invisible when people search Google', studio: 'Built so Google can find you', mobile: true },
-  { diy: 'No backlinks to boost your ranking', studio: 'I link to your site to boost your ranking', mobile: false },
-  { diy: 'Hope it brings in customers', studio: 'Built to turn visitors into customers', mobile: false },
+  { diy: 'Weeks of your nights and weekends', studio: 'Live in about a week. No homework.' },
+  { diy: 'Looks like every other template', studio: 'Custom-built, one of a kind' },
+  { diy: 'Clunky on phones. Customers leave.', studio: 'Mobile-first. Every visitor stays.' },
+  { diy: 'You figure out updates alone', studio: 'Updates handled for you' },
+  { diy: 'Something breaks? You\'re on your own', studio: 'Something breaks? I fix it.' },
+  { diy: 'Invisible when people search Google', studio: 'Built so Google can find you' },
+  { diy: 'No backlinks to boost your ranking', studio: 'I link to your site to boost your ranking' },
+  { diy: 'Hope it brings in customers', studio: 'Built to turn visitors into customers' },
 ];
 
 export default function Comparison() {
@@ -48,7 +48,7 @@ export default function Comparison() {
               {points.map((point, i) => (
                 <div
                   key={i}
-                  className={`${point.mobile ? 'flex' : 'hidden md:flex'} items-start gap-3`}
+                  className="flex items-start gap-3"
                 >
                   <X size={16} className="text-brand-primary/20 shrink-0 mt-0.5" />
                   <p className="text-sm md:text-base text-brand-primary/40">{point.diy}</p>
@@ -70,7 +70,7 @@ export default function Comparison() {
               {points.map((point, i) => (
                 <div
                   key={i}
-                  className={`${point.mobile ? 'flex' : 'hidden md:flex'} items-start gap-3`}
+                  className="flex items-start gap-3"
                 >
                   <Check size={16} className="text-brand-accent shrink-0 mt-0.5" />
                   <p className="text-sm md:text-base text-white/80">{point.studio}</p>

@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 type Business = {
   name: string;
@@ -52,18 +52,14 @@ export default function WhoItsFor() {
           {businesses.map((biz) => {
             if (biz.href) {
               return (
-                <Link
-                  key={biz.name}
-                  href={biz.href}
-                  className="h-full px-2.5 py-2.5 rounded-xl bg-brand-accent/5 border border-brand-accent/30 hover:bg-brand-accent/10 active:bg-brand-accent/15 transition-colors flex items-start justify-between gap-2"
-                >
-                  <div className="flex items-start gap-2">
+                <Link key={biz.name} href={biz.href} className="h-full px-1 py-2">
+                  <div className="flex items-start gap-2 mb-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-accent shrink-0 mt-1.5" />
                     <span className="font-semibold text-emerald-800 text-[13px] leading-tight">
                       {biz.name.replace(/& /g, '&\u00a0')}
+                      <ArrowUpRight size={11} className="inline-block ml-1 -translate-y-px" />
                     </span>
                   </div>
-                  <ArrowUpRight size={14} className="text-emerald-800 shrink-0 mt-0.5" />
                 </Link>
               );
             }
@@ -92,17 +88,14 @@ export default function WhoItsFor() {
             if (biz.href) {
               return (
                 <motion.div key={biz.name} {...motionProps}>
-                  <Link
-                    href={biz.href}
-                    className="group flex items-start gap-3 rounded-2xl bg-brand-accent/5 border border-brand-accent/30 px-4 py-3.5 hover:bg-brand-accent/10 hover:border-brand-accent/50 transition-colors"
-                  >
+                  <Link href={biz.href} className="group flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-accent mt-2.5 shrink-0" />
                     <div className="flex-1">
-                      <div className="font-bold text-emerald-800 text-base">{biz.name}</div>
-                      <div className="text-brand-primary/70 text-base">{biz.hook}</div>
-                      <div className="mt-1.5 inline-flex items-center gap-1 text-emerald-800 font-semibold text-sm">
-                        View page <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+                      <div className="font-bold text-emerald-800 text-base">
+                        {biz.name}
+                        <ArrowUpRight size={14} className="inline-block ml-1 -translate-y-px text-emerald-800 group-hover:translate-x-0.5 transition-transform" />
                       </div>
+                      <div className="text-brand-primary/70 text-base">{biz.hook}</div>
                     </div>
                   </Link>
                 </motion.div>

@@ -17,7 +17,7 @@ export default function SpeedProof() {
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">
           <figure className="rounded-2xl border border-emerald-200 bg-emerald-50/30 p-4 md:p-6 shadow-sm">
             <figcaption className="text-center mb-3">
-              <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-full">
+              <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-emerald-700">
                 Studio 925
               </span>
             </figcaption>
@@ -33,7 +33,7 @@ export default function SpeedProof() {
 
           <figure className="rounded-2xl border border-brand-primary/10 bg-brand-primary/[0.02] p-4 md:p-6 shadow-sm">
             <figcaption className="text-center mb-3">
-              <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-brand-primary/75 bg-brand-primary/5 px-2.5 py-1 rounded-full">
+              <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-brand-primary/75">
                 A Louisville Agency
               </span>
             </figcaption>

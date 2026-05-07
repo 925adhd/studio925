@@ -225,7 +225,7 @@ export default function IndustryHubContent() {
           </p>
           <Link
             href="/#contact"
-            className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 md:px-7 md:py-4 rounded-2xl text-sm md:text-base font-semibold hover:scale-[1.02] transition-transform"
+            className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 md:px-7 md:py-4 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
           >
             Tell me about your business <ArrowRight size={18} />
           </Link>
@@ -247,7 +247,7 @@ export default function IndustryHubContent() {
           </p>
           <a
             href="/#pricing"
-            className="inline-flex items-center gap-2 bg-brand-primary text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:scale-[1.02] transition-transform"
+            className="inline-flex items-center gap-2 bg-brand-primary text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
           >
             See Full Pricing <ArrowRight size={18} />
           </a>

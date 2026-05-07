@@ -657,7 +657,7 @@ const chatMessages = [
   { from: 'client', text: 'Hey, can we add our new phone number to the site?', time: '10:32 AM' },
   { from: 'kara', text: 'Done! Already updated it across all pages. Anything else?', time: '10:34 AM' },
   { from: 'client', text: 'That was fast. Thanks!', time: '10:35 AM' },
-  { from: 'kara', text: "That's what I'm here for 😊", time: '10:35 AM' },
+  { from: 'kara', text: "That's what I'm here for.", time: '10:35 AM' },
 ] as const;
 
 

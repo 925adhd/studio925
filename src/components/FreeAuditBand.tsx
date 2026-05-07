@@ -17,7 +17,7 @@ export default function FreeAuditBand({ headline, subhead, ctaText = "Get my fre
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
-          className="rounded-3xl bg-gradient-to-br from-brand-accent/10 via-brand-accent/5 to-transparent border-2 border-brand-accent/30 p-6 md:p-10"
+          className="rounded-3xl bg-white border border-brand-primary/10 p-6 md:p-10"
         >
           <div className="grid md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center">
             <div>
@@ -31,11 +31,29 @@ export default function FreeAuditBand({ headline, subhead, ctaText = "Get my fre
               <p className="text-sm md:text-base text-brand-primary/75 leading-relaxed mb-5 md:mb-6">
                 {subhead}
               </p>
+
+              {/* Mobile-only sample image — visual proof between body and CTA */}
+              <div className="md:hidden mb-5">
+                <div className="rounded-2xl overflow-hidden border border-brand-primary/10 bg-white">
+                  <img
+                    src="/audit-sample-heatmap-mobile.webp"
+                    alt="Sample free local SEO audit showing a Google rankings heatmap across a Kentucky service area"
+                    width={730}
+                    height={600}
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-xs text-brand-primary/65 mt-2 italic">
+                  Sample audit. Yours will look like this.
+                </p>
+              </div>
+
               <a
                 href="https://audit.studio925.design"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 hover:scale-[1.02] transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
               >
                 {ctaText} <ArrowRight size={18} />
               </a>
@@ -44,7 +62,7 @@ export default function FreeAuditBand({ headline, subhead, ctaText = "Get my fre
               </p>
             </div>
             <div className="hidden md:block md:w-72 shrink-0">
-              <div className="rounded-2xl overflow-hidden border border-brand-primary/10 shadow-md bg-white">
+              <div className="rounded-2xl overflow-hidden border border-brand-primary/10 bg-white">
                 <img
                   src="/audit-sample-heatmap.webp"
                   alt="Sample free local SEO audit showing a Google rankings heatmap across a Kentucky service area"

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { ArrowRight, Check, MapPin, Code, Users, TrendingUp, Smartphone, Search, Zap } from 'lucide-react';
+import { ArrowRight, Check, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
@@ -129,7 +129,7 @@ export default function KentuckyContent() {
             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
               <a
                 href="/#contact"
-                className="bg-brand-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg shadow-brand-primary/20"
+                className="bg-brand-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-primary/90 transition-colors shadow-lg shadow-brand-primary/20"
               >
                 Get a Free Quote <ArrowRight size={20} />
               </a>
@@ -218,50 +218,30 @@ export default function KentuckyContent() {
             Every website is custom-built. No templates. No page builders. Here's what that means for your business.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+          <div className="max-w-3xl space-y-10 md:space-y-14">
             {[
               {
-                icon: Code,
                 title: 'Custom code, not templates',
                 text: 'Your website is written from scratch. That means it loads faster, ranks better, and doesn\'t look like the same Squarespace template your competitor uses.',
               },
               {
-                icon: Smartphone,
-                title: 'Built for phones first',
-                text: 'Over 60% of searches happen on phones. Your site is built for phones first, then made to look right on a computer. Not the other way around.',
-              },
-              {
-                icon: Search,
-                title: 'SEO built in from day one',
-                text: 'The technical setup Google needs to find your business is handled. You don\'t need to know what any of it means. Your site is just built to be found.',
-              },
-              {
-                icon: Zap,
-                title: 'Speed that keeps visitors',
-                text: 'Research shows 53% of visitors leave if a site takes more than 3 seconds to load. Studio 925 sites are built lean. No slow add-ons or heavy templates dragging them down.',
-              },
-              {
-                icon: Users,
                 title: 'Direct communication',
                 text: 'You talk to the person building your site. No account managers, no project coordinators, no game of telephone. One person, start to finish.',
               },
               {
-                icon: TrendingUp,
                 title: 'Built to bring in calls',
                 text: 'A clear next step on every page. Easy-to-find contact info. A layout that guides visitors toward calling you or filling out a form.',
               },
             ].map((item, i) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="p-5 md:p-8 glass rounded-3xl"
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ delay: i * 0.08, duration: 0.4 }}
               >
-                <item.icon size={20} className="text-brand-accent mb-3 md:mb-4 md:!w-6 md:!h-6" />
-                <h3 className="text-base md:text-lg font-sans font-bold mb-2 md:mb-3">{item.title}</h3>
-                <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed">{item.text}</p>
+                <h3 className="text-xl md:text-2xl font-sans font-bold mb-2 md:mb-3">{item.title}</h3>
+                <p className="text-base md:text-lg text-brand-primary/65 leading-relaxed">{item.text}</p>
               </motion.div>
             ))}
           </div>
@@ -323,7 +303,7 @@ export default function KentuckyContent() {
           <div className="mt-6 md:mt-8">
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:scale-[1.02] transition-transform"
+              className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
             >
               View Full Portfolio <ArrowRight size={18} />
             </Link>
@@ -398,7 +378,7 @@ export default function KentuckyContent() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
             <a
               href="/#pricing"
-              className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:scale-[1.02] transition-transform"
+              className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
             >
               View Full Pricing <ArrowRight size={18} />
             </a>
