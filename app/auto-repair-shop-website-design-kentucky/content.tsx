@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     question: 'Do I really need a website if I already have a Facebook page?',
-    answer: 'A Facebook page can\'t rank for "auto repair near me" or "oil change [your town]" the way a real website can. Facebook is fine for posting updates and connecting with regulars, but most new customers start on Google. If you only live on Facebook, you\'re invisible to anyone searching for a mechanic right now.',
+    answer: 'A Facebook page can show up in Google search if someone types your shop\'s name. What it almost never does is win the top spots for searches like "auto repair near me" or "oil change [your town]." Those go to real websites and Google Maps listings, which is where most new customers click. Facebook is fine for posting updates and staying in touch with regulars. For new customers searching right now, a real website does the heavy lifting.',
   },
   {
     question: 'What pages should an auto repair shop website have?',
@@ -198,8 +198,8 @@ export default function AutoRepairShopContent() {
           </motion.div>
           <div className="grid md:grid-cols-3 gap-4 md:gap-8">
             {[
-              { title: 'Customers Google first, call second', text: 'When a brake light comes on or a tire goes flat, almost nobody opens Facebook to find a mechanic. They search Google. If your shop doesn\'t show up there, they\'re calling someone who does.' },
-              { title: 'A Facebook page can\'t rank you', text: 'Facebook isn\'t a website and it can\'t compete for "auto repair near me" or "oil change [your town]" the way a real site can. You can\'t out-post your way into Google\'s map results.' },
+              { title: 'Customers Google first, call second', text: 'When a brake light comes on or a tire goes flat, almost nobody opens Facebook to find a mechanic. They search Google. The top spots for "auto repair near me" go to real websites and Google Maps listings. That\'s where the calls come from.' },
+              { title: 'A Facebook page can\'t win the top spot', text: 'Facebook can rank if someone types your shop\'s name. For searches like "auto repair near me" or "oil change [your town]," the top results almost always go to real websites and Google Maps listings. You can\'t out-post your way into those spots.' },
               { title: 'Trust starts before the phone rings', text: 'A clean website with hours, services, real reviews, and clear pricing tells a customer your shop is run right. Most decisions about which mechanic to call are made before anyone picks up a phone.' },
             ].map((item, i) => (
               <motion.div
