@@ -96,7 +96,7 @@ export default function BlogIndex() {
                   {post.image ? (
                     <img
                       src={post.image}
-                      alt=""
+                      alt={post.title}
                       width={896}
                       height={300}
                       className="w-full object-contain"

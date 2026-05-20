@@ -3,9 +3,10 @@ import ArticlePage from './content';
 
 export const metadata: Metadata = {
   title: 'Your Website Is a Tax Write-Off. Here\'s What to Know | Studio 925',
-  description: 'In most cases, a business website is a tax-deductible business expense. Learn how small business owners can write off their website costs and keep more money in their pocket.',
+  description: 'A business website is usually tax-deductible. Here\'s how small business owners can write off the cost and keep more money in their pocket.',
   alternates: { canonical: '/blog/your-website-is-a-tax-write-off' },
   openGraph: {
+    type: 'article',
     title: 'Your Website Is a Tax Write-Off. Here\'s What to Know',
     description: 'A business website is a tax-deductible expense. Here\'s what small business owners need to know.',
     url: '/blog/your-website-is-a-tax-write-off',

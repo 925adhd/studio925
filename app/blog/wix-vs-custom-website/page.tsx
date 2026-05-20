@@ -2,11 +2,12 @@ import type { Metadata } from 'next';
 import ArticlePage from './content';
 
 export const metadata: Metadata = {
-  title: 'Wix vs Custom Website: Which Is Right for Your Small Business? | Studio 925',
+  title: 'Wix vs Custom Website for Small Business | Studio 925',
   description: 'An honest comparison of Wix, Squarespace, and custom-built websites. Compare costs, speed, SEO, and long-term value for your small business.',
   alternates: { canonical: '/blog/wix-vs-custom-website' },
   openGraph: {
-    title: 'Wix vs Custom Website: Which Is Right for Your Small Business?',
+    type: 'article',
+    title: 'Wix vs Custom Website for Small Business',
     description: 'An honest comparison of Wix, Squarespace, and custom-built websites for small businesses.',
     url: '/blog/wix-vs-custom-website',
     images: [{ url: '/studio925.png', alt: 'Studio 925 — Custom websites for small businesses in Kentucky' }],

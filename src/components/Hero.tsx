@@ -9,17 +9,26 @@ export default function Hero() {
     <section className="relative min-h-[100svh] md:min-h-0 pt-32 md:pt-36 pb-10 md:pb-28 px-4 md:px-6 overflow-hidden">
       <div className="absolute inset-0 grid-pattern -z-10" />
 
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Desktop: staggered fade-in via CSS (no JS animation library) */}
+      <div className="max-w-4xl mx-auto text-left md:text-center">
+        {/* Eyebrow — desktop */}
+        <p className="hidden md:block fade-in-up text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/70 mb-5">
+          Helping Local Businesses Grow Online · Leitchfield &amp; Grayson County, Kentucky
+        </p>
+        {/* Eyebrow — mobile */}
+        <p className="md:hidden text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-brand-primary/70 mb-6">
+          Helping Local Businesses Grow Online
+        </p>
+
+        {/* Single H1 — responsive styling for both viewports */}
+        <h1
+          className="text-[clamp(2.25rem,9vw,3.5rem)] md:text-7xl mb-5 md:mb-4 leading-[1.12] md:leading-[1.1] md:fade-in-up"
+          style={{ animationDelay: '0.1s' }}
+        >
+          Your business<br className="md:hidden" /> deserves a website<span className="block md:inline italic text-brand-accent"> that actually&nbsp;works.</span>
+        </h1>
+
+        {/* Desktop: location, sub, CTA */}
         <div className="hidden md:block">
-          <p className="fade-in-up text-xs font-medium tracking-[0.15em] uppercase text-brand-primary/70 mb-5">
-            Helping Local Businesses Grow Online · Leitchfield &amp; Grayson County, Kentucky
-          </p>
-
-          <h1 className="fade-in-up text-5xl md:text-7xl mb-4 leading-[1.1]" style={{ animationDelay: '0.1s' }}>
-            Your business deserves a website <span className="italic text-brand-accent">that actually works.</span>
-          </h1>
-
           <p className="fade-in-up flex items-center justify-center gap-1.5 text-base mb-5" style={{ animationDelay: '0.2s' }}>
             <MapPin size={14} className="shrink-0 text-brand-primary/55" />
             <span className="font-semibold text-brand-primary/70">Leitchfield, KY</span>
@@ -42,16 +51,8 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Mobile: fully static, no animation — critical for LCP */}
-        <div className="md:hidden text-left">
-          <p className="text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-brand-primary/70 mb-6">
-            Helping Local Businesses Grow Online
-          </p>
-
-          <h1 className="text-[clamp(2.25rem,9vw,3.5rem)] mb-5 leading-[1.12]">
-            Your business<br />deserves a website<span className="block italic text-brand-accent">that actually&nbsp;works.</span>
-          </h1>
-
+        {/* Mobile: location, sub, CTA */}
+        <div className="md:hidden">
           <p className="flex items-center gap-1.5 text-lg mb-7">
             <MapPin size={18} className="shrink-0 text-brand-primary/55" />
             <span className="font-bold text-brand-primary/85">Leitchfield, KY</span>

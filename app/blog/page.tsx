@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Honest advice on web design, pricing, DIY vs custom websites, and how to get more customers online. Written for small business owners by a Kentucky web designer.',
   alternates: { canonical: '/blog' },
   openGraph: {
+    type: 'website',
     title: 'Blog — Web Design Tips for Small Businesses | Studio 925',
     description: 'Honest advice on web design, pricing, DIY vs custom websites, and how to get more customers online.',
     url: '/blog',

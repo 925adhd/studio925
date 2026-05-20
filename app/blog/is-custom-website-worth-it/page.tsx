@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Honest ROI math on whether a custom website actually pays for itself for a small business. Real numbers, no sales pitch.',
   alternates: { canonical: '/blog/is-custom-website-worth-it' },
   openGraph: {
+    type: 'article',
     title: 'Is a Custom Website Worth It? Here\'s the Math.',
     description: 'Honest ROI math on whether a custom website actually pays for itself for a small business.',
     url: '/blog/is-custom-website-worth-it',

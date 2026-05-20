@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: 'Hiring a local web designer for your small business? Here\'s what actually matters, what to ask before signing anything, and the red flags to avoid.',
   alternates: { canonical: '/blog/what-to-look-for-in-a-local-web-designer' },
   openGraph: {
+    type: 'article',
     title: 'What to Look for in a Local Web Designer',
     description: 'Hiring a local web designer? Here\'s what actually matters and the red flags to avoid.',
     url: '/blog/what-to-look-for-in-a-local-web-designer',

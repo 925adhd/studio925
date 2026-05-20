@@ -3,9 +3,10 @@ import ArticlePage from './content';
 
 export const metadata: Metadata = {
   title: 'Why I Stopped Using GoDaddy and Learned to Code Instead | Studio 925',
-  description: 'GoDaddy\'s website builder still locks custom HTML inside iframes and won\'t let you edit the head tag. Here\'s how those limits pushed me to write code, and what changed.',
+  description: 'GoDaddy\'s builder locks custom HTML in iframes and won\'t let you edit the head tag. Here\'s why those limits pushed me to write code instead.',
   alternates: { canonical: '/blog/why-i-stopped-using-godaddy' },
   openGraph: {
+    type: 'article',
     title: 'Why I Stopped Using GoDaddy and Learned to Code Instead',
     description: 'How GoDaddy\'s builder limits pushed me to write HTML and CSS, and what most small business owners on GoDaddy still hit today.',
     url: '/blog/why-i-stopped-using-godaddy',
