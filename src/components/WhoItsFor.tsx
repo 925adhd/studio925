@@ -12,7 +12,7 @@ type Business = {
 };
 
 const businesses: Business[] = [
-  { name: 'Contractors & trades', short: 'Contractors', hook: 'Get found when someone searches "roofer near me."' },
+  { name: 'Contractors & trades', short: 'Contractors', hook: 'Get found when someone searches "roofer near me."', href: '/contractor-website-design-kentucky' },
   { name: 'Service providers', short: 'Service pros', hook: 'Stop relying on word of mouth alone.' },
   { name: 'Restaurants & food', short: 'Restaurants', hook: 'Menus, hours, and directions. Not a Facebook page.' },
   { name: 'Retail & boutiques', short: 'Retail', hook: 'Show off what you sell before they walk in.' },

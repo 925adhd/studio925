@@ -28,6 +28,7 @@ const industries: Industry[] = [
     name: 'Contractors & trades',
     short: 'contractor or trades',
     insight: 'Roofers, plumbers, electricians, and tradespeople get most of their leads from "X near me" searches. Your site has to be fast, clear, and tell Google exactly what you do and where you do it.',
+    href: '/contractor-website-design-kentucky',
   },
   {
     slug: 'restaurants',
