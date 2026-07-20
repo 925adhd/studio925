@@ -9,7 +9,7 @@ const testimonials = [
     quote: "Not even exaggerating. This is hands down the cleanest, smoothest, most professional site I've ever had. Everything flows, loads fast, and actually reflects the quality I bring. Studio 925 doesn't just build websites. She builds brands that convert. If you're serious about leveling up your business, I highly recommend reaching out to Kara.",
     name: 'CS Media',
     role: 'Real Estate Media · Leitchfield, KY',
-    link: 'https://cscreatesmedia.com',
+    link: undefined,
     placeholder: false,
   },
   {

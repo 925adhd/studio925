@@ -9,12 +9,12 @@ import { trackEvent } from '../lib/gtag';
 type Project = {
   src: string;
   alt: string;
-  href: string;
+  href?: string;
   name: string;
 };
 
 const projects: Project[] = [
-  { src: '/csmedia-listing-sold-hero.webp', alt: 'CS Media — Real estate photography in Leitchfield, KY', href: 'https://cscreatesmedia.com', name: 'CS Media' },
+  { src: '/csmedia-listing-sold-hero.webp', alt: 'CS Media — Real estate photography in Leitchfield, KY', name: 'CS Media' },
   { src: '/925adhd.webp', alt: '925 ADHD — flexible work guide', href: 'https://925adhd.com', name: '925 ADHD' },
   { src: '/townly.webp', alt: 'Townly — Grayson County community board', href: 'https://townly.us', name: 'Townly' },
   { src: '/4chariots.webp', alt: 'Four Chariots — minimal faithwear e-commerce site', href: 'https://4chariots.com', name: 'Four Chariots' },
@@ -144,14 +144,17 @@ export default function PortfolioPreview() {
               const zOffset = isHovered ? 90 : 0;
               const zIndex = isHovered ? 50 : totalImages - index;
 
+              const hasLink = !!project.href;
+
               return (
                 <motion.a
                   key={index}
                   href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => trackEvent('click_portfolio_card', `gallery_${project.name.toLowerCase().replace(/\s+/g, '_')}`)}
-                  className="group flex-shrink-0 cursor-pointer"
+                  target={hasLink ? '_blank' : undefined}
+                  rel={hasLink ? 'noopener noreferrer' : undefined}
+                  onClick={hasLink ? () => trackEvent('click_portfolio_card', `gallery_${project.name.toLowerCase().replace(/\s+/g, '_')}`) : undefined}
+                  aria-label={hasLink ? `Visit ${project.name}` : project.name}
+                  className={`group flex-shrink-0 ${hasLink ? 'cursor-pointer' : ''}`}
                   style={{ zIndex }}
                   initial={false}
                   animate={{
@@ -163,7 +166,6 @@ export default function PortfolioPreview() {
                   }}
                   onHoverStart={() => setHoveredIndex(index)}
                   onHoverEnd={() => setHoveredIndex(null)}
-                  aria-label={`Visit ${project.name}`}
                 >
                   <div
                     className={`relative aspect-video w-80 lg:w-96 rounded-xl overflow-hidden ring-1 transition duration-300 group-hover:scale-[1.03] ${
@@ -184,7 +186,7 @@ export default function PortfolioPreview() {
                     />
                     <div className="absolute inset-x-0 bottom-0 px-4 py-3 bg-gradient-to-t from-brand-primary/85 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-between gap-2">
                       <span className="text-sm font-semibold">{project.name}</span>
-                      <ExternalLink size={13} />
+                      {hasLink && <ExternalLink size={13} />}
                     </div>
                   </div>
                 </motion.a>
@@ -210,26 +212,15 @@ export default function PortfolioPreview() {
               </div>
             </div>
             <Dots activeIndex={mobileCarousel.activeIndex} onSelect={mobileCarousel.goTo} />
-            <a
-              href="https://cscreatesmedia.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackEvent('click_portfolio_card', 'mobile_csmedia')}
-              className="p-4 flex items-center justify-between gap-3 border-t border-brand-primary/5"
-            >
-              <div>
-                <p className="font-bold text-base">CS Media LLC</p>
-                <p className="text-xs text-brand-primary/75">Real Estate Media · Leitchfield, KY</p>
-              </div>
-              <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-800 shrink-0">
-                Visit Site <ExternalLink size={11} />
-              </span>
-            </a>
+            <div className="p-4 border-t border-brand-primary/5">
+              <p className="font-bold text-base">CS Media LLC</p>
+              <p className="text-xs text-brand-primary/75">Real Estate Media · Leitchfield, KY</p>
+            </div>
           </motion.div>
         </div>
 
         {/* Testimonial + CTA */}
-        <div className="mt-8 md:mt-16 grid md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center max-w-4xl mx-auto">
+        <div className="relative mt-8 md:mt-16 grid md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center max-w-4xl mx-auto">
           <div>
             <div className="flex gap-0.5 mb-3 md:mb-4">
               {[...Array(5)].map((_, j) => (

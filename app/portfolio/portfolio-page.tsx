@@ -18,7 +18,7 @@ const featuredProjects = [
       'Generate real inquiries through clear calls to action',
       'Establish a strong brand identity online',
     ],
-    href: 'https://cscreatesmedia.com',
+    href: undefined as string | undefined,
     image: '/csmedia-listing-sold-hero.webp',
     images: ['/csmedia-listing-sold-hero.webp', '/csmedia-featured-projects-portfolio.webp', '/csmedia-services-grid.webp', '/csmedia-virtual-staging-service.webp', '/csmedia-how-it-works.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'],
     tags: ['Lead Generation', 'Branding'],
@@ -95,7 +95,7 @@ const features = [
   'SEO backlink from Studio 925 to your site',
 ];
 
-function PageSpeedResults({ title, results, siteUrl }: { title: string; results: NonNullable<typeof featuredProjects[0]['results']>; siteUrl: string }) {
+function PageSpeedResults({ title, results, siteUrl }: { title: string; results: NonNullable<typeof featuredProjects[0]['results']>; siteUrl?: string }) {
   const [modalImage, setModalImage] = useState<string | null>(null);
 
   // When modal opens, push a history entry so the phone back button closes it
@@ -149,16 +149,18 @@ function PageSpeedResults({ title, results, siteUrl }: { title: string; results:
         <p className="text-[10px] text-brand-primary/50 mt-3 text-center">
           Mobile: {results.mobile.performance}/100 · Desktop: {results.desktop.performance}/100 — Accessibility, Best Practices & SEO all 100
         </p>
-        <p className="text-center mt-3">
-          <a
-            href={`https://pagespeed.web.dev/analysis?url=${encodeURIComponent(siteUrl)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs font-semibold text-emerald-800 hover:text-emerald-900 underline underline-offset-2"
-          >
-            Test it yourself →
-          </a>
-        </p>
+        {siteUrl && (
+          <p className="text-center mt-3">
+            <a
+              href={`https://pagespeed.web.dev/analysis?url=${encodeURIComponent(siteUrl)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-semibold text-emerald-800 hover:text-emerald-900 underline underline-offset-2"
+            >
+              Test it yourself →
+            </a>
+          </p>
+        )}
       </div>
 
       {/* Modal */}
@@ -210,13 +212,8 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
           transition={{ duration: 0.5 }}
         >
           {/* Full-width image on top */}
-          <a
-            href={project.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-lg shadow-brand-primary/10 bg-brand-primary/5 mb-5 md:mb-10"
-          >
-            {hasCarousel ? (
+          {(() => {
+            const imageContent = hasCarousel ? (
               <div className="relative">
                 {project.images!.map((img, i) => (
                   <img
@@ -235,8 +232,23 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
                 loading="lazy"
                 className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
               />
-            )}
-          </a>
+            );
+
+            return project.href ? (
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-lg shadow-brand-primary/10 bg-brand-primary/5 mb-5 md:mb-10"
+              >
+                {imageContent}
+              </a>
+            ) : (
+              <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg shadow-brand-primary/10 bg-brand-primary/5 mb-5 md:mb-10">
+                {imageContent}
+              </div>
+            );
+          })()}
 
           {/* Details below — two columns on desktop */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
@@ -269,14 +281,16 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
                 ))}
               </ul>
 
-              <a
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-semibold text-sm hover:bg-brand-primary/90 transition-all group"
-              >
-                View Website <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </a>
+              {project.href && (
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-semibold text-sm hover:bg-brand-primary/90 transition-all group"
+                >
+                  View Website <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </a>
+              )}
             </div>
 
             {/* PageSpeed results on the right */}
