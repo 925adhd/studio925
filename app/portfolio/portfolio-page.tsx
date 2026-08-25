@@ -18,9 +18,9 @@ const featuredProjects = [
       'Generate real inquiries through clear calls to action',
       'Establish a strong brand identity online',
     ],
-    href: undefined as string | undefined,
-    image: '/csmedia-listing-sold-hero.webp',
-    images: ['/csmedia-listing-sold-hero.webp', '/csmedia-featured-projects-portfolio.webp', '/csmedia-services-grid.webp', '/csmedia-virtual-staging-service.webp', '/csmedia-how-it-works.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'],
+    href: 'https://cscreatesmedia.com',
+    image: '/csmedia-photo-video-hero.webp',
+    images: ['/csmedia-photo-video-hero.webp', '/csmedia-real-estate-drone-photography.webp', '/csmedia-video-production-portfolio.webp', '/csmedia-services-photo-video-events.webp', '/csmedia-about-cheris-drone-pilot.webp', '/csmedia-how-it-works.webp', '/csmedia-client-reviews-testimonials.webp', '/csmedia-booking-call-to-action.webp'],
     tags: ['Lead Generation', 'Branding'],
     results: {
       desktop: { performance: 100, accessibility: 100, bestPractices: 100, seo: 100, fcp: '0.3s', lcp: '0.7s', cls: '0', speedIndex: '0.6s', image: '/csmedia-speed-desktop.webp' },

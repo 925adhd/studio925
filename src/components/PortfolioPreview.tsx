@@ -14,7 +14,7 @@ type Project = {
 };
 
 const projects: Project[] = [
-  { src: '/csmedia-listing-sold-hero.webp', alt: 'CS Media — Real estate photography in Leitchfield, KY', name: 'CS Media' },
+  { src: '/csmedia-photo-video-hero.webp', alt: 'CS Media — Photo, video & drone production in Leitchfield, KY', href: 'https://cscreatesmedia.com', name: 'CS Media' },
   { src: '/925adhd.webp', alt: '925 ADHD — flexible work guide', href: 'https://925adhd.com', name: '925 ADHD' },
   { src: '/townly.webp', alt: 'Townly — Grayson County community board', href: 'https://townly.us', name: 'Townly' },
   { src: '/4chariots.webp', alt: 'Four Chariots — minimal faithwear e-commerce site', href: 'https://4chariots.com', name: 'Four Chariots' },
@@ -22,10 +22,11 @@ const projects: Project[] = [
 
 /* CS Media carousel images for mobile — depth over breadth */
 const csmediaImages = [
-  '/csmedia-listing-sold-hero.webp',
-  '/csmedia-featured-projects-portfolio.webp',
-  '/csmedia-services-grid.webp',
-  '/csmedia-virtual-staging-service.webp',
+  '/csmedia-photo-video-hero.webp',
+  '/csmedia-real-estate-drone-photography.webp',
+  '/csmedia-video-production-portfolio.webp',
+  '/csmedia-services-photo-video-events.webp',
+  '/csmedia-about-cheris-drone-pilot.webp',
   '/csmedia-how-it-works.webp',
   '/csmedia-client-reviews-testimonials.webp',
   '/csmedia-booking-call-to-action.webp',
@@ -212,10 +213,21 @@ export default function PortfolioPreview() {
               </div>
             </div>
             <Dots activeIndex={mobileCarousel.activeIndex} onSelect={mobileCarousel.goTo} />
-            <div className="p-4 border-t border-brand-primary/5">
-              <p className="font-bold text-base">CS Media LLC</p>
-              <p className="text-xs text-brand-primary/75">Real Estate Media · Leitchfield, KY</p>
-            </div>
+            <a
+              href="https://cscreatesmedia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent('click_portfolio_card', 'mobile_csmedia')}
+              className="p-4 flex items-center justify-between gap-3 border-t border-brand-primary/5"
+            >
+              <div>
+                <p className="font-bold text-base">CS Media LLC</p>
+                <p className="text-xs text-brand-primary/75">Real Estate Media · Leitchfield, KY</p>
+              </div>
+              <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-800 shrink-0">
+                Visit Site <ExternalLink size={11} />
+              </span>
+            </a>
           </motion.div>
         </div>
 

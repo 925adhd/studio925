@@ -43,7 +43,7 @@
 
 ## Portfolio projects
 
-- CS Media: Media brand site built for clear service positioning and lead generation (project no longer live)
+- [CS Media](https://cscreatesmedia.com): Media brand site built for clear service positioning and lead generation
 - [925 ADHD](https://925adhd.com): SaaS platform for remote work with a gated resource library and Stripe subscriptions
 - [Four Chariots](https://4chariots.com): Apparel e-commerce brand with a streamlined purchasing flow
 - [Townly](https://townly.us): Community platform that organizes local businesses and neighborhood info
