@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { ArrowRight, Check, UtensilsCrossed, Code, Search, Smartphone, Zap } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, UtensilsCrossed, Code, Search, Smartphone, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
@@ -400,17 +400,9 @@ export default function RestaurantContent() {
           <h2 className="text-2xl md:text-4xl mb-5 md:mb-8">
             What makes Studio 925 <span className="italic text-brand-accent">different</span>
           </h2>
-          <div className="space-y-4 md:space-y-6 text-brand-primary/75 text-sm md:text-lg leading-relaxed">
-            <p>
-              A lot of restaurant websites come from templates with a big photo slider up top and the menu tucked away in a PDF. They look nice on a desktop and load slow on a phone, which is exactly where your customers are. Studio 925 sites are custom-coded, with no templates and no page builders, so the menu, hours, and order button load first.
-            </p>
-            <p>
-              I&apos;m based in Grayson County, Kentucky, not a remote agency three states away. When you work with me, you&apos;re talking directly to the person building your site. When your hours change for the holidays or you add a new special, you text me. No account managers. No runaround.
-            </p>
-            <p>
-              Some web shops only build for one kind of business. Studio 925 builds for small Kentucky businesses of all kinds, with the details a restaurant actually needs: a menu people and Google can read, hours that match your listing, and a button that gets them to order or call.
-            </p>
-          </div>
+          <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed">
+            A lot of restaurant sites come from templates with a big photo slider and the menu buried in a PDF. Studio 925 sites are custom-coded so the menu, hours, and order button load first on a phone. I&apos;m based in Grayson County, so when your holiday hours change, you just text me. No account managers, no runaround.
+          </p>
         </div>
       </section>
 
@@ -428,10 +420,15 @@ export default function RestaurantContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                 transition={{ delay: i * 0.05 }}
-                className="p-5 md:p-6 rounded-2xl bg-white border border-brand-primary/5"
+                className="rounded-2xl bg-white border border-brand-primary/5"
               >
-                <h3 className="text-sm md:text-base font-bold mb-2">{faq.question}</h3>
-                <p className="text-sm text-brand-primary/70 leading-relaxed">{faq.answer}</p>
+                <details className="group">
+                  <summary className="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    <h3 className="text-sm md:text-base font-bold">{faq.question}</h3>
+                    <ChevronDown size={18} className="shrink-0 text-brand-primary/70 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <p className="text-sm text-brand-primary/75 leading-relaxed px-5 md:px-6 pb-5 md:pb-6 -mt-1">{faq.answer}</p>
+                </details>
               </motion.div>
             ))}
           </div>
@@ -465,7 +462,7 @@ export default function RestaurantContent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-4 md:mb-6">Also serving</h2>
           <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed mb-4 md:mb-6">
-            Studio 925 builds custom websites for small businesses across Kentucky. Whether you run a diner in Leitchfield, a food truck in Grayson County, or a cafe anywhere in the state, the work is the same: a real site that helps hungry customers find you.
+            Studio 925 builds custom websites for small businesses in Leitchfield, Grayson County, and across Kentucky.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap">
             <Link href="/web-design-by-industry" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-brand-accent/5 border border-brand-accent/30 hover:bg-brand-accent/10 transition-colors text-sm md:text-base font-semibold text-emerald-800">

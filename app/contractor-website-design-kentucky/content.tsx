@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { ArrowRight, Check, HardHat, Code, Search, Smartphone, Zap } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, HardHat, Code, Search, Smartphone, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
@@ -396,17 +396,9 @@ export default function ContractorContent() {
           <h2 className="text-2xl md:text-4xl mb-5 md:mb-8">
             What makes Studio 925 <span className="italic text-brand-accent">different</span>
           </h2>
-          <div className="space-y-4 md:space-y-6 text-brand-primary/75 text-sm md:text-lg leading-relaxed">
-            <p>
-              Most contractor websites are templates with the business name swapped in, or they are built by an agency that hands you a polished site without a real local search foundation underneath it. Studio 925 sits in the middle. Custom-coded, no templates, no page builders. Built around your trade, your services, and how customers in your area actually search.
-            </p>
-            <p>
-              I&apos;m based in Grayson County, Kentucky, not a remote agency three states away. When you work with me, you&apos;re talking directly to the person building your site. No account managers. No outsourcing. No runaround.
-            </p>
-            <p>
-              Some web shops only take one industry. Others only take big agency clients. Studio 925 is built around small Kentucky businesses with the depth of service-page detail a contractor actually needs to rank on Google.
-            </p>
-          </div>
+          <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed">
+            Most contractor websites are a template with the business name swapped in. Studio 925 sites are custom-coded around your trade, your services, and the towns you cover. I&apos;m based in Grayson County, so you talk directly to the person building your site. No account managers, no runaround.
+          </p>
         </div>
       </section>
 
@@ -424,10 +416,15 @@ export default function ContractorContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                 transition={{ delay: i * 0.05 }}
-                className="p-5 md:p-6 rounded-2xl bg-white border border-brand-primary/5"
+                className="rounded-2xl bg-white border border-brand-primary/5"
               >
-                <h3 className="text-sm md:text-base font-bold mb-2">{faq.question}</h3>
-                <p className="text-sm text-brand-primary/70 leading-relaxed">{faq.answer}</p>
+                <details className="group">
+                  <summary className="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    <h3 className="text-sm md:text-base font-bold">{faq.question}</h3>
+                    <ChevronDown size={18} className="shrink-0 text-brand-primary/70 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <p className="text-sm text-brand-primary/75 leading-relaxed px-5 md:px-6 pb-5 md:pb-6 -mt-1">{faq.answer}</p>
+                </details>
               </motion.div>
             ))}
           </div>
@@ -461,7 +458,7 @@ export default function ContractorContent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-4 md:mb-6">Also serving</h2>
           <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed mb-4 md:mb-6">
-            Studio 925 builds custom websites for small businesses across Kentucky. Whether you run a trade business in Leitchfield, Grayson County, or anywhere in the state, the work is the same: a real site that helps real customers find you.
+            Studio 925 builds custom websites for small businesses in Leitchfield, Grayson County, and across Kentucky.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap">
             <Link href="/web-design-by-industry" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-brand-accent/5 border border-brand-accent/30 hover:bg-brand-accent/10 transition-colors text-sm md:text-base font-semibold text-emerald-800">

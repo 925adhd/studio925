@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { ArrowRight, Check, Wrench, Code, Search, Smartphone, Zap } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, Wrench, Code, Search, Smartphone, Zap } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
@@ -398,17 +398,9 @@ export default function AutoRepairShopContent() {
           <h2 className="text-2xl md:text-4xl mb-5 md:mb-8">
             What makes Studio 925 <span className="italic text-brand-accent">different</span>
           </h2>
-          <div className="space-y-4 md:space-y-6 text-brand-primary/75 text-sm md:text-lg leading-relaxed">
-            <p>
-              Most auto-shop websites are either built on a template that looks like every other shop in the state, or built by an agency that hands the shop owner a polished site with no real local search foundation underneath it. Studio 925 sits in the middle. Custom-coded, no templates, no page builders. Built around your shop, your services, and the way customers actually search.
-            </p>
-            <p>
-              I&apos;m based in Grayson County, Kentucky, not a remote agency three states away. When you work with me, you&apos;re talking directly to the person building your site. No account managers. No outsourcing. No runaround.
-            </p>
-            <p>
-              Some web shops focus only on auto repair. Others focus only on big agency clients. Studio 925 is built around small Kentucky businesses, with the same depth of service-page detail an auto shop actually needs to rank on Google.
-            </p>
-          </div>
+          <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed">
+            Most auto shop websites are a template that looks like every other shop in the state, or an agency build with nothing local underneath. Studio 925 sites are custom-coded around your shop, your services, and how people near you actually search. I&apos;m based in Grayson County, so you talk directly to the person building your site. No account managers, no runaround.
+          </p>
         </div>
       </section>
 
@@ -426,10 +418,15 @@ export default function AutoRepairShopContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                 transition={{ delay: i * 0.05 }}
-                className="p-5 md:p-6 rounded-2xl bg-white border border-brand-primary/5"
+                className="rounded-2xl bg-white border border-brand-primary/5"
               >
-                <h3 className="text-sm md:text-base font-bold mb-2">{faq.question}</h3>
-                <p className="text-sm text-brand-primary/70 leading-relaxed">{faq.answer}</p>
+                <details className="group">
+                  <summary className="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    <h3 className="text-sm md:text-base font-bold">{faq.question}</h3>
+                    <ChevronDown size={18} className="shrink-0 text-brand-primary/70 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <p className="text-sm text-brand-primary/75 leading-relaxed px-5 md:px-6 pb-5 md:pb-6 -mt-1">{faq.answer}</p>
+                </details>
               </motion.div>
             ))}
           </div>
@@ -463,7 +460,7 @@ export default function AutoRepairShopContent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-4 md:mb-6">Also serving</h2>
           <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed mb-4 md:mb-6">
-            Studio 925 builds custom websites for small businesses across Kentucky. Whether you run a shop in Leitchfield, Grayson County, or anywhere in the state, the work is the same: a real site that helps real customers find you.
+            Studio 925 builds custom websites for small businesses in Leitchfield, Grayson County, and across Kentucky.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap">
             <Link href="/web-design-by-industry" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-brand-accent/5 border border-brand-accent/30 hover:bg-brand-accent/10 transition-colors text-sm md:text-base font-semibold text-emerald-800">
