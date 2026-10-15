@@ -42,6 +42,7 @@ const industries: Industry[] = [
     name: 'Retail & boutiques',
     short: 'boutique or shop',
     insight: 'Customers want to see what you sell before they walk in. A clean product preview, real photos, and clear store hours beat a generic shop-now button that goes nowhere useful.',
+    href: '/retail-boutique-website-design-kentucky',
   },
   {
     slug: 'service-providers',

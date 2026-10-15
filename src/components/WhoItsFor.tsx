@@ -15,7 +15,7 @@ const businesses: Business[] = [
   { name: 'Contractors & trades', short: 'Contractors', hook: 'Get found when someone searches "roofer near me."', href: '/contractor-website-design-kentucky' },
   { name: 'Service providers', short: 'Service pros', hook: 'Stop relying on word of mouth alone.' },
   { name: 'Restaurants & food', short: 'Restaurants', hook: 'Menus, hours, and directions. Not a Facebook page.', href: '/restaurant-website-design-kentucky' },
-  { name: 'Retail & boutiques', short: 'Retail', hook: 'Show off what you sell before they walk in.' },
+  { name: 'Retail & boutiques', short: 'Retail', hook: 'Show off what you sell before they walk in.', href: '/retail-boutique-website-design-kentucky' },
   { name: 'Healthcare & wellness', short: 'Healthcare', hook: 'Let patients book and find you online.' },
   { name: 'Real estate', short: 'Real estate', hook: 'Listings and credibility in one place.' },
   { name: 'Auto shops & dealers', short: 'Auto shops', hook: 'Make it easy to call, get directions, or request a quote.', href: '/auto-repair-shop-website-design-kentucky' },
