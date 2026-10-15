@@ -41,7 +41,7 @@ function PrivacyPolicy() {
           <li>Email address</li>
           <li>Business type</li>
           <li>Project details</li>
-          <li>Any information submitted through contact forms or scheduling tools</li>
+          <li>Any information submitted through contact or project intake forms</li>
         </ul>
         <p>We may also collect limited technical information automatically, such as:</p>
         <ul>
@@ -74,15 +74,17 @@ function PrivacyPolicy() {
           <li>Improve site performance</li>
         </ul>
         <p>Analytics data is anonymized and aggregated where possible. You may disable cookies in your browser settings.</p>
+        <p>We use Microsoft Clarity to see how visitors use our website, such as where they click and how far they scroll. Clarity uses cookies and may record anonymized sessions. Learn more in the <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft Privacy Statement</a>.</p>
       </Section>
 
       <Section title="5. Third-Party Services">
         <p>We may use trusted third-party providers, including:</p>
         <ul>
-          <li>Calendly (for scheduling calls)</li>
+          <li>Web3Forms (to deliver contact and intake form submissions)</li>
+          <li>Stripe (to process deposits and hosting payments)</li>
           <li>Email service providers (to receive and respond to inquiries)</li>
           <li>Analytics providers</li>
-          <li>Hosting and infrastructure providers (such as GitHub Pages and Cloudflare)</li>
+          <li>Hosting and infrastructure providers (such as Vercel for hosting and Cloudflare for domain and DNS services)</li>
         </ul>
         <p>These providers may process limited data necessary to deliver their services and are governed by their own privacy policies.</p>
       </Section>
@@ -394,9 +396,8 @@ function CookiePolicy() {
       <Section title="3. Third-Party Services">
         <p>Our website may use third-party services that set their own cookies, including:</p>
         <ul>
-          <li>Calendly (for scheduling calls)</li>
           <li>Analytics providers</li>
-          <li>Hosting and infrastructure providers (such as GitHub Pages and Cloudflare)</li>
+          <li>Hosting and infrastructure providers (such as Vercel for hosting and Cloudflare for domain and DNS services)</li>
         </ul>
         <p>These services are governed by their own privacy and cookie policies. {company} does not control third-party cookies.</p>
       </Section>
