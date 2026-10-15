@@ -350,7 +350,7 @@ function ResponsiveDemo() {
       {/* Desktop — visual left, text right */}
       <div className="hidden md:grid md:grid-cols-1 md:gap-6 lg:grid-cols-[1.3fr_1fr] lg:gap-10 items-center">
         <div>
-          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-primary/60 mb-6">
+          <span className="inline-block text-xs font-semibold tracking-widest uppercase text-brand-primary/75 mb-6">
             Responsive on every device
           </span>
           <div className="flex items-end gap-5 justify-center">
@@ -362,22 +362,26 @@ function ResponsiveDemo() {
               transition={{ delay: 0, duration: 0.5, ease: 'easeOut' }}
               className="relative"
             >
-              <div className="w-56 bg-white rounded-xl shadow-xl shadow-brand-primary/10 border border-brand-primary/15 p-3 pb-1">
-                <div className="bg-brand-accent/10 rounded-lg p-3 mb-2">
-                  <div className="h-2 bg-brand-accent/35 rounded w-[70%] mb-2" />
-                  <div className="h-1.5 bg-brand-primary/15 rounded w-full mb-1.5" />
-                  <div className="h-1.5 bg-brand-primary/12 rounded w-[85%]" />
-                </div>
-                <div className="grid grid-cols-3 gap-1.5 mb-2">
-                  <div className="h-8 bg-brand-primary/10 rounded" />
-                  <div className="h-8 bg-brand-primary/10 rounded" />
-                  <div className="h-8 bg-brand-primary/10 rounded" />
+              <div className="w-56 bg-neutral-300 rounded-xl p-px shadow-xl shadow-brand-primary/15">
+                <div className="bg-white rounded-[11px] p-3 pb-2">
+                  <div className="bg-brand-accent/10 rounded-lg p-3 mb-2">
+                    <div className="h-2 bg-brand-accent/35 rounded w-[70%] mb-2" />
+                    <div className="h-1.5 bg-brand-primary/15 rounded w-full mb-1.5" />
+                    <div className="h-1.5 bg-brand-primary/12 rounded w-[85%]" />
+                  </div>
+                  <div className="grid grid-cols-3 gap-1.5">
+                    <div className="h-8 bg-brand-primary/10 rounded" />
+                    <div className="h-8 bg-brand-primary/10 rounded" />
+                    <div className="h-8 bg-brand-primary/10 rounded" />
+                  </div>
                 </div>
               </div>
-              <div className="w-20 h-2 bg-brand-primary/15 rounded-b-lg mx-auto" />
+              {/* Stand */}
+              <div className="w-8 h-4 bg-gradient-to-b from-neutral-400 to-neutral-300 mx-auto" style={{ clipPath: 'polygon(15% 0, 85% 0, 100% 100%, 0 100%)' }} />
+              <div className="w-24 h-1.5 bg-neutral-300 rounded-full mx-auto" />
               <div className="flex items-center gap-1 justify-center mt-1.5">
-                <Monitor size={12} className="text-brand-primary/45" />
-                <span className="text-[10px] text-brand-primary/45 font-medium">Desktop</span>
+                <Monitor size={12} className="text-brand-primary/75" />
+                <span className="text-[10px] text-brand-primary/75 font-medium">Desktop</span>
               </div>
             </motion.div>
             {/* Tablet mockup */}
@@ -388,20 +392,24 @@ function ResponsiveDemo() {
               transition={{ delay: 0.3, duration: 0.5, ease: 'easeOut' }}
               className="relative"
             >
-              <div className="w-32 bg-white rounded-xl shadow-lg shadow-brand-primary/10 border border-brand-primary/15 p-2.5 pb-1">
-                <div className="bg-brand-accent/10 rounded-lg p-2 mb-1.5">
-                  <div className="h-1.5 bg-brand-accent/35 rounded w-[70%] mb-1.5" />
-                  <div className="h-1 bg-brand-primary/15 rounded w-full mb-1" />
-                  <div className="h-1 bg-brand-primary/12 rounded w-[85%]" />
-                </div>
-                <div className="grid grid-cols-2 gap-1 mb-1.5">
-                  <div className="h-6 bg-brand-primary/10 rounded" />
-                  <div className="h-6 bg-brand-primary/10 rounded" />
+              <div className="relative w-32 bg-neutral-300 rounded-xl p-px shadow-lg shadow-brand-primary/15">
+                {/* Front camera */}
+                <div className="absolute top-[1px] left-1/2 -translate-x-1/2 w-[2px] h-[2px] bg-neutral-400 rounded-full" />
+                <div className="bg-white rounded-[11px] p-2 pt-2.5">
+                  <div className="bg-brand-accent/10 rounded-lg p-2 mb-1.5">
+                    <div className="h-1.5 bg-brand-accent/35 rounded w-[70%] mb-1.5" />
+                    <div className="h-1 bg-brand-primary/15 rounded w-full mb-1" />
+                    <div className="h-1 bg-brand-primary/12 rounded w-[85%]" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-1">
+                    <div className="h-6 bg-brand-primary/10 rounded" />
+                    <div className="h-6 bg-brand-primary/10 rounded" />
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-1 justify-center mt-1.5">
-                <Tablet size={12} className="text-brand-primary/45" />
-                <span className="text-[10px] text-brand-primary/45 font-medium">Tablet</span>
+                <Tablet size={12} className="text-brand-primary/75 rotate-90" />
+                <span className="text-[10px] text-brand-primary/75 font-medium">Tablet</span>
               </div>
             </motion.div>
             {/* Phone mockup */}
@@ -412,25 +420,34 @@ function ResponsiveDemo() {
               transition={{ delay: 0.6, duration: 0.5, ease: 'easeOut' }}
               className="relative"
             >
-              <div className="w-20 bg-white rounded-xl shadow-2xl shadow-brand-accent/25 border-2 border-brand-accent/50 p-2 pb-1 ring-4 ring-brand-accent/10">
-                <div className="w-8 h-1 bg-brand-primary/20 rounded-full mx-auto mb-1.5" />
-                <div className="bg-brand-accent/15 rounded-lg p-1.5 mb-1.5">
-                  <div className="h-1.5 bg-brand-accent/60 rounded w-[70%] mb-1" />
-                  <div className="h-1 bg-brand-primary/20 rounded w-full mb-0.5" />
-                  <div className="h-1 bg-brand-primary/15 rounded w-[85%]" />
-                </div>
-                <div className="space-y-1 mb-1">
-                  <div className="h-4 bg-brand-primary/12 rounded" />
-                  <div className="h-4 bg-brand-primary/12 rounded" />
+              <div className="relative w-[70px] bg-neutral-300 rounded-[15px] p-px shadow-2xl shadow-brand-accent/25 ring-[3px] ring-brand-accent/25">
+                {/* Side buttons */}
+                <div className="absolute -right-[3px] top-9 w-[3px] h-6 bg-neutral-400 rounded-r" />
+                <div className="absolute -left-[3px] top-7 w-[3px] h-4 bg-neutral-400 rounded-l" />
+                <div className="absolute -left-[3px] top-12 w-[3px] h-4 bg-neutral-400 rounded-l" />
+                <div className="relative bg-white rounded-[14px] px-1.5 pt-4 pb-2">
+                  {/* Dynamic island */}
+                  <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-5 h-1.5 bg-neutral-300 rounded-full" />
+                  <div className="bg-brand-accent/15 rounded-lg p-1.5 mb-1.5">
+                    <div className="h-1.5 bg-brand-accent/60 rounded w-[70%] mb-1" />
+                    <div className="h-1 bg-brand-primary/20 rounded w-full mb-0.5" />
+                    <div className="h-1 bg-brand-primary/15 rounded w-[85%]" />
+                  </div>
+                  <div className="space-y-1">
+                    <div className="h-4 bg-brand-primary/12 rounded" />
+                    <div className="h-4 bg-brand-primary/12 rounded" />
+                  </div>
+                  {/* Home indicator */}
+                  <div className="w-5 h-0.5 bg-neutral-300 rounded-full mx-auto mt-2" />
                 </div>
               </div>
               <div className="flex items-center gap-1 justify-center mt-1.5">
-                <PhoneIcon size={12} className="text-brand-accent" />
-                <span className="text-[10px] text-brand-accent font-bold">Mobile</span>
+                <PhoneIcon size={12} className="text-emerald-800" />
+                <span className="text-[10px] text-emerald-800 font-bold">Mobile</span>
               </div>
             </motion.div>
           </div>
-          <div className="flex items-center gap-2 justify-center mt-5 text-xs text-brand-primary/50">
+          <div className="flex items-center gap-2 justify-center mt-5 text-xs text-brand-primary/75">
             <Check size={14} className="text-brand-accent" />
             <span>Same content, perfect layout on every screen</span>
           </div>
@@ -469,11 +486,11 @@ function ResponsiveDemo() {
             <div className="h-0.5 bg-brand-primary/15 rounded w-full" />
           </div>
         </div>
-        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-primary/60 mb-2">
+        <span className="inline-block text-[10px] font-semibold tracking-widest uppercase text-brand-primary/75 mb-2">
           Responsive on every device
         </span>
         <h3 className="text-2xl mb-1.5">Win the customers who decide on their phone.</h3>
-        <p className="text-sm text-brand-primary/60 leading-relaxed">
+        <p className="text-sm text-brand-primary/75 leading-relaxed">
           Your site will load fast and look right the moment they tap. No waiting, no pinching, no broken layouts.
         </p>
       </div>

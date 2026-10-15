@@ -40,10 +40,10 @@ export default function HomePage() {
         <div className="order-2 md:hidden bg-white border-t border-brand-primary/5"><TrustStrip /></div>
         <div className="order-3 md:order-2"><PortfolioPreview /></div>
         <div className="order-4 md:order-9"><WhoItsFor /></div>
-        <div className="order-5 md:order-6"><SpeedProof /></div>
-        <div className="order-6 md:order-3"><Services /></div>
-        <div className="order-7 md:order-4"><Comparison /></div>
-        <div className="order-8 md:order-5"><Pricing /></div>
+        <div className="order-7 md:order-5"><SpeedProof /></div>
+        <div className="order-5 md:order-3"><Services /></div>
+        <div className="order-6 md:order-4"><Comparison /></div>
+        <div className="order-8 md:order-6"><Pricing /></div>
 
         {/* Process Section — Timeline (desktop) / Accordion (mobile) — order-9 */}
         <section id="process" className="order-9 md:order-7 py-10 md:pt-20 md:pb-36 px-6 bg-white border-t border-brand-primary/5">
