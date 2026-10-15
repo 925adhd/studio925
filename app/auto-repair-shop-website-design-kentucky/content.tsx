@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     question: 'Do I really need a website if I already have a Facebook page?',
-    answer: 'A Facebook page can show up in Google search if someone types your shop\'s name. What it almost never does is win the top spots for searches like "auto repair near me" or "oil change [your town]." Those go to real websites and Google Maps listings, which is where most new customers click. Facebook is fine for posting updates and staying in touch with regulars. For new customers searching right now, a real website does the heavy lifting.',
+    answer: 'A Facebook page can show up in Google search when someone types your shop\'s name, and in smaller towns it sometimes shows up for broader searches too. But for searches like "auto repair near me" or "oil change [your town]," Google shows its map listings first, and the results below are mostly websites and directories. Your Google listing works best when it links to a real site that spells out what you fix, your hours, and where you are. Facebook is great for updates and staying in touch with regulars. A website is the part you own and control.',
   },
   {
     question: 'What pages should an auto repair shop website have?',
@@ -198,8 +198,8 @@ export default function AutoRepairShopContent() {
           </motion.div>
           <div className="grid md:grid-cols-3 gap-4 md:gap-8">
             {[
-              { title: 'Customers Google first, call second', text: 'When a brake light comes on or a tire goes flat, almost nobody opens Facebook to find a mechanic. They search Google. The top spots for "auto repair near me" go to real websites and Google Maps listings. That\'s where the calls come from.' },
-              { title: 'A Facebook page can\'t win the top spot', text: 'Facebook can rank if someone types your shop\'s name. For searches like "auto repair near me" or "oil change [your town]," the top results almost always go to real websites and Google Maps listings. You can\'t out-post your way into those spots.' },
+              { title: 'Customers Google first, call second', text: 'When a brake light comes on or a tire goes flat, most people grab their phone and search Google. Near the top they see the Google Maps listings, each one with a link to the shop\'s website. That\'s where the calls come from.' },
+              { title: 'Facebook is a backup, not your front door', text: 'Facebook can show up when someone types your shop\'s name, and in small towns it sometimes shows up for more. But for "auto repair near me," people see the map listings first, and those link to your website. A real site is the part you own, and it\'s where customers check what you fix before they call.' },
               { title: 'Trust starts before the phone rings', text: 'A clean website with hours, services, real reviews, and clear pricing tells a customer your shop is run right. Most decisions about which mechanic to call are made before anyone picks up a phone.' },
             ].map((item, i) => (
               <motion.div

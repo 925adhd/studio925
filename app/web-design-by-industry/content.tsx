@@ -35,6 +35,7 @@ const industries: Industry[] = [
     name: 'Restaurants & food',
     short: 'restaurant',
     insight: 'Menu, hours, directions, reservations. Customers decide where to eat in under a minute, so your site has to answer those four questions before anything else loads.',
+    href: '/restaurant-website-design-kentucky',
   },
   {
     slug: 'retail',

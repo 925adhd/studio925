@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     question: 'Do I really need a website if I already have a Facebook page?',
-    answer: 'A Facebook page can show up in Google search if someone types your business name. What it almost never does is win the top spots for searches like "plumber in [your town]" or "emergency electrician." Those go to real websites and Google Maps listings, which is where most new customers click. Facebook is fine for posting updates and connecting with people who already know you. For new customers searching right now, a real website does the heavy lifting.',
+    answer: 'A Facebook page can show up in Google search when someone types your business name, and in smaller towns it sometimes shows up for broader searches too. But for searches like "plumber in [your town]" or "emergency electrician," Google shows its map listings first, and the results below are mostly websites and directories. Your Google listing works best when it links to a real site that lists your services, the towns you cover, and photos of real jobs. Facebook is great for updates and connecting with people who already know you. A website is the part you own and control.',
   },
   {
     question: 'What pages should a contractor website have?',
@@ -196,7 +196,7 @@ export default function ContractorContent() {
           </motion.div>
           <div className="grid md:grid-cols-3 gap-4 md:gap-8">
             {[
-              { title: 'People Google it, they don\'t open Facebook', text: 'When a roof leaks or a pipe bursts, almost nobody opens Facebook to find help. They grab their phone and Google it. Your Facebook page might show up if they type your business name. The top spots for "roofer near me" go to real websites and Google Maps listings. That\'s where the new calls come from.' },
+              { title: 'People Google it first', text: 'When a roof leaks or a pipe bursts, most people grab their phone and Google it. For "roofer near me," they see the Google Maps listings first, each one linking to a website. Your Facebook page might show up too, especially if they type your business name. But the listing and the site behind it are where most new calls come from.' },
               { title: 'The new guy in town already has a site', text: 'That contractor across town with the polished website is taking jobs that used to be yours. Not because he\'s better. Because he shows up first when customers search.' },
               { title: 'A real site builds trust before they call', text: 'Hours, services, real photos of finished work, and reviews tell a customer you are legit before they ever pick up the phone. Most decisions get made on the website, not on the call.' },
             ].map((item, i) => (

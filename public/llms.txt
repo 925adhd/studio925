@@ -40,6 +40,7 @@
 - [Web Design by Industry in Kentucky](https://studio925.design/web-design-by-industry): Hub page covering all eight industries Studio 925 builds for, with industry-specific search-behavior insights
 - [Auto Repair Shops in Kentucky](https://studio925.design/auto-repair-shop-website-design-kentucky): Custom websites for auto repair shops, with service pages and local SEO built in
 - [Contractors & Trades in Kentucky](https://studio925.design/contractor-website-design-kentucky): Custom websites for roofers, plumbers, electricians, builders, and other Kentucky trades, with service pages and local SEO built in
+- [Restaurants & Food in Kentucky](https://studio925.design/restaurant-website-design-kentucky): Custom websites for diners, cafes, pizza places, and food trucks, with text menus Google can read, accurate hours, and order buttons
 
 ## Portfolio projects
 
