@@ -286,6 +286,18 @@ export default function DomainGuide() {
           </p>
         </motion.div>
 
+        {/* Next: business email */}
+        <div className="glass rounded-2xl p-6 mt-8 text-center">
+          <p className="font-sans font-bold text-brand-primary mb-1">Want an email that matches your domain?</p>
+          <p className="font-sans text-sm text-brand-primary/75 mb-3">Get you@yourbusiness.com with Google Workspace. Free for 14 days.</p>
+          <Link
+            href="/setup/email"
+            className="inline-flex items-center gap-2 text-sm font-sans font-semibold text-emerald-800 hover:underline"
+          >
+            Business Email Setup Guide <ChevronRight size={14} />
+          </Link>
+        </div>
+
         {/* Back to setup */}
         <div className="text-center mt-10">
           <Link

@@ -182,6 +182,9 @@ export default function Pricing() {
         <p className="text-center text-xs text-brand-primary/70 mt-8 md:mt-12">
           50% deposit to start. You own everything after final payment.
         </p>
+        <p className="text-center text-xs text-brand-primary/70 mt-1.5">
+          Need more pages? Extra pages are $75 each.
+        </p>
         <div className="mt-3 text-center">
           <Link
             href="/how-it-works"

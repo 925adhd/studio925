@@ -849,10 +849,10 @@ export default function Services() {
           className="mb-8 md:mb-16 max-w-3xl"
         >
           <h2 className="text-2xl sm:text-4xl md:text-5xl mb-4">
-            Every Studio 925 site includes <span className="text-brand-accent italic">all&nbsp;five.</span>
+            What <span className="text-brand-accent italic">&ldquo;actually works&rdquo;</span> means.
           </h2>
-          <p className="text-sm sm:text-lg text-brand-primary/60">
-            Built in by default. No upsells.
+          <p className="text-sm sm:text-lg text-brand-primary/75">
+            Every Studio 925 website includes all&nbsp;five.
           </p>
         </motion.div>
 

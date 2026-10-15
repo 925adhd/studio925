@@ -411,7 +411,7 @@ export default function WebsiteCostContent() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">Studio 925 pricing</h2>
           <p className="text-brand-primary/60 text-sm md:text-lg leading-relaxed mb-6 md:mb-8 max-w-2xl">
-            Flat-rate pricing with no hourly billing and no hidden fees. You know the full cost before we start.
+            Flat-rate pricing with no hourly billing and no hidden fees. You know the full cost before we start. Need more pages than your plan includes? Extra pages are $75 each.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-4 mb-8">
