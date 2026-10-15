@@ -212,7 +212,7 @@ export default function HostingSupportPage() {
             </div>
             <div>
               <h3 className="font-semibold text-brand-primary mb-2">Can I get a business email like you@yourbusiness.com?</h3>
-              <p>Yes. I recommend Google Workspace. It works just like Gmail, but with your own domain. You get a 14-day free trial, and signing up through my link takes 10% off your first year. Google bills you directly. You sign up and pick your address using my{' '}<Link href="/setup/email" className="text-brand-primary font-semibold underline hover:text-emerald-800">email setup guide</Link>, and I handle the technical settings on my end.</p>
+              <p>Yes. I recommend Google Workspace. It works just like Gmail, but with your own domain. You get a 14-day free trial, then it&apos;s about $7 a month per person, and signing up through my link takes 10% off your first year. Google bills you directly. You sign up and pick your address using my{' '}<Link href="/setup/email" className="text-brand-primary font-semibold underline hover:text-emerald-800">email setup guide</Link>, and I handle the technical settings on my end.</p>
             </div>
             <div>
               <h3 className="font-semibold text-brand-primary mb-2">Will you do SEO for my competitor too?</h3>

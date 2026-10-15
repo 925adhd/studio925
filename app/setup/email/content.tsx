@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Mail, ExternalLink, ChevronRight, Tag, ZoomIn } from 'lucide-react';
 
@@ -60,7 +61,14 @@ const steps = [
 export default function EmailGuide() {
   return (
     <div className="min-h-screen bg-brand-warm selection:bg-brand-accent selection:text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 md:py-10">
+
+        {/* Logo back to the main site */}
+        <div className="flex justify-center mb-6 md:mb-14">
+          <Link href="/" aria-label="Studio 925 home">
+            <img src="/logo.webp" alt="Studio 925" width={162} height={56} className="h-8 md:h-10 w-auto" />
+          </Link>
+        </div>
 
         {/* Header */}
         <motion.div
@@ -147,7 +155,7 @@ export default function EmailGuide() {
                   Start My Free Trial <ExternalLink size={16} className="shrink-0" />
                 </a>
                 <p className="flex items-center justify-center sm:justify-start gap-1.5 text-sm font-sans font-medium text-emerald-800 mt-2">
-                  <Tag size={14} className="shrink-0" /> 14 days free, then 10% off your first year
+                  <Tag size={14} className="shrink-0" /> 14 days free, then about $7/month per person. 10% off your first year.
                 </p>
               </div>
             )}
@@ -159,7 +167,7 @@ export default function EmailGuide() {
                   href={step.image.src}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white p-2 sm:p-4 flex justify-center relative group"
+                  className="bg-white p-2 sm:p-4 flex justify-center relative sm:pointer-events-none sm:cursor-default"
                 >
                   <Image
                     src={step.image.src}
@@ -168,7 +176,7 @@ export default function EmailGuide() {
                     height={step.image.height}
                     className="max-w-full h-auto rounded-lg shadow-md"
                   />
-                  <span className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-white/90 rounded-full shadow-lg flex items-center gap-1.5 text-xs font-semibold text-brand-primary px-3 py-2 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
+                  <span className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-white/90 rounded-full shadow-lg flex sm:hidden items-center gap-1.5 text-xs font-semibold text-brand-primary px-3 py-2">
                     <ZoomIn size={14} /> Tap to enlarge
                   </span>
                 </a>
