@@ -52,6 +52,7 @@
 
 ## Blog
 
+- [Will Your Business Show Up When Customers Ask AI?](https://studio925.design/blog/will-your-business-show-up-in-ai-search): What Google says about appearing in AI Overviews and AI Mode, what is and isn't known about ChatGPT's local sources, and a checklist for small businesses
 - [Is a Custom Website Worth It? Here's the Math](https://studio925.design/blog/is-custom-website-worth-it): ROI math on whether a custom site pays for itself for a small business
 - [What to Look for in a Local Web Designer](https://studio925.design/blog/what-to-look-for-in-a-local-web-designer): What matters when hiring a local designer and the red flags to avoid
 - [Why I Stopped Using GoDaddy and Learned to Code Instead](https://studio925.design/blog/why-i-stopped-using-godaddy): Why GoDaddy's website builder limits (iframe-only custom HTML, no head-tag access, blocked JavaScript) push small business owners toward custom-coded sites
