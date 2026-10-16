@@ -47,7 +47,7 @@ const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'Your Website Is a Tax Write-Off. Here\'s What to Know',
-  image: 'https://studio925.design/small-business-website-tax-write-off.webp',
+  image: 'https://studio925.design/business-owner-tracking-expenses-receipts.webp',
   author: { '@type': 'Person', name: 'Kara Gibson', url: 'https://studio925.design' },
   publisher: { '@type': 'Organization', name: 'Studio 925', url: 'https://studio925.design' },
   datePublished: '2026-04-04',

@@ -8,13 +8,22 @@ import Footer from '../../src/components/Footer';
 
 const posts = [
   {
+    slug: 'will-your-business-show-up-in-ai-search',
+    title: 'Will Your Business Show Up When Customers Ask AI?',
+    excerpt: "AI search tools build their answers from your website, your Google Business Profile, and your reviews. Here's what actually helps, what doesn't, and how to check where you stand.",
+    date: '2026-10-15',
+    readTime: '5 min read',
+    tags: ['Local Search', 'Small Business'],
+    image: '/customer-searching-local-business-on-phone.webp',
+  },
+  {
     slug: 'why-i-stopped-using-godaddy',
     title: 'Why I Stopped Using GoDaddy and Learned to Code Instead',
     excerpt: 'GoDaddy\'s builder still locks custom HTML inside iframes and won\'t let you edit the head tag. Here\'s how those limits pushed me to write code, and what changed.',
     date: '2026-05-02',
     readTime: '5 min read',
     tags: ['Story', 'Small Business'],
-    image: '/why-i-stopped-using-godaddy.webp',
+    image: '/hands-writing-code-on-laptop-desk.webp',
   },
   {
     slug: 'wix-vs-custom-website',
@@ -23,7 +32,7 @@ const posts = [
     date: '2026-04-02',
     readTime: '6 min read',
     tags: ['Comparison', 'Small Business'],
-    image: '/wix-vs-custom-website-comparison.webp',
+    image: '/designer-planning-custom-website-color-swatches.webp',
   },
   {
     slug: 'is-custom-website-worth-it',
@@ -31,8 +40,8 @@ const posts = [
     excerpt: 'Your website is a business tool, not an expense. See how a $900 site can pay for itself with just one new customer.',
     date: '2026-04-02',
     readTime: '5 min read',
-    tags: ['ROI', 'Small Business'],
-    image: '/custom-website-worth-it-roi.webp',
+    tags: ['Cost', 'Small Business'],
+    image: '/shop-owner-helping-customer-small-business.webp',
   },
   {
     slug: 'what-to-look-for-in-a-local-web-designer',
@@ -41,7 +50,7 @@ const posts = [
     date: '2026-04-06',
     readTime: '5 min read',
     tags: ['Hiring Guide', 'Small Business'],
-    image: '/local-web-designer-kentucky.webp',
+    image: '/small-business-owner-meeting-web-designer.webp',
   },
   {
     slug: 'your-website-is-a-tax-write-off',
@@ -50,7 +59,7 @@ const posts = [
     date: '2026-04-04',
     readTime: '4 min read',
     tags: ['Tax Tips', 'Small Business'],
-    image: '/small-business-website-tax-write-off.webp',
+    image: '/business-owner-tracking-expenses-receipts.webp',
   },
 ];
 
@@ -108,25 +117,15 @@ export default function BlogIndex() {
                     </div>
                   )}
                   <div className="p-6 md:p-8">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {post.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2.5 py-0.5 rounded-lg bg-brand-accent/10 text-brand-accent text-[10px] font-bold tracking-widest uppercase"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                     <h2 className="text-xl md:text-2xl mb-2 group-hover:text-brand-accent transition-colors">
                       {post.title}
                     </h2>
-                    <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed mb-4">
+                    <p className="text-sm md:text-base text-brand-primary/75 leading-relaxed mb-4">
                       {post.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-brand-primary/40">{post.readTime}</span>
-                      <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent group-hover:gap-2.5 transition-all">
+                      <span className="text-xs text-brand-primary/75">{post.tags[0]} · {post.readTime}</span>
+                      <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-800 group-hover:gap-2.5 transition-all">
                         Read More <ArrowRight size={14} />
                       </span>
                     </div>

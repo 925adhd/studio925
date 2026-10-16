@@ -47,7 +47,7 @@ const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'Is a Custom Website Worth It? Here\'s the Math.',
-  image: 'https://studio925.design/custom-website-worth-it-roi.webp',
+  image: 'https://studio925.design/shop-owner-helping-customer-small-business.webp',
   author: { '@type': 'Person', name: 'Kara Gibson', url: 'https://studio925.design' },
   publisher: { '@type': 'Organization', name: 'Studio 925', url: 'https://studio925.design' },
   datePublished: '2026-04-02',

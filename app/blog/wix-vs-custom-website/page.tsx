@@ -47,7 +47,7 @@ const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'Wix vs Custom Website: Which Is Right for Your Small Business?',
-  image: 'https://studio925.design/wix-vs-custom-website-comparison.webp',
+  image: 'https://studio925.design/designer-planning-custom-website-color-swatches.webp',
   author: { '@type': 'Person', name: 'Kara Gibson', url: 'https://studio925.design' },
   publisher: { '@type': 'Organization', name: 'Studio 925', url: 'https://studio925.design' },
   datePublished: '2026-04-02',

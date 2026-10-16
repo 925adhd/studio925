@@ -27,21 +27,16 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
               <ArrowLeft size={14} /> Back to Blog
             </Link>
 
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="px-2.5 py-0.5 rounded-lg bg-brand-accent/10 text-brand-accent text-[10px] font-bold tracking-widest uppercase">Story</span>
-              <span className="px-2.5 py-0.5 rounded-lg bg-brand-accent/10 text-brand-accent text-[10px] font-bold tracking-widest uppercase">Small Business</span>
-            </div>
-
             <h1 className="text-3xl md:text-4xl lg:text-5xl mb-4 leading-[1.1]">
               Why I Stopped Using GoDaddy and Learned to Code Instead
             </h1>
-            <p className="text-brand-primary/50 text-sm mb-10">May 2, 2026 · 5 min read</p>
+            <p className="text-brand-primary/75 text-sm mb-10">Story · May 2, 2026 · 5 min read</p>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-10">
             <img
-              src="/why-i-stopped-using-godaddy.webp"
-              alt="Why I stopped using GoDaddy and learned to code instead — illustration showing iframe builder limits on the left, a designer writing custom code in the center, and a clean custom website on the right"
+              src="/hands-writing-code-on-laptop-desk.webp"
+              alt="Hands typing code on a laptop at a wooden desk, next to a camera lens and a notebook"
               width={1536}
               height={1024}
               className="w-full rounded-2xl"

@@ -27,22 +27,17 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
               <ArrowLeft size={14} /> Back to Blog
             </Link>
 
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="px-2.5 py-0.5 rounded-lg bg-brand-accent/10 text-brand-accent text-[10px] font-bold tracking-widest uppercase">Tax Tips</span>
-              <span className="px-2.5 py-0.5 rounded-lg bg-brand-accent/10 text-brand-accent text-[10px] font-bold tracking-widest uppercase">Small Business</span>
-            </div>
-
             <h1 className="text-3xl md:text-4xl lg:text-5xl mb-4 leading-[1.1]">
               Your Website Is a Tax Write-Off. Here's What to Know
             </h1>
-            <p className="text-brand-primary/50 text-sm mb-10">April 4, 2026 · 4 min read</p>
+            <p className="text-brand-primary/75 text-sm mb-10">Tax Tips · April 4, 2026 · 4 min read</p>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-10">
             <img
-              src="/small-business-website-tax-write-off.webp"
-              alt="Small business website tax write-off, laptop showing tax deduction form next to a small business storefront and piggy bank"
-              width={1024}
+              src="/business-owner-tracking-expenses-receipts.webp"
+              alt="Business owner adding up receipts on a calculator at a desk"
+              width={1536}
               height={1024}
               className="w-full rounded-2xl"
               loading="eager"

@@ -27,21 +27,16 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
               <ArrowLeft size={14} /> Back to Blog
             </Link>
 
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="px-2.5 py-0.5 rounded-lg bg-brand-accent/10 text-brand-accent text-[10px] font-bold tracking-widest uppercase">Hiring Guide</span>
-              <span className="px-2.5 py-0.5 rounded-lg bg-brand-accent/10 text-brand-accent text-[10px] font-bold tracking-widest uppercase">Small Business</span>
-            </div>
-
             <h1 className="text-3xl md:text-4xl lg:text-5xl mb-4 leading-[1.1]">
               What to Look for in a Local Web Designer
             </h1>
-            <p className="text-brand-primary/50 text-sm mb-10">April 6, 2026 · 5 min read</p>
+            <p className="text-brand-primary/75 text-sm mb-10">Hiring Guide · April 6, 2026 · 5 min read</p>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mb-10">
             <img
-              src="/local-web-designer-kentucky.webp"
-              alt="What to look for in a local web designer — small business owner meeting with a Kentucky web designer to review a custom website"
+              src="/small-business-owner-meeting-web-designer.webp"
+              alt="Two women going over a website project on a laptop at a cafe table"
               width={1536}
               height={1024}
               className="w-full rounded-2xl"

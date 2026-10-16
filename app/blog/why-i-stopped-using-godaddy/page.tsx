@@ -47,7 +47,7 @@ const articleLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'Why I Stopped Using GoDaddy and Learned to Code Instead',
-  image: 'https://studio925.design/why-i-stopped-using-godaddy.webp',
+  image: 'https://studio925.design/hands-writing-code-on-laptop-desk.webp',
   author: { '@type': 'Person', name: 'Kara Gibson', url: 'https://studio925.design' },
   publisher: { '@type': 'Organization', name: 'Studio 925', url: 'https://studio925.design' },
   datePublished: '2026-05-02',
