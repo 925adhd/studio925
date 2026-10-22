@@ -448,10 +448,13 @@ export default function KentuckyContent() {
               Web Design by Industry in Kentucky <ArrowRight size={16} className="inline ml-2" />
             </Link>
             <Link href="/web-design-grayson-county-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Web Design in Grayson County <ArrowRight size={16} className="inline ml-2" />
+              Web Design Services in Grayson County <ArrowRight size={16} className="inline ml-2" />
             </Link>
             <Link href="/website-design-leitchfield-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
               Website Design in Leitchfield, KY <ArrowRight size={16} className="inline ml-2" />
+            </Link>
+            <Link href="/contractor-website-design-kentucky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
+              Contractor Websites in Kentucky <ArrowRight size={16} className="inline ml-2" />
             </Link>
           </div>
         </div>

@@ -57,7 +57,7 @@ export default function LocalSection() {
 
           <div className="space-y-3.5 text-brand-primary/75 text-base leading-relaxed">
             <p>
-              You work directly with the person building your site. I'm in <Link href="/website-design-leitchfield-ky" className="text-emerald-800 font-semibold hover:underline">Leitchfield, Kentucky</Link>, right here in Grayson County.
+              You work directly with the person building your site. I'm in <Link href="/website-design-leitchfield-ky" className="text-emerald-800 font-semibold hover:underline">Leitchfield, Kentucky</Link>, right here in <Link href="/web-design-grayson-county-ky" className="text-emerald-800 font-semibold hover:underline">Grayson County</Link>.
             </p>
             <p>
               When you have a question, you call me. When something needs to change, I handle it.

@@ -53,6 +53,7 @@ export default function Footer() {
               <li><a href="/#pricing" className="hover:text-brand-accent transition-colors">Pricing</a></li>
               <li><Link href="/how-it-works" className="hover:text-brand-accent transition-colors">How It Works</Link></li>
               <li><Link href="/website-cost" className="hover:text-brand-accent transition-colors">Website Cost Guide</Link></li>
+              <li><Link href="/hosting-support" className="hover:text-brand-accent transition-colors">Hosting &amp; Support</Link></li>
               <li><a href="https://audit.studio925.design" className="hover:text-brand-accent transition-colors">Free Local Audit</a></li>
               <li><Link href="/blog" className="hover:text-brand-accent transition-colors">Blog</Link></li>
               <li><a href="/#process" className="hover:text-brand-accent transition-colors">Process</a></li>
@@ -65,7 +66,7 @@ export default function Footer() {
             <ul className="space-y-2 md:space-y-2.5 text-brand-primary/60">
               <li>
                 <Link href="/web-design-grayson-county-ky" className="hover:text-brand-accent transition-colors">
-                  Web Design in Grayson County
+                  Web Design Services in Grayson County
                 </Link>
               </li>
               <li>
@@ -76,6 +77,11 @@ export default function Footer() {
               <li>
                 <Link href="/small-business-website-design-kentucky" className="hover:text-brand-accent transition-colors">
                   Small Business Websites in Kentucky
+                </Link>
+              </li>
+              <li>
+                <Link href="/contractor-website-design-kentucky" className="hover:text-brand-accent transition-colors">
+                  Contractor Websites in Kentucky
                 </Link>
               </li>
               <li>

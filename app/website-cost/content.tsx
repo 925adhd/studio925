@@ -449,12 +449,15 @@ export default function WebsiteCostContent() {
       <section className="py-12 md:py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-4 md:mb-6">Learn more</h2>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+          <p className="text-brand-primary/70 text-sm md:text-lg leading-relaxed mb-4 md:mb-6">
+            Still deciding? Read <Link href="/blog/is-custom-website-worth-it" className="text-brand-primary font-semibold underline underline-offset-2 hover:text-emerald-800">whether a custom website is worth it</Link> for a small business, and how <Link href="/blog/your-website-is-a-tax-write-off" className="text-brand-primary font-semibold underline underline-offset-2 hover:text-emerald-800">your website can be a tax write-off</Link>.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap">
             <Link href="/website-design-leitchfield-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
               Website Design in Leitchfield, KY <ArrowRight size={16} className="inline ml-2" />
             </Link>
             <Link href="/web-design-grayson-county-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Web Design in Grayson County <ArrowRight size={16} className="inline ml-2" />
+              Web Design Services in Grayson County <ArrowRight size={16} className="inline ml-2" />
             </Link>
             <Link href="/portfolio" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
               View Portfolio <ArrowRight size={16} className="inline ml-2" />

@@ -226,6 +226,9 @@ export default function GraysonCountyContent() {
               </motion.div>
             ))}
           </div>
+          <p className="mt-6 md:mt-8 text-sm md:text-base text-brand-primary/70 leading-relaxed">
+            Comparing designers? Here&apos;s <Link href="/blog/what-to-look-for-in-a-local-web-designer" className="text-brand-primary font-semibold underline underline-offset-2 hover:text-emerald-800">what to look for in a local web designer</Link> before you hire anyone, including me.
+          </p>
         </div>
       </section>
 
@@ -243,7 +246,7 @@ export default function GraysonCountyContent() {
               When someone in Grayson County needs a plumber, an electrician, or a place to eat, they pull out their phone and search. If your business doesn't show up, or shows up with a site that looks like it was built in 2012, they're calling whoever does show up.
             </p>
             <p>
-              A professionally built website puts you in front of those searches. It loads fast, makes your phone number easy to tap, and tells customers exactly what you do and how to reach you. No guessing, no digging through menus.
+              A professionally designed website puts you in front of those searches. It loads fast, makes your phone number easy to tap, and tells customers exactly what you do and how to reach you. No guessing, no digging through menus.
             </p>
             <p>
               That's the difference between a website that's a digital business card collecting dust and one that's actively bringing in calls every week. The businesses that invest in this see it in their phone. More calls, more messages, more booked jobs.
@@ -483,6 +486,9 @@ export default function GraysonCountyContent() {
             </Link>
             <Link href="/small-business-website-design-kentucky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
               Small Business Websites in Kentucky <ArrowRight size={16} className="inline ml-2" />
+            </Link>
+            <Link href="/contractor-website-design-kentucky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
+              Contractor Websites in Kentucky <ArrowRight size={16} className="inline ml-2" />
             </Link>
           </div>
         </div>
