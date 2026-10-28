@@ -75,6 +75,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/website-design-clarkson-ky" className="hover:text-brand-accent transition-colors">
+                  Website Design in Clarkson, KY
+                </Link>
+              </li>
+              <li>
+                <Link href="/website-design-caneyville-ky" className="hover:text-brand-accent transition-colors">
+                  Website Design in Caneyville, KY
+                </Link>
+              </li>
+              <li>
                 <Link href="/small-business-website-design-kentucky" className="hover:text-brand-accent transition-colors">
                   Small Business Websites in Kentucky
                 </Link>
