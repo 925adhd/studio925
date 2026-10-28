@@ -85,6 +85,31 @@ const featuredProjects = [
   },
 ];
 
+// Concept sites for fictional businesses. Never present these as client work.
+const conceptProjects = [
+  {
+    title: 'Cedar Hollow Plant Co.',
+    kind: 'Plant shop',
+    desc: 'A browsable plant catalog with care details for every plant, plus hours and directions for a booth inside a local market.',
+    image: '/concept-cedar-hollow-plant-shop-website.webp',
+    alt: 'Homepage of the Cedar Hollow Plant Co. concept website, a houseplant shop',
+  },
+  {
+    title: 'Sweet Clover Boutique',
+    kind: 'Family boutique',
+    desc: 'A warm, playful boutique site with new arrivals, community events, and a story page that makes a small shop feel like family.',
+    image: '/concept-sweet-clover-boutique-website.webp',
+    alt: 'Homepage of the Sweet Clover Boutique concept website, a family clothing boutique',
+  },
+  {
+    title: 'Clearline Networks',
+    kind: 'Installer',
+    desc: 'A bold service site for a camera, networking, and home theater installer, with a page for each service and a quick quote form.',
+    image: '/concept-clearline-networks-installer-website.webp',
+    alt: 'Homepage of the Clearline Networks concept website, a security camera and networking installer',
+  },
+];
+
 const features = [
   'Mobile-first design',
   'SEO-friendly structure',
@@ -286,7 +311,7 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
                   href={project.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-semibold text-sm hover:bg-brand-primary/90 transition-all group"
+                  className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-6 py-3 rounded-2xl font-semibold text-sm group"
                 >
                   View Website <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -378,7 +403,7 @@ function FeaturedProject({ project, index, isReversed }: { project: typeof featu
             href={project.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl font-semibold text-sm hover:bg-brand-primary/90 transition-all group"
+            className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-6 py-3 rounded-2xl font-semibold text-sm group"
           >
             View Website <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </a>
@@ -421,6 +446,43 @@ export default function PortfolioPage() {
             <FeaturedProject key={project.title} project={project} index={index} isReversed={isReversed} />
           );
         })}
+
+        {/* Concept work — made-up businesses, kept separate from client projects */}
+        <section className="max-w-6xl mx-auto mb-16 md:mb-24 pt-12 md:pt-16 border-t border-brand-primary/15">
+          <div className="grid md:grid-cols-[1fr_1.4fr] gap-4 md:gap-16 mb-10 md:mb-14">
+            <h2 className="text-3xl md:text-5xl leading-[1.1]">Concept work</h2>
+            <p className="text-base md:text-lg text-brand-primary/75 leading-relaxed">
+              Sites I designed to show what I&apos;d build for different kinds of local businesses. The businesses are made up. The design and the code are real.
+            </p>
+          </div>
+          <div className="border-t border-brand-primary/15">
+            {conceptProjects.map((concept) => (
+              <motion.article
+                key={concept.title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
+                className="grid md:grid-cols-[1.7fr_1fr] gap-6 md:gap-12 items-center py-8 md:py-12 border-b border-brand-primary/15"
+              >
+                <img
+                  src={concept.image}
+                  alt={concept.alt}
+                  width={1600}
+                  height={1000}
+                  loading="lazy"
+                  className="w-full aspect-[16/10] object-cover object-top rounded-xl border border-brand-primary/10 shadow-md"
+                />
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-brand-primary/70 mb-3">
+                    Concept design · {concept.kind}
+                  </p>
+                  <h3 className="text-2xl md:text-3xl mb-3">{concept.title}</h3>
+                  <p className="text-base md:text-lg text-brand-primary/75 leading-relaxed">{concept.desc}</p>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </section>
 
 
         {/* What Every Project Includes */}
@@ -466,7 +528,7 @@ export default function PortfolioPage() {
           </p>
           <a
             href="/#contact"
-            className="inline-flex items-center gap-2 bg-brand-accent text-white px-9 py-4 rounded-2xl text-lg font-semibold hover:brightness-115 transition-all shadow-xl shadow-brand-accent/40"
+            className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white px-9 py-4 rounded-2xl text-lg font-semibold"
           >
             Start My Project <ArrowRight size={20} />
           </a>

@@ -22,7 +22,7 @@ export default function BlogAuditCTA() {
           href="https://audit.studio925.design"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-brand-primary text-white px-5 py-3 rounded-xl text-sm font-semibold hover:bg-brand-primary/90 transition-colors whitespace-nowrap shrink-0"
+          className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-5 py-3 rounded-xl text-sm font-semibold whitespace-nowrap shrink-0"
         >
           Run my free audit <ArrowRight size={16} />
         </a>

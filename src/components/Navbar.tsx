@@ -45,7 +45,7 @@ export default function Navbar() {
           <a href="/#pricing" className="text-sm font-medium hover:text-brand-accent transition-colors whitespace-nowrap">Pricing</a>
           <Link href="/hosting-support" className="text-sm font-medium hover:text-brand-accent transition-colors whitespace-nowrap">Hosting & Support</Link>
           <Link href="/blog" className="text-sm font-medium hover:text-brand-accent transition-colors whitespace-nowrap">Blog</Link>
-          <a href="/#contact" onClick={() => trackEvent('click_contact_kara', 'navbar')} className="bg-brand-primary text-white px-5 py-2 rounded-xl text-sm font-medium flex items-center gap-2 hover:bg-brand-primary/90 transition-all whitespace-nowrap">
+          <a href="/#contact" onClick={() => trackEvent('click_contact_kara', 'navbar')} className="btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-5 py-2 rounded-xl text-sm font-medium flex items-center gap-2 whitespace-nowrap">
             Contact Kara <ArrowRight size={16} />
           </a>
         </div>

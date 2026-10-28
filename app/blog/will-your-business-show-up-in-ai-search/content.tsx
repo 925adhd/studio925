@@ -142,7 +142,7 @@ export default function ArticlePage({ faqItems }: { faqItems: FaqItem[] }) {
             </p>
             <div className="space-y-4 mb-8">
               {[
-                'Ask ChatGPT, and Google\'s AI Mode if you have it, the question a new customer would ask. Something like "Who\'s a good [your type of business] in [your town]?"',
+                'Ask ChatGPT, and Google\'s AI Mode if you have it, the question a new customer would ask. Something like "Who\'s a good plumber in Leitchfield?" Swap in your own business type and town.',
                 'See if your business comes up. Then try a couple of different wordings, since answers can change from one question to the next.',
                 'Look at the sources the tool lists under its answer. Those are the places it trusted. Make sure your business is listed there, with correct details.',
                 'Search your business name on Google and look at your Business Profile. Is every field filled in? How many reviews do you have?',

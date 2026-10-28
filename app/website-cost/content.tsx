@@ -143,7 +143,7 @@ export default function WebsiteCostContent() {
             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
               <a
                 href="/#pricing"
-                className="bg-brand-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-primary/90 transition-colors shadow-lg shadow-brand-primary/20"
+                className="btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2"
               >
                 See Our Pricing <ArrowRight size={20} />
               </a>
@@ -431,7 +431,7 @@ export default function WebsiteCostContent() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
             <a
               href="/#pricing"
-              className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold hover:bg-brand-primary/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold"
             >
               View Full Pricing Details <ArrowRight size={20} />
             </a>
@@ -476,7 +476,7 @@ export default function WebsiteCostContent() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <a
               href="/#contact"
-              className="inline-flex items-center justify-center gap-2 bg-brand-accent text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold hover:bg-brand-accent/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold"
             >
               Get Started <ArrowRight size={20} />
             </a>

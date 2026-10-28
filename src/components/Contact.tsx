@@ -201,7 +201,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === 'sending'}
-                className="w-full bg-brand-primary text-white py-3 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-brand-primary/90 transition-all group disabled:opacity-60"
+                className="w-full btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white py-3 rounded-2xl font-bold flex items-center justify-center gap-2 group disabled:opacity-60"
               >
                 {status === 'sending' ? 'Sending...' : <>Send Message <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /></>}
               </button>

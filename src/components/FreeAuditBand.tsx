@@ -53,7 +53,7 @@ export default function FreeAuditBand({ headline, subhead, ctaText = "Get my fre
                 href="https://audit.studio925.design"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
+                className="inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-sm md:text-base font-semibold"
               >
                 {ctaText} <ArrowRight size={18} />
               </a>

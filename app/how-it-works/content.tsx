@@ -324,7 +324,7 @@ export default function HowItWorksContent() {
           <Link
             href="/#pricing"
             onClick={() => trackEvent('click_view_packages', 'how_it_works_page')}
-            className="inline-flex items-center gap-2 bg-brand-accent text-white px-7 py-3.5 rounded-2xl font-bold hover:bg-brand-accent/90 transition-all"
+            className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white px-7 py-3.5 rounded-2xl font-bold"
           >
             View Packages <ArrowRight size={18} />
           </Link>

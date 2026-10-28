@@ -24,7 +24,7 @@ export default function ThankYouContent() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/how-it-works"
-              className="inline-flex items-center justify-center gap-2 bg-brand-accent text-white px-6 py-3 rounded-2xl font-semibold hover:bg-brand-accent/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white px-6 py-3 rounded-2xl font-semibold"
             >
               See How It Works
             </Link>

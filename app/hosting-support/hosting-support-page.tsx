@@ -227,7 +227,7 @@ export default function HostingSupportPage() {
           <Link
             href="/#pricing"
             onClick={() => trackEvent('click_view_packages', 'hosting_page')}
-            className="inline-flex items-center gap-2 bg-brand-primary text-white px-7 py-3.5 rounded-2xl font-semibold hover:bg-brand-primary/90 transition-all"
+            className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-7 py-3.5 rounded-2xl font-semibold"
           >
             View Website Packages <ArrowRight size={18} />
           </Link>

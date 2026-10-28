@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { ArrowRight, ArrowUpRight, MessageCircle, Layers } from 'lucide-react';
+import { ArrowRight, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import Navbar from '../../src/components/Navbar';
 import Footer from '../../src/components/Footer';
@@ -13,6 +13,8 @@ type Industry = {
   short: string;
   insight: string;
   href?: string;
+  image?: string;
+  alt?: string;
 };
 
 const industries: Industry[] = [
@@ -20,8 +22,10 @@ const industries: Industry[] = [
     slug: 'auto-repair',
     name: 'Auto repair shops & dealers',
     short: 'auto repair shop',
-    insight: 'Customers searching "brake repair near me" or "oil change [your town]" need to land on a service page, not just a homepage. Service pages are how a shop ranks for what people actually search.',
+    insight: 'Customers searching "brake repair near me" or "oil change Leitchfield" need to land on a service page, not just a homepage. Service pages are how a shop ranks for what people actually search.',
     href: '/auto-repair-shop-website-design-kentucky',
+    image: '/auto-repair-shop-bay-kentucky.webp',
+    alt: 'Modern auto repair shop bay with a car on a service stand under overhead lighting',
   },
   {
     slug: 'contractors',
@@ -29,6 +33,8 @@ const industries: Industry[] = [
     short: 'contractor or trades',
     insight: 'Roofers, plumbers, electricians, and tradespeople get most of their leads from "X near me" searches. Your site has to be fast, clear, and tell Google exactly what you do and where you do it.',
     href: '/contractor-website-design-kentucky',
+    image: '/contractor-rooftop-job-kentucky.webp',
+    alt: 'Roofing contractor working on a residential roof on a clear Kentucky afternoon',
   },
   {
     slug: 'restaurants',
@@ -36,6 +42,8 @@ const industries: Industry[] = [
     short: 'restaurant',
     insight: 'Menu, hours, directions, reservations. Customers decide where to eat in under a minute, so your site has to answer those four questions before anything else loads.',
     href: '/restaurant-website-design-kentucky',
+    image: '/restaurant-cook-kitchen-kentucky.webp',
+    alt: 'Cook seasoning a row of plated dishes in a busy restaurant kitchen',
   },
   {
     slug: 'retail',
@@ -43,6 +51,8 @@ const industries: Industry[] = [
     short: 'boutique or shop',
     insight: 'Customers want to see what you sell before they walk in. A clean product preview, real photos, and clear store hours beat a generic shop-now button that goes nowhere useful.',
     href: '/retail-boutique-website-design-kentucky',
+    image: '/boutique-owner-arranging-store-kentucky.webp',
+    alt: 'Boutique owner taking notes beside a clothing rack and wrapped gift boxes',
   },
   {
     slug: 'service-providers',
@@ -73,7 +83,7 @@ const industries: Industry[] = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["ProfessionalService", "Service"],
-  "name": "Studio 925 — Web Design by Industry in Kentucky",
+  "name": "Studio 925: Web Design by Industry in Kentucky",
   "url": "https://studio925.design/web-design-by-industry",
   "email": "kara@studio925.design",
   "telephone": "+1-270-551-2210",
@@ -120,118 +130,137 @@ export default function IndustryHubContent() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative pt-28 pb-16 md:pt-40 md:pb-24 px-6 overflow-hidden">
-        <div className="absolute inset-0 grid-pattern opacity-60" />
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-accent/5 -skew-x-12 translate-x-1/4" />
-
-        <div className="max-w-5xl mx-auto relative z-10">
+      {/* Hero — text with a collage of real industry photos */}
+      <section className="pt-28 pb-14 md:pt-40 md:pb-24 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-primary text-white text-xs font-medium mb-4 md:mb-6">
-              <Layers size={12} className="shrink-0" /> Kentucky · By Industry
-            </div>
+            <p className="text-sm font-medium text-brand-primary/75 mb-3 md:mb-4">Kentucky · By industry</p>
             <h1 className="text-3xl md:text-6xl mb-4 md:mb-6 leading-[1.1]">
-              Web Design by <span className="italic text-brand-accent">Industry</span> in Kentucky
+              Web Design by <span className="italic">Industry</span> in Kentucky
             </h1>
-            <p className="text-base md:text-xl text-brand-primary/75 max-w-2xl leading-relaxed">
-              Studio 925 builds custom websites for Kentucky&apos;s local industries: auto repair shops, contractors, restaurants, boutiques, and more. Each industry has different customer search behavior, so each gets a site built around how those customers actually find local services.
+            <p className="text-base md:text-xl text-brand-primary/75 max-w-xl leading-relaxed">
+              Studio 925 builds custom websites for Kentucky&apos;s local industries: auto repair shops, contractors, restaurants, boutiques, real estate, and more. Each industry&apos;s customers search differently, so each gets a site built around how they actually find you.
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="grid grid-cols-2 gap-3 md:gap-4"
+            aria-hidden="true"
+          >
+            <div className="space-y-3 md:space-y-4">
+              <img src="/contractor-rooftop-job-kentucky.webp" alt="" className="w-full h-40 md:h-56 object-cover rounded-2xl" />
+              <img src="/restaurant-cook-kitchen-kentucky.webp" alt="" className="w-full h-28 md:h-40 object-cover rounded-2xl" />
+            </div>
+            <div className="space-y-3 md:space-y-4 pt-8 md:pt-12">
+              <img src="/boutique-owner-arranging-store-kentucky.webp" alt="" className="w-full h-28 md:h-40 object-cover rounded-2xl" />
+              <img src="/auto-repair-shop-bay-kentucky.webp" alt="" className="w-full h-40 md:h-56 object-cover rounded-2xl" />
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Why industry-specific matters */}
-      <section className="py-10 md:py-14 px-6 bg-white border-t border-brand-primary/5">
-        <div className="max-w-4xl mx-auto">
-          <div className="p-6 md:p-8 rounded-3xl bg-brand-primary text-white">
-            <p className="text-xs uppercase tracking-widest text-brand-accent font-semibold mb-2 md:mb-3">Why this matters</p>
-            <p className="text-base md:text-lg leading-relaxed text-white/90">
-              An auto repair customer searches "brake repair near me." A boutique customer searches "where to buy a dress in [town]." A roofer&apos;s customer searches "roof leak repair Kentucky." Same town, three different intents. A one-template-fits-all site quietly loses on all three. The pages below are built around how each industry&apos;s customers actually search.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Industries grid */}
-      <section className="py-12 md:py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-            {industries.map((ind, i) => {
-              const motionProps = {
-                initial: { opacity: 0, y: 12 },
-                whileInView: { opacity: 1, y: 0 },
-                viewport: { once: true, amount: 0, margin: "100% 0px 100% 0px" },
-                transition: { delay: i * 0.04 },
-              };
-              if (ind.href) {
-                return (
-                  <motion.div key={ind.slug} {...motionProps}>
-                    <Link
-                      href={ind.href}
-                      className="group block h-full p-5 md:p-7 rounded-3xl bg-brand-accent/5 border-2 border-brand-accent/30 hover:bg-brand-accent/10 hover:border-brand-accent/50 transition-colors"
-                    >
-                      <div className="flex items-start justify-between gap-3 mb-2 md:mb-3">
-                        <h2 className="text-lg md:text-xl font-sans font-bold text-emerald-800">
-                          {ind.name}
-                        </h2>
-                        <ArrowUpRight size={18} className="text-emerald-800 shrink-0 mt-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                      </div>
-                      <p className="text-sm md:text-base text-brand-primary/75 leading-relaxed mb-4">
-                        {ind.insight}
-                      </p>
-                      <div className="inline-flex items-center gap-1.5 text-emerald-800 font-semibold text-sm md:text-base">
-                        View industry page <ArrowRight size={14} />
-                      </div>
-                    </Link>
-                  </motion.div>
-                );
-              }
-              return (
-                <motion.div
-                  key={ind.slug}
-                  {...motionProps}
-                  className="h-full p-5 md:p-7 rounded-3xl bg-white border border-brand-primary/10 flex flex-col"
-                >
-                  <h2 className="text-lg md:text-xl font-sans font-bold text-brand-primary mb-2 md:mb-3">
-                    {ind.name}
-                  </h2>
-                  <p className="text-sm md:text-base text-brand-primary/75 leading-relaxed mb-4 flex-1">
-                    {ind.insight}
-                  </p>
-                  <Link
-                    href="/#contact"
-                    className="group inline-flex items-center gap-1.5 text-emerald-800 font-semibold text-sm md:text-base hover:underline underline-offset-4"
-                  >
-                    <MessageCircle size={14} />
-                    Talk about your {ind.short} site
-                    <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Don't see your industry? */}
-      <section className="py-12 md:py-16 px-6 bg-white border-t border-brand-primary/5">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl mb-3 md:mb-4">
-            Don&apos;t see your <span className="italic text-brand-accent">industry?</span>
+      {/* Same town, different searches */}
+      <section className="py-14 md:py-20 px-6 bg-white border-y border-brand-primary/10">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-4xl mb-8 md:mb-12 max-w-2xl">
+            Same town. Three customers. Three completely different searches.
           </h2>
-          <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed mb-5 md:mb-6 max-w-2xl mx-auto">
-            The list above covers the industries Studio 925 sees most often, but it isn&apos;t the whole list. If you run a small business in Kentucky and you need a custom website, the conversation is the same regardless of category.
+          <div className="grid md:grid-cols-3">
+            {[
+              { who: 'Auto repair customer', search: 'brake repair near me' },
+              { who: 'Boutique shopper', search: 'where to buy a dress in Leitchfield' },
+              { who: 'Homeowner with a leak', search: 'roof leak repair Kentucky' },
+            ].map((item, i) => (
+              <div
+                key={item.who}
+                className={i > 0 ? 'py-5 md:py-0 md:px-8 border-t md:border-t-0 md:border-l border-brand-primary/15' : 'py-5 md:py-0 md:pr-8'}
+              >
+                <p className="text-sm text-brand-primary/70 mb-2">{item.who}</p>
+                <p className="font-serif italic text-2xl md:text-3xl leading-snug">&ldquo;{item.search}&rdquo;</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 md:mt-12 text-base md:text-lg text-brand-primary/75 leading-relaxed max-w-3xl">
+            A one-size-fits-all site quietly loses all three. The industry pages below are each built around what that industry&apos;s customers actually type.
           </p>
-          <Link
-            href="/#contact"
-            className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 md:px-7 md:py-4 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
-          >
-            Tell me about your business <ArrowRight size={18} />
-          </Link>
+        </div>
+      </section>
+
+      {/* Industry directory — built pages with photos */}
+      <section className="py-14 md:py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-4xl mb-8 md:mb-12">Industry pages</h2>
+          <div className="border-t border-brand-primary/15">
+            {industries.filter((ind) => ind.href).map((ind, i) => (
+              <motion.div
+                key={ind.slug}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
+                transition={{ delay: i * 0.04 }}
+                className="border-b border-brand-primary/15"
+              >
+                <Link
+                  href={ind.href!}
+                  className="group grid grid-cols-[6rem_1fr] sm:grid-cols-[3rem_10rem_1fr_auto] md:grid-cols-[4rem_14rem_1fr_auto] gap-4 md:gap-8 items-center py-5 md:py-7"
+                >
+                  <span className="hidden sm:block font-serif italic text-2xl md:text-3xl text-brand-primary/70">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <img
+                    src={ind.image}
+                    alt={ind.alt}
+                    className="w-full h-20 sm:h-24 md:h-32 object-cover rounded-xl"
+                  />
+                  <div>
+                    <h3 className="text-xl md:text-3xl mb-1 md:mb-2 group-hover:underline underline-offset-4 decoration-2">{ind.name}</h3>
+                    <p className="hidden sm:block text-sm md:text-base text-brand-primary/75 leading-relaxed max-w-xl">{ind.insight}</p>
+                  </div>
+                  <ArrowRight size={22} className="hidden sm:block text-brand-primary shrink-0 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries without a dedicated page yet */}
+      <section className="py-14 md:py-20 px-6 bg-white border-t border-brand-primary/10">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.6fr] gap-8 md:gap-16">
+          <div>
+            <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">I also build for</h2>
+            <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed mb-5 md:mb-6">
+              These don&apos;t have their own page yet, but they get the same custom build. Don&apos;t see your business at all? The conversation is the same.
+            </p>
+            <Link
+              href="/#contact"
+              className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold"
+            >
+              Tell me about your business <ArrowRight size={18} />
+            </Link>
+          </div>
+          <div className="border-t border-brand-primary/15">
+            {industries.filter((ind) => !ind.href).map((ind) => (
+              <div key={ind.slug} className="py-5 md:py-6 border-b border-brand-primary/15">
+                <h3 className="text-lg md:text-xl mb-1.5">{ind.name}</h3>
+                <p className="text-sm md:text-base text-brand-primary/75 leading-relaxed mb-2">{ind.insight}</p>
+                <Link
+                  href="/#contact"
+                  className="inline-flex items-center gap-1.5 text-emerald-800 font-semibold text-sm hover:underline underline-offset-4"
+                >
+                  <MessageCircle size={14} />
+                  Talk about your {ind.short} site
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -242,15 +271,31 @@ export default function IndustryHubContent() {
       />
 
       {/* Pricing teaser */}
-      <section className="py-12 md:py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">Same pricing across every industry</h2>
-          <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed mb-5 md:mb-7 max-w-3xl">
-            Foundation sites start at <strong>$900</strong>. Growth sites with individual service pages start at <strong>$1,800</strong>. Online stores start at <strong>$2,600</strong>. The right tier depends on whether your industry needs deep service pages to rank, not on the industry itself. The <Link href="/website-cost" className="text-emerald-800 hover:underline">website cost guide</Link> breaks down what you get at each tier.
+      <section className="py-14 md:py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">Same pricing for every industry</h2>
+          <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed mb-8 md:mb-12 max-w-3xl">
+            The right plan depends on how hard you need to compete on Google, not on what you sell. The <Link href="/website-cost" className="text-emerald-800 underline underline-offset-2 hover:text-emerald-900">website cost guide</Link> breaks down each one.
           </p>
+          <div className="grid sm:grid-cols-3 border-t border-brand-primary/15 mb-8 md:mb-10">
+            {[
+              { price: '$900', name: 'Foundation', note: 'Up to 5 pages. Get found when people search your name.' },
+              { price: '$1,800', name: 'Growth', note: 'Up to 10 pages and an SEO audit. Built to compete on Google.' },
+              { price: '$2,600', name: 'Online Store', note: 'Everything in Growth, plus checkout and customer accounts.' },
+            ].map((plan, i) => (
+              <div
+                key={plan.name}
+                className={i > 0 ? 'py-6 sm:pb-0 sm:px-8 border-t sm:border-t-0 sm:border-l border-brand-primary/15' : 'py-6 sm:pb-0 sm:pr-8'}
+              >
+                <p className="font-serif text-4xl md:text-5xl font-bold mb-2">{plan.price}</p>
+                <p className="font-semibold mb-1">{plan.name}</p>
+                <p className="text-sm text-brand-primary/75 leading-relaxed">{plan.note}</p>
+              </div>
+            ))}
+          </div>
           <a
             href="/#pricing"
-            className="inline-flex items-center gap-2 bg-brand-primary text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold"
           >
             See Full Pricing <ArrowRight size={18} />
           </a>
@@ -264,15 +309,15 @@ export default function IndustryHubContent() {
           <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed mb-4 md:mb-6">
             Looking for web design in a specific Kentucky town or region? Studio 925 has dedicated pages for these areas too.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap">
-            <Link href="/website-design-leitchfield-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Website Design in Leitchfield, KY <ArrowRight size={16} className="inline ml-2" />
+          <div className="grid sm:grid-cols-2 gap-x-10 border-t border-brand-primary/15">
+            <Link href="/website-design-leitchfield-ky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Website Design in Leitchfield, KY <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/web-design-grayson-county-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Web Design in Grayson County, KY <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/web-design-grayson-county-ky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Web Design in Grayson County, KY <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/small-business-website-design-kentucky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Small Business Website Design in Kentucky <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/small-business-website-design-kentucky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Small Business Website Design in Kentucky <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
@@ -288,7 +333,7 @@ export default function IndustryHubContent() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link
               href="/portfolio"
-              className="inline-flex items-center justify-center gap-2 bg-brand-accent text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold hover:bg-brand-accent/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold"
             >
               View Portfolio <ArrowRight size={20} />
             </Link>

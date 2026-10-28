@@ -48,7 +48,7 @@ const includedMore = [
 
 const customerSearches = [
   { query: '"restaurants near me"', intent: 'Hungry now. Picking from whatever shows up.' },
-  { query: '"breakfast [your town]"', intent: 'Wants to know who\'s open and what they serve.' },
+  { query: '"breakfast Clarkson KY"', intent: 'Wants to know who\'s open and what they serve.' },
   { query: '"pizza delivery near me"', intent: 'Ready to order. Needs a number or an order link.' },
   { query: '"[your restaurant] menu"', intent: 'Already knows you. Checking prices before coming in.' },
   { query: '"catering Grayson County"', intent: 'Planning an event. Bigger order, comparing options.' },
@@ -157,11 +157,11 @@ export default function RestaurantContent() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white text-xs font-medium mb-5 md:mb-7">
+            <div className="inline-flex items-center gap-1.5 text-white/85 text-sm font-medium mb-4 md:mb-5">
               <UtensilsCrossed size={12} className="shrink-0" /> Restaurants &amp; Food · Kentucky
             </div>
             <h1 className="text-3xl md:text-6xl mb-4 md:mb-6 leading-[1.1] text-white">
-              Website Design for <span className="italic text-brand-accent">Restaurants</span> in Kentucky
+              Website Design for <span className="italic">Restaurants</span> in Kentucky
             </h1>
             <p className="text-base md:text-xl text-white/85 max-w-xl leading-relaxed">
               Custom restaurant websites for diners, cafes, pizza places, food trucks, and family restaurants across Kentucky. Built so hungry people can find your menu, your hours, and your front door in under a minute.
@@ -171,7 +171,7 @@ export default function RestaurantContent() {
                 href="https://audit.studio925.design"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-brand-accent text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-accent/90 transition-colors shadow-lg shadow-black/20"
+                className="btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2"
               >
                 Get My Free Audit <ArrowRight size={20} />
               </a>
@@ -195,10 +195,10 @@ export default function RestaurantContent() {
             viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
           >
             <h2 className="text-2xl md:text-4xl mb-6 md:mb-8">
-              Why Kentucky restaurants need a <span className="italic text-brand-accent">real website</span>
+              Why Kentucky restaurants need a <span className="italic">real website</span>
             </h2>
           </motion.div>
-          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-10">
             {[
               { title: 'Hungry people decide fast', text: 'Someone searching "lunch near me" is looking at three or four places at once. If your menu won\'t load or your hours are missing, they pick the next one. A real site answers what you serve, when you\'re open, where you are, and how to order before they have to scroll.' },
               { title: 'A menu photo is hard to read', text: 'Lots of restaurants post a picture of the menu or a PDF. Those are tough to read on a phone, and Google matches plain text to searches like "catfish near me" much more reliably. A menu written as real text can show up for every dish on it.' },
@@ -210,7 +210,7 @@ export default function RestaurantContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                 transition={{ delay: i * 0.1 }}
-                className="p-5 md:p-8 glass rounded-3xl"
+                className="border-t-2 border-brand-primary pt-5"
               >
                 <h3 className="text-lg md:text-xl font-sans font-bold mb-2 md:mb-3">{item.title}</h3>
                 <p className="text-sm md:text-base text-brand-primary/70 leading-relaxed">{item.text}</p>
@@ -250,12 +250,12 @@ export default function RestaurantContent() {
           <div className="grid md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-start">
             <div>
               <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
-                What people search for when they&apos;re <span className="italic text-brand-accent">hungry</span>
+                What people search for when they&apos;re <span className="italic">hungry</span>
               </h2>
               <p className="text-brand-primary/70 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
                 Each of these is a search your restaurant can show up for. Some are about food, some are about timing, and one is about you by name. A good site has an answer ready for every one.
               </p>
-              <div className="grid sm:grid-cols-2 gap-3">
+              <div className="grid sm:grid-cols-2 gap-x-10 border-t border-brand-primary/15">
                 {customerSearches.map((s, i) => (
                   <motion.div
                     key={i}
@@ -263,13 +263,10 @@ export default function RestaurantContent() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                     transition={{ delay: i * 0.05 }}
-                    className="p-3 md:p-4 rounded-xl bg-brand-primary/5 border border-brand-primary/5"
+                    className="py-4 border-b border-brand-primary/15"
                   >
-                    <div className="flex items-center gap-2 mb-1">
-                      <Search size={13} className="text-emerald-800 shrink-0" />
-                      <span className="font-semibold text-brand-primary text-xs md:text-sm">{s.query}</span>
-                    </div>
-                    <p className="text-xs text-brand-primary/70 leading-relaxed pl-5">{s.intent}</p>
+                    <p className="font-semibold text-brand-primary text-sm md:text-base mb-1">{s.query}</p>
+                    <p className="text-sm text-brand-primary/70 leading-relaxed">{s.intent}</p>
                   </motion.div>
                 ))}
               </div>
@@ -306,12 +303,12 @@ export default function RestaurantContent() {
           <div className="grid md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-start">
             <div>
               <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
-                Pages your restaurant website should <span className="italic text-brand-accent">actually have</span>
+                Pages your restaurant website should <span className="italic">actually have</span>
               </h2>
               <p className="text-brand-primary/70 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
                 A restaurant site doesn&apos;t need to be big. It needs to answer four questions fast: what do you serve, when are you open, where are you, and how do I order. These pages cover all four, plus the one that brings in catering money.
               </p>
-              <div className="space-y-3 md:space-y-4">
+              <div className="border-t border-brand-primary/15">
                 {restaurantPages.map((p, i) => (
                   <motion.div
                     key={i}
@@ -319,11 +316,9 @@ export default function RestaurantContent() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                     transition={{ delay: i * 0.05 }}
-                    className="flex items-start gap-3 md:gap-4 p-4 md:p-5 rounded-2xl bg-white border border-brand-primary/5"
+                    className="grid grid-cols-[2.5rem_1fr] md:grid-cols-[3.5rem_1fr] py-5 border-b border-brand-primary/15"
                   >
-                    <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <Check size={14} className="text-emerald-800" />
-                    </div>
+                    <span className="font-serif italic text-xl md:text-2xl text-brand-primary/70 leading-none pt-0.5">{String(i + 1).padStart(2, '0')}</span>
                     <div>
                       <h3 className="font-bold text-brand-primary text-sm md:text-base mb-1">{p.title}</h3>
                       <p className="text-sm text-brand-primary/70 leading-relaxed">{p.text}</p>
@@ -374,10 +369,10 @@ export default function RestaurantContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                 transition={{ delay: i * 0.1 }}
-                className="p-4 md:p-6 rounded-2xl bg-white/10 border border-white/10"
+                className="border-t border-white/15 pt-5 pr-4"
               >
-                <item.icon size={20} className="text-brand-accent mb-3 md:mb-4 md:!w-6 md:!h-6" />
-                <p className="text-xs md:text-sm font-medium leading-relaxed">{item.text}</p>
+                <item.icon size={22} strokeWidth={1.5} className="text-brand-accent mb-4" />
+                <p className="text-sm md:text-base leading-relaxed text-white/90">{item.text}</p>
               </motion.div>
             ))}
           </div>
@@ -398,7 +393,7 @@ export default function RestaurantContent() {
         <div className="absolute inset-0 grid-pattern opacity-40" />
         <div className="max-w-4xl mx-auto relative z-10">
           <h2 className="text-2xl md:text-4xl mb-5 md:mb-8">
-            What makes Studio 925 <span className="italic text-brand-accent">different</span>
+            What makes Studio 925 <span className="italic">different</span>
           </h2>
           <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed">
             A lot of restaurant sites come from templates with a big photo slider and the menu buried in a PDF. Studio 925 sites are custom-coded so the menu, hours, and order button load first on a phone. I&apos;m based in Grayson County, so when your holiday hours change, you just text me. No account managers, no runaround.
@@ -410,9 +405,9 @@ export default function RestaurantContent() {
       <section className="py-16 md:py-24 px-6 bg-white border-t border-brand-primary/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-6 md:mb-10">
-            Common questions about <span className="italic text-brand-accent">restaurant websites</span>
+            Common questions about <span className="italic">restaurant websites</span>
           </h2>
-          <div className="space-y-4">
+          <div className="border-t border-brand-primary/15">
             {faqs.map((faq, i) => (
               <motion.div
                 key={i}
@@ -420,14 +415,14 @@ export default function RestaurantContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                 transition={{ delay: i * 0.05 }}
-                className="rounded-2xl bg-white border border-brand-primary/5"
+                className="border-b border-brand-primary/15"
               >
                 <details className="group">
-                  <summary className="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-                    <h3 className="text-sm md:text-base font-bold">{faq.question}</h3>
+                  <summary className="flex items-center justify-between gap-4 py-5 md:py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    <h3 className="text-base md:text-lg font-bold">{faq.question}</h3>
                     <ChevronDown size={18} className="shrink-0 text-brand-primary/70 transition-transform group-open:rotate-180" />
                   </summary>
-                  <p className="text-sm text-brand-primary/75 leading-relaxed px-5 md:px-6 pb-5 md:pb-6 -mt-1">{faq.answer}</p>
+                  <p className="text-sm text-brand-primary/75 leading-relaxed pb-6 -mt-1 max-w-3xl">{faq.answer}</p>
                 </details>
               </motion.div>
             ))}
@@ -450,7 +445,7 @@ export default function RestaurantContent() {
           </p>
           <a
             href="/#pricing"
-            className="inline-flex items-center gap-2 bg-brand-primary text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold"
           >
             See Full Pricing <ArrowRight size={18} />
           </a>
@@ -464,18 +459,18 @@ export default function RestaurantContent() {
           <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed mb-4 md:mb-6">
             Studio 925 builds custom websites for small businesses in Leitchfield, Grayson County, and across Kentucky.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap">
-            <Link href="/web-design-by-industry" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-brand-accent/5 border border-brand-accent/30 hover:bg-brand-accent/10 transition-colors text-sm md:text-base font-semibold text-emerald-800">
-              All Industries Web Design <ArrowRight size={16} className="inline ml-2" />
+          <div className="grid sm:grid-cols-2 gap-x-10 border-t border-brand-primary/15">
+            <Link href="/web-design-by-industry" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              All Industries Web Design <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/website-design-leitchfield-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Website Design in Leitchfield, KY <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/website-design-leitchfield-ky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Website Design in Leitchfield, KY <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/web-design-grayson-county-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Web Design in Grayson County, KY <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/web-design-grayson-county-ky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Web Design in Grayson County, KY <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/small-business-website-design-kentucky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Small Business Website Design in Kentucky <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/small-business-website-design-kentucky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Small Business Website Design in Kentucky <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
@@ -491,7 +486,7 @@ export default function RestaurantContent() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link
               href="/portfolio"
-              className="inline-flex items-center justify-center gap-2 bg-brand-accent text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold hover:bg-brand-accent/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold"
             >
               View Portfolio <ArrowRight size={20} />
             </Link>

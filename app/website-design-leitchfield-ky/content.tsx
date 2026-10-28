@@ -123,11 +123,11 @@ export default function LeitchfieldContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-primary text-white text-xs font-medium mb-4 md:mb-6">
+            <div className="inline-flex items-center gap-1.5 text-brand-primary/75 text-sm font-medium mb-3 md:mb-4">
               <MapPin size={12} className="shrink-0" /> Leitchfield, KY
             </div>
             <h1 className="text-3xl md:text-6xl mb-4 md:mb-6 leading-[1.1]">
-              Website Design in <span className="italic text-brand-accent">Leitchfield, Kentucky</span>
+              Website Design in <span className="italic">Leitchfield, Kentucky</span>
             </h1>
             <p className="text-base md:text-xl text-brand-primary/70 max-w-xl leading-relaxed">
               Custom website design for small businesses in Leitchfield, KY. No templates, no page builders. Your site is built from scratch to bring in real customers.
@@ -135,7 +135,7 @@ export default function LeitchfieldContent() {
             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
               <Link
                 href="/portfolio"
-                className="bg-brand-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-primary/90 transition-colors shadow-lg shadow-brand-primary/20"
+                className="btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2"
               >
                 See My Work <ArrowRight size={20} />
               </Link>
@@ -198,10 +198,10 @@ export default function LeitchfieldContent() {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl md:text-4xl mb-6 md:mb-8">
-              Why Leitchfield businesses need a <span className="italic text-brand-accent">professional website</span>
+              Why Leitchfield businesses need a <span className="italic">professional website</span>
             </h2>
           </motion.div>
-          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-10">
             {[
               { title: 'Get found first', text: 'When someone in Leitchfield searches for a contractor, a restaurant, or a local service, they go to Google first. If your business doesn\'t show up, they\'re calling someone else.' },
               { title: 'Build instant trust', text: 'A professional website tells potential customers that you\'re serious. In a small town where reputation matters, your website should reflect the quality of your work.' },
@@ -213,7 +213,7 @@ export default function LeitchfieldContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-5 md:p-8 glass rounded-3xl"
+                className="border-t-2 border-brand-primary pt-5"
               >
                 <h3 className="text-lg md:text-xl font-sans font-bold mb-2 md:mb-3">{item.title}</h3>
                 <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed">{item.text}</p>
@@ -230,7 +230,7 @@ export default function LeitchfieldContent() {
           <p className="text-brand-primary/70 text-base md:text-lg leading-relaxed mb-6 md:mb-10">
             If you run a business in Leitchfield and you don't have a website, or your current site is outdated, slow, or isn't bringing in customers, this is for you.
           </p>
-          <div className="grid grid-cols-2 gap-3 md:gap-4">
+          <div className="grid grid-cols-2 gap-x-6 md:gap-x-10 border-t border-brand-primary/15">
             {[
               'Contractors & tradespeople',
               'Local service providers',
@@ -247,11 +247,9 @@ export default function LeitchfieldContent() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="flex items-center gap-2 md:gap-3 p-3 md:p-4 rounded-2xl bg-white border border-brand-primary/5"
+                className="flex items-center gap-2 md:gap-3 py-3 border-b border-brand-primary/15"
               >
-                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0">
-                  <Check size={14} className="text-brand-accent md:!w-4 md:!h-4" />
-                </div>
+                <Check size={16} className="text-emerald-800 shrink-0" />
                 <span className="text-xs md:text-base text-brand-primary/80 font-medium">{item}</span>
               </motion.div>
             ))}
@@ -275,10 +273,10 @@ export default function LeitchfieldContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-4 md:p-6 rounded-2xl bg-white/10 border border-white/10"
+                className="border-t border-white/15 pt-5 pr-4"
               >
-                <item.icon size={20} className="text-brand-accent mb-3 md:mb-4 md:!w-6 md:!h-6" />
-                <p className="text-xs md:text-sm font-medium leading-relaxed">{item.text}</p>
+                <item.icon size={22} strokeWidth={1.5} className="text-brand-accent mb-4" />
+                <p className="text-sm md:text-base leading-relaxed text-white/90">{item.text}</p>
               </motion.div>
             ))}
           </div>
@@ -299,7 +297,7 @@ export default function LeitchfieldContent() {
         <div className="absolute inset-0 grid-pattern opacity-40" />
         <div className="max-w-4xl mx-auto relative z-10">
           <h2 className="text-2xl md:text-4xl mb-5 md:mb-8">
-            What makes Studio 925 <span className="italic text-brand-accent">different</span>
+            What makes Studio 925 <span className="italic">different</span>
           </h2>
           <div className="space-y-4 md:space-y-6 text-brand-primary/70 text-sm md:text-lg leading-relaxed">
             <p>
@@ -322,7 +320,7 @@ export default function LeitchfieldContent() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-6 md:p-10 glass rounded-3xl"
+            className="border-l-4 border-brand-primary pl-5 md:pl-8"
           >
             <div className="flex gap-1 mb-4">
               {[...Array(5)].map((_, i) => (
@@ -337,7 +335,7 @@ export default function LeitchfieldContent() {
             <div className="flex items-center gap-3">
               <div>
                 <p className="font-semibold text-sm">CS Media</p>
-                <p className="text-xs text-brand-primary/50">Real Estate Media · Leitchfield, KY</p>
+                <p className="text-xs text-brand-primary/70">Real Estate Media · Leitchfield, KY</p>
               </div>
             </div>
           </motion.div>
@@ -348,9 +346,9 @@ export default function LeitchfieldContent() {
       <section className="py-16 md:py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-6 md:mb-10">
-            Common questions about website design in <span className="italic text-brand-accent">Leitchfield</span>
+            Common questions about website design in <span className="italic">Leitchfield</span>
           </h2>
-          <div className="space-y-4">
+          <div className="border-t border-brand-primary/15">
             {faqs.map((faq, i) => (
               <motion.div
                 key={i}
@@ -358,10 +356,10 @@ export default function LeitchfieldContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="p-5 md:p-6 rounded-2xl bg-white border border-brand-primary/5"
+                className="py-5 md:py-6 border-b border-brand-primary/15"
               >
-                <h3 className="text-sm md:text-base font-bold mb-2">{faq.question}</h3>
-                <p className="text-sm text-brand-primary/65 leading-relaxed">{faq.answer}</p>
+                <h3 className="text-base md:text-lg font-bold mb-2">{faq.question}</h3>
+                <p className="text-sm md:text-base text-brand-primary/75 leading-relaxed max-w-3xl">{faq.answer}</p>
               </motion.div>
             ))}
           </div>
@@ -383,7 +381,7 @@ export default function LeitchfieldContent() {
           </p>
           <a
             href="/#pricing"
-            className="inline-flex items-center gap-2 bg-brand-primary text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold"
           >
             See Full Pricing <ArrowRight size={18} />
           </a>
@@ -397,18 +395,18 @@ export default function LeitchfieldContent() {
           <p className="text-brand-primary/70 text-sm md:text-lg leading-relaxed mb-4 md:mb-6">
             Studio 925 builds websites for businesses across Grayson County, the rest of Kentucky, and a range of local industries.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap">
-            <Link href="/web-design-by-industry" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-brand-accent/5 border border-brand-accent/30 hover:bg-brand-accent/10 transition-colors text-sm md:text-base font-semibold text-emerald-800">
-              Web Design by Industry in Kentucky <ArrowRight size={16} className="inline ml-2" />
+          <div className="grid sm:grid-cols-2 gap-x-10 border-t border-brand-primary/15">
+            <Link href="/web-design-by-industry" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Web Design by Industry in Kentucky <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/web-design-grayson-county-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Web Design Services in Grayson County, KY <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/web-design-grayson-county-ky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Web Design Services in Grayson County, KY <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/small-business-website-design-kentucky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Small Business Website Design in Kentucky <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/small-business-website-design-kentucky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Small Business Website Design in Kentucky <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/contractor-website-design-kentucky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Contractor Websites in Kentucky <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/contractor-website-design-kentucky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Contractor Websites in Kentucky <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
@@ -424,7 +422,7 @@ export default function LeitchfieldContent() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link
               href="/portfolio"
-              className="inline-flex items-center justify-center gap-2 bg-brand-accent text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold hover:bg-brand-accent/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold"
             >
               View Portfolio <ArrowRight size={20} />
             </Link>

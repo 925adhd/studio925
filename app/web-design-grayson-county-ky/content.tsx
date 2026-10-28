@@ -121,19 +121,19 @@ export default function GraysonCountyContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-primary text-white text-xs font-medium mb-4 md:mb-6">
+            <div className="inline-flex items-center gap-1.5 text-brand-primary/75 text-sm font-medium mb-3 md:mb-4">
               <MapPin size={12} className="shrink-0" /> Grayson County, KY
             </div>
             <h1 className="text-3xl md:text-6xl mb-4 md:mb-6 leading-[1.1]">
-              Web Design in <span className="italic text-brand-accent">Grayson County, Kentucky</span>
+              Web Design in <span className="italic">Grayson County, Kentucky</span>
             </h1>
             <p className="text-base md:text-xl text-brand-primary/70 max-w-xl leading-relaxed">
-              Custom web design for local businesses across Leitchfield, Clarkson, Caneyville, and the rest of Grayson County. Built by a designer who actually lives here.
+              Custom web design for local businesses across <Link href="/website-design-leitchfield-ky" className="text-brand-primary font-semibold underline underline-offset-2 hover:text-emerald-800">Leitchfield</Link>, <Link href="/website-design-clarkson-ky" className="text-brand-primary font-semibold underline underline-offset-2 hover:text-emerald-800">Clarkson</Link>, <Link href="/website-design-caneyville-ky" className="text-brand-primary font-semibold underline underline-offset-2 hover:text-emerald-800">Caneyville</Link>, and the rest of Grayson County. Built by a designer who actually lives here.
             </p>
             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
               <a
                 href="/#contact"
-                className="bg-brand-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-primary/90 transition-colors shadow-lg shadow-brand-primary/20"
+                className="btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2"
               >
                 Get Started <ArrowRight size={20} />
               </a>
@@ -195,10 +195,10 @@ export default function GraysonCountyContent() {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl md:text-4xl mb-6 md:mb-8">
-              Why Grayson County businesses choose a <span className="italic text-brand-accent">local web designer</span>
+              Why Grayson County businesses choose a <span className="italic">local web designer</span>
             </h2>
           </motion.div>
-          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-10">
             {[
               {
                 title: 'You\'re not just another ticket',
@@ -219,7 +219,7 @@ export default function GraysonCountyContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-5 md:p-8 glass rounded-3xl"
+                className="border-t-2 border-brand-primary pt-5"
               >
                 <h3 className="text-lg md:text-xl font-sans font-bold mb-2 md:mb-3">{item.title}</h3>
                 <p className="text-sm md:text-base text-brand-primary/60 leading-relaxed">{item.text}</p>
@@ -236,7 +236,7 @@ export default function GraysonCountyContent() {
       <section className="py-16 md:py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
-            What a good website actually <span className="italic text-brand-accent">does</span> for your business
+            What a good website actually <span className="italic">does</span> for your business
           </h2>
           <p className="text-brand-primary/60 text-sm md:text-lg leading-relaxed mb-6 md:mb-10 max-w-2xl">
             It's not about having a website. It's about having one that works.
@@ -271,10 +271,10 @@ export default function GraysonCountyContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-4 md:p-6 rounded-2xl bg-white/10 border border-white/10"
+                className="border-t border-white/15 pt-5 pr-4"
               >
-                <item.icon size={20} className="text-brand-accent mb-3 md:mb-4 md:!w-6 md:!h-6" />
-                <p className="text-xs md:text-sm font-medium leading-relaxed">{item.text}</p>
+                <item.icon size={22} strokeWidth={1.5} className="text-brand-accent mb-4" />
+                <p className="text-sm md:text-base leading-relaxed text-white/90">{item.text}</p>
               </motion.div>
             ))}
           </div>
@@ -302,7 +302,7 @@ export default function GraysonCountyContent() {
         <div className="absolute inset-0 grid-pattern opacity-40" />
         <div className="max-w-4xl mx-auto relative z-10">
           <h2 className="text-2xl md:text-4xl mb-5 md:mb-8">
-            Built right here in <span className="italic text-brand-accent">Grayson County</span>
+            Built right here in <span className="italic">Grayson County</span>
           </h2>
           <div className="space-y-4 md:space-y-6 text-brand-primary/70 text-sm md:text-lg leading-relaxed">
             <p>
@@ -333,29 +333,28 @@ export default function GraysonCountyContent() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-[2rem] border border-brand-primary/10 bg-white p-6 md:p-10 shadow-lg shadow-brand-primary/5"
+            className="relative"
           >
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-700/5 -skew-x-12 translate-x-1/3 pointer-events-none" />
             <div className="relative z-10 grid md:grid-cols-[1.4fr_1fr] gap-6 md:gap-10 items-center">
               <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-700/10 text-emerald-800 text-xs font-bold tracking-widest uppercase mb-3 md:mb-4">
+                <div className="inline-flex items-center gap-1.5 text-emerald-800 text-xs font-bold tracking-widest uppercase mb-3 md:mb-4">
                   <MapPin size={12} className="shrink-0" /> Free for Grayson County
                 </div>
                 <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
-                  See exactly where you rank on <span className="italic text-emerald-800">Google</span> first.
+                  See exactly where you rank on <span className="italic">Google</span> first.
                 </h2>
                 <p className="text-sm md:text-base text-brand-primary/70 leading-relaxed mb-5 md:mb-6">
                   Before we talk about a website, get a free 49-point map of how your business shows up across Grayson County. Visibility score, top competitors, and one concrete recommendation. No subscription, no catch.
                 </p>
                 <a
                   href="https://audit.studio925.design"
-                  className="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors shadow-lg shadow-brand-primary/20"
+                  className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold"
                 >
                   Get my free audit <ArrowRight size={18} />
                 </a>
               </div>
               <div className="hidden md:block">
-                <div className="relative rounded-2xl border border-brand-primary/10 bg-brand-warm p-5 font-serif">
+                <div className="relative rounded-2xl border border-brand-primary/10 bg-white p-5 font-serif shadow-sm">
                   <div className="text-[10px] tracking-[0.22em] font-bold text-brand-primary/50 mb-2 uppercase">Local Geomap · Sample</div>
                   <div className="grid grid-cols-7 gap-1.5">
                     {[2, 1, 4, 7, 9, 12, 18, 1, 1, 3, 5, 8, 14, 20, 3, 2, 5, 8, 11, 16, 22, 6, 4, 7, 10, 13, 19, 25, 9, 7, 11, 14, 17, 21, 30].map((rank, i) => {
@@ -403,7 +402,7 @@ export default function GraysonCountyContent() {
               { name: 'Growth', price: '$1,800', desc: 'Up to 10 pages, hands-on SEO audit, service pages, analytics' },
               { name: 'Online Store', price: '$2,600', desc: 'Up to 15 pages, online store, customer accounts, checkout' },
             ].map((plan) => (
-              <div key={plan.name} className="p-5 md:p-6 rounded-2xl border border-brand-primary/10 text-center">
+              <div key={plan.name} className="py-4 sm:py-0 sm:px-6 border-b sm:border-b-0 sm:border-l sm:first:border-l-0 border-brand-primary/15 text-center">
                 <p className="text-xs text-brand-primary/40 font-medium mb-1">{plan.name}</p>
                 <p className="text-2xl md:text-3xl font-serif font-bold italic mb-2">{plan.price}</p>
                 <p className="text-xs text-brand-primary/50">{plan.desc}</p>
@@ -418,7 +417,7 @@ export default function GraysonCountyContent() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
             <a
               href="/#pricing"
-              className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-6 py-3 rounded-2xl text-sm md:text-base font-semibold"
             >
               See Full Pricing Details <ArrowRight size={18} />
             </a>
@@ -441,14 +440,14 @@ export default function GraysonCountyContent() {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
-              Common <span className="italic text-brand-accent">questions</span>
+              Common <span className="italic">questions</span>
             </h2>
             <p className="text-brand-primary/60 text-sm md:text-lg leading-relaxed mb-8 md:mb-12 max-w-2xl">
               Questions I hear from Grayson County business owners, answered honestly.
             </p>
           </motion.div>
 
-          <div className="space-y-4 md:space-y-6">
+          <div className="border-t border-brand-primary/15">
             {faqItems.map((item, i) => (
               <motion.div
                 key={i}
@@ -456,7 +455,7 @@ export default function GraysonCountyContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="p-5 md:p-8 rounded-2xl md:rounded-3xl border border-brand-primary/10 bg-white"
+                className="py-5 md:py-6 border-b border-brand-primary/15"
               >
                 <h3 className="text-base md:text-lg font-sans font-bold mb-2 md:mb-3 text-brand-primary">
                   {item.question}
@@ -477,18 +476,24 @@ export default function GraysonCountyContent() {
           <p className="text-brand-primary/70 text-sm md:text-lg leading-relaxed mb-4 md:mb-6">
             Studio 925 builds websites for businesses across Kentucky and a range of local industries.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap">
-            <Link href="/web-design-by-industry" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-brand-accent/5 border border-brand-accent/30 hover:bg-brand-accent/10 transition-colors text-sm md:text-base font-semibold text-emerald-800">
-              Web Design by Industry in Kentucky <ArrowRight size={16} className="inline ml-2" />
+          <div className="grid sm:grid-cols-2 gap-x-10 border-t border-brand-primary/15">
+            <Link href="/web-design-by-industry" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Web Design by Industry in Kentucky <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/website-design-leitchfield-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Website Design in Leitchfield, KY <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/website-design-leitchfield-ky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Website Design in Leitchfield, KY <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/small-business-website-design-kentucky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Small Business Websites in Kentucky <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/website-design-clarkson-ky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Website Design in Clarkson, KY <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/contractor-website-design-kentucky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Contractor Websites in Kentucky <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/website-design-caneyville-ky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Website Design in Caneyville, KY <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link href="/small-business-website-design-kentucky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Small Business Websites in Kentucky <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
+            </Link>
+            <Link href="/contractor-website-design-kentucky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Contractor Websites in Kentucky <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
@@ -504,7 +509,7 @@ export default function GraysonCountyContent() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <a
               href="/#contact"
-              className="inline-flex items-center justify-center gap-2 bg-brand-accent text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold hover:bg-brand-accent/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold"
             >
               Get Started <ArrowRight size={20} />
             </a>

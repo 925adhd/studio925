@@ -48,7 +48,7 @@ const includedMore = [
 
 const customerSearches = [
   { query: '"oil change near me"', intent: 'Ready to book today.' },
-  { query: '"brake repair [your town]"', intent: 'Comparing local shops right now.' },
+  { query: '"brake repair Elizabethtown"', intent: 'Comparing local shops right now.' },
   { query: '"check engine light diagnostic"', intent: 'Worried, looking for someone trustworthy.' },
   { query: '"tire rotation [zip code]"', intent: 'Routine maintenance, price-shopping.' },
   { query: '"transmission repair Kentucky"', intent: 'Big job, vetting carefully.' },
@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     question: 'Do I really need a website if I already have a Facebook page?',
-    answer: 'A Facebook page can show up in Google search when someone types your shop\'s name, and in smaller towns it sometimes shows up for broader searches too. But for searches like "auto repair near me" or "oil change [your town]," Google shows its map listings first, and the results below are mostly websites and directories. Your Google listing works best when it links to a real site that spells out what you fix, your hours, and where you are. Facebook is great for updates and staying in touch with regulars. A website is the part you own and control.',
+    answer: 'A Facebook page can show up in Google search when someone types your shop\'s name, and in smaller towns it sometimes shows up for broader searches too. But for searches like "auto repair near me" or "oil change Leitchfield," Google shows its map listings first, and the results below are mostly websites and directories. Your Google listing works best when it links to a real site that spells out what you fix, your hours, and where you are. Facebook is great for updates and staying in touch with regulars. A website is the part you own and control.',
   },
   {
     question: 'What pages should an auto repair shop website have?',
@@ -155,11 +155,11 @@ export default function AutoRepairShopContent() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white text-xs font-medium mb-5 md:mb-7">
+            <div className="inline-flex items-center gap-1.5 text-white/85 text-sm font-medium mb-4 md:mb-5">
               <Wrench size={12} className="shrink-0" /> Auto Repair Shops · Kentucky
             </div>
             <h1 className="text-3xl md:text-6xl mb-4 md:mb-6 leading-[1.1] text-white">
-              Website Design for <span className="italic text-brand-accent">Auto Repair Shops</span> in Kentucky
+              Website Design for <span className="italic">Auto Repair Shops</span> in Kentucky
             </h1>
             <p className="text-base md:text-xl text-white/85 max-w-xl leading-relaxed">
               Custom website design for auto repair shops in Kentucky. Built to help your shop get found on Google, take calls and service requests, and turn local searches into booked work.
@@ -169,7 +169,7 @@ export default function AutoRepairShopContent() {
                 href="https://audit.studio925.design"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-brand-accent text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2 hover:bg-brand-accent/90 transition-colors shadow-lg shadow-black/20"
+                className="btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold flex items-center justify-center gap-2"
               >
                 Get My Free Audit <ArrowRight size={20} />
               </a>
@@ -193,10 +193,10 @@ export default function AutoRepairShopContent() {
             viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
           >
             <h2 className="text-2xl md:text-4xl mb-6 md:mb-8">
-              Why auto repair shops in Kentucky need a <span className="italic text-brand-accent">real website</span>
+              Why auto repair shops in Kentucky need a <span className="italic">real website</span>
             </h2>
           </motion.div>
-          <div className="grid md:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-10">
             {[
               { title: 'Customers Google first, call second', text: 'When a brake light comes on or a tire goes flat, most people grab their phone and search Google. Near the top they see the Google Maps listings, each one with a link to the shop\'s website. That\'s where the calls come from.' },
               { title: 'Facebook is a backup, not your front door', text: 'Facebook can show up when someone types your shop\'s name, and in small towns it sometimes shows up for more. But for "auto repair near me," people see the map listings first, and those link to your website. A real site is the part you own, and it\'s where customers check what you fix before they call.' },
@@ -208,7 +208,7 @@ export default function AutoRepairShopContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                 transition={{ delay: i * 0.1 }}
-                className="p-5 md:p-8 glass rounded-3xl"
+                className="border-t-2 border-brand-primary pt-5"
               >
                 <h3 className="text-lg md:text-xl font-sans font-bold mb-2 md:mb-3">{item.title}</h3>
                 <p className="text-sm md:text-base text-brand-primary/70 leading-relaxed">{item.text}</p>
@@ -248,12 +248,12 @@ export default function AutoRepairShopContent() {
           <div className="grid md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-start">
             <div>
               <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
-                What customers search for when they need a <span className="italic text-brand-accent">mechanic</span>
+                What customers search for when they need a <span className="italic">mechanic</span>
               </h2>
               <p className="text-brand-primary/70 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
                 Each one of these is a search a real shop website can show up for. A homepage alone can&apos;t. Individual service pages can. That&apos;s the part most cheap auto-shop websites skip, and the reason their phones don&apos;t ring.
               </p>
-              <div className="grid sm:grid-cols-2 gap-3">
+              <div className="grid sm:grid-cols-2 gap-x-10 border-t border-brand-primary/15">
                 {customerSearches.map((s, i) => (
                   <motion.div
                     key={i}
@@ -261,13 +261,10 @@ export default function AutoRepairShopContent() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                     transition={{ delay: i * 0.05 }}
-                    className="p-3 md:p-4 rounded-xl bg-brand-primary/5 border border-brand-primary/5"
+                    className="py-4 border-b border-brand-primary/15"
                   >
-                    <div className="flex items-center gap-2 mb-1">
-                      <Search size={13} className="text-emerald-800 shrink-0" />
-                      <span className="font-semibold text-brand-primary text-xs md:text-sm">{s.query}</span>
-                    </div>
-                    <p className="text-xs text-brand-primary/70 leading-relaxed pl-5">{s.intent}</p>
+                    <p className="font-semibold text-brand-primary text-sm md:text-base mb-1">{s.query}</p>
+                    <p className="text-sm text-brand-primary/70 leading-relaxed">{s.intent}</p>
                   </motion.div>
                 ))}
               </div>
@@ -304,12 +301,12 @@ export default function AutoRepairShopContent() {
           <div className="grid md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-start">
             <div>
               <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">
-                Pages your auto repair shop website should <span className="italic text-brand-accent">actually have</span>
+                Pages your auto repair shop website should <span className="italic">actually have</span>
               </h2>
               <p className="text-brand-primary/70 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
                 A good shop site isn&apos;t a single page with a phone number. It&apos;s a small, focused set of pages built to answer the questions a real customer is about to ask.
               </p>
-              <div className="space-y-3 md:space-y-4">
+              <div className="border-t border-brand-primary/15">
                 {shopPages.map((p, i) => (
                   <motion.div
                     key={i}
@@ -317,11 +314,9 @@ export default function AutoRepairShopContent() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                     transition={{ delay: i * 0.05 }}
-                    className="flex items-start gap-3 md:gap-4 p-4 md:p-5 rounded-2xl bg-white border border-brand-primary/5"
+                    className="grid grid-cols-[2.5rem_1fr] md:grid-cols-[3.5rem_1fr] py-5 border-b border-brand-primary/15"
                   >
-                    <div className="w-7 h-7 md:w-8 md:h-8 rounded-full bg-brand-accent/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <Check size={14} className="text-emerald-800" />
-                    </div>
+                    <span className="font-serif italic text-xl md:text-2xl text-brand-primary/70 leading-none pt-0.5">{String(i + 1).padStart(2, '0')}</span>
                     <div>
                       <h3 className="font-bold text-brand-primary text-sm md:text-base mb-1">{p.title}</h3>
                       <p className="text-sm text-brand-primary/70 leading-relaxed">{p.text}</p>
@@ -372,10 +367,10 @@ export default function AutoRepairShopContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                 transition={{ delay: i * 0.1 }}
-                className="p-4 md:p-6 rounded-2xl bg-white/10 border border-white/10"
+                className="border-t border-white/15 pt-5 pr-4"
               >
-                <item.icon size={20} className="text-brand-accent mb-3 md:mb-4 md:!w-6 md:!h-6" />
-                <p className="text-xs md:text-sm font-medium leading-relaxed">{item.text}</p>
+                <item.icon size={22} strokeWidth={1.5} className="text-brand-accent mb-4" />
+                <p className="text-sm md:text-base leading-relaxed text-white/90">{item.text}</p>
               </motion.div>
             ))}
           </div>
@@ -396,7 +391,7 @@ export default function AutoRepairShopContent() {
         <div className="absolute inset-0 grid-pattern opacity-40" />
         <div className="max-w-4xl mx-auto relative z-10">
           <h2 className="text-2xl md:text-4xl mb-5 md:mb-8">
-            What makes Studio 925 <span className="italic text-brand-accent">different</span>
+            What makes Studio 925 <span className="italic">different</span>
           </h2>
           <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed">
             Most auto shop websites are a template that looks like every other shop in the state, or an agency build with nothing local underneath. Studio 925 sites are custom-coded around your shop, your services, and how people near you actually search. I&apos;m based in Grayson County, so you talk directly to the person building your site. No account managers, no runaround.
@@ -408,9 +403,9 @@ export default function AutoRepairShopContent() {
       <section className="py-16 md:py-24 px-6 bg-white border-t border-brand-primary/5">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-4xl mb-6 md:mb-10">
-            Common questions about <span className="italic text-brand-accent">auto repair shop websites</span>
+            Common questions about <span className="italic">auto repair shop websites</span>
           </h2>
-          <div className="space-y-4">
+          <div className="border-t border-brand-primary/15">
             {faqs.map((faq, i) => (
               <motion.div
                 key={i}
@@ -418,14 +413,14 @@ export default function AutoRepairShopContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0, margin: "100% 0px 100% 0px" }}
                 transition={{ delay: i * 0.05 }}
-                className="rounded-2xl bg-white border border-brand-primary/5"
+                className="border-b border-brand-primary/15"
               >
                 <details className="group">
-                  <summary className="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-                    <h3 className="text-sm md:text-base font-bold">{faq.question}</h3>
+                  <summary className="flex items-center justify-between gap-4 py-5 md:py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    <h3 className="text-base md:text-lg font-bold">{faq.question}</h3>
                     <ChevronDown size={18} className="shrink-0 text-brand-primary/70 transition-transform group-open:rotate-180" />
                   </summary>
-                  <p className="text-sm text-brand-primary/75 leading-relaxed px-5 md:px-6 pb-5 md:pb-6 -mt-1">{faq.answer}</p>
+                  <p className="text-sm text-brand-primary/75 leading-relaxed pb-6 -mt-1 max-w-3xl">{faq.answer}</p>
                 </details>
               </motion.div>
             ))}
@@ -448,7 +443,7 @@ export default function AutoRepairShopContent() {
           </p>
           <a
             href="/#pricing"
-            className="inline-flex items-center gap-2 bg-brand-primary text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold hover:bg-brand-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-5 md:px-6 py-3 rounded-2xl text-sm md:text-base font-semibold"
           >
             See Full Pricing <ArrowRight size={18} />
           </a>
@@ -462,18 +457,18 @@ export default function AutoRepairShopContent() {
           <p className="text-brand-primary/75 text-sm md:text-lg leading-relaxed mb-4 md:mb-6">
             Studio 925 builds custom websites for small businesses in Leitchfield, Grayson County, and across Kentucky.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap">
-            <Link href="/web-design-by-industry" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-brand-accent/5 border border-brand-accent/30 hover:bg-brand-accent/10 transition-colors text-sm md:text-base font-semibold text-emerald-800">
-              All Industries Web Design <ArrowRight size={16} className="inline ml-2" />
+          <div className="grid sm:grid-cols-2 gap-x-10 border-t border-brand-primary/15">
+            <Link href="/web-design-by-industry" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              All Industries Web Design <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/website-design-leitchfield-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Website Design in Leitchfield, KY <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/website-design-leitchfield-ky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Website Design in Leitchfield, KY <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/web-design-grayson-county-ky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Web Design in Grayson County, KY <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/web-design-grayson-county-ky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Web Design in Grayson County, KY <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/small-business-website-design-kentucky" className="px-5 md:px-6 py-3 md:py-4 rounded-2xl bg-white border border-brand-primary/10 hover:border-brand-accent/30 transition-colors text-sm md:text-base font-medium text-brand-primary/80">
-              Small Business Website Design in Kentucky <ArrowRight size={16} className="inline ml-2" />
+            <Link href="/small-business-website-design-kentucky" className="group flex items-center justify-between gap-4 py-4 border-b border-brand-primary/15 font-medium text-brand-primary hover:text-emerald-800 transition-colors">
+              Small Business Website Design in Kentucky <ArrowRight size={18} className="shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
@@ -489,7 +484,7 @@ export default function AutoRepairShopContent() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link
               href="/portfolio"
-              className="inline-flex items-center justify-center gap-2 bg-brand-accent text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold hover:bg-brand-accent/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-semibold"
             >
               View Portfolio <ArrowRight size={20} />
             </Link>

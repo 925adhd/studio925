@@ -248,7 +248,7 @@ export default function PortfolioPreview() {
           <Link
             href="/portfolio"
             onClick={() => trackEvent('click_view_portfolio', 'portfolio_preview')}
-            className="inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-2xl text-sm font-semibold hover:bg-brand-primary/90 transition-all group shrink-0"
+            className="inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white px-6 py-3 rounded-2xl text-sm font-semibold group shrink-0"
           >
             View Full Portfolio <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </Link>

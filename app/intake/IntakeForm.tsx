@@ -759,7 +759,7 @@ function ActionBar({
           type="button"
           onClick={onSubmit}
           disabled={submitting}
-          className="inline-flex items-center gap-2 bg-brand-accent text-white font-semibold px-5 py-3 rounded-xl hover:bg-brand-accent/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white font-semibold px-5 py-3 rounded-xl disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {submitting ? (
             <><span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Sending...</>
@@ -769,7 +769,7 @@ function ActionBar({
         <button
           type="button"
           onClick={onNext}
-          className="inline-flex items-center gap-2 bg-brand-accent text-white font-semibold px-5 py-3 rounded-xl hover:bg-brand-accent/90 transition-colors"
+          className="inline-flex items-center gap-2 btn-lit [--btn:var(--color-brand-accent)] hover:[--btn:#047857] text-white font-semibold px-5 py-3 rounded-xl"
         >
           {nextLabel}
         </button>

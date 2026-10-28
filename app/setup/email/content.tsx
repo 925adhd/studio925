@@ -150,7 +150,7 @@ export default function EmailGuide() {
                   href={step.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex sm:inline-flex items-center justify-center gap-2 bg-brand-primary text-white font-sans font-semibold rounded-xl px-5 py-3 hover:bg-brand-primary/90 transition-colors"
+                  className="flex sm:inline-flex items-center justify-center gap-2 btn-lit [--btn:var(--color-brand-primary)] hover:[--btn:#1e293b] text-white font-sans font-semibold rounded-xl px-5 py-3"
                 >
                   Start My Free Trial <ExternalLink size={16} className="shrink-0" />
                 </a>
